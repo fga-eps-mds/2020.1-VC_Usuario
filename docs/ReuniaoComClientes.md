@@ -1,3 +1,13 @@
+# Reunião
+
+### Avisos:
+- Questões entre parentes são pontos questionados pelos alunos de MDS, não expressa a opinião das outras pessoas envolvidas na reunião;
+- Em alguns momentos, fomos colocados como os seus representantes no quis diz respeito ao que a matéria é como seria o desenvolvimento do produto nela. Por favor reforce esses pontos numa proxima reunião;
+
+## Grupo 1 - Ganhadores do hackathon
+
+### Projeto: Postagens de assuntos relacionados a UnB.
+
 Aplicativo/Site que pudessem ajudar a UnB. alunos e servidores fazem postagens sobre problemas que enfrentam da faculdade e os gestores podem visualizar e tomar medidas para resolver esse problema reportado.
 
 ### Aluno:
