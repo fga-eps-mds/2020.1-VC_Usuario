@@ -10,7 +10,7 @@
 
 * Verifique se não há nenhuma [_Issue_](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues) relacionada a essa modificação.
 
-* Caso não haja, crie uma [Nova _Issue_](https://github.com/fga-gpp-mds/2018.1-Dr-Down/issues/new).
+* Caso não haja, crie uma [Nova _Issue_](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/new/choose).
 
 * Submeta um [Pull Request](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/compare) seguindo o padrão do projeto.
 
