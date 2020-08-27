@@ -28,6 +28,6 @@
 * master: representa uma versão estável do produto contendo código já testado e versionado. Essa branch parte da branch develop através de pull requests aprovados no fim de cada release.
 * develop: contém a versão mais atualizada do código que está sendo desenvolvido, está sempre sincronizada com a master e é base para as branches feature.
 * feature/*: são branches para o desenvolvimento de uma funcionalidade específica, por convenção elas tem o nome iniciado por feature/, por exemplo: feature/cadastro-usuarios. Importante ressaltar que essas branches são criadas sempre à partir da branch develop.
-* bugfix/ - branch utilizada para corrigir bugs de baixa ou média urgências e não estão presentes na master. O nome deve ser a descrição do bug. Ex: "bugfix/ descricao"
+* bugfix/: branch utilizada para corrigir bugs de baixa ou média urgências e não estão presentes na master. O nome deve ser a descrição do bug. Ex: "bugfix/ descricao"
 * hotfix/*: são branches responsáveis pela realização de alguma correção crítica encontrada em produção e por isso são criadas à partir da master. Importante ressaltar que essa branch deve ser juntada tanto com a master quanto com a develop. O nome deve ser a descrição do bug. Ex: "hotfix/ descricao"
 * release/*: onde será feito os ajustes finais antes da entrega de uma versão do produto de software. Por convenção, essas branches tem o nome começando com release/ e terminando com o número da próxima versão do software.
