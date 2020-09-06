@@ -3,6 +3,7 @@
 Data|Versão|Descrição|Autor
 -|-|-|-
 28/08|1.0.0|Abertura do documento|Daniel Porto
+31/08|1.0.1|Adição do itens 4.1 e 4.3|Daniel Porto
 
 # Sumário
 
@@ -103,18 +104,24 @@ Sendo dividido em:</p>
 
 ### 4.1 <strong name="4_1">Diagrama de Casos de Uso</strong>
 
+![Diagrama_Caso_Uso_VamosCuidar](Imagens/documento_de_arquitetura/Caso_de_Uso_VamosCuidar.jpeg)
 
 ### 4.2 <strong name="4_2">Atores de Casos de Uso</strong>
 
 |**Ator**|**Descrição**
 |:-|:-|
 |**Usuário**|O usuário poderá, postar, de forma simples e acompanhada de texto, uma imagem que caputure o problema relatado. Poderá também se engajar nas postagens para determinar o grau de relevância da mesma. 
-**Gestor**|O gestor poderá visualizar as postagens feitas pelos estudantes e o engajamento nela. Poderá se comunicar por meio dos comentários e marcar a publicação como resolvida caso isso aconteça. 
+|**Gestor**|O gestor poderá visualizar as postagens feitas pelos estudantes e o engajamento nela. Poderá se comunicar por meio dos comentários e marcar a publicação como resolvida caso isso aconteça. 
 
 ### 4.3 <strong name="4_3">Descrições de Casos de Uso</strong>
 
 | Caso de uso | Descrição |
 |:-|:-|
+|USO1 - Fazer postagem|Criar postagem registrando algum problema.
+|USO2 - Engajar postagem|Interagir em uma postagem para definir a relevância da mesma.
+|USO3 - Editar página|Fazer alterações na página institucional.
+|USO4 - Cadastrar usuários|Inserir dados dos usuários para a validação.
+|USO5 - Marcar Postagem|Marcar a postagem como resolvida.
 
 ## 5. <strong name="5">Visão Lógica</strong>
 
