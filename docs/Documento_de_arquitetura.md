@@ -3,7 +3,7 @@
 Data|Versão|Descrição|Autor
 -|-|-|-
 28/08|1.0.0|Abertura do documento|Daniel Porto
-31/08|1.0.1|Adição do itens 4.1 e 4.3|Daniel Porto
+31/08|1.0.1|Adição dos itens 4.1 e 4.3|Daniel Porto
 
 # Sumário
 
@@ -36,7 +36,7 @@ Data|Versão|Descrição|Autor
 
 ### 1.1 <strong name="1_1">Finalidade</strong>
 
- <p align = "justify"> &emsp;&emsp; Este documento tem como finalidade fornecer uma visão geral da arquitetura da platoaforma Vamos Cuidar UnB, utilizando-se de diversas visões arquiteturais - tais como a visão lógica e de caso de uso - a fim de facilitar o entendimento dos processos e funcionamento de todo o sistema. Tem também como objetivo transmitir as decisões arquiteturais significativas tomadas em relação ao mesmo.</p>
+ <p align = "justify"> &emsp;&emsp; Este documento tem como finalidade fornecer uma visão geral da arquitetura da platoforma Vamos Cuidar UnB, utilizando-se de diversas visões arquiteturais - tais como a visão lógica e de caso de uso - a fim de facilitar o entendimento dos processos e funcionamento de todo o sistema. Tem também como objetivo transmitir as decisões arquiteturais significativas tomadas em relação ao mesmo.</p>
 
 ### 1.2 <strong name="1_2">Escopo</strong>
 
@@ -50,17 +50,18 @@ Data|Versão|Descrição|Autor
 Abreviação|Significado
 |:-:|:-|
 |**MDS**| Métodos de Desenvolvimento de Software|
+|**UNB**| Universidade de Brasília|
 
 
 ### 1.4 <strong name="1_4">Referências</strong>
 
-<p align="left">Como documentar a arquitetura de software. Disponível em: http://www.linhadecodigo.com.br/artigo/3343/como-documentar-a-arquitetura-de-software.aspx.</p>
+<p align="left">Como documentar a arquitetura de software. Disponível em: </br>http://www.linhadecodigo.com.br/artigo/3343/como-documentar-a-arquitetura-de-software.aspx.</p>
 
-<p align="left">Documento de arquitetura ADA. Disponível em: https://fga-eps-mds.github.io/2019.1-ADA/#/docs/project/architecture_doc.</p>
+<p align="left">Documento de arquitetura ADA. Disponível em: </br>https://fga-eps-mds.github.io/2019.1-ADA/#/docs/project/architecture_doc.</p>
 
-<p align="left">Documento de arquitetura ArBC. Disponível em: https://github.com/fga-eps-mds/2019.2-ArBC/blob/develop/docs/mds/Documento_de_arquitetura.md</p>
+<p align="left">Documento de arquitetura ArBC. Disponível em: </br>https://github.com/fga-eps-mds/2019.2-ArBC/blob/develop/docs/mds/Documento_de_arquitetura.md</p>
 
-<p align="left">Documento de arquitetura C-Registration System. Disponível em: http://mds.cultura.gov.br/extend.formal_resources/guidances/examples/resources/sadoc_v1.htm.</p>
+<p align="left">Documento de arquitetura C-Registration System. Disponível em: </br>http://mds.cultura.gov.br/extend.formal_resources/guidances/examples/resources/sadoc_v1.htm.</p>
 
 ### 1.5 <strong name="1_5">Visão Geral</strong>
 
@@ -95,7 +96,7 @@ Sendo dividido em:</p>
 
 ### 3.1 <strong name="3_1">Metas</strong>
 
-<p align = "justify">&emsp;&emsp; O sistema da plataforma vamos cuidar deve ter acesso a uma câmera e aos arquivos de mídia para up-load de imagens que mostrarão os problemas diversos da inuversidade às autoridades competentes em resolve-los. O objetivo é melhorar a comunicação dos estudantes com a administração.</p>
+<p align = "justify">&emsp;&emsp; O sistema da plataforma vamos cuidar deve ter acesso a uma câmera e aos arquivos de mídia para up-load de imagens que mostrarão os problemas diversos da universidade às autoridades competentes em resolve-los. O objetivo é melhorar a comunicação dos estudantes com a administração.</p>
 
 ### 3.2 <strong name="3_2">Restrições</strong>
 
@@ -104,24 +105,19 @@ Sendo dividido em:</p>
 
 ### 4.1 <strong name="4_1">Diagrama de Casos de Uso</strong>
 
-![Diagrama_Caso_Uso_VamosCuidar](Imagens/documento_de_arquitetura/Caso_de_Uso_VamosCuidar.jpeg)
-
 ### 4.2 <strong name="4_2">Atores de Casos de Uso</strong>
 
 |**Ator**|**Descrição**
 |:-|:-|
-|**Usuário**|O usuário poderá, postar, de forma simples e acompanhada de texto, uma imagem que caputure o problema relatado. Poderá também se engajar nas postagens para determinar o grau de relevância da mesma. 
-|**Gestor**|O gestor poderá visualizar as postagens feitas pelos estudantes e o engajamento nela. Poderá se comunicar por meio dos comentários e marcar a publicação como resolvida caso isso aconteça. 
+|**Usuário**|O usuário poderá, postar, de forma simples e acompanhada de texto, uma imagem que capture o problema relatado. Poderá também se engajar nas postagens para determinar o grau de relevância e acompanhar notícias da universidade.  
 
 ### 4.3 <strong name="4_3">Descrições de Casos de Uso</strong>
 
 | Caso de uso | Descrição |
 |:-|:-|
-|USO1 - Fazer postagem|Criar postagem registrando algum problema.
-|USO2 - Engajar postagem|Interagir em uma postagem para definir a relevância da mesma.
-|USO3 - Editar página|Fazer alterações na página institucional.
-|USO4 - Cadastrar usuários|Inserir dados dos usuários para a validação.
-|USO5 - Marcar Postagem|Marcar a postagem como resolvida.
+|USO01 - Fazer postagem|Criar postagem registrando algum problema.
+|USO02 - Engajar postagem|Interagir em uma postagem para definir a relevância da mesma.
+|USO03 - Ver notícias|Visualizar notícias da Universidade.
 
 ## 5. <strong name="5">Visão Lógica</strong>
 
