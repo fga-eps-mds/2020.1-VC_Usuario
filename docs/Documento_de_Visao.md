@@ -9,7 +9,7 @@
 | 08/09/2020 | 0.3 | Inserção dos itens 3.5, 3.6 e 3.7 | Daniel Porto |
 | 08/09/2020 | 0.4 | Inserção dos itens 1, 1.1 e 1.2 | Emily Dias |
 | 08/09/2020 | 0.5 | Inserção dos itens 2.2 | Bruno Félix |
-
+| 08/09/2020 | 0.6 | Inserção dos itens 3.1, 3.2, 3.3 e 3.4 | Enzo Gabriel |
 
 ## 1. Introdução
 
