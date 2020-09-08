@@ -6,22 +6,25 @@
 | --- | --- | --- | --- |
 | 20/08/2020 | 0.1 | Abertura do documento |  Bruno Félix |
 | 31/08/2020 | 0.2 | Inserção do template do documento |  Bruno Félix |
-| 08/09/2020 | 0.3 | Inserção dos itens 3.5, 3.6 e 3.7 | Daniel Porto
+| 08/09/2020 | 0.3 | Inserção dos itens 3.5, 3.6 e 3.7 | Daniel Porto |
+| 08/09/2020 | 0.4 | Inserção dos itens 1, 1.1 e 1.2 | Emily Dias |
 
 
 ## 1. Introdução
 
-Esta introdução fornece uma visão geral de todo o documento de visão. Ela inclui o propósito, escopo, definições, acrônimos, abreviações, referências e visão geral de todo o documento.
+Este documento terá o propósito, escopo, definições, acrônimos, abreviações, referências e visão geral de todo o documento, permitindo ter um entendimento maior do escopo do projeto.
+
+Assim, será explicado o problema identificado, a descrição dos principais pontos do projeto, a solução proposta, suas principais funcionalidades e seus requisitos, para assim obter uma melhor compreensão do escopo.
 
 
 ### 1.1 Propósito
 
-Determina o propósito deste documento de visão.
+Este documento de visão tem por objetivo mostrar os objetivos do projeto, suas características e seu desenvolvimento em questão. Ele também expõe as suas funcionalidades e define os requisitos em termos de necessidade para o objetivo final.
 
 
 ### 1.2 Escopo
 
-Descreve brevemente o escopo deste documento de visão, incluindo a quais programas, projetos, aplicativos e processos de negócios o documento está associado. Inclui qualquer outra coisa que este documento afete ou influencie.
+Este projeto que será aplicativo/site tem um objetivo de ajudar a UnB, alunos e servidores a fazerem postagens sobre problemas que enfrentam na faculdade, com isto, os gestores podem visualizar e tomar medidas para resolver esses problemas reportados.
 
 
 ### 1.3 Definições, acrônimos e abreviações
