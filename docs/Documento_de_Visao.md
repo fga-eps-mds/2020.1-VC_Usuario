@@ -77,22 +77,27 @@ Uma instrução de posição do produto comunica o intento do aplicativo e a imp
 
 | **Nome** | **Descrição** | **Responsabilidade** |
 | --- | --- | --- |
+|Equipe de Desenvolvimento de _Software_| Estudantes da disciplina Métodos de Desenvolvimento de _Software_, na Universidade de Brasília.| Desenvolvimento e implementação do _Software_ descrito no documento.|
+|Equipe de orientação| Porfessora e monitores da disciplina MDS.| Auxiliar e guiar a equipe durante o desenvolvimento do _Software_.|
+
 
 
 ### 3.2 Resumo dos Usuários
 
 | **Nome** | **Descrição** |
 | --- | --- |
+|Comunidade da Unb| Alunos e servidores da UnB, que transitam pela universidade.|
 
 
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
 
 | **Usuário** | **Necessidade** | **Solução Atual** | **Solução Proposta** |
 | --- | --- | --- | --- |
+|Estudantes e servidores da UnB| Melhoria ou reforma de alguma problema.| Esperar alguém com maior autoridade na faculdade resolver.| Uma plataforma onde a comunidade possa reportar os problemas que encontrarem, sujeita a pequenos bônus pelos relatos.|
 
 ### 3.4 Ambiente dos Usuários
 
-Detalha o ambiente de trabalho do usuário alvo. Aqui estão algumas sugestões.
+Os usuários poderão realizar a interação com o _Software_ Vamos Cuidar através do site ou aplicativo, sempre que encontrarem algum problema na universidade que possa ser resolvido.
 
 
 ### 3.5 Perfis dos Envolvidos
