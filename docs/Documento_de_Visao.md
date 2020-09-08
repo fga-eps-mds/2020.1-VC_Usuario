@@ -6,6 +6,7 @@
 | --- | --- | --- | --- |
 | 20/08/2020 | 0.1 | Abertura do documento |  Bruno Félix |
 | 31/08/2020 | 0.2 | Inserção do template do documento |  Bruno Félix |
+| 08/09/2020 | 0.3 | Inserção dos itens 3.5, 3.6 e 3.7 | Daniel Porto
 
 
 ## 1. Introdução
@@ -92,26 +93,39 @@ Detalha o ambiente de trabalho do usuário alvo. Aqui estão algumas sugestões.
 
 ### 3.5 Perfis dos Envolvidos
 
-#### 3.5.1 Equipe de Desenvolvimento de <i>Software</i>
+#### 3.5.1 Equipe de Desenvolvimento de <i>Software</i>:
 
-| **Representantes** | **Tipo** | **Responsabilidade** | **Critério de sucesso** | **Envolvimento** |
-| --- | --- | --- | --- | --- |
+| **Representantes** | Bruno Alves Felix, Daniel Barcelos Moreira, 	Daniel Porto de Souza, Denys Rogeres Leles dos Santos, Emily Dias Sousa e Enzo Gabriel Guedes Queiroz Saraiva.
+|:-|:-|
+| **Tipo** | Estudantes de Métodos de Desenvolvimento de Software da Universidade de Brasília - UnB/Gama - FGA, curso Engenharia de Software.
+|**Responsabilidade** | Desenvolvimento, testes, Documentação e implementação do software.
+|**Critério de sucesso** | Finalizar o Software com todas as funcionalidades do escopo no prazo estipulado do ciclo da disciplina.
+| **Envolvimento** | Alto
+| **Problemas/Comentários** | Inexperiência da equipe com desenvolvimento colaborativo.
 
 
-#### 3.5.2 Orientadores
 
-| **Representantes** | **Tipo** | **Responsabilidade** | **Critério de sucesso** | **Envolvimento** |
-| --- | --- | --- | --- | --- |
+#### 3.5.2 Orientadores:
+
+| **Representantes** | Carla Silva Rocha Aguiar
+|:-|:-|
+| **Tipo** | Orientadora e avaliadora que dará auxílio no desenvolvimento da plataforma Vamos Cuidar.
+| **Responsabilidade** | Avaliar a equipe de MDS e ajudá-los em eventuais dúvidas.
+| **Envolvimento** |  	Médio.
 
 
 ### 3.6 Perfis dos Usuários
 
-| **Representantes** | **Tipo** | **Responsabilidade** | **Critério de sucesso** | **Envolvimento** |
-| --- | --- | --- | --- | --- |
+| **Representantes** | Estudantes e Servidores
+|:-|:-|
+| **Tipo** | Estudantes e Servidores da UnB 
+| **Responsabilidade** | Usar a plataforma para tentar solucionar problemas da universidade.
+| **Critério de sucesso** | Ter o problema postado solucionado. 
+|**Envolvimento** | Alto
 
 ### 3.7 Alternativas e Concorrências
 
-Identifica as alternativas que a parte interessada percebe como disponíveis. Essas alternativas podem incluir a compra do produto de um concorrente, a criação de uma solução desenvolvida internamente ou manter o status quo. Listam todas as opções disponíveis e conhecidas. Elas incluem os principais pontos fortes e fracos de cada concorrente como observados pela parte interessada.
+Atualmente é possível estar por dentro das notícias da universidade através do portal de notícias encontrado no próprio site da Unb. No âmbito de notificação de problemas à administração, a universidade dispõe de uma ouvidoria, que pode ser contactada por e-mail e telefone. Tanto portal de notícias quanto a ouvidoria são pouco difundidos na universidade.   
 
 
 ## 4. Visão geral do Produto
