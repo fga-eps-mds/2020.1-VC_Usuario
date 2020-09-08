@@ -4,9 +4,10 @@
 
 | **Data** | **Versão** | **Modificação** | **Autor** |
 | --- | --- | --- | --- |
-| 20/08/2020 | 0.1 | Abertura do documento |  Bruno Félix |
-| 31/08/2020 | 0.2 | Inserção do template do documento |  Bruno Félix |
-| 08/09/2020 | 0.3 | Inserção dos itens 3.5, 3.6 e 3.7 | Daniel Porto
+| 20/08/2020 | 0.1 | Abertura do documento | Bruno Félix |
+| 31/08/2020 | 0.2 | Inserção do template do documento | Bruno Félix |
+| 08/09/2020 | 0.3 | Inserção dos itens 3.5, 3.6 e 3.7 | Daniel Porto |
+| 08/09/2020 | 0.5 | Inserção dos itens 2.2 | Bruno Félix |
 
 
 ## 1. Introdução
@@ -52,10 +53,10 @@ Descreve brevemente a oportunidade de negócios que é tratada por este projeto.
 
 | **Questão** | **Informações do Produto** |
 | --- | --- |
-| **O problema é**                | |
-| **Que Afeta**                     | |
-| **Cujo impacto é**        | |
-| **Uma boa solução seria**     | 
+| **O problema é**         | O difícil relato de problemas e defeitos encontrados na universidades |
+| **Que Afeta**            | A comunidade acadêmica |
+| **Cujo impacto é**       | A demora ou ineficácia da resolução desses problemas pro parte da universidade |
+| **Uma boa solução seria**| Uma aplicação aonde a comunidade pudesse relatar os problemas encontrados diretamente para universidade. Otimizando o dialogo e a resolução | 
 
 
 ### 2.3 Descrição da posição do produto
