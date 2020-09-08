@@ -10,6 +10,7 @@
 | 08/09/2020 | 0.4 | Inserção dos itens 1, 1.1 e 1.2 | Emily Dias |
 | 08/09/2020 | 0.5 | Inserção dos itens 2.2 | Bruno Félix |
 | 08/09/2020 | 0.6 | Inserção dos itens 3.1, 3.2, 3.3 e 3.4 | Enzo Gabriel |
+| 08/09/2020 | 0.7 | Inserção dos itens 2.1 e 2.3 | Daniel Barcelos |
 
 ## 1. Introdução
 
@@ -49,7 +50,7 @@ Descreve o conteúdo do documento de visão e explica como o documento é organi
 
 ### 2.1 Oportunidade de negócios
 
-Descreve brevemente a oportunidade de negócios que é tratada por este projeto.
+Reportar de maneira rápida problemas enfrentados pela comunidade da UnB.
 
 
 ### 2.2 Descrição do problema
@@ -64,11 +65,7 @@ Descreve brevemente a oportunidade de negócios que é tratada por este projeto.
 
 ### 2.3 Descrição da posição do produto
 
-Fornece uma instrução geral resumida no nível mais alto, a posição exclusiva que o produto pretende preencher no mercado de trabalho. Use as seguintes instruções como um modelo, fornecendo detalhes do projeto para substituir os elementos entre parênteses:
-
-Para o (cliente alvo) quem (instrução da necessidade ou oportunidade). O (nome do produto) é uma (categoria do produto) que (instrução do principal benefício, isto é, o motivo convincente para comprar). De outro modo (principal alternativa competitiva), nosso produto (instrução da principal diferenciação).
-
-Uma instrução de posição do produto comunica o intento do aplicativo e a importância do projeto para todas as partes interessadas.
+O Vamos Cuidar visa facilitar a solução de problemas enfrentados pela comunidade da UnB através de um aplicativo/site em que será possível realizar postagens sobre os mesmos. Dessa forma, os gestores visualizarão os problemas e buscarão uma solução adequada. 
 
 
 ## 3. Descrição dos Envolvidos e dos Usuários
