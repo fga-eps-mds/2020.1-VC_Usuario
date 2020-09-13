@@ -11,7 +11,7 @@
 | 08/09/2020 | 0.5 | Inserção dos itens 2.2 | Bruno Félix |
 | 08/09/2020 | 0.6 | Inserção dos itens 3.1, 3.2, 3.3 e 3.4 | Enzo Gabriel |
 | 08/09/2020 | 0.7 | Inserção dos itens 2.1 e 2.3 | Daniel Barcelos |
-| 09/09/2020 | 0.8 | Inserção dos itens 1.3 e 1.4 |
+| 09/09/2020 | 0.8 | Inserção dos itens 1.3 e 1.4 | Denys Rogeres |
 
 ## 1. Introdução
 
@@ -41,7 +41,6 @@ Este projeto que será aplicativo/site tem um objetivo de ajudar a UnB, alunos e
 
 
 ### 1.4 Visão geral
-
  
 Este documento contém informações a respeito das características do software que está sendo desenvolvido. O documento é dividido em 8 tópico, sendo:
 - Introdução: é apresentado o propósito, escopo e os detalhes em relação a visão do projeto.
@@ -51,8 +50,6 @@ Este documento contém informações a respeito das características do software
 - Recursos do Produto: descrição sintetizada dos recursos do produto.
 - Restrições: detalhes sobre as restrições de design, restrições externas, como requisito operacionais ou regulamentares ou outras dependências.
 - Outros requisitos do Produto: listagem dos padrões aplicáveis, dos requisitos de hardware ou plataforma, dos requisitos de desempenho e dos requisitos ambientais.
-Referências: exposição das referências utilizadas.
-
 
 ## 2. Posicionamento
 
