@@ -42,3 +42,6 @@ A issue deve ser atribuída ao Milestone (sprint) correspondente previsto para s
 
 ## 6. Estimate
 Deve se adicionar à issue a sua estimativa de dificuldade (pontuação).
+
+## 7. Epics
+Deve ser a dicionado um épico(uma feature muito grande e pouco detalhada no projeto) na qual a issue está relacionada no projeto.

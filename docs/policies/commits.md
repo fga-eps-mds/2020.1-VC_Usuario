@@ -8,7 +8,7 @@ Os commits devem ser claros e diretos, descrevendo as alterações feitas.
 
 Regras para escrita das mensagens nos commits:
 
-* Devem ser escritos em inglês na forma infinitiva, e ainda conter uma breve decrição.
+* Devem ser escritos em português no gerúndio, e conter uma breve descrição.
 
 <b>Exemplo: <b>
 
