@@ -3,10 +3,10 @@
 ## Planejamento 
 ____________________________
 ## 1.Visão Geral
-Número da Sprint: 0 <br>
-Data de Início: 20/08/2020 <br>
-Data de Término: 26/08/2020 <br>
-Duração: 7 dias <br>
+**Número da Sprint:** 0 <br>
+**Data de Início:** 20/08/2020 <br>
+**Data de Término:** 26/08/2020 <br>
+**Duração:** 7 dias <br>
 
 ## 2.Papéis
 <table>
@@ -25,20 +25,45 @@ Duração: 7 dias <br>
 Esta foi a sprint inicial do projeto com o foco principal de estudo e nivelamento de conhecimentos. Também foi definido uma reunião com os ganhadores do Hackathon para entender a solução proposta que possivelmente será nosso tema.
 
 ## 4.Sprint Backlog
-Issues adicionadas 
-- #1 Verificação dos conhecimentos de Git e Github
-- #2 Ambiente integrantes ao GitHub e ao repositório
-- #3 Visualizar trabalhos de grupos anteriores
-- #4 Criar perfil de comunidade Open Source
-- #5 Padrão de contribuição e trabalho no projeto
-- #6 Estudar documento de visão
-- #7 Criar past /docs
-- #9 Reunião com possíveis clientes de MDS
-- #12 Estudar documento de arquitetura
-- #13 Estudar protótipo de baixa/alta fidelidade
-- #14 Estudar Gestão e planejamento de Sprint
-- #19 Estudar documento Product Backlog
-- #20 Estudar o design de fluxo Gitflow
+Issues adicionadas: <br>
+1. **Issue:** #1 Verificação dos conhecimentos de Git e Github<br>
+**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo
+
+2. **Issue:** #2 Ambiente integrantes ao GitHub e ao repositório<br>
+**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo
+
+2. **Issue:** #3 Visualizar trabalhos de grupos anteriores<br>
+**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo
+
+3. **Issue:** #4 Criar perfil de comunidade Open Source<br>
+**Responsáveis:** Daniel Barcelos e Enzo
+
+4. **Issue:** #5 Padrão de contribuição e trabalho no projeto<br>
+**Responsáveis:** Bruno, Denys e Emily
+
+5. **Issue:** #6 Estudar documento de visão<br>
+**Responsáveis:** Bruno e Daniel Barcelos 
+
+6. **Issue:** #7 Criar past/docs<br>
+**Responsáveis:** Bruno
+
+7. **Issue:** #9 Reunião com possíveis clientes de MDS<br>
+**Responsáveis:** Bruno, Carla, Daniel Porto e Denys
+
+8. **Issue:** #12 Estudar documento de arquitetura<br>
+**Responsáveis:** Daniel Porto e Enzo
+
+9. **Issue:** #13 Estudar protótipo de baixa/alta fidelidade<br>
+**Responsáveis:** Bruno e Daniel Porto
+
+10. **Issue:** #14 Estudar Gestão e planejamento de Sprint<br>
+**Responsáveis:** Denys
+
+11. **Issue:** #19 Estudar documento Product Backlog<br>
+**Responsáveis:** Bruno
+
+12. **Issue:** #20 Estudar o design de fluxo Gitflow<br>
+**Responsáveis:** Bruno e Daniel Porto
 
 
 
