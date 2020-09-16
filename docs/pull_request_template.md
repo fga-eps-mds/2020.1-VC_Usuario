@@ -5,12 +5,15 @@
 
 ## Política de Pull Requests
 
-Os pull requests devem explicar o que está sendo inserido, e devem indicar o número da issue relacionada.
+Os pull requests devem explicar o que está sendo inserido,  devem indicar o número da issue relacionada e caso esteja sendo trabalhado uma história de usuário(US), botar a US no título e na descrição do pull request.
 
-<b>Exemplo</b>
+<b>Exemplos</b>
 
 ```
 #1 Validação do Login
+```
+```
+US(1) - Criar login
 ```
 
 * Deve conter um ou mais ```Assignees```, que indica os membros da equipe que contribuiram com as modificações realizadas
