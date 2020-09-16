@@ -12,29 +12,39 @@
 | 08/09/2020 | 0.6 | Inserção dos itens 3.1, 3.2, 3.3 e 3.4        | Enzo Gabriel |
 | 08/09/2020 | 0.7 | Inserção dos itens 2.1 e 2.3                  | Daniel Barcelos |
 | 09/09/2020 | 0.8 | Inserção dos itens 1.3 e 1.4                  | Denys Rógeres |
-| 12/09/2020 | 1.0 | Formatação do documento: Alinhamento e Recuo | Bruno Félix |
+| 12/09/2020 | 1.0 | Formatação do documento: Alinhamento e Recuo  | Bruno Félix |
+| 14/09/2020 | 1.1 | Revisão Tópico 1                              | Bruno Félix |
 
 
 ## 1. Introdução
 
-<p style="text-align: justify;">&emsp;&emsp;
-Este documento terá o propósito, escopo, definições, acrônimos, abreviações, referências e visão geral de todo o documento, permitindo ter um entendimento maior do escopo do projeto.
-
-Assim, será explicado o problema identificado, a descrição dos principais pontos do projeto, a solução proposta, suas principais funcionalidades e seus requisitos, para assim obter uma melhor compreensão do escopo.
-</p>
-
-
 ### 1.1 Propósito
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Este documento de visão tem por objetivo mostrar os objetivos do projeto, suas características e seu desenvolvimento em questão. Ele também expõe as suas funcionalidades e define os requisitos em termos de necessidade para o objetivo final.
+Esse documento tem como objetivo apresentar os conceito, ideias e justificativas para o desenvolvimento da aplicação Vamos Cuidar. Fazendo uma análise precisa do problema abordado e como as pessoas são afetadas por ele, podemos desenvolver um produto com funcionalidades e requisitos impactantes e efetivas no auxílio do bem estar da comunidade universitária.
+</p>
+
+<p style="text-align: justify;">&emsp;&emsp; 
+Passando por questionamentos como escopo, problemática, função do produto e requisitos, podemos levantar a visão da essência do que o produto necessita ser e servir para as pessoas. Assim, norteando todas as ações do desenvolvimento e planejamento para se construir uma aplicação de valor para seus usuários.
 </p>
 
 
 ### 1.2 Escopo
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Este projeto que será aplicativo/site tem um objetivo de ajudar a UnB, alunos e servidores a fazerem postagens sobre problemas que enfrentam na faculdade, com isto, os gestores podem visualizar e tomar medidas para resolver esses problemas reportados.
+O Vamos Cuidar é uma PWA responsiva que tem como objetivo auxiliar a UnB na maior agilidade em resolver problemas gerais que impactam negativamente o dia a dia da universidade. Com uma plataforma prática e direta, a comunidade acadêmica fazer postagens sobre problemas que enfrentam na faculdade, com isto, os gestores podem visualizar e tomar medidas para resolver esses problemas reportados.
+</p>
+
+<p style="text-align: justify;">&emsp;&emsp; 
+O projeto se baseia numa proposta do evento, ocorrido nos dias 21 e 22 de novembro de 2019, "Hackathon DAF e PCTec/UnB", que tinha como tema "UnB na palma da sua mão". Nesse Hackathon, o objetivo era desenvolver uma aplicação que as pessoas pudessem relatar problemas para os administradores e assims serem rapidamente resolvidos.
+</p>
+
+<p style="text-align: justify;">&emsp;&emsp; 
+Ao longo de um semestre letivo, é comum se visualizar certos problemas estruturais, acadêmicos, processuais e outros, demoram tempo demais para serem resolvidos por parte da administração. A falta de um meio de comunicação não burocrático e prático para a notificação desses tais problemas ocasiona que eles podem ir se perpetuando, gerando até mesmo outros problemas e prejuízos dos mais diversos.
+</p>
+
+<p style="text-align: justify;">&emsp;&emsp; 
+A universidade é um espaço público, que passa de geração a geração de estudantes, professores, servidores e outros. A efetiva aplicando e desenvolvendo de um produto com raiz nesse tema de Hackathon agregado a problemática levantada, pode-se gerar um grande projeto que agregue o cotidiano e beneficie a vida da comunidade universitária, preservando e enriquecendo a Universidade de Brasília do presente e do futuro.
 </p>
 
 
@@ -45,6 +55,7 @@ Este projeto que será aplicativo/site tem um objetivo de ajudar a UnB, alunos e
 | MDS | Métodos de Desenvolvimento de <i>Software</i> |  
 | FGA | Faculdade do Gama | 
 | UnB | Universidade de Brasília | 
+| PWA | Progressive Web App | 
 
 
 ### 1.4 Visão geral
@@ -205,13 +216,6 @@ Lista e descreve brevemente os recursos do produto. Os recursos são capacidades
 
 <p style="text-align: justify;">&emsp;&emsp; 
 Observe todas as restrições de design, restrições externas, como requisitos operacionais ou regulamentares) ou outras dependências.
-</p>
-
-
-## 7. Outros Requisitos do Produto
-
-<p style="text-align: justify;">&emsp;&emsp; 
-Em um alto nível, lista os padrões aplicáveis, os requisitos de hardware ou plataforma, os requisitos de desempenho e os requisitos ambientais.
 </p>
 
 
