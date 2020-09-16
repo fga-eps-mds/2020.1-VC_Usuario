@@ -48,6 +48,7 @@ Os pull requests devem explicar o que está sendo inserido, e devem indicar o n�
 - [ ] _Bug fix_ (alteração que corrige uma _issue_ e não altera funcionalidades já existentes)
 - [ ] Nova _feature_ (alteração que adiciona uma funcionalidade e não altera funcionalidades já existentes)
 - [ ] Alteração disruptiva (_Breaking change_) (Correção ou funcionalidade que causa alteração nas funcionalidades existentes)
+- [ ] Documentação
 
 ## Checklist:
 <!--- Passe por todos os pontos a seguir e coloque um `x` em todas as caixas que se aplicam. -->
