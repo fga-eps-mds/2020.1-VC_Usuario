@@ -5,6 +5,7 @@ Data|Versão|Descrição|Autor
 28/08|1.0.0|Abertura do documento|Daniel Porto
 31/08|1.0.1|Adição dos itens 4.1 e 4.3|Daniel Porto
 15/09|1.0.2|Inserção dos requisitos nos casos de uso | Enzo Gabriel
+15/09 | 1.0.3 | Adição das representações de arquitetura de back-end e front-end e das restrições
 
 # Sumário
 
@@ -79,19 +80,23 @@ Sendo dividido em:</p>
 
 ## 2. <strong name="2">Representação da Arquitetura</strong>
 
-### 2.1 <strong name="2_1">Front-end</strong>
+### 2.1 <strong name="2_1">Back-end</strong>
 
+O framework escolhido para o back-end é o Node.Js, que pode ser definido como um ambiente de execução Javascipt server-side. Através dele, é possível desenvolver pequenas e grandes aplicações. É de código aberto e possui uma ampla comunidade.
 
+Outros pontos fortes do Node são: 
+- Ele utiliza JavaScript no back-end, então é possível usar JSON para tudo; 
+- É possível rodar projetos abertos e com o sistema operacional que quiser; 
+- Não necessidade de dependencias instaladas no seu computador para começar a usar; 
+- Oferece muitos pacotes a partir do seu gerenciador de pacotes;
+- Comunidade muito ativa.
 
-### 2.2 <strong name="2_2">Back-end</strong>
+### 2.2 <strong name="2_2">Front-end</strong>
 
+Já no front-end, o framework adotado foi o Vue.js, que é um framework Javascript ***open source***. É utilizado para desenvolver vários tipos de interfaces, que posuem necessidades de maior interação e experiência mais valorosa para o usuário. Lembrando que é  de fácil aprendizagem, o que facilita sua aplicação para uma equipe.
 
-### 2.3 <strong name="2_3">Diagrama de Relações</strong>
+Aplicações que usam Vue são constituídas de componentes com a sintaxe HTML, CSS e Javascript e um único arquivo .vue, o que facilita o isolamento e a manutenção de funcionalidades. Cada componente constituíndo um escopo isolado dos demais, tanto em lógica quantos nos estilos.
 
-
-### 2.4 <strong name="2_4">Diagrama de Pacotes do Front</strong>
-
-### 2.5 <strong name="2_5">Diagrama de Pacotes do Back</strong>
 
 ## 3. <strong name="3">Metas e Restrições de Arquitetura</strong>
 
@@ -101,6 +106,25 @@ Sendo dividido em:</p>
 
 ### 3.2 <strong name="3_2">Restrições</strong>
 
+#### 3.2.1 **Suportabilidade**
+
+Por ser uma aplicação com foco no PWA, ela deve poder ser acessada sem problemas nos principais navegadores na atualidade, tanto nas suas versões desktop quanto na mobile.
+
+#### 3.2.2 **Usabilidade**
+
+É um sistema de fácil uso, onde o usuário não deve sofrer de dificuldades para a utilização da aplicação.
+
+#### 3.2.3 **Ferramentas de Desenvolvimento**
+
+Tanto no back-end quanto no front-end serão utilizados frameworks Javascript. 
+
+No banco de dados será utilizado o software MongoDB, que é um software escrito em C++.
+
+Também será utilizado o Docker, para facilitar a portabilidade do projeto.
+
+#### 3.2.4 **Confiabilidade**
+
+Ao longo de cada etapa, serão feitos inúmeros testes, no intuito de proporcionar a melhor experiência para o usuário.
 
 ## 4. <strong name="4">Visão dos Casos de Uso</strong>
 
