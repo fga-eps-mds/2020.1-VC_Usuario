@@ -4,6 +4,7 @@ Data|Versão|Descrição|Autor
 -|-|-|-
 28/08|1.0.0|Abertura do documento|Daniel Porto
 31/08|1.0.1|Adição dos itens 4.1 e 4.3|Daniel Porto
+15/09|1.0.2|Inserção dos requisitos nos casos de uso | Enzo Gabriel
 
 # Sumário
 
@@ -32,7 +33,7 @@ Data|Versão|Descrição|Autor
 
 # Documento de Arquitetura de Software
 
-### 1. <strong name="1">Introdução</strong>
+## 1. <strong name="1">Introdução</strong>
 
 ### 1.1 <strong name="1_1">Finalidade</strong>
 
@@ -105,22 +106,43 @@ Sendo dividido em:</p>
 
 ### 4.1 <strong name="4_1">Diagrama de Casos de Uso</strong>
 
+
 ### 4.2 <strong name="4_2">Atores de Casos de Uso</strong>
 
 |**Ator**|**Descrição**
 |:-|:-|
-|**Usuário**|O usuário poderá, postar, de forma simples e acompanhada de texto, uma imagem que capture o problema relatado. Poderá também se engajar nas postagens para determinar o grau de relevância e acompanhar notícias da universidade.  
+|**Usuário**|O usuário poderá, postar, de forma simples e acompanhada de texto, uma imagem que capture o problema relatado. Poderá também se engajar nas postagens para determinar o grau de relevância e acompanhar notícias da universidade.
 
-### 4.3 <strong name="4_3">Descrições de Casos de Uso</strong>
+### 4.3 <strong name="4_3">Prioridade dos casos de uso</strong>
 
-| Caso de uso | Descrição |
-|:-|:-|
-|USO01 - Fazer postagem|Criar postagem registrando algum problema.
-|USO02 - Engajar postagem|Interagir em uma postagem para definir a relevância da mesma.
-|USO03 - Ver notícias|Visualizar notícias da Universidade.
+Esse diagrama expõe os seguintes requisitos: 
+
+**Identificador** | **Requisito**
+-- | --
+**RF01** | Permitir que usuários da comunidade acadêmica realize postagens sobre problemas da universidade
+**RF02** | Permitir o usuário editar e excluir suas postagens
+**RF03** | Permitir que o usuário crie, edite e apaga sua conta
+**RF04** | Permitir o usuário fazer e desfazer login de sua conta
+**RF05**| Exibir a listagem de todas as postagens feitas
+**RF06** | Permitir a visualização de todas informações de uma postagem
+**RF07** | Permitir que o usuário visualize suas postagens feitas
+**RF08** | Permitir a visualização do estágio de resolução da postagem
+**RF09** | Permitir que a listagem das postagens seja feita por filtros
+**RF10** | Permitir os usuários engajarem com uma postagem, através de comentários e apoio(positivo ou negativo)
+**RF11** | Permitir o usuário compartilhar uma postagem
+**RF12** | Permitir o reporte de uma postagem
+**RF13** | Exibir ao usuário uma notificação caso uma postagem sua tenha sido resolvida com sucesso
+**RF14** | Exibir uma página direcionada às notificações e atualizações da universidade sobre as postagens
+**RF15** | Exibir uma aba de ajuda de uso da aplicação
+**RNF16** | A aplicação deve fazer a verificação de conta com dados da universidade
+**RNF17** | O sistema deve se tratar de uma PWA (Progressive web app)
+**RNF18** | A aplicação deve ter uma experiencia de uso simples e familiar, de linguagem fácil e intuitiva
+**RNF19** | Assegurar a segurança de dados dos usuários
+**RNF20**| Pode ter suporte para gamificação
+
+
 
 ## 5. <strong name="5">Visão Lógica</strong>
-
 
 
 ## 6. <strong name="6">Tamanho e Desempenho</strong>
