@@ -13,7 +13,8 @@
 | 08/09/2020 | 0.7 | Inserção dos itens 2.1 e 2.3                  | Daniel Barcelos |
 | 09/09/2020 | 0.8 | Inserção dos itens 1.3 e 1.4                  | Denys Rógeres |
 | 12/09/2020 | 1.0 | Formatação do documento: Alinhamento e Recuo  | Bruno Félix |
-| 14/09/2020 | 1.1 | Revisão Tópico 1                              | Bruno Félix |
+| 14/09/2020 | 1.1 | Revisão do Tópico 1                           | Bruno Félix |
+| 16/09/2020 | 1.2 | Revisão do Tópico 1 e 2                       | Bruno Félix |
 
 
 ## 1. Introdução
@@ -32,7 +33,7 @@ Passando por questionamentos como escopo, problemática, função do produto e r
 ### 1.2 Escopo
 
 <p style="text-align: justify;">&emsp;&emsp; 
-O Vamos Cuidar é uma PWA responsiva que tem como objetivo auxiliar a UnB na maior agilidade em resolver problemas gerais que impactam negativamente o dia a dia da universidade. Com uma plataforma prática e direta, a comunidade acadêmica fazer postagens sobre problemas que enfrentam na faculdade, com isto, os gestores podem visualizar e tomar medidas para resolver esses problemas reportados.
+O Vamos Cuidar é uma PWA responsiva que tem como objetivo auxiliar a UnB na maior agilidade em resolver problemas, sejam eles estruturais, acadêmicos, processuais entre outros, que impactam negativamente o dia a dia da universidade. Com uma plataforma prática e direta, a comunidade universitária pode fazer postagens sobre problemas que enfrentam no cotidiano, e com isto, os gestores podem analizar e tomar medidas para resolver esses problemas reportados.
 </p>
 
 <p style="text-align: justify;">&emsp;&emsp; 
@@ -40,7 +41,7 @@ O projeto se baseia numa proposta do evento, ocorrido nos dias 21 e 22 de novemb
 </p>
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Ao longo de um semestre letivo, é comum se visualizar certos problemas estruturais, acadêmicos, processuais e outros, demoram tempo demais para serem resolvidos por parte da administração. A falta de um meio de comunicação não burocrático e prático para a notificação desses tais problemas ocasiona que eles podem ir se perpetuando, gerando até mesmo outros problemas e prejuízos dos mais diversos.
+Ao longo de um semestre letivo, é comum se visualizar certos problemas que demoram tempo demais para serem resolvidos por parte da administração. A falta de um meio de comunicação não burocrático e prático para a notificação desses tais problemas ocasiona que eles podem ir se perpetuando, gerando até mesmo outros problemas e prejuízos dos mais diversos.
 </p>
 
 <p style="text-align: justify;">&emsp;&emsp; 
@@ -76,7 +77,7 @@ Referências: exposição das referências utilizadas.
 ### 2.1 Oportunidade de negócios
 
 <p style="text-align: justify;">&emsp;&emsp;
-Reportar de maneira rápida problemas enfrentados pela comunidade da UnB.
+Analisando o difícil acesso a canais de comunicação quando e diz respeito a delação de problemas no campus e na universidade, agregado a demora da administração de reconhecer esses mesmos problemas e resolvemos, foi identificado a oportunidade de desenvolver uma aplicação PWA para fornecer um sistema rápido e prático para a comunidade universitária postar seus problemas do dia a dia através computadores e smartphones.
 </p>
 
 
@@ -93,7 +94,7 @@ Reportar de maneira rápida problemas enfrentados pela comunidade da UnB.
 ### 2.3 Descrição da posição do produto
 
 <p style="text-align: justify;">&emsp;&emsp; 
-O Vamos Cuidar visa facilitar a solução de problemas enfrentados pela comunidade da UnB através de um aplicativo/site em que será possível realizar postagens sobre os mesmos. Dessa forma, os gestores visualizarão os problemas e buscarão uma solução adequada. 
+A aplicação uma fez desenvolvida, poderá se posicionar no mercado como uma plataforma web que pode ser facilmente usada nos navegadores mobile com uma experiência semelhante a de um app nativo. Essa característica proporciona o usuário usar a aplicação em multiplas plataformas com a mesma experiencia de uso, facilitando a praticidade e rapidez de postar um problema e beneciando a universidade na rapida detecção e resolução do mesmo. 
 </p>
 
 
