@@ -102,41 +102,22 @@ Ao longo de cada etapa, serão feitos inúmeros testes, no intuito de proporcion
 
 ## 4. Visão dos Casos de Uso
 
-### 4.1 Diagrama de Casos de Uso<
-
-
+### 4.1 Diagrama de Casos de Uso
+![Casos de uso](./Imagens/Documento_de_Arquitetura/Casos_de_Uso.png)
 ### 4.2 Atores de Casos de Uso
 
 |**Ator**|**Descrição**
 |:-|:-|
-|**Usuário**|O usuário poderá, postar, de forma simples e acompanhada de texto, uma imagem que capture o problema relatado. Poderá também se engajar nas postagens para determinar o grau de relevância e acompanhar notícias da universidade.
+|**Usuário**|O usuário poderá postar, de forma simples e acompanhada de texto, uma imagem que capture o problema relatado. Poderá também se engajar nas postagens para determinar o grau de relevância, acompanhar os status das publicações e ver notícias da universidade.
 
-### 4.3 Prioridade dos casos de uso
+### 4.3 Descrições de Casos de Uso
 
-Esse diagrama expõe os seguintes requisitos: 
-
-**Identificador** | **Requisito**
--- | --
-**RF01** | Permitir que usuários da comunidade acadêmica realize postagens sobre problemas da universidade
-**RF02** | Permitir o usuário editar e excluir suas postagens
-**RF03** | Permitir que o usuário crie, edite e apaga sua conta
-**RF04** | Permitir o usuário fazer e desfazer login de sua conta
-**RF05**| Exibir a listagem de todas as postagens feitas
-**RF06** | Permitir a visualização de todas informações de uma postagem
-**RF07** | Permitir que o usuário visualize suas postagens feitas
-**RF08** | Permitir a visualização do estágio de resolução da postagem
-**RF09** | Permitir que a listagem das postagens seja feita por filtros
-**RF10** | Permitir os usuários engajarem com uma postagem, através de comentários e apoio(positivo ou negativo)
-**RF11** | Permitir o usuário compartilhar uma postagem
-**RF12** | Permitir o reporte de uma postagem
-**RF13** | Exibir ao usuário uma notificação caso uma postagem sua tenha sido resolvida com sucesso
-**RF14** | Exibir uma página direcionada às notificações e atualizações da universidade sobre as postagens
-**RF15** | Exibir uma aba de ajuda de uso da aplicação
-**RNF16** | A aplicação deve fazer a verificação de conta com dados da universidade
-**RNF17** | O sistema deve se tratar de uma PWA (Progressive web app)
-**RNF18** | A aplicação deve ter uma experiencia de uso simples e familiar, de linguagem fácil e intuitiva
-**RNF19** | Assegurar a segurança de dados dos usuários
-**RNF20**| Pode ter suporte para gamificação
+|Épico | Caso de uso | Descrição |
+|:-|:-|:-|
+|E1|Autenticar usuário|Fazer login|
+|E2|Fazer postagem|Criar postagem registrando algum problema.|
+|E3|Engajar postagem|Interagir em uma postagem para definir a relevância da mesma.|
+|E3|Ver notícias|Acompanhar notícias da universidade|
 
 ## 5. Tamanho e Desempenho
 
