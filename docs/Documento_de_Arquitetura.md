@@ -1,53 +1,27 @@
-# Histórico de Versões
+# Documento de Arquitetura de Software
+## Histórico de Versões
 
 Data|Versão|Descrição|Autor
 -|-|-|-
 28/08|1.0.0|Abertura do documento|Daniel Porto
 31/08|1.0.1|Adição dos itens 4.1 e 4.3|Daniel Porto
 15/09|1.0.2|Inserção dos requisitos nos casos de uso | Enzo Gabriel
-15/09 | 1.0.3 | Adição das representações de arquitetura de back-end e front-end e das restrições
+15/09 | 1.0.3 | Adição das representações de arquitetura de back-end e front-end e das restrições | Enzo Gabriel
 
-# Sumário
+## 1. Introdução
 
- 1. [Introdução](#1)
-  - 1.1 [Finalidade](#1_1)
-  - 1.2 [Escopo](#1_2)
-  - 1.3 [Definições, Acrônimos e Abreviações](#1_3)
-  - 1.4 [Referências](#1_4)
-  - 1.5 [Visão Geral](#1_5)
- 2. [Representação da Arquitetura](#2)
-  - 2.1 [Front-end](#2_1)
-  - 2.2 [Back-end](#2_2)
-  - 2.3 [Diagrama de Relações](#2_3)
-  - 2.4 [Diagrama de Pacotes do Front](#2_4)
-  - 2.5 [Diagrama de Pacotes da Back](#2_5)
- 3. [Metas e Restrições de Arquitetura](#3)
-  - 3.1 [Metas](#3_1)
-  - 3.2 [Restrições](#3_2)
- 4. [Visão dos Casos de Uso](#4)
-  - 4.1 [Diagrama de Casos de Uso](#4_1)
-  - 4.2 [Atores de Casos de Uso](#4_2)
-  - 4.3 [Descrições de Casos de Uso](#4_3)
- 5. [Visão Lógica](#5)
- 6. [Tamanho e Desempenho](#6)
- 7. [Qualidade](#7)
-
-# Documento de Arquitetura de Software
-
-## 1. <strong name="1">Introdução</strong>
-
-### 1.1 <strong name="1_1">Finalidade</strong>
+### 1.1 Finalidade
 
  <p align = "justify"> &emsp;&emsp; Este documento tem como finalidade fornecer uma visão geral da arquitetura da platoforma Vamos Cuidar UnB, utilizando-se de diversas visões arquiteturais - tais como a visão lógica e de caso de uso - a fim de facilitar o entendimento dos processos e funcionamento de todo o sistema. Tem também como objetivo transmitir as decisões arquiteturais significativas tomadas em relação ao mesmo.</p>
 
-### 1.2 <strong name="1_2">Escopo</strong>
+### 1.2 Escopo
 
 <p align="justify"> &emsp;&emsp; Atráves desse documento, é possível obter um melhor entendimento da arquitetura do
  projeto, permitindo ao leitor a compreensão do funcionamento do sistem e as abordagens utilizadas para o
  seu desenvolvimento.
 </p>
 
-### 1.3 <strong name="1_3">Definições, Acrônimos e Abreviações</strong>
+### 1.3 Definições, Acrônimos e Abreviações
 
 Abreviação|Significado
 |:-:|:-|
@@ -55,7 +29,7 @@ Abreviação|Significado
 |**UNB**| Universidade de Brasília|
 
 
-### 1.4 <strong name="1_4">Referências</strong>
+### 1.4 Referências
 
 <p align="left">Como documentar a arquitetura de software. Disponível em: </br>http://www.linhadecodigo.com.br/artigo/3343/como-documentar-a-arquitetura-de-software.aspx.</p>
 
@@ -65,7 +39,7 @@ Abreviação|Significado
 
 <p align="left">Documento de arquitetura C-Registration System. Disponível em: </br>http://mds.cultura.gov.br/extend.formal_resources/guidances/examples/resources/sadoc_v1.htm.</p>
 
-### 1.5 <strong name="1_5">Visão Geral</strong>
+### 1.5 Visão Geral
 
 <p align="justify"> &emsp;&emsp; Este documento é dividido em 7 tópicos, descrevendo os detalhes das características do software proposto.
 Sendo dividido em:</p>
@@ -78,9 +52,9 @@ Sendo dividido em:</p>
 * Tamanho e Desempenho: descreve as principais características de dimensionamento do software que têm um impacto na arquitetura, bem como as restrições do desempenho desejado;
 * Qualidade: descreve como a arquitetura do software contribui para todos os recursos (exceto a funcionalidade) do sistema.
 
-## 2. <strong name="2">Representação da Arquitetura</strong>
+## 2. Representação da Arquitetura
 
-### 2.1 <strong name="2_1">Back-end</strong>
+### 2.1 Back-end
 
 O framework escolhido para o back-end é o Node.Js, que pode ser definido como um ambiente de execução Javascipt server-side. Através dele, é possível desenvolver pequenas e grandes aplicações. É de código aberto e possui uma ampla comunidade.
 
@@ -91,20 +65,20 @@ Outros pontos fortes do Node são:
 - Oferece muitos pacotes a partir do seu gerenciador de pacotes;
 - Comunidade muito ativa.
 
-### 2.2 <strong name="2_2">Front-end</strong>
+### 2.2 Front-end
 
 Já no front-end, o framework adotado foi o Vue.js, que é um framework Javascript ***open source***. É utilizado para desenvolver vários tipos de interfaces, que posuem necessidades de maior interação e experiência mais valorosa para o usuário. Lembrando que é  de fácil aprendizagem, o que facilita sua aplicação para uma equipe.
 
 Aplicações que usam Vue são constituídas de componentes com a sintaxe HTML, CSS e Javascript e um único arquivo .vue, o que facilita o isolamento e a manutenção de funcionalidades. Cada componente constituíndo um escopo isolado dos demais, tanto em lógica quantos nos estilos.
 
 
-## 3. <strong name="3">Metas e Restrições de Arquitetura</strong>
+## 3. Metas e Restrições de Arquitetura
 
-### 3.1 <strong name="3_1">Metas</strong>
+### 3.1 Metas
 
 <p align = "justify">&emsp;&emsp; O sistema da plataforma vamos cuidar deve ter acesso a uma câmera e aos arquivos de mídia para up-load de imagens que mostrarão os problemas diversos da universidade às autoridades competentes em resolve-los. O objetivo é melhorar a comunicação dos estudantes com a administração.</p>
 
-### 3.2 <strong name="3_2">Restrições</strong>
+### 3.2 Restrições
 
 #### 3.2.1 **Suportabilidade**
 
@@ -126,18 +100,18 @@ Também será utilizado o Docker, para facilitar a portabilidade do projeto.
 
 Ao longo de cada etapa, serão feitos inúmeros testes, no intuito de proporcionar a melhor experiência para o usuário.
 
-## 4. <strong name="4">Visão dos Casos de Uso</strong>
+## 4. Visão dos Casos de Uso
 
-### 4.1 <strong name="4_1">Diagrama de Casos de Uso</strong>
+### 4.1 Diagrama de Casos de Uso<
 
 
-### 4.2 <strong name="4_2">Atores de Casos de Uso</strong>
+### 4.2 Atores de Casos de Uso
 
 |**Ator**|**Descrição**
 |:-|:-|
 |**Usuário**|O usuário poderá, postar, de forma simples e acompanhada de texto, uma imagem que capture o problema relatado. Poderá também se engajar nas postagens para determinar o grau de relevância e acompanhar notícias da universidade.
 
-### 4.3 <strong name="4_3">Prioridade dos casos de uso</strong>
+### 4.3 Prioridade dos casos de uso
 
 Esse diagrama expõe os seguintes requisitos: 
 
@@ -164,13 +138,6 @@ Esse diagrama expõe os seguintes requisitos:
 **RNF19** | Assegurar a segurança de dados dos usuários
 **RNF20**| Pode ter suporte para gamificação
 
+## 5. Tamanho e Desempenho
 
-
-## 5. <strong name="5">Visão Lógica</strong>
-
-
-## 6. <strong name="6">Tamanho e Desempenho</strong>
-
-
-## 7. <strong name="7">Qualidade</strong>
 
