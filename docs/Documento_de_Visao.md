@@ -16,7 +16,7 @@
 | 14/09/2020 | 1.1 | Revisão do Tópico 1                           | Bruno Félix |
 | 16/09/2020 | 1.2 | Revisão do Tópico 1 e 2                       | Bruno Félix |
 | 16/09/2020 | 1.3 | Revisão do Tópico 3                           | Bruno Félix |
-
+| 17/09/2020 | 1.4 | Inserção dos itens 4, 5, 6 e 7                | Bruno Félix |
 
 ## 1. Introdução
 
@@ -34,7 +34,7 @@ Passando por questionamentos como escopo, problemática, função do produto e r
 ### 1.2 Escopo
 
 <p style="text-align: justify;">&emsp;&emsp; 
-O Vamos Cuidar é uma PWA responsiva que tem como objetivo auxiliar a UnB na maior agilidade em resolver problemas, sejam eles estruturais, acadêmicos, processuais entre outros, que impactam negativamente o dia a dia da universidade. Com uma plataforma prática e direta, a comunidade universitária pode fazer postagens sobre problemas que enfrentam no cotidiano, e com isto, os gestores podem analizar e tomar medidas para resolver esses problemas reportados.
+O Vamos Cuidar é uma PWA responsiva que tem como objetivo auxiliar a UnB na maior agilidade em resolver problemas, sejam eles estruturais, acadêmicos, processuais entre outros, que impactam negativamente o dia a dia da universidade. Com uma plataforma prática e direta, a comunidade universitária pode fazer postagens sobre problemas que enfrentam no cotidiano, e com isto, os gestores podem analisar e tomar medidas para resolver esses problemas reportados.
 </p>
 
 <p style="text-align: justify;">&emsp;&emsp; 
@@ -89,7 +89,7 @@ Analisando o difícil acesso a canais de comunicação quando e diz respeito a d
 | **O problema é**         | O difícil relato de problemas e defeitos encontrados na universidades |
 | **Que Afeta**            | A comunidade acadêmica |
 | **Cujo impacto é**       | A demora ou ineficácia da resolução desses problemas pro parte da universidade |
-| **Uma boa solução seria**| Uma aplicação aonde a comunidade pudesse relatar os problemas encontrados diretamente para universidade. Otimizando o dialogo e a resolução | 
+| **Uma boa solução seria**| Uma aplicação onde a comunidade pudesse relatar os problemas encontrados diretamente para universidade. Otimizando o diálogo e a resolução | 
 
 
 ### 2.3 Descrição da posição do produto
@@ -173,56 +173,101 @@ Atualmente é possível estar por dentro das notícias da universidade através 
 ### 4.1 Perspectiva do Produto
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Coloca o produto em perspectiva com respeito a outros produtos relacionados e ao ambiente do usuário. Se o produto for independente e totalmente autocontido, indique-o aqui. Se o produto for um componente de um sistema maior, relacione como esses sistemas interagem e identificam as interfaces relevantes entre os sistemas. Uma maneira de exibir os principais componentes do maior sistema, interconexões e interfaces externas é usar um processo de negócios ou diagrama de casos de uso.
+O produto desenvolvido neste documento faz parte de sistema maior, onde ele fica responsável pela aplicação voltada usuário, na postagem e visualização de problemas que se encontra na universidade. O sistema é dividido em 2 aplicações, uma aplicação voltada aos administradores e gestores, e a outra voltada aos os usuários da comunidade universitária.
+</p>
+
+<p style="text-align: justify;">&emsp;&emsp; 
+Essas duas aplicações interagem através de APIs, onde a focada nos usuários encaminha informações como as postagens geradas, que serão resolvidas como se achar necessário. Já a focada nos administradores e gestores encaminha informações como o status de solução da postagem e as notícias e relatórios, que serão disponibilizadas como se achar necessário.
 </p>
 
 
-### 4.2 Resumo das capacidades
- 
-| Benefício para o Usuário | Recursos de suporte |
-|:------------------------:|:-------------------:|
-
-
-### 4.3 Funções do Produto
- 
- 
-### 4.4 Suposições e dependências
+### 4.2 Funções do Produto
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Lista cada um dos fatores que afeta os recursos que o documento de visão inclui. Lista as suposições que, se modificadas, alterarão o documento de visão. Por exemplo, uma suposição pode indicar que um sistema operacional específico fique disponível para o hardware designado para o produto de software. Se o sistema operacional não estiver disponível, será necessário alterar o documento de visão.
+A PWA Vamos Cuidar visa otimizar a comunicação de problemas e da agilização de suas soluções na Universidade de Brasília. A comunidade relata um problema que atrapalha o seu dia a dia e, assim, a administração e as pessoas responsáveis poderão tomar as medidas necessárias para resolver esses relatos.
 </p>
+ 
+
+### 4.3 Suposições e dependências
+
+- O usuário deverá ter acesso a uma plataforma, como desktop ou mobile, com algum navegador web;
+- O usuário deverá ter acesso a internet;
+- A aplicação deverá ser utilizada por membros da comunidade universitária;
+- A aplicação deverá facilitar a comunicação entre os usuários e os gestores, para uma efetiva e rápida solução do problema postado;
 
 
-### 4.5 Custo e precificação
+### 4.4 Licenciamento e instalação
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Registra os impactos e restrições relevantes de custo e precificação. Por exemplo, os custos de distribuição (o número de CDs e CD principal) ou outras restrições de custo de mercadorias vendidas (manuais e embalagem) podem ser material para o sucesso dos projetos, ou irrelevantes, dependendo da natureza do aplicativo.
-</p>
-
-
-### 4.6 Licenciamento e instalação
-
-<p style="text-align: justify;">&emsp;&emsp; 
-Os problemas de licenciamento e instalação também podem impactar diretamente o esforço de desenvolvimento. Por exemplo, a necessidade de suportar a serialização, a segurança da senha ou o licenciamento da rede criarão requisitos adicionais do sistema que devem ser considerados no esforço de desenvolvimento. Os requisitos de instalação também podem afetar a codificação ou criar a necessidade de separar o software de instalação.
+A PWA Vamos Cuidar é desenvolvida sob a licença GPL 3.0.
 </p>
 
 
 ## 5. Requisitos do Produto
 
+### 5.1 Comunidade acadêmica realize postagens
 <p style="text-align: justify;">&emsp;&emsp; 
-Lista e descreve brevemente os recursos do produto. Os recursos são capacidades de alto nível do sistema que são necessários para entregar benefícios aos usuários. Cada recurso é um serviço solicitado que, em geral, requer uma série de entradas para alcançar o resultado desejado. Por exemplo, um recurso de um sistema de rastreamento de problemas pode ser a capacidade de fornecer relatórios de tendências. À medida que o modelo de casos de uso toma forma, atualize a descrição para fazer referência aos casos de uso.
+Permitir que usuários da comunidade acadêmica realize postagens sobre problemas da universidade;
+</p>
+
+
+### 5.2 Estágio de solução da postagem
+
+<p style="text-align: justify;">&emsp;&emsp; 
+Permitir a visualização do estágio de solução da postagem;
+</p>
+
+
+### 5.3 Usuários engajarem e compartilhem uma postagem
+
+<p style="text-align: justify;">&emsp;&emsp; 
+Permitir os usuários engajarem e compartilhem uma postagem, através de comentários e apoio(positivo ou negativo);
+</p>
+
+
+### 5.4 Espaço de notificações e relatórios
+
+<p style="text-align: justify;">&emsp;&emsp;
+Exibir uma página direcionada às notificações, relatórios e atualizações da universidade sobre as postagens.
 </p>
 
 
 ## 6. Restrições
 
-<p style="text-align: justify;">&emsp;&emsp; 
-Observe todas as restrições de design, restrições externas, como requisitos operacionais ou regulamentares) ou outras dependências.
-</p>
+- Ter um computador ou aparelho celular;
+- Ser membro da comunidade universitária;
+- Conexão com a internet.
+ 
+
+## 7. Outros Requisitos do Produto
+
+Identificador | Requisito
+-- | --
+RF01 | Permitir que usuários da comunidade acadêmica realize postagens sobre problemas da universidade
+RF02 | Permitir o usuário editar e excluir suas postagens
+RF03 | Permitir que o usuário crie, edite e apaga sua conta
+RF04 | Permitir o usuário fazer e desfazer login de sua conta
+RF05 | Exibir a listagem de todas as postagens feitas
+RF06 | Permitir a visualização de todas informações de uma postagem
+RF07 | Permitir que o usuário visualize suas postagens feitas
+RF08 | Permitir a visualização do estágio de resolução da postagem
+RF09 | Permitir que a listagem das postagens seja feita por filtros
+RF10 | Permitir os usuários engajarem com uma postagem, através de comentários e apoio(positivo ou negativo)
+RF11 | Permitir o usuário compartilhar uma postagem
+RF12 | Permitir a postagem de uma postagem
+RF13 | Exibir ao usuário uma notificação caso uma postagem sua tenha sido resolvida com sucesso
+RF14 | Exibir uma página direcionada às notificações e atualizações da universidade sobre as postagens
+RF15 | Exibir uma aba de ajuda de uso da aplicação
+RNF16 | A aplicação deve fazer a verificação de conta com dados da universidade
+RNF17 | O sistema deve se tratar de uma PWA (Progressive web app)
+RNF18 | A aplicação deve ter uma experiência de uso simples e familiar, de linguagem fácil e intuitiva
+RNF19 | Assegurar a segurança de dados dos usuários
+RNF20 | Pode ter suporte para gamificação
 
 
 ## 8. Referências
 
--
-- 
--
+- IBM Knowledge Center - Documento de Visão: A estrutura de tópicos do documento de visão. Disponível em: https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ\_4.0.6/com.ibm.rational.rrm.help.doc/topics/r\_vision\_doc.html. Acesso em 31 de agosto de 2020;
+- Disponível em: https://github.com/fga-eps-mds/2019.2-Acacia/blob/develop/docs/vision_document.md. Acesso em 20 de agosto de 2020;
+
+- Disponível em: https://github.com/fga-eps-mds/2019.1-ADA/blob/gh-pages/docs/product/vision_document.md. Acesso em 20 de agosto de 2020.
