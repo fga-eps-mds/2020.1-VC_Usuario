@@ -15,6 +15,7 @@
 | 12/09/2020 | 1.0 | Formatação do documento: Alinhamento e Recuo  | Bruno Félix |
 | 14/09/2020 | 1.1 | Revisão do Tópico 1                           | Bruno Félix |
 | 16/09/2020 | 1.2 | Revisão do Tópico 1 e 2                       | Bruno Félix |
+| 16/09/2020 | 1.3 | Revisão do Tópico 3                           | Bruno Félix |
 
 
 ## 1. Introdução
@@ -94,7 +95,7 @@ Analisando o difícil acesso a canais de comunicação quando e diz respeito a d
 ### 2.3 Descrição da posição do produto
 
 <p style="text-align: justify;">&emsp;&emsp; 
-A aplicação uma fez desenvolvida, poderá se posicionar no mercado como uma plataforma web que pode ser facilmente usada nos navegadores mobile com uma experiência semelhante a de um app nativo. Essa característica proporciona o usuário usar a aplicação em multiplas plataformas com a mesma experiencia de uso, facilitando a praticidade e rapidez de postar um problema e beneciando a universidade na rapida detecção e resolução do mesmo. 
+ A aplicação uma vez desenvolvida, poderá se posicionar no mercado como uma plataforma web que pode ser facilmente usada nos navegadores mobile com uma experiência semelhante a de um app nativo. Essa característica proporciona o usuário usar a aplicação em múltiplas plataformas com a mesma experiência de uso, facilitando a praticidade e rapidez de postar um problema e beneficiando a universidade na rápida detecção e resolução do mesmo.
 </p>
 
 
@@ -104,27 +105,27 @@ A aplicação uma fez desenvolvida, poderá se posicionar no mercado como uma pl
 
 | **Nome** | **Descrição** | **Responsabilidade** |
 | --- | --- | --- |
-|Equipe de Desenvolvimento de _Software_| Estudantes da disciplina Métodos de Desenvolvimento de _Software_, na Universidade de Brasília.| Desenvolvimento e implementação do _Software_ descrito no documento.|
-|Equipe de orientação| Porfessora e monitores da disciplina MDS.| Auxiliar e guiar a equipe durante o desenvolvimento do _Software_.|
+| Equipe de Desenvolvimento de _Software_ | Estudantes da disciplina Métodos de Desenvolvimento de _Software_, na Universidade de Brasília.| Documentar, desenvolver e implementar a aplicação elaborada |
+| Equipe de orientação | Professora e monitores da disciplina MDS. | Auxiliar e guiar a equipe durante o desenvolvimento da aplicação. |    
 
 
 ### 3.2 Resumo dos Usuários
 
 | **Nome** | **Descrição** |
 | --- | --- |
-|Comunidade da Unb| Alunos e servidores da UnB, que transitam pela universidade.|
+| Comunidade Universitária | Estudantes, professores, servidores e outros membros da Universidade de Brasília. |
 
 
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
 
 | **Usuário** | **Necessidade** | **Solução Atual** | **Solução Proposta** |
 | --- | --- | --- | --- |
-|Estudantes e servidores da UnB| Melhoria ou reforma de alguma problema.| Esperar alguém com maior autoridade na faculdade resolver.| Uma plataforma onde a comunidade possa reportar os problemas que encontrarem, sujeita a pequenos bônus pelos relatos.|
+| Estudantes e servidores da UnB| Melhoria ou reforma de alguma problema.| Esperar alguém com maior autoridade na faculdade resolver.| Uma plataforma onde a comunidade possa reportar os problemas que encontrarem, sujeita a pequenos bônus pelos relatos. |
 
 ### 3.4 Ambiente dos Usuários
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Os usuários poderão realizar a interação com o _Software_ Vamos Cuidar através do site ou aplicativo, sempre que encontrarem algum problema na universidade que possa ser resolvido.
+Os usuários poderão realizar a aplicação Vamos Cuidar, através da PWA em múltiplas plataformas, sempre que encontrarem algum problema na universidade que possa ser resolvido pela administração.
 </p>
 
 
@@ -132,38 +133,38 @@ Os usuários poderão realizar a interação com o _Software_ Vamos Cuidar atrav
 
 #### 3.5.1 Equipe de Desenvolvimento de <i>Software</i>:
 
-| **Representantes** | Bruno Alves Felix, Daniel Barcelos Moreira, 	Daniel Porto de Souza, Denys Rogeres Leles dos Santos, Emily Dias Sousa e Enzo Gabriel Guedes Queiroz Saraiva.
+| **Representantes** | **Bruno Alves Félix, Daniel Barcelos Moreira, Daniel Porto de Souza, Denys Rogeres Leles dos Santos, Emily Dias Sousa e Enzo Gabriel Guedes Queiroz Saraiva** |
 |:-|:-|
-| **Tipo** | Estudantes de Métodos de Desenvolvimento de Software da Universidade de Brasília - UnB/Gama - FGA, curso Engenharia de Software.
-|**Responsabilidade** | Desenvolvimento, testes, Documentação e implementação do software.
-|**Critério de sucesso** | Finalizar o Software com todas as funcionalidades do escopo no prazo estipulado do ciclo da disciplina.
+| **Tipo** | Estudantes de Métodos de Desenvolvimento de Software da Universidade de Brasília - UnB/Gama - FGA, curso Engenharia de Software. |
+| **Responsabilidade** | Desenvolvimento, testes, Documentação e implementação do software. |
+| **Critério de sucesso** | Finalizar o Software com todas as funcionalidades do escopo no prazo estipulado do ciclo da disciplina. |
 | **Envolvimento** | Alto
-| **Problemas/Comentários** | Inexperiência da equipe com desenvolvimento colaborativo.
+| **Problemas/Comentários** | Inexperiência da equipe com desenvolvimento colaborativo. |
 
 
 #### 3.5.2 Orientadores:
 
-| **Representantes** | Carla Silva Rocha Aguiar
+| **Representantes** | **Carla Silva Rocha Aguiar** |
 |:-|:-|
-| **Tipo** | Orientadora e avaliadora que dará auxílio no desenvolvimento da plataforma Vamos Cuidar.
-| **Responsabilidade** | Avaliar a equipe de MDS e ajudá-los em eventuais dúvidas.
-| **Envolvimento** |  	Médio.
+| **Tipo** | Orientadora e avaliadora que dará auxílio no desenvolvimento da plataforma Vamos Cuidar. |
+| **Responsabilidade** | Avaliar a equipe de MDS e ajudá-los em eventuais dúvidas. |
+| **Envolvimento** | Médio. |
 
 
 ### 3.6 Perfis dos Usuários
 
-| **Representantes** | Estudantes e Servidores
+| **Representantes** | **Estudantes e Servidores** |
 |:-|:-|
-| **Tipo** | Estudantes e Servidores da UnB 
-| **Responsabilidade** | Usar a plataforma para tentar solucionar problemas da universidade.
-| **Critério de sucesso** | Ter o problema postado solucionado. 
-|**Envolvimento** | Alto
+| **Tipo** | Estudantes, Professores e Servidores da UnB |
+| **Responsabilidade** | Usar a plataforma para tentar solucionar problemas da universidade. |
+| **Critério de sucesso** | Ter o problema postado solucionado. |
+| **Envolvimento** | Alto |
 
 
 ### 3.7 Alternativas e Concorrências
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Atualmente é possível estar por dentro das notícias da universidade através do portal de notícias encontrado no próprio site da Unb. No âmbito de notificação de problemas à administração, a universidade dispõe de uma ouvidoria, que pode ser contactada por e-mail e telefone. Tanto portal de notícias quanto a ouvidoria são pouco difundidos na universidade.   
+Atualmente é possível estar por dentro das notícias da universidade através do portal de notícias encontrado no próprio site da Unb. No âmbito de notificação de problemas à administração, a universidade dispõe de uma ouvidoria, que pode ser contactada por e-mail e telefone. Tanto o portal de notícias quanto a ouvidoria são pouco difundidos e tem baixos níveis de efetividade na universidade. Mesmo existentes, essas ferramentas não conseguem suprir as necessidades do cotidiano da comunidade universitária de relatar problemas e os mesmos serem resolvidos por seus responsáveis de forma competente e ágil.
 </p>
 
 
