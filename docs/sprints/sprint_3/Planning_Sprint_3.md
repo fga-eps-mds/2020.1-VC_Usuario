@@ -3,9 +3,9 @@
 ## Planejamento 
 
 ## 1.Visão Geral
-**Número da Sprint:** 2<br>
-**Data de Início:** 03/09/2020<br>
-**Data de Término:** 09/09/2020<br>
+**Número da Sprint:** 3<br>
+**Data de Início:** 10/09/2020<br>
+**Data de Término:** 16/09/2020<br>
 **Duração:** 7 dias<br>
 
 ## 2.Papéis
@@ -23,53 +23,72 @@
 
 
 ## 3.Objetivos
-A sprint 2 tem como objetivo:
-- Desenvolvimento da documentação
-- Debate sobre tecnologias, escopo e documentos 
-- Estudo, levantamento e debate sobre os requisitos dos produtos
-- Estudo e levantamento de tecnologias 
-- Reunião com clientes, grupo aliado e membros representantes da UnB
+A sprint 3 tem como objetivo:
+- Criação de página para melhor visialização da documentação
+- Revisão, refatoração e finalização de alguns documentos 
+- Reunião com o outro grupo responsável por desenvolver o Dashboard 
+- Desenvolver protótipo de baixa fidelidade
+- Dafinição das Stack de tecnologias
+- Desenvolvimento do Product Backlog e do README
 
 ## 4.Sprint Backlog
 Issues adicionadas: 
-1. **Issue:** #38 Estudo, levantamento e debate sobre os requisitos do produto<br>
-**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo<br>
+1. **Issue:** #55 Criar página para documentação - GitHub Page <br>
+**Responsáveis:** Daniel Porto<br>
 **Pontuação:** 2
 
-2. **Issue:** #39 Estudo e levantamento de tecnologias/Front-end<br>
+2. **Issue:** #56 Estudo e Desenvolvimento do Planejamento de Riscos<br>
+**Responsáveis:** Emily<br>
+**Pontuação:** 2
+
+3. **Issue:** #57 Documentação do planejamento e resultados das Sprints<br>
+**Responsáveis:** Denys<br>
+**Pontuação:** 3
+
+4. **Issue:** #58 Desenvolvimento do Product Backlog<br>
+**Responsáveis:** Bruno<br>
+**Pontuação:** 2
+
+5. **Issue:** #59 Finalizar Desenvolvimento  do Documento de Visão<br>
+**Responsáveis:** Bruno<br>
+**Pontuação:** 2
+
+6. **Issue:** #60 Desenvolvimento do README<br>
+**Responsáveis:** Bruno<br>
+**Pontuação:** 1
+
+7. **Issue:** #62 Revisar Contributing<br>
+**Responsáveis:** Enzo<br>
+**Pontuação:** 3
+
+8. **Issue:** #64 Refatorar o documento de arquitetura<br>
+**Responsáveis:** Enzo e Daniel Porto<br>
+**Pontuação:** 5
+
+9. **Issue:** #66 Desenvolver Identidade Visual<br>
+**Responsáveis:** Denys e Daniel Porto<br>
+**Pontuação:** 3
+
+10. **Issue:** #67 Desenvolver protótipo de baixa fidelidade<br>
 **Responsáveis:** Daniel Porto e Denys<br>
 **Pontuação:** 2
 
-3. **Issue:** #40 Estudo da tecnologia/Docker<br>
-**Responsáveis:** Daniel Barcelos e Emily<br>
-**Pontuação:** 2
-
-4. **Issue:** #41 Desenvolvimento do documento de visão - Tópico 1, 2 e 3<br>
-**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo<br>
-**Pontuação:** 2
-
-5. **Issue:** #42 Estudo e levantamento de tecnologias/Back-end<br>
-**Responsáveis:** Bruno e Enzo<br>
+11. **Issue:** #70 Reunião com grupo Dashboard<br>
+**Responsáveis:** Bruno, Denys e Daniel Porto<br>
 **Pontuação:** 3
 
-6. **Issue:** #43 Debate sobre tecnologias levantadas, Product Backlog pensado e Documento de Visão desenvolvido<br>
-**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo<br>
-**Pontuação:** 2
-
-7. **Issue:** #44 Estudo e levantamento de sistemas/Banco de dados<br>
-**Responsáveis:** Bruno e Daniel Porto<br>
-**Pontuação:** 3
-
-8. **Issue:** #45 Estudo e inserção do template de Roadmap<br>
+12. **Issue:** #72 Criar ambiente de desenvolvimento<br>
 **Responsáveis:** Daniel Barcelos e Enzo<br>
-**Pontuação:** 2
+**Pontuação:** 5
 
-9. **Issue:** #46 Pensamento e levantamento do Product Backlog<br>
-**Responsáveis:** Bruno<br>
+13. **Issue:** #80 Definição da stack de tecnologias<br>
+**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo<br>
 **Pontuação:** 3
 
-10. **Issue:** #53 Reunião com clientes, grupo aliado e membros representantes da universidade<br>
-**Responsáveis:** Bruno e Denys<br>
-**Pontuação:** 3
+
+
+
+
+
 
 
