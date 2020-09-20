@@ -3,7 +3,7 @@
 ## Planejamento 
 
 ## 1.Visão Geral
-**Número da Sprint:** 1<br>
+**Número da Sprint:** 2<br>
 **Data de Início:** 03/09/2020<br>
 **Data de Término:** 09/09/2020<br>
 **Duração:** 7 dias<br>
@@ -23,7 +23,7 @@
 
 
 ## 3.Objetivos
-A sprint 1 tem como objetivo:
+A sprint 2 tem como objetivo:
 - Desenvolvimento da documentação
 - Debate sobre tecnologias, escopo e documentos 
 - Estudo, levantamento e debate sobre os requisitos dos produtos
