@@ -62,9 +62,6 @@ Sendo dividido em:</p>
 * Representação da arquitetura: Descreve qual é a arquitetura de software do sistema atual e como ela é representada;
 * Metas e restrições da arquitetura: Descreve os requisitos e objetivos do software que têm algum impacto sobre a arquitetura;
 * Visão de caso de uso: Descreve as partes significativas do ponto de vista da arquitetura do modelo de casos de uso;
-* Visão Lógica: Descreve as partes significativas do ponto de vista da arquitetura do modelo de design;
-* Tamanho e Desempenho: descreve as principais características de dimensionamento do software que têm um impacto na arquitetura, bem como as restrições do desempenho desejado;
-* Qualidade: descreve como a arquitetura do software contribui para todos os recursos (exceto a funcionalidade) do sistema.
 
 ## 2. Representação da Arquitetura
 
