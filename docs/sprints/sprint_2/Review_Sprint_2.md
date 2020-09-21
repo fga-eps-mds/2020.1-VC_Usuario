@@ -1,7 +1,7 @@
 # Análise e Retrospectiva
 
 ## 1. Visão Geral
-**Número da Sprint:** 1<br>
+**Número da Sprint:** 2<br>
 **Data de Início:** 03/09/2020<br>
 **Data de Término:** 09/09/2020<br>
 **Duração:** 7 dias<br>
