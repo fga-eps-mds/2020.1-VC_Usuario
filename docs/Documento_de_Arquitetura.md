@@ -7,6 +7,7 @@ Data|Versão|Descrição|Autor
 31/08|1.0.1|Adição dos itens 4.1 e 4.3|Daniel Porto
 15/09|1.0.2|Inserção dos requisitos nos casos de uso | Enzo Gabriel
 15/09 | 1.0.3 | Adição das representações de arquitetura de back-end e front-end e das restrições | Enzo Gabriel
+20/09 | 2.0.0 | Refatoração do documento: exclusão de tópico fora do padrão e correção de titulação, representação de arquitetura, metas e restrições e visão dos casos de uso | Daniel Porto e Enzo Gabriel
 
 ## 1. Introdução
 
@@ -27,6 +28,10 @@ Abreviação|Significado
 |:-:|:-|
 |**MDS**| Métodos de Desenvolvimento de Software|
 |**UNB**| Universidade de Brasília|
+|**PWA**| Progressive Web Application|
+|**VCU**| Vamos Cuidar - Usuário|
+|**VCG**| Vamos Cuidar - Gestão|
+|**API**| Application Programming Interface|
 
 
 ### 1.4 Referências
@@ -38,6 +43,15 @@ Abreviação|Significado
 <p align="left">Documento de arquitetura ArBC. Disponível em: </br>https://github.com/fga-eps-mds/2019.2-ArBC/blob/develop/docs/mds/Documento_de_arquitetura.md</p>
 
 <p align="left">Documento de arquitetura C-Registration System. Disponível em: </br>http://mds.cultura.gov.br/extend.formal_resources/guidances/examples/resources/sadoc_v1.htm.</p>
+
+<p align="left">Vue.js e suas vantagens.
+Disponível em: </br>https://blog.geekhunter.com.br/vue-js-so-vejo-vantagens-e-voce/#O_que_e_Vue_JS</p>
+
+<p align="left">Características do node.
+Disponível em: </br>https://king.host/wiki/artigo/o-que-e-o-node-js-e-quais-sao-as-suas-caracteristicas/</p>
+
+<p align="left">GridFS: como manipular arquivos e documentos grandes.
+Disponível em: </br>http://db4beginners.com/blog/gridfs/#:~:text=Formalmente%20falando%2C%20o%20GridFS%20%C3%A9,parte%20como%20um%20documento%20separado.</p>
 
 ### 1.5 Visão Geral
 
@@ -54,9 +68,21 @@ Sendo dividido em:</p>
 
 ## 2. Representação da Arquitetura
 
-### 2.1 Back-end
+<p align = "justify"> &emsp;&emsp;A plataforma Vamos Cuidar é composta por duas frentes de desenvolvimento desacoplados: VCG e VCU.
+A arquitetura utilizada no sistema desenvolvido pelo nosso grupo, VCU, é baseadada no modelo em 3 camadas, sendo composta pela camada de apresentação (front-end), pela camada de nogócios (back-end) e pela camada de dados.</p>
 
-O framework escolhido para o back-end é o Node.Js, que pode ser definido como um ambiente de execução Javascipt server-side. Através dele, é possível desenvolver pequenas e grandes aplicações. É de código aberto e possui uma ampla comunidade.
+### 2.1 Camada de apresentação (front-end)
+#### 2.1.1 **VUE.js**
+<p align = "justify"> &emsp;&emsp;O Vue.js é um framework Javascript ***open source*** que é utilizado para desenvolver vários tipos de interfaces que posuem necessidades de maior interação e experiência mais valorosa para o usuário. Lembrando que é  de fácil aprendizagem, o que facilita sua aplicação para uma equipe.</p>
+
+<p align = "justify"> &emsp;&emsp;Aplicações que usam Vue são constituídas de componentes com a sintaxe HTML, CSS e Javascript e um único arquivo .vue, o que facilita o isolamento e a manutenção de funcionalidades. Cada componente constituíndo um escopo isolado dos demais, tanto em lógica quanto nos estilos. Além disso, o Vue contem funcionalidades que facilitam no desenvolvimento de PWA, o que será de grande utilidade.</p>
+
+#### 2.1.2 **NUXT.js**
+<p align = "justify"> &emsp;&emsp;Para auxiliar no desempenho da aplicação, foi escolhido o uso do NUXT.js que é um framework VUE.js que oferece algumas facilidades para o desenvolvimento de PWA em VUE.</p>
+
+### 2.2 Camada de negócios (Back-end)
+
+<p align = "justify"> &emsp;&emsp;O framework escolhido para o back-end é o Node.Js, que pode ser definido como um ambiente de execução Javascipt server-side. Através dele, é possível desenvolver pequenas e grandes aplicações. É de código aberto e possui uma ampla comunidade.</p>
 
 Outros pontos fortes do Node são: 
 - Ele utiliza JavaScript no back-end, então é possível usar JSON para tudo; 
@@ -65,11 +91,15 @@ Outros pontos fortes do Node são:
 - Oferece muitos pacotes a partir do seu gerenciador de pacotes;
 - Comunidade muito ativa.
 
-### 2.2 Front-end
+<p align = "justify"> &emsp;&emsp;Visto, o já antes citado, desenvolvimento desacoplado da plataforma, o sistema desenvolvido por nós da frente VCU estará trocando dados com o sistema desenvolvido na frente VCG por essa camada utilizando APIs.</p>
 
-Já no front-end, o framework adotado foi o Vue.js, que é um framework Javascript ***open source***. É utilizado para desenvolver vários tipos de interfaces, que posuem necessidades de maior interação e experiência mais valorosa para o usuário. Lembrando que é  de fácil aprendizagem, o que facilita sua aplicação para uma equipe.
+### 2.3 Camada de dados
+<p align = "justify"> &emsp;&emsp;Essa camada é composta pelo banco de dados e a tecnologia escolhida para se trabalhar aqui foi o MongoDB. O MongoDB é um banco de dados to tipo NoSQL orientado a documentos do tipo Json, o que é muito interessante para a plataforma visto o uso do Javascript ao longo de todo o projeto.</p>
 
-Aplicações que usam Vue são constituídas de componentes com a sintaxe HTML, CSS e Javascript e um único arquivo .vue, o que facilita o isolamento e a manutenção de funcionalidades. Cada componente constituíndo um escopo isolado dos demais, tanto em lógica quantos nos estilos.
+#### 2.3.1 **Modelagem do banco de dados**
+![Modelagem](./Imagens/Documento_de_Arquitetura/ModelagemDB.png)
+### 2.4 Diagrama de relações
+![Modelagem](./Imagens/Documento_de_Arquitetura/Diagrama_Rel.jpg)
 
 
 ## 3. Metas e Restrições de Arquitetura
@@ -82,23 +112,19 @@ Aplicações que usam Vue são constituídas de componentes com a sintaxe HTML, 
 
 #### 3.2.1 **Suportabilidade**
 
-Por ser uma aplicação com foco no PWA, ela deve poder ser acessada sem problemas nos principais navegadores na atualidade, tanto nas suas versões desktop quanto na mobile.
+<p align = "justify"> &emsp;&emsp;Por ser uma aplicação com foco no PWA, ela deve poder ser acessada sem problemas nos principais navegadores na atualidade, tanto nas suas versões desktop quanto na mobile.</p>
 
 #### 3.2.2 **Usabilidade**
 
-É um sistema de fácil uso, onde o usuário não deve sofrer de dificuldades para a utilização da aplicação.
+<p align = "justify"> &emsp;&emsp;É um sistema de fácil uso, onde o usuário não deve sofrer de dificuldades para a utilização da aplicação.</p>
 
 #### 3.2.3 **Ferramentas de Desenvolvimento**
 
-Tanto no back-end quanto no front-end serão utilizados frameworks Javascript. 
-
-No banco de dados será utilizado o software MongoDB, que é um software escrito em C++.
-
-Também será utilizado o Docker, para facilitar a portabilidade do projeto.
+<p align = "justify"> &emsp;&emsp;Tanto no back-end quanto no front-end serão utilizados frameworks Javascript. No banco de dados será utilizado o software MongoDB, que é um software escrito em C++. Também será utilizado o Docker, para facilitar a portabilidade do projeto e o pode ser usado o insomnia para testes das APIs.</p>
 
 #### 3.2.4 **Confiabilidade**
 
-Ao longo de cada etapa, serão feitos inúmeros testes, no intuito de proporcionar a melhor experiência para o usuário.
+<p align = "justify"> &emsp;&emsp;Ao longo de cada etapa, serão feitos inúmeros testes, no intuito de proporcionar a melhor experiência para o usuário.</p>
 
 ## 4. Visão dos Casos de Uso
 
@@ -117,8 +143,4 @@ Ao longo de cada etapa, serão feitos inúmeros testes, no intuito de proporcion
 |E1|Autenticar usuário|Fazer login|
 |E2|Fazer postagem|Criar postagem registrando algum problema.|
 |E3|Engajar postagem|Interagir em uma postagem para definir a relevância da mesma.|
-|E3|Ver notícias|Acompanhar notícias da universidade|
-
-## 5. Tamanho e Desempenho
-
-
+|E3|Ver notícias|Acompanhar as notícias da plataforma|
