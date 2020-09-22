@@ -4,6 +4,7 @@
 |:----------:|:------:|:--------------------:|:-----------------:|
 | 15/09/2020 | 1.0 | Criação do documento com template inicial              | Enzo Gabriel |
 | 22/09/2020 | 2.0 | Revisão e Inserção do Gitflow do projeto               | Bruno Félix |
+| 22/09/2020 | 2.1 | Revisão de erros de português                          | Bruno Félix |
 
 
 ## Introdução
@@ -26,7 +27,7 @@ Esse documento é destinado a apresentação da política de Branches usada ness
 É a branch destinada ao desenvolvimento de uma nova funcionalidade do produto: 
 - Deve ser derivada da branch **develop**;
 - Deve ser mesclado de volta a branch **develop** após a funcionalidade ser desenvolvida;
-- Após ser a funcionalidade ser devidamente desenvolvidada, a branch deve ser excluída do projeto.
+- Após a funcionalidade ser devidamente desenvolvida, a branch deve ser excluída do projeto.
 
 #### 2.1 O nome de uma nova Feacture
 ```
@@ -35,7 +36,7 @@ feature/USXXX_issueID-Nome_da_Funcionalidade
 <sub>Em que USXXX representa o número da User Story;</sub><br>
 <sub>Em que issueID representa o número da issue;</sub><br>
 <sub>Teve ter feacture/ no nome da branch;</sub>
-<sub>Caso a branch não esteja associada a uma User Story, não é necessario a adição da mesma ao nome.</sub>
+<sub>Caso a branch não esteja associada a uma User Story, não é necessário a adição da mesma ao nome.</sub>
 
 <b>Exemplo:</b>
 ```
@@ -55,8 +56,8 @@ feature/#999-Criar_Login
 - Nenhuma funcionalidade pode ser inserida ao ambiente de produção fora de uma **release**;
 - Deve aceita apenas mesclagens de branches do tipo **bugfix**;
 - Deve indicar o fim de uma fase de desenvolvimento e o início de uma outra;
-- A cada nova **release**, a versão do produto deve modificada, acrescentando 1 ao numero central;
-- Deve ser macada por uma 'tag' que representa o Número da Versão da **release**.
+- A cada nova **release**, a versão do produto deve modificada, acrescentando 1 ao número central;
+- Deve ser marcada por uma 'tag' que representa o Número da Versão da **release**.
 
 #### 3.1 O nome de uma nova Release
 ```
@@ -107,7 +108,7 @@ bugfix/#999-Resolver_Login
 É a branch destinada a implementação de soluções para bugs e erros emergentes encontrados no ambiente de produção, a **master**:
 - Deve ser derivada da branch **master**;
 - Deve ser mesclada a branch **master** e a **develop** após o ponto abordado pela branch ser resolvido;
-- A cada novo **hotfix**, a versão do produto deve modificada, acrescentando 1 ao numero extremo.
+- A cada novo **hotfix**, a versão do produto deve modificada, acrescentando 1 ao número extremo.
 
 #### 6.1 O nome de um novo Hotfix
 ```
