@@ -6,8 +6,9 @@ Data|Versão|Descrição|Autor
 28/08|1.0.0|Abertura do documento|Daniel Porto
 31/08|1.0.1|Adição dos itens 4.1 e 4.3|Daniel Porto
 15/09|1.0.2|Inserção dos requisitos nos casos de uso | Enzo Gabriel
-15/09 | 1.0.3 | Adição das representações de arquitetura de back-end e front-end e das restrições | Enzo Gabriel
-20/09 | 2.0.0 | Refatoração do documento: exclusão de tópico fora do padrão e correção de titulação, representação de arquitetura, metas e restrições e visão dos casos de uso | Daniel Porto e Enzo Gabriel
+15/09| 1.0.3 | Adição das representações de arquitetura de back-end e front-end e das restrições | Enzo Gabriel
+20/09| 2.0.0 | Refatoração do documento: exclusão de tópico fora do padrão e correção de titulação, representação de arquitetura, metas e restrições e visão dos casos de uso | Daniel Porto e Enzo Gabriel
+22/09|2.1.0| Atualização do item 2
 
 ## 1. Introdução
 
@@ -32,6 +33,7 @@ Abreviação|Significado
 |**VCU**| Vamos Cuidar - Usuário|
 |**VCG**| Vamos Cuidar - Gestão|
 |**API**| Application Programming Interface|
+|**MVC**| Model-View-Controller|
 
 
 ### 1.4 Referências
@@ -55,7 +57,7 @@ Disponível em: </br>http://db4beginners.com/blog/gridfs/#:~:text=Formalmente%20
 
 ### 1.5 Visão Geral
 
-<p align="justify"> &emsp;&emsp; Este documento é dividido em 7 tópicos, descrevendo os detalhes das características do software proposto.
+<p align="justify"> &emsp;&emsp; Este documento é dividido em 4 tópicos, descrevendo os detalhes das características do software proposto. 
 Sendo dividido em:</p>
 
 * Introdução: Fornece uma visão geral do documento inteiro;
@@ -64,22 +66,20 @@ Sendo dividido em:</p>
 * Visão de caso de uso: Descreve as partes significativas do ponto de vista da arquitetura do modelo de casos de uso;
 
 ## 2. Representação da Arquitetura
-
+![Diagrama de relações](./Imagens/Documento_de_Arquitetura/Diagrama_Rel.jpg)
 <p align = "justify"> &emsp;&emsp;A plataforma Vamos Cuidar é composta por duas frentes de desenvolvimento desacoplados: VCG e VCU.
-A arquitetura utilizada no sistema desenvolvido pelo nosso grupo, VCU, é baseadada no modelo em 3 camadas, sendo composta pela camada de apresentação (front-end), pela camada de nogócios (back-end) e pela camada de dados.</p>
+A arquitetura utilizada no sistema desenvolvido pelo nosso grupo, VCU, utiliza o modelo MVC, sendo, portanto, composta por três camadas e o banco de dados. Para o desenvolvimento na nossa frente do projeto, separamos as camadas de forma que a camada de view seja representada e trabalhada no front-end e as camadas controller e model no back-end.</p>
 
-### 2.1 Camada de apresentação (front-end)
-#### 2.1.1 **VUE.js**
-<p align = "justify"> &emsp;&emsp;O Vue.js é um framework Javascript ***open source*** que é utilizado para desenvolver vários tipos de interfaces que posuem necessidades de maior interação e experiência mais valorosa para o usuário. Lembrando que é  de fácil aprendizagem, o que facilita sua aplicação para uma equipe.</p>
+### 2.1 Font-end
+<p align = "justify"> &emsp;&emsp;Representando a camada de view no MVC, o front-end é onde se tem a interação do usuário. Para o front-end foi escolhido o Vue.js, que é um framework Javascript open source utilizado para desenvolver vários tipos de interfaces que posuem necessidades de maior interação e experiência mais valorosa para o usuário. Lembrando que é de fácil aprendizagem, o que facilita sua aplicação para uma equipe.</p>
+<p align = "justify"> &emsp;&emsp;Aplicações que usam Vue são constituídas de componentes com a sintaxe HTML, CSS e Javascript em um único arquivo .vue, o que facilita o isolamento e a manutenção de funcionalidades. Cada componente constitui um escopo isolado dos demais, tanto em lógica quanto nos estilos. Além disso, o Vue contem funcionalidades que facilitam no desenvolvimento de PWA, o que será de grande utilidade.</p>
 
-<p align = "justify"> &emsp;&emsp;Aplicações que usam Vue são constituídas de componentes com a sintaxe HTML, CSS e Javascript e um único arquivo .vue, o que facilita o isolamento e a manutenção de funcionalidades. Cada componente constituíndo um escopo isolado dos demais, tanto em lógica quanto nos estilos. Além disso, o Vue contem funcionalidades que facilitam no desenvolvimento de PWA, o que será de grande utilidade.</p>
+#### 2.1.1 **Diagrama de pacotes Front-end**
 
-#### 2.1.2 **NUXT.js**
-<p align = "justify"> &emsp;&emsp;Para auxiliar no desempenho da aplicação, foi escolhido o uso do NUXT.js que é um framework VUE.js que oferece algumas facilidades para o desenvolvimento de PWA em VUE.</p>
-
-### 2.2 Camada de negócios (Back-end)
-
-<p align = "justify"> &emsp;&emsp;O framework escolhido para o back-end é o Node.Js, que pode ser definido como um ambiente de execução Javascipt server-side. Através dele, é possível desenvolver pequenas e grandes aplicações. É de código aberto e possui uma ampla comunidade.</p>
+### 2.2 Back-end
+<p align = "justify"> &emsp;&emsp;Englobando as camadas de  controller e model do mvc, no back-end é onde se encotram as regras de negócios e a comunicação com o banco de dados, o qual será tratado sobre no próximo tópico.</p>
+<p align = "justify"> &emsp;&emsp;As tecnologias escolhidas para se trabalhar no back-end foram os frameworks Node.js e Express.</p>
+<p align = "justify"> &emsp;&emsp;O Node.Js pode ser definido como um ambiente de execução Javascipt server-side. Através dele, é possível desenvolver pequenas e grandes aplicações. É de código aberto e possui uma ampla comunidade.</p>
 
 Outros pontos fortes do Node são: 
 - Ele utiliza JavaScript no back-end, então é possível usar JSON para tudo; 
@@ -87,17 +87,16 @@ Outros pontos fortes do Node são:
 - Não necessidade de dependencias instaladas no seu computador para começar a usar; 
 - Oferece muitos pacotes a partir do seu gerenciador de pacotes;
 - Comunidade muito ativa.
+<p align = "justify"> &emsp;&emsp;O Express é um framework Node.js que oferece, dentre muitas, uma série de funcionalidades para gerenciar requisições de diferentes verbos HTTP em diferentes URLs, integrar "view engines" para inserir dados nos templates, criar abstrações de rotas, middlewares para facilitar a criação de APIs </p>
+<p align = "justify"> &emsp;&emsp;Visto, o já antes citado, desenvolvimento desacoplado da plataforma, o sistema desenvolvido por nós da frente VCU estará trocando dados com o sistema desenvolvido na frente VCG pela camada de controller utilizando APIs.</p>
 
-<p align = "justify"> &emsp;&emsp;Visto, o já antes citado, desenvolvimento desacoplado da plataforma, o sistema desenvolvido por nós da frente VCU estará trocando dados com o sistema desenvolvido na frente VCG por essa camada utilizando APIs.</p>
+#### 2.1.1 **Diagrama de pacotes Back-end**
 
-### 2.3 Camada de dados
-<p align = "justify"> &emsp;&emsp;Essa camada é composta pelo banco de dados e a tecnologia escolhida para se trabalhar aqui foi o MongoDB. O MongoDB é um banco de dados to tipo NoSQL orientado a documentos do tipo Json, o que é muito interessante para a plataforma visto o uso do Javascript ao longo de todo o projeto.</p>
+### 2.3 Banco de dados
+<p align = "justify"> &emsp;&emsp;A tecnologia escolhida para se trabalhar aqui foi o MongoDB. O MongoDB é um banco de dados to tipo NoSQL orientado a documentos do tipo Json, o que é muito interessante para a plataforma visto o uso do Javascript ao longo de todo o projeto.</p>
 
 #### 2.3.1 **Modelagem do banco de dados**
 ![Modelagem](./Imagens/Documento_de_Arquitetura/ModelagemDB.png)
-### 2.4 Diagrama de relações
-![Modelagem](./Imagens/Documento_de_Arquitetura/Diagrama_Rel.jpg)
-
 
 ## 3. Metas e Restrições de Arquitetura
 
@@ -117,7 +116,7 @@ Outros pontos fortes do Node são:
 
 #### 3.2.3 **Ferramentas de Desenvolvimento**
 
-<p align = "justify"> &emsp;&emsp;Tanto no back-end quanto no front-end serão utilizados frameworks Javascript. No banco de dados será utilizado o software MongoDB, que é um software escrito em C++. Também será utilizado o Docker, para facilitar a portabilidade do projeto e o pode ser usado o insomnia para testes das APIs.</p>
+<p align = "justify"> &emsp;&emsp;Tanto no back-end quanto no front-end serão utilizados frameworks Javascript. No banco de dados será utilizado o software MongoDB, que é um software escrito em C++. Também será utilizado o Docker, para facilitar a portabilidade do projeto e pode ser usado o insomnia para testes das APIs.</p>
 
 #### 3.2.4 **Confiabilidade**
 
