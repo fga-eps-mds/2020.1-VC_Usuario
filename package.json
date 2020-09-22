@@ -1,5 +1,5 @@
 {
-  "name": "2020.1-Vamos_Cuidar",
+  "name": "2020.1-vamos_cuidar",
   "version": "1.0.0",
   "description": "<!--- Badges --> <div align=\"center\">     <a href=\"https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/blob/master/LICENSE\">         <img alt=\"License\" src=\"https://img.shields.io/github/license/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario\">     </a>     <a href=\"https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/milestones\">         <img alt=\"Numero de Milestones\" src=\"https://img.shields.io/github/milestones/all/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario\">     </a>     <a href=\"https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues?q=is%3Aissue+is%3Aclosed\">         <img alt=\"Numero de issues closed\" src=\"https://img.shields.io/github/issues-closed-raw/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario\">     </a> </div>",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "node"
   },
   "repository": {
     "type": "git",
