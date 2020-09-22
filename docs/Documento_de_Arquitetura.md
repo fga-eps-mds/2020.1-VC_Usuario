@@ -8,7 +8,8 @@ Data|Versão|Descrição|Autor
 15/09|1.0.2|Inserção dos requisitos nos casos de uso | Enzo Gabriel
 15/09| 1.0.3 | Adição das representações de arquitetura de back-end e front-end e das restrições | Enzo Gabriel
 20/09| 2.0.0 | Refatoração do documento: exclusão de tópico fora do padrão e correção de titulação, representação de arquitetura, metas e restrições e visão dos casos de uso | Daniel Porto e Enzo Gabriel
-22/09|2.1.0| Atualização do item 2
+22/09|2.1.0| Atualização do item 2 | Daniel Porto
+22/09|2.1.1| Atualização do item 2.3.1 | Daniel Porto
 
 ## 1. Introdução
 
