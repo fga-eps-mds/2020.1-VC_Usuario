@@ -4,19 +4,20 @@
 
 | **Data** | **Versão** | **Modificação** | **Autor** |
 | --- | --- | --- | --- |
-| 20/08/2020 | 0.1 | Abertura do documento                         | Bruno Félix |
-| 31/08/2020 | 0.2 | Inserção do template do documento             | Bruno Félix |
-| 08/09/2020 | 0.3 | Inserção dos itens 3.5, 3.6 e 3.7             | Daniel Porto |
-| 08/09/2020 | 0.4 | Inserção dos itens 1, 1.1 e 1.2               | Emily Dias |
-| 08/09/2020 | 0.5 | Inserção dos itens 2.2                        | Bruno Félix |
-| 08/09/2020 | 0.6 | Inserção dos itens 3.1, 3.2, 3.3 e 3.4        | Enzo Gabriel |
-| 08/09/2020 | 0.7 | Inserção dos itens 2.1 e 2.3                  | Daniel Barcelos |
-| 09/09/2020 | 0.8 | Inserção dos itens 1.3 e 1.4                  | Denys Rógeres |
-| 12/09/2020 | 1.0 | Formatação do documento: Alinhamento e Recuo  | Bruno Félix |
-| 14/09/2020 | 1.1 | Revisão do Tópico 1                           | Bruno Félix |
-| 16/09/2020 | 1.2 | Revisão do Tópico 1 e 2                       | Bruno Félix |
-| 16/09/2020 | 1.3 | Revisão do Tópico 3                           | Bruno Félix |
-| 17/09/2020 | 1.4 | Inserção dos itens 4, 5, 6 e 7                | Bruno Félix |
+| 20/08/2020 | 0.1 | Abertura do documento                                      | Bruno Félix |
+| 31/08/2020 | 0.2 | Inserção do template do documento                          | Bruno Félix |
+| 08/09/2020 | 0.3 | Inserção dos itens 3.5, 3.6 e 3.7                          | Daniel Porto |
+| 08/09/2020 | 0.4 | Inserção dos itens 1, 1.1 e 1.2                            | Emily Dias |
+| 08/09/2020 | 0.5 | Inserção dos itens 2.2                                     | Bruno Félix |
+| 08/09/2020 | 0.6 | Inserção dos itens 3.1, 3.2, 3.3 e 3.4                     | Enzo Gabriel |
+| 08/09/2020 | 0.7 | Inserção dos itens 2.1 e 2.3                               | Daniel Barcelos |
+| 09/09/2020 | 0.8 | Inserção dos itens 1.3 e 1.4                               | Denys Rógeres |
+| 12/09/2020 | 1.0 | Formatação do documento: Alinhamento e Recuo               | Bruno Félix |
+| 14/09/2020 | 1.1 | Revisão do Tópico 1                                        | Bruno Félix |
+| 16/09/2020 | 1.2 | Revisão do Tópico 1 e 2                                    | Bruno Félix |
+| 16/09/2020 | 1.3 | Revisão do Tópico 3                                        | Bruno Félix |
+| 17/09/2020 | 1.4 | Inserção dos itens 4, 5, 6 e 7                             | Bruno Félix |
+| 22/09/2020 | 2.0 | Revisão e alinhamento do documento a nova visão de produto | Bruno Félix |
 
 ## 1. Introdução
 
@@ -67,7 +68,7 @@ A universidade é um espaço público, que passa de geração a geração de est
 - Posicionamento: descrição do problema e do produto e oportunidade de negócios.
 - Descrição dos Envolvidos e dos Usuários: Detalhamento das partes envolvidas no projeto.
 - Visão geral do Produto: síntese das capacidades do produto e suas funcionalidades.
-- Recursos do Produto: descrição sintetizada dos recursos do produto.
+- Requisitos do Produto: descrição sintetizada dos requisitos do produto.
 - Restrições: detalhes sobre as restrições de design, restrições externas, como requisito operacionais ou regulamentares ou outras dependências.
 - Outros requisitos do Produto: listagem dos padrões aplicáveis, dos requisitos de hardware ou plataforma, dos requisitos de desempenho e dos requisitos ambientais.
 Referências: exposição das referências utilizadas.
@@ -78,7 +79,7 @@ Referências: exposição das referências utilizadas.
 ### 2.1 Oportunidade de negócios
 
 <p style="text-align: justify;">&emsp;&emsp;
-Analisando o difícil acesso a canais de comunicação quando e diz respeito a delação de problemas no campus e na universidade, agregado a demora da administração de reconhecer esses mesmos problemas e resolvemos, foi identificado a oportunidade de desenvolver uma aplicação PWA para fornecer um sistema rápido e prático para a comunidade universitária postar seus problemas do dia a dia através computadores e smartphones.
+Analisando o difícil acesso a canais de comunicação quando e diz respeito a delação de problemas no campus e na universidade, agregado a demora da administração de reconhecer esses mesmos problemas e resolvemos, foi identificado a oportunidade de desenvolver uma aplicação PWA para fornecer um sistema rápido, prático e democrático para a comunidade universitária postar seus problemas do dia a dia através computadores e smartphones.
 </p>
 
 
@@ -88,8 +89,8 @@ Analisando o difícil acesso a canais de comunicação quando e diz respeito a d
 | --- | --- |
 | **O problema é**         | O difícil relato de problemas e defeitos encontrados na universidades |
 | **Que Afeta**            | A comunidade acadêmica |
-| **Cujo impacto é**       | A demora ou ineficácia da resolução desses problemas pro parte da universidade |
-| **Uma boa solução seria**| Uma aplicação onde a comunidade pudesse relatar os problemas encontrados diretamente para universidade. Otimizando o diálogo e a resolução | 
+| **Cujo impacto é**       | A demora ou ineficácia da resolução desses problemas por parte da universidade |
+| **Uma boa solução seria**| Uma aplicação onde a comunidade pudesse relatar os problemas encontrados diretamente para universidade. Otimizando o diálogo e a solução | 
 
 
 ### 2.3 Descrição da posição do produto
@@ -113,19 +114,19 @@ Analisando o difícil acesso a canais de comunicação quando e diz respeito a d
 
 | **Nome** | **Descrição** |
 | --- | --- |
-| Comunidade Universitária | Estudantes, professores, servidores e outros membros da Universidade de Brasília. |
+| Comunidade Universitária | Todos os membros pertencentes a Universidade de Brasília. |
 
 
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
 
 | **Usuário** | **Necessidade** | **Solução Atual** | **Solução Proposta** |
 | --- | --- | --- | --- |
-| Estudantes e servidores da UnB| Melhoria ou reforma de alguma problema.| Esperar alguém com maior autoridade na faculdade resolver.| Uma plataforma onde a comunidade possa reportar os problemas que encontrarem, sujeita a pequenos bônus pelos relatos. |
+| Estudantes e servidores da UnB| Melhoria e/ou solução de alguma problema.| Real dificuldade de relatar os problemas da universidade.| Uma plataforma democrática onde a comunidade possa relatar os problemas que encontrarem. |
 
 ### 3.4 Ambiente dos Usuários
 
-<p style="text-align: justify;">&emsp;&emsp; 
-Os usuários poderão realizar a aplicação Vamos Cuidar, através da PWA em múltiplas plataformas, sempre que encontrarem algum problema na universidade que possa ser resolvido pela administração.
+<p style="text-align: justify;">&emsp;&emsp;
+Somente dentro das dependências universidade os usuários poderão utilizar a aplicação Vamos Cuidar, através da PWA em múltiplas plataformas, sempre que encontrarem algum problema no campus para que possam ser resolvido pela administração.
 </p>
 
 
@@ -164,7 +165,7 @@ Os usuários poderão realizar a aplicação Vamos Cuidar, através da PWA em m�
 ### 3.7 Alternativas e Concorrências
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Atualmente é possível estar por dentro das notícias da universidade através do portal de notícias encontrado no próprio site da Unb. No âmbito de notificação de problemas à administração, a universidade dispõe de uma ouvidoria, que pode ser contactada por e-mail e telefone. Tanto o portal de notícias quanto a ouvidoria são pouco difundidos e tem baixos níveis de efetividade na universidade. Mesmo existentes, essas ferramentas não conseguem suprir as necessidades do cotidiano da comunidade universitária de relatar problemas e os mesmos serem resolvidos por seus responsáveis de forma competente e ágil.
+Atualmente é possível estar por dentro das notícias da universidade através do portal de notícias encontrado no próprio site da Unb. No âmbito de notificação de problemas à administração, a universidade dispõe de uma ouvidoria, que pode ser contactada por e-mail e telefone. Tanto o portal de notícias quanto a ouvidoria são pouco difundidos e têm baixos níveis de efetividade na universidade. Mesmo existentes, essas ferramentas não conseguem suprir as necessidades do cotidiano da comunidade universitária de relatar problemas e os mesmos serem resolvidos por seus responsáveis de forma competente e ágil.
 </p>
 
 
@@ -186,13 +187,17 @@ Essas duas aplicações interagem através de APIs, onde a focada nos usuários 
 <p style="text-align: justify;">&emsp;&emsp; 
 A PWA Vamos Cuidar visa otimizar a comunicação de problemas e da agilização de suas soluções na Universidade de Brasília. A comunidade relata um problema que atrapalha o seu dia a dia e, assim, a administração e as pessoas responsáveis poderão tomar as medidas necessárias para resolver esses relatos.
 </p>
+
+<p style="text-align: justify;">&emsp;&emsp; 
+Outro ponto em que a aplicação visa é de ser um catalisador de coleta de dados dos problemas existentes na universidade. Assim alinhar as reais necessidades da comunidade acadêmica e os esforços e ações da administração.
+</p>
  
 
 ### 4.3 Suposições e dependências
 
 - O usuário deverá ter acesso a uma plataforma, como desktop ou mobile, com algum navegador web;
 - O usuário deverá ter acesso a internet;
-- A aplicação deverá ser utilizada por membros da comunidade universitária;
+- O usuário deverá estar dentro das dependências da universidade;
 - A aplicação deverá facilitar a comunicação entre os usuários e os gestores, para uma efetiva e rápida solução do problema postado;
 
 
@@ -235,7 +240,7 @@ Exibir uma página direcionada às notificações, relatórios e atualizações 
 ## 6. Restrições
 
 - Ter um computador ou aparelho celular;
-- Ser membro da comunidade universitária;
+- Estar nas dependências da universidade;
 - Conexão com a internet.
  
 
@@ -267,7 +272,7 @@ RNF20 | Pode ter suporte para gamificação
 
 ## 8. Referências
 
-- IBM Knowledge Center - Documento de Visão: A estrutura de tópicos do documento de visão. Disponível em: https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ\_4.0.6/com.ibm.rational.rrm.help.doc/topics/r\_vision\_doc.html. Acesso em 31 de agosto de 2020;
+- IBM Knowledge Center - Documento de Visão: A estrutura de tópicos do documento de visão. Disponível em: https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_4.0.6/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.html. Acesso em 31 de agosto de 2020;
 - Disponível em: https://github.com/fga-eps-mds/2019.2-Acacia/blob/develop/docs/vision_document.md. Acesso em 20 de agosto de 2020;
 
 - Disponível em: https://github.com/fga-eps-mds/2019.1-ADA/blob/gh-pages/docs/product/vision_document.md. Acesso em 20 de agosto de 2020.
