@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+    VC_Usuario-back:
+        build: .
+        command: npm start
+        ports:
+            - "8000:8000"
+        volumes: 
+            - .:/usr/app
