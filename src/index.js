@@ -6,8 +6,8 @@ const HOST = '0.0.0.0';
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Hello World teste');
+    res.send('Hello World teste Vamos Cuidar');
 });
     
 app.listen(PORT, HOST);
-console.log('BackEnd inicializado com sucesso')
+console.log('Vamos Cuidar BackEnd inicializado com sucesso')
