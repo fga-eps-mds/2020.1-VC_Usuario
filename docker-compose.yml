@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-    VC_Usuario-back:
+    vc_usuario-backend:
         build: .
         command: npm start
         ports:
