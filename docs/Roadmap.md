@@ -3,21 +3,18 @@
 |Data|Versão|Alteração|Autor|
 |:-:|:-:|:-:|:-:|
 |09/09/2020|1.0|Abertura do Documento|Enzo Gabriel e Daniel Barcelos|
+|23/09/2020|1.1|Refatorando o Documento|Enzo Gabriel e Daniel Barcelos|
 
 # Release 1
 
 ### Sprint 0
-| ID | Issue |
+| ID | Issue | 
 |:--:| ------- | 
-| Issue  | Criar pasta [**/docs**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/7) 
-| Issue  | Reunião com possíveis [**clientes**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/9)
-| Issue  | Visualizar trabalhos de [**grupos anteriores**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/3)
 | Issue  | Estudo dos documentos de [**Visão**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/6), de [**Arquitetura**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/12) e [**Product Backlog**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/19)
 | Issue  | Estudo de [**Gestão e planejamento de Sprint**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/14), [**Design de fluxo Gitflow**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/20) e [**protótipo de baixa e alta fidelidade**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/13)
 | Issue  | Ambientar integrantes ao [**GitHub e ao repositório**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/2)
 | Issue  | Criar perfil de comunidade [**Open Source**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/4)
 | Issue  | Padrão de [**contribuição e trabalho**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/5) no projeto
-| Issue  | Verificação dos conhecimentos de [**git e GitHub**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/1)
 
 
 ### Sprint 1
@@ -25,10 +22,8 @@
 |:--:| ------- | 
 | Issue  | Treinamento sobre documento de [**visão**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/31), documento de [**arquitetura**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/23), [**templates para a contribuição com o projeto**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/25) e [**Git/Gitflow**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/30)
 | Issue  | Estudo [**GitHub Pages**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/33), função [**Scrum Master**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/27),  [**Product Owner**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/34) e estrutura de uma [**aplicação web**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/26)
-| Issue  | Conversar com nossos [**clientes**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/29)
-| Issue  | Criar [**Discord**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/32)
 | Issue  | Inserir os templates de documentos de [**arquitetura**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/24) e [**visão**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/35) 
-| Issue  | Assistir ao [**vídeo**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/22) da reunião com o cliente
+
 
 
 
@@ -41,86 +36,42 @@
 | Issue  | Elaboração e desenvolvimento do [**Product Backlog**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/46)
 | Issue  |Estudo e inserção do template de [**Roadmap**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/45)
 | Issue  | Estudo, levantamento e debate de [**requisitos**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/38)
-| Issue  |Reunião de debate sobre as [**tecnologias levantadas**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/issues/43)
 
 
 ### Sprint 3
 | ID | Issue |
 |:--:| ------- | 
-| Issue |
-| Issue |
+| Issue | Refatorar [**Documento de Arquitetura**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/64)
+| Issue | Criar [**Ambiente de Desenvolvimento**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/72)
+| Issue | Desenvolver [**Identidade Visual**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/66)
+| Issue | Desenvolvimento do [**Product Backlog**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/64)
+| Issue | Desenvolvimento do [**Planejamento de Riscos**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/56)
+| Issue | Desenvolvimento do [**Protótipo de Baixa Fidelidade**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/67)
 
 ### Sprint 4
 | ID | Issue |
 |:--:| ------- | 
-| Issue |
-| Issue |
+| Issue | Revisar [**Roadmap**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/blob/develop/docs/Roadmap.md)
+| Issue | Atualizar a [**GitHub Page**](https://fga-eps-mds.github.io/2020.1-Vamos_Cuidar-Usuario/#/)
+| Issue | Revisar [**Product Backlog e Requisitos**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/90) e [**Roadmap**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/86)
+| Issue | Desenvolver [**Protótipo de Alta Fidelidade**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/93)
+
 
 ## Sprint 5
 | ID | Issue |
 |:--:| ------- | 
-| Issue | 
-| Issue | 
+
+| Issue | US01 - Realizar postagem anônima
+| Issue | US11 - Editar postagem
+| Issue | US12 - Excluir postagem
 
 
 ## Sprint 6
 | ID | Issue |
 | :--:| ------- |
-| Issue | 
-| Issue | 
+| Issue | US02 - Visualizar toda a lista de postagens realizadas
+| Issue | US03 - Visualizar todos os detalhes de uma postagem
+| Issue | Revisar documentação
+| Issue | Preparar apresentação da Release 1
 
 # Release 2
-
-## Sprint 7
-| ID | Issue |
-| :--:| ------- |
-| Issue | 
-| Issue |
-
-## Sprint 8
-| ID | Issue |
-| :--:| ------- |
-| Issue |
-| Issue | 
-
-## Sprint 9
-| ID | Issue |
-| :--:| ------- |
-| Issue | 
-| Issue |
-
-## Sprint 10
-| ID | Issue |
-| :--:| ------- |
-| Issue | 
-| Issue | 
-
-## Sprint 11
-| ID | Issue |
-| :--:| ------- |
-| Issue |
-| Issue | 
-
-## Sprint 12
-| ID | Issue |
-| :--:| ------- |
-| Issue |
-| Issue | 
-
-## Sprint 13
-| ID | Issue |
-| :--:| ------- |
-| Issue |
-| Issue | 
-
-## Sprint 14
-| ID | Issue |
-| :--:| ------- |
-| Issue |
-| Issue | 
-
-## Sprint 15
-| ID | Issue |
-| :--:| ------- |
-| Issue |
-| Issue | 
