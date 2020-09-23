@@ -24,9 +24,9 @@
 | **Épico** | **ID** | **Descrição** |
 | --- | --- | --- |
 | E1 | FT01 | Cadastro e Login do usuário |
-| E2 | FT02 | Criaçao e Gerencia das postagens |
+| E2 | FT02 | Criação e Gerência das postagens |
 | E2 | FT03 | Listagem das postagens |
-| E2 | FT04 | Vizualizar detalhes da postagem |
+| E2 | FT04 | Visualizar detalhes da postagem |
 | E2 | FT05 | Feedback e Progresso de solução das postagens |
 | E3 | FT06 | Comentário, Reação e Compartilhamento nas postagens |
 | E3 | FT07 | Denúncia de postagens |
@@ -40,9 +40,9 @@
 | **Épico** | **Feacture** | **História de Usuário** | **Descrição** | **Pontos** |
 | --- | --- | --- | --- | --- |
 | E2 | FT02 | US01 | Eu, como usuário, desejo realizar uma postagem anônima                                               | 2 |
-| E2 | FT03 | US02 | Eu, como usuário, desejo vizualizar a lista de todas as postagens realizadas                         | 3 |
-| E2 | FT04 | US03 | Eu, como usuário, desejo vizualizar todos os detalhes de uma determinada postagem                    | 3 |
-| E2 | FT05 | US04 | Eu, como usuário, desejo vizualizar o estágio de solução de uma determinada postagem                 | 5 |
+| E2 | FT03 | US02 | Eu, como usuário, desejo visualizar a lista de todas as postagens realizadas                         | 3 |
+| E2 | FT04 | US03 | Eu, como usuário, desejo visualizar todos os detalhes de uma determinada postagem                    | 3 |
+| E2 | FT05 | US04 | Eu, como usuário, desejo visualizar o estágio de solução de uma determinada postagem                 | 5 |
 | E1 | FT01 | US05 | Eu, como usuário, desejo fazer um cadastro                                                           | 2 |
 | E1 | FT01 | US06 | Eu, como usuário, desejo fazer e desfazer login em minha conta                                       | 2 |
 | E2 | FT02 | US07 | Eu, como usuário logado, desejo realizar uma postagem não anônima                                    |   |
@@ -55,9 +55,9 @@
 | E1 | FT01 | US14 | Eu, como usuário logado, desejo excluir minha conta                                                  | 2 |
 | E2 | FT03 | US15 | Eu, como usuário, desejo filtrar a lista de postagens por categoria                                  |   |
 | E2 | FT05 | US16 | Eu, como usuário logado, desejo receber notificações caso uma postagem minha tenha sido resolvida, reportada ou não aceita                                                                                                             | 3 |
-| E3 | FT10 | US18 | Eu, como usuário, posso usar a aplicação somente dentro das dependencias da universidade             |   |
+| E3 | FT10 | US18 | Eu, como usuário, posso usar a aplicação somente dentro das dependências da universidade             |   |
 | E3 | FT07 | US20 | Eu, como usuário logado, desejo denúnciar uma postagem                                               | 3 |
-| E3 | FT06 | US21 | Eu, como usuário, desejo compatilhar uma determinado postagem                                        | 3 |
+| E3 | FT06 | US21 | Eu, como usuário, desejo compartilhar uma determinado postagem                                        | 3 |
 | E3 | FT06 | US22 | Eu, como usuário logado, desejo comentar em uma determinada postagem                                 | 3 |
 
 
@@ -67,12 +67,12 @@
 | --- | --- | --- | --- | --- |
 | E2 | FT02 | US07 | Eu, como usuário logado, desejo realizar uma postagem não anônima                                    |   |
 | E2 | FT03 | US15 | Eu, como usuário, desejo filtrar a lista de postagens por categoria                                  |   |
-| E3 | FT10 | US18 | Eu, como usuário, posso usar a aplicação somente dentro das dependencias da universidade             |   |
+| E3 | FT10 | US18 | Eu, como usuário, posso usar a aplicação somente dentro das dependências da universidade             |   |
 
 
 ## 3.2 Histórias de Usuário Retiradas
 
 | **Épico** | **Feacture** | **História de Usuário** | **Descrição** | **Pontos** |
 | --- | --- | --- | --- | --- |
-| E1 | FT01 | US17 | Eu, como sistema, devo verificar cadastro uma de nova conta conta por veio dos dados da universidade | 5 | 
+| E1 | FT01 | US17 | Eu, como sistema, preciso verificar cadastro uma de nova conta conta por veio dos dados da universidade | 5 | 
 | E3 | FT08 | US19 | Eu, como usuário, desejo ter uma área de ajuda de uso da aplicação                                   | 3 |
