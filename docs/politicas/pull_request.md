@@ -3,7 +3,8 @@
 | Data       | Versão | Descrição            | Autor             |
 |:----------:|:------:|:--------------------:|:-----------------:|
 | 15/09/2020 | 1.0 | Criação do documento com template inicial                            | Enzo Gabriel|
-| 21/09/2020 | 2.0 | Revisão, formatação do documento em geral e inserção do Tópico 2 e 8 | Bruno Félix |   
+| 21/09/2020 | 2.0 | Revisão, formatação do documento em geral e inserção do Tópico 2 e 8 | Bruno Félix |  
+| 22/09/2020 | 2.1 | Retirando Tópico 7                                                   | Bruno Félix |  
  
 ## 1. Nome do Pull Request
 Os pull requests devem explicar o que está sendo inserido, e devem indicar o número da issue relacionada. <br>
@@ -53,11 +54,8 @@ Deve conter ```Labels```, que adiciona as labels relacionadas ao pull request, d
 ## 6. Milestone
 Deve conter a ```Milestone```, em que é adicionada a sprint correspondente à execução das modificações.
  
-## 7. Issue
-Deve conter a ```Issue```, em que após a criação do pull request, deve-se conectar ele à sua issue correspondente através da interface do GitHub.
  
- 
-## 8. Aceitação do Pull Request
+## 7. Aceitação do Pull Request
 - O Pull Request deve ser revisado e aceito por pelo menos duas pessoas;
 - As pessoas responsáveis pelas revisões devem comentar seu parecer sobre as modificações feitas;
 - Um Pull Request só deve ser aceito caso todos os critérios de aceitação, estipulados nas issues que ele está vinculado, sejam totalmente atendidos;
