@@ -1,11 +1,21 @@
-version: "3"
+version: "3.2"
 
 services:
+
     vc_usuario-backend:
         container_name: vc_usuario-backend
+        restart: always
         build: .
         command: npm start
         ports:
             - "8000:8000"
         volumes: 
             - .:/usr/app
+        links: 
+            - mongo
+
+    mongo:
+        container_name: mongo
+        image: mongo
+        ports: 
+            - 50050:50050
