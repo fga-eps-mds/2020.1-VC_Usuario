@@ -2,7 +2,6 @@ version: "3"
 
 services:
     vc_usuario-backend:
-        container_name: vc_usuario-backend
         build: .
         command: npm start
         ports:
