@@ -1,34 +1,48 @@
 const mongoose = require('mongoose');
+const ObjectId = mongoose.Schema.ObjectId;
+
 
 const PostageSchema = new mongoose.Schema({
     fk_id_usuario:{
-        type: String,
-        required: true,
-    },
-    /*fk_id_local:{
-        type: Number,
+        type: ObjectId,
+    },/*
+    fk_id_local:{
+        type: ObjectId,
         required: true,
     },
     fk_id_categoria:{
-        type: Number,
+        type: ObjectId,
         required: true,
-    },
+    },*/
+    createdAt:{
+        type: Date,
+        default: Date.now,
+    },/*
     titulo_post: {
         type: String,
         required: true,
     },
-    data:{
-        type: Date,
-        default: Date.now,
+    midia:{
+        type:[String],
     },
     status:{
         type: String,
-        required: true,
+        default: "Aguardando"
     },*/
     descricao:{
         type: String,
         required: true,
     },
+    canPost:{
+        type: Boolean,
+        required: true,
+    },/*
+    apoio:{
+        type: [ObjectId],
+    },
+    comentarios: {
+        type: [ObjectId],
+    }*/
 });
 
 const Postage = mongoose.model('Postage', PostageSchema);
