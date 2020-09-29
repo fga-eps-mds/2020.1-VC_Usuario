@@ -4,6 +4,7 @@ module.exports = {
     async an_post (req, res){
         try{
             console.log(req.file);
+            req.body.midia = req.file.path;
             req.body.fk_id_usuario = null;
             const postage = await Postage.create(req.body);
             console.log(postage);
@@ -12,6 +13,11 @@ module.exports = {
         }catch(err){
             return res.status(400).send({ error: err.message});
         }
+    },
+
+    async ADMGposts (req, res){
+        const posts = await Postage.find();
+        return res.json(posts);
     }
 }
 

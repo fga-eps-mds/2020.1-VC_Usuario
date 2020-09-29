@@ -4,5 +4,6 @@ const Postage = require('./controllers/postage');
 const multerConfig = require('./config/multer');
 
 router.post('/an_post', multer(multerConfig).single("file"), Postage.an_post);
+router.get('/ADMGposts', Postage.ADMGposts );
 
 module.exports = router;

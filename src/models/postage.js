@@ -17,18 +17,18 @@ const PostageSchema = new mongoose.Schema({
     createdAt:{
         type: Date,
         default: Date.now,
-    },/*
+    },
     titulo_post: {
         type: String,
         required: true,
     },
     midia:{
-        type:[String],
+        type:[String]
     },
     status:{
         type: String,
         default: "Aguardando"
-    },*/
+    },
     descricao:{
         type: String,
         required: true,
