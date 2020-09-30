@@ -1,18 +1,23 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
-const PORT = 8000;
-const HOST = '0.0.0.0';
+const cors = require('cors');
+const path = require('path');
 
 const app = express();
 
+app.use(cors());
+/* app.use((req, res,) => {
+    console.log("midleware!");
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');  
+    app.use(cors()); 
+}); */ 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:false }));
-
+app.use('/img', express.static(path.resolve(__dirname, '..', 'tmp', 'img_uploads'))); //url de imagens
 app.use(require("./routes"));
-
-//require('./controllers/postage')(app);
 
 app.get('/', (req, res) => {
     res.json({"esta": "funcionando"});
@@ -20,7 +25,7 @@ app.get('/', (req, res) => {
 
 // MongoDB connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://mongo:27017/backend', { 
+mongoose.connect(`${process.env.DB_HOST}`, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true 
 }).then(() => {
@@ -29,4 +34,4 @@ mongoose.connect('mongodb://mongo:27017/backend', {
     console.log("Erro: "+err)
 })
 
-app.listen(PORT, HOST);
+app.listen(process.env.PORT);

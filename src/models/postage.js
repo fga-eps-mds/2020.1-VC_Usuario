@@ -45,5 +45,10 @@ const PostageSchema = new mongoose.Schema({
     }*/
 });
 
+
+/* PostageSchema.pre('save', function (){
+    
+}); será definido método para criar url da imagem, caso tenha*/
+
 const Postage = mongoose.model('Postage', PostageSchema);
 module.exports = Postage;

@@ -3,8 +3,10 @@ const Postage = require ('../models/postage.js');
 module.exports = {
     async an_post (req, res){
         try{
-            console.log(req.file);
-            req.body.midia = req.file.path;
+            if(req.file){
+                console.log(req.file);
+                req.body.midia = req.file.path;
+            }
             req.body.fk_id_usuario = null;
             const postage = await Postage.create(req.body);
             console.log(postage);
@@ -18,6 +20,11 @@ module.exports = {
     async ADMGposts (req, res){
         const posts = await Postage.find();
         return res.json(posts);
+    },
+
+    async devdel (req, res){
+        const post = await Postage.findById(req.params.id);
+        await post.remove();
+        return res.send();
     }
 }
-
