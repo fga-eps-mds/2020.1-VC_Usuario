@@ -5,15 +5,15 @@ const ObjectId = mongoose.Schema.ObjectId;
 const PostageSchema = new mongoose.Schema({
     fk_id_usuario:{
         type: ObjectId,
-    },/*
-    fk_id_local:{
-        type: ObjectId,
+    },
+    local:{
+        type: String,
         required: true,
     },
-    fk_id_categoria:{
-        type: ObjectId,
+    categoria:{
+        type: String,
         required: true,
-    },*/
+    },
     createdAt:{
         type: Date,
         default: Date.now,
