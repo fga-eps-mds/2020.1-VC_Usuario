@@ -4,7 +4,8 @@
 
 Data|Versão|Descrição|Autor
 -|-|-|-
-02/10|0.1| Introdução | Emily Dias| 
+02/10|0.1|Introdução|Emily Dias|
+02/10|0.2|Modelo de negócios|Emily Dias, Enzo|
 
 
 ## Introdução
@@ -13,7 +14,7 @@ Utilizando os conceitos de design thinking, o canvas foi feito de uma formas sim
 
 ## Modelo de Negócios
 
-![](../docs/Imagens/Canvas/Business_model_canvas.jpg)
+![Business_model_canvas](https://user-images.githubusercontent.com/52640974/94971881-69d8d180-04de-11eb-9f39-4437a24852a8.jpg)
 <img src="../docs/Imagens/Canvas/Business_model_canvas.jpg">
 
 
