@@ -3,6 +3,7 @@
 - [**Home**](README.md)
 - [Documento de visao](/docs/Documento_de_Visao.md)
 - [Documento de Arquiteura](/docs/Documento_de_Arquitetura.md)
+- [Canvas](/docs/Canvas.md)
 - [Identidade Visual](/docs/Identidade_Visual)
 - [Roadmap](/docs/Roadmap.md)
 - [Plano de Riscos](/docs/Plano_riscos.md)

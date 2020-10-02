@@ -4,8 +4,9 @@
 
 Data|Versão|Descrição|Autor
 -|-|-|-
-02/10|0.1|Introdução|Emily Dias|
-02/10|0.2|Modelo de negócios|Emily Dias, Enzo|
+02/10|0.1|Abertura do documento|Emily Dias|
+02/10|0.2|Introdução|Emily Dias|
+02/10|0.3|Modelo de negócios|Emily Dias, Enzo|
 
 
 ## Introdução
