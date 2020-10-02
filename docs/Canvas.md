@@ -14,7 +14,6 @@ Utilizando os conceitos de design thinking, o canvas foi feito de uma formas sim
 
 ## Modelo de Negócios
 
-![Business_model_canvas](https://user-images.githubusercontent.com/52640974/94971881-69d8d180-04de-11eb-9f39-4437a24852a8.jpg)
 <img src="../docs/Imagens/Canvas/Business_model_canvas.jpg">
 
 
