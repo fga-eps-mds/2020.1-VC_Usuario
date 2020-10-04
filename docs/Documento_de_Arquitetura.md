@@ -4,14 +4,14 @@
 
 Data|Versão|Descrição|Autor
 -|-|-|-
-28/08|1.0.0|Abertura do documento|Daniel Porto
-31/08|1.0.1|Adição dos itens 4.1 e 4.3|Daniel Porto
-15/09|1.0.2|Inserção dos requisitos nos casos de uso | Enzo Gabriel
-15/09| 1.0.3 | Adição das representações de arquitetura de back-end e front-end e das restrições | Enzo Gabriel
-20/09| 2.0.0 | Refatoração do documento: exclusão de tópico fora do padrão e correção de titulação, representação de arquitetura, metas e restrições e visão dos casos de uso | Daniel Porto e Enzo Gabriel
-22/09|2.1.0| Atualização do item 2 | Daniel Porto
-22/09|2.1.1| Atualização do item 2.3.1 | Daniel Porto
-24/09|2.1.2| Inserção dos diagramas de pacotes |Daniel Porto
+28/08|0.1|Abertura do documento|Daniel Porto
+31/08|0.2|Adição dos itens 4.1 e 4.3|Daniel Porto
+15/09|0.3|Inserção dos requisitos nos casos de uso | Enzo Gabriel
+15/09| 0.4 | Adição das representações de arquitetura de back-end e front-end e das restrições | Enzo Gabriel
+20/09| 1.0 | Refatoração do documento: exclusão de tópico fora do padrão e correção de titulação, representação de arquitetura, metas e restrições e visão dos casos de uso | Daniel Porto e Enzo Gabriel
+22/09|1.1| Atualização do item 2 | Daniel Porto
+22/09|1.2| Atualização do item 2.3.1 | Daniel Porto
+24/09|1.3| Inserção dos diagramas de pacotes |Daniel Porto
 
 ## 1. Introdução
 
@@ -41,22 +41,19 @@ Abreviação|Significado
 
 ### 1.4 Referências
 
-<p align="left">Como documentar a arquitetura de software. Disponível em: </br> http://www.linhadecodigo.com.br/artigo/3343/como-documentar-a-arquitetura-de-software.aspx.</p>
+* Como documentar a arquitetura de software. Disponível em: </br> http://www.linhadecodigo.com.br/artigo/3343/como-documentar-a-arquitetura-de-software.aspx
 
-<p align="left">Documento de arquitetura ADA. Disponível em: </br>https://fga-eps-mds.github.io/2019.1-ADA/#/docs/project/architecture_doc.</p>
+* Documento de arquitetura ADA. Disponível em: </br> https://fga-eps-mds.github.io/2019.1-ADA/#/docs/project/architecture_doc
 
-<p align="left">Documento de arquitetura ArBC. Disponível em: </br>https://github.com/fga-eps-mds/2019.2-ArBC/blob/develop/docs/mds/Documento_de_arquitetura.md</p>
+* Documento de arquitetura ArBC. Disponível em: </br> https://github.com/fga-eps-mds/2019.2-ArBC/blob/develop/docs/mds/Documento_de_arquitetura.md
 
-<p align="left">Documento de arquitetura C-Registration System. Disponível em: </br>http://mds.cultura.gov.br/extend.formal_resources/guidances/examples/resources/sadoc_v1.htm.</p>
+* Documento de arquitetura C-Registration System. Disponível em: </br> http://mds.cultura.gov.br/extend.formal_resources/guidances/examples/resources/sadoc_v1.htm
 
-<p align="left">Vue.js e suas vantagens.
-Disponível em: </br>https://blog.geekhunter.com.br/vue-js-so-vejo-vantagens-e-voce/#O_que_e_Vue_JS</p>
+* Documentação do Vue.js. Disponível em: </br> https://v3.vuejs.org/guide/introduction.html 
 
-<p align="left">Características do node.
-Disponível em: </br>https://king.host/wiki/artigo/o-que-e-o-node-js-e-quais-sao-as-suas-caracteristicas/</p>
+* Introdução Express/Node. Disponível em: </br> https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introdu%C3%A7%C3%A3o
 
-<p align="left">GridFS: como manipular arquivos e documentos grandes.
-Disponível em: </br> http://db4beginners.com/blog/gridfs/#:~:text=Formalmente%20falando%2C%20o%20GridFS%20%C3%A9,parte%20como%20um%20documento%20separado.</p>
+* Documentação MongoDb. Disponível em: </br> https://docs.mongodb.com/manual/introduction/  
 
 ### 1.5 Visão Geral
 
