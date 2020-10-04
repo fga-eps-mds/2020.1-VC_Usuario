@@ -3,8 +3,8 @@ const multer = require('multer');
 const Postage = require('./controllers/postage');
 const multerConfig = require('./config/multer');
 
-router.post('/an_post', multer(multerConfig).single("file"), Postage.an_post);
-router.get('/ADMGposts', Postage.ADMGposts );
-router.delete('/delDev/:id', Postage.devdel);
+router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_anon);
+router.get('/postage/list_all', Postage.list);
+router.delete('/postage/delete/:id', Postage.delete);
 
 module.exports = router;
