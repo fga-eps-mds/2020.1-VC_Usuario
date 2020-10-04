@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const ObjectId = mongoose.Schema.ObjectId;
 
-
 const PostageSchema = new mongoose.Schema({
     fk_user_id:{
         type: ObjectId
@@ -48,11 +47,6 @@ const PostageSchema = new mongoose.Schema({
     }
 	*/
 });
-
-
-/* PostageSchema.pre('save', function (){
-    
-}); será definido método para criar url da imagem, caso tenha*/
 
 const Postage = mongoose.model('Postage', PostageSchema);
 module.exports = Postage;
