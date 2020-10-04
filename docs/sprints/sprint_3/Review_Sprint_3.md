@@ -79,7 +79,7 @@
 
 
 ## 3. Burndown
-<img src = "../../Imagens/Sprints/Burndown_S3.png" width = 70%><br>
+![Burndown](../../Imagens/Sprints/Burndown_S3.png)
 
 ## 4. Retrospective
 ### Pontos Positivos:
@@ -99,11 +99,13 @@
 - Melhorar planejamento da sprint
 - Melhorar Roadmap
 
-## 5. Quadro de Conhecimento
-<img src = "../../Imagens/Sprints/Quadro_conhecimento_S3.png" width = 90%><br>
+## 4. Quadro de Conhecimento
 
-## 6. Presença Daily
-<img src = "../../Imagens/Sprints/Daily_Sprint3.png" width = 90%>
+![Quadro de Conhecimentos](../../Imagens/Sprints/Quadro_conhecimento_S3.png)
+
+## 5. Presença  Daily 
+
+![Presença](../../Imagens/Sprints/Daily_Sprint3.png)
 
 ## 7. Animal da Sprint
 Jabutis são animais lentos, estritamente terrestres e bem solitário. Nesta Sprint, embora tenhamos ganhado mais independência, houve uma grande demora na criação das issues e pecamos em fazer pareamento. 

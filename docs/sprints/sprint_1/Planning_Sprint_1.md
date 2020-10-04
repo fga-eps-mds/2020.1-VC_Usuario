@@ -2,13 +2,13 @@
 
 ## Planejamento 
 
-## 1.Visão Geral
+## 1. Visão Geral
 **Número da Sprint:** 1<br>
 **Data de Início:** 27/08/2020<br>
 **Data de Término:** 02/09/2020<br>
 **Duração:** 7 dias<br>
 
-## 2.Papéis
+## 2. Papéis
 
 <table>
     <tr>
@@ -22,7 +22,7 @@
     </table>
 
 
-## 3.Objetivos
+## 3. Objetivos
 A sprint 1 tem como objetivo:
 - Estudo das funções de uma equipe ágil 
 - Estudo sobre documentação
@@ -35,7 +35,7 @@ A sprint 1 tem como objetivo:
 
 
 
-## 4.Sprint Backlog
+## 4. Sprint Backlog
 Issues adicionadas: 
 1. **Issue:** #22 Assistir ao vídeo da reunião com o cliente<br>
 **Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo

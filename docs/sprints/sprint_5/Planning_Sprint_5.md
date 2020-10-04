@@ -2,13 +2,13 @@
 
 ## Planejamento 
 
-## 1.Visão Geral
+## 1. Visão Geral
 **Número da Sprint:** 5<br>
 **Data de Início:** 24/09/2020<br>
 **Data de Término:** 30/09/2020<br>
 **Duração:** 7 dias<br>
 
-## 2.Papéis
+## 2. Papéis
 
 <table>
     <tr>
@@ -22,13 +22,13 @@
     </table>
 
 
-## 3.Objetivos
+## 3. Objetivos
 A sprint 5 tem como objetivo:
 - Criar uma model para a postagem e para o usuário.
 - Definir uma rota para a postagem e testar no back se a postagem foi criada.
 - Criar a tela de criar a postagem e fazer a mesma pegar a rota para a postagem.
 
-## 4.Sprint Backlog
+## 4. Sprint Backlog
 Issues adicionadas: 
 1. **Issue:** #104 US01 - Postagem Anonima<br>
 **Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo<br>

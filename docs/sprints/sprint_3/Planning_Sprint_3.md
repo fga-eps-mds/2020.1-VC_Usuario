@@ -2,13 +2,13 @@
 
 ## Planejamento 
 
-## 1.Visão Geral
+## 1. Visão Geral
 **Número da Sprint:** 3<br>
 **Data de Início:** 10/09/2020<br>
 **Data de Término:** 16/09/2020<br>
 **Duração:** 7 dias<br>
 
-## 2.Papéis
+## 2. Papéis
 
 <table>
     <tr>
@@ -22,7 +22,7 @@
     </table>
 
 
-## 3.Objetivos
+## 3. Objetivos
 A sprint 3 tem como objetivo:
 - Desenvolvimento, revisão e finalização de documentação
 - Criação do protótipo de identidade visual
@@ -30,7 +30,7 @@ A sprint 3 tem como objetivo:
 - Reunião com o outro grupo responsável pelo projeto
 - Criação do ambiente de desenvolvimento e definição das tecnologias
 
-## 4.Sprint Backlog
+## 4. Sprint Backlog
 Issues adicionadas: 
 1. **Issue:** #55 Criar página para documentação - GitHub Page <br>
 **Responsáveis:** Daniel Porto<br>

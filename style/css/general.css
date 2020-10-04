@@ -3,6 +3,10 @@ body {
     color: black;
 }
 
+a {
+text-decoration:none;
+}
+
 .lg {
     display: block;
     margin-left: auto;

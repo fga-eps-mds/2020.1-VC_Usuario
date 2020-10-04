@@ -24,7 +24,8 @@
 
 
 ## 3. Burndown
-<img src = "../../Imagens/Sprints/Burndown_S5.png" width = 70%><br>
+
+![Burndown](../../Imagens/Sprints/Burndown_S5.png)
 
 ## 4. Retrospective
 ### Pontos Positivos:
@@ -48,10 +49,12 @@
 
 
 ## 5. Quadro de Conhecimento
-<img src = "../../Imagens/Sprints/Quadro_conhecimento_S5.png" width = 90%><br>
 
-## 6. Presença Daily
-<img src = "../../Imagens/Sprints/Daily_Sprint5.png" width = 90%>
+![Quadro de Conhecimentos](../../Imagens/Sprints/Quadro_conhecimento_S5.png)
+
+## 6. Presença  Daily 
+
+![Presença](../../Imagens/Sprints/Daily_Sprint5.png)
 
 ## 7. Animal da Sprint
 Ursos são animais conhecidos por fazerem uma bagunça onde chegam. Na economia, o urso é adotado para representar a queda no mercado de ações (bearish). Nesta sprint, houve uma pequena bagunça no planejamento da user story e houve uma queda no grande salto ao desenvolvimento que estávamos tendo.

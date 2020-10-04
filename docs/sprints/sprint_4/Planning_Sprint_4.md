@@ -2,13 +2,13 @@
 
 ## Planejamento 
 
-## 1.Visão Geral
+## 1. Visão Geral
 **Número da Sprint:** 4<br>
 **Data de Início:** 17/09/2020<br>
 **Data de Término:** 23/09/2020<br>
 **Duração:** 7 dias<br>
 
-## 2.Papéis
+## 2. Papéis
 
 <table>
     <tr>
@@ -21,7 +21,7 @@
         </tr>
     </table>
 
-## 3.Objetivos
+## 3. Objetivos
 A sprint 4 tem como objetivo:
 - Documentação do planejamento e resultado da Sprint 3
 - Reunião com o grupo do dashboard, DAF e ganhadores do Hackathon
@@ -29,7 +29,7 @@ A sprint 4 tem como objetivo:
 - Atualizar o GitHub Pages
 - Desenvolver protótipo de alta fidelidade
 
-## 4.Sprint Backlog
+## 4. Sprint Backlog
 Issues adicionadas: 
 1. **Issue:** #84 Atualizar a GitHub Page <br>
 **Responsáveis:** Daniel Porto e Denys<br>
@@ -62,4 +62,3 @@ Issues adicionadas:
 8. **Issue:** #93 Desenvolver protótipo de alta fidelidade<br>
 **Responsáveis:** Bruno e Emily<br>
 **Pontuação:** 2
-

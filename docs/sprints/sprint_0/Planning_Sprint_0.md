@@ -2,13 +2,13 @@
 
 ## Planejamento 
 ____________________________
-## 1.Visão Geral
+## 1. Visão Geral
 **Número da Sprint:** 0 <br>
 **Data de Início:** 20/08/2020 <br>
 **Data de Término:** 26/08/2020 <br>
 **Duração:** 7 dias <br>
 
-## 2.Papéis
+## 2. Papéis
 <table>
     <tr>
      <td align="center"><a href="https://github.com/Bruno-Felix"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/38890440?s=400&u=9c14ab68fc12dbeb25956056fe86bb075d138fa5&v=4" width="100px;" alt=""/><br /><sub><b>Bruno Félix</b><br><b>Product Owner/ Dev</b></sub></a><br /><a href="https://github.com/Bruno-Felix"></a>           </td>
@@ -21,10 +21,10 @@ ____________________________
     </table>
 
 
-## 3.Objetivos
+## 3. Objetivos
 Esta foi a sprint inicial do projeto com o foco principal de estudo e nivelamento de conhecimentos. Também foi definido uma reunião com os ganhadores do Hackathon para entender a solução proposta que possivelmente será nosso tema.
 
-## 4.Sprint Backlog
+## 4. Sprint Backlog
 Issues adicionadas: <br>
 1. **Issue:** #1 Verificação dos conhecimentos de Git e Github<br>
 **Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo
@@ -64,8 +64,3 @@ Issues adicionadas: <br>
 
 12. **Issue:** #20 Estudar o design de fluxo Gitflow<br>
 **Responsáveis:** Bruno e Daniel Porto
-
-
-
-
-

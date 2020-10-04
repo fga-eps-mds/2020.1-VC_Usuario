@@ -78,7 +78,8 @@
 
 
 ## 3. Burndown
-<img src = "../../Imagens/Sprints/Burndown_S4.png" width = 70%><br>
+
+![Burndown](../../Imagens/Sprints/Burndown_S4.png)
 
 ## 4. Retrospective
 ### Pontos Positivos:
@@ -99,10 +100,12 @@
 
 
 ## 5. Quadro de Conhecimento
-<img src = "../../Imagens/Sprints/Quadro_conhecimento_S4.png" width = 90%><br>
 
-## 6. Presença Daily
-<img src = "../../Imagens/Sprints/Daily_Sprint4.png" width = 90%>
+![Quadro de Conhecimentos](../../Imagens/Sprints/Quadro_conhecimento_S4.png)
+
+## 6. Presença  Daily 
+
+![Presença](../../Imagens/Sprints/Daily_Sprint4.png)
 
 ## 7. Animal da Sprint
  Os cangurus são animais grandes e fortes, podendo ultrapassar os dois metros de altura quando ficam eretos e podendo ultrapassar também os 80 kg. Nesta Sprint demos grandes saltos rumo ao desenvolvimento do projeto.

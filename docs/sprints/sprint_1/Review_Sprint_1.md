@@ -78,10 +78,12 @@
 - Pensar de maneira processual 
 
 ## 4. Quadro de Conhecimento
-<img src = "../../Imagens/Sprints/Quadro_conhecimento_S1.png" width = 90%>
+
+![Quadro de Conhecimentos](../../Imagens/Sprints/Quadro_conhecimento_S1.png)
 
 ## 5. Presença  Daily 
-<img src = "../../Imagens/Sprints/Daily_Sprint1.png" width = 90%>
+
+![Presença](../../Imagens/Sprints/Daily_Sprint1.png)
 
 ## 6. Animal da Sprint
 Os saguis são pequenos macacos que são muito ágeis, inteligentes e curiosos. Nesta Sprint a equipe demonstrou muita competência, agilidade e curiosidade.

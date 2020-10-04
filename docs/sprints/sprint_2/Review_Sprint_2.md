@@ -64,7 +64,8 @@
 
 
 ## 3. Burndown
-<img src = "../../Imagens/Sprints/Burndown_S2.png" width = 70%><br>
+
+![Burndown](../../Imagens/Sprints/Burndown_S2.png)
 
 ## 4. Retrospective
 ### Pontos Positivos:
@@ -85,11 +86,13 @@
 - Melhorar a dependência externa
 - Melhorar comunicação com a professora
 
-## 5. Quadro de Conhecimento
-<img src = "../../Imagens/Sprints/Quadro_conhecimento_S2.png" width = 90%><br>
+## 4. Quadro de Conhecimento
 
-## 6. Presença Daily
-<img src = "../../Imagens/Sprints/Daily_Sprint2.png" width = 90%>
+![Quadro de Conhecimentos](../../Imagens/Sprints/Quadro_conhecimento_S2.png)
+
+## 5. Presença  Daily 
+
+![Presença](../../Imagens/Sprints/Daily_Sprint2.png)
 
 ## 7. Animal da Sprint
 O pato é um dos poucos animais da natureza que anda, nada e voa com razoável competência, porém não consegue desempenhar nenhuma das atividades com maestria. Na Sprint 2 fizemos de tudo um pouco e demos nosso primeiros passos, porém, desengonçados.
