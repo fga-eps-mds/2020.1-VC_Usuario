@@ -11,7 +11,7 @@ services:
             - "8000:8000"
         volumes: 
             - .:/usr/app
-            - /usr/app/node_modules
+            - /usr/app/node_modules  
         links: 
             - mongo
 

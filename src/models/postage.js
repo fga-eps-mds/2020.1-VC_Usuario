@@ -3,37 +3,37 @@ const ObjectId = mongoose.Schema.ObjectId;
 
 
 const PostageSchema = new mongoose.Schema({
-    fk_id_usuario:{
-        type: ObjectId,
+    fk_user_id:{
+        type: ObjectId
     },
-    local:{
+    post_place:{
         type: String,
         required: true,
     },
-    categoria:{
+    post_category:{
         type: String,
         required: true,
     },
-    createdAt:{
+    post_created_at:{
         type: Date,
         default: Date.now,
     },
-    titulo_post: {
+    post_title: {
         type: String,
         required: true,
     },
-    midia:{
+    post_midia:{
         type:[String]
     },
-    status:{
+    post_status:{
         type: String,
         default: "Aguardando"
     },
-    descricao:{
+    post_description:{
         type: String,
         required: true,
     },
-    canPost:{
+    post_permission:{
         type: Boolean,
         required: true,
     },/*
@@ -42,7 +42,11 @@ const PostageSchema = new mongoose.Schema({
     },
     comentarios: {
         type: [ObjectId],
-    }*/
+    }
+    relev_degree: {
+    	type: double,
+    }
+	*/
 });
 
 
