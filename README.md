@@ -12,6 +12,11 @@
 </div>
 
 <!--- Título e Descrição -->
+
+<div align="center">
+    <img width=20% src="docs/Imagens/vamosCuidarIcon.png" alt="Vamos Cuidar" class="lg">
+</div>
+
 <h1 align="center">Vamos Cuidar</h1>
 
 <p align="center"> Sistema de postagem de problemas da Universidades de Brasília</p>
