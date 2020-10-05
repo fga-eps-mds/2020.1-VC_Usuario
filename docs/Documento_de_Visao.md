@@ -17,6 +17,7 @@
 | 16/09/2020 | 1.2 | Revisão do Tópico 1 e 2                       | Bruno Félix |
 | 16/09/2020 | 1.3 | Revisão do Tópico 3                           | Bruno Félix |
 | 17/09/2020 | 1.4 | Inserção dos itens 4, 5, 6 e 7                | Bruno Félix |
+| 05/10/2020 | 1.5 | Revisão do Tópico 7                           | Bruno Félix |
 
 ## 1. Introdução
 
@@ -243,7 +244,7 @@ Exibir uma página direcionada às notificações, relatórios e atualizações 
 
 Identificador | Requisito
 -- | --
-RF01 | Permitir que usuários da comunidade acadêmica realize postagens sobre problemas da universidade
+RF01 | Permitir que usuários da comunidade acadêmica realize postagens, anonimamente ou não, de problemas da universidade
 RF02 | Permitir o usuário editar e excluir suas postagens
 RF03 | Permitir que o usuário crie, edite e apaga sua conta
 RF04 | Permitir o usuário fazer e desfazer login de sua conta
@@ -252,17 +253,18 @@ RF06 | Permitir a visualização de todas informações de uma postagem
 RF07 | Permitir que o usuário visualize suas postagens feitas
 RF08 | Permitir a visualização do estágio de resolução da postagem
 RF09 | Permitir que a listagem das postagens seja feita por filtros
-RF10 | Permitir os usuários engajarem com uma postagem, através de comentários e apoio(positivo ou negativo)
+RF10 | Permitir o usuário apoie uma determinada postagem
 RF11 | Permitir o usuário compartilhar uma postagem
 RF12 | Permitir a postagem de uma postagem
 RF13 | Exibir ao usuário uma notificação caso uma postagem sua tenha sido resolvida com sucesso
 RF14 | Exibir uma página direcionada às notificações e atualizações da universidade sobre as postagens
-RF15 | Exibir uma aba de ajuda de uso da aplicação
-RNF16 | A aplicação deve fazer a verificação de conta com dados da universidade
-RNF17 | O sistema deve se tratar de uma PWA (Progressive web app)
-RNF18 | A aplicação deve ter uma experiência de uso simples e familiar, de linguagem fácil e intuitiva
-RNF19 | Assegurar a segurança de dados dos usuários
-RNF20 | Pode ter suporte para gamificação
+RF15 | Dar ao usuário pontos por cada ação sua na aplicação, que podem ser trocados por benefícios
+RF16 | Permitir o usuário engajar com uma postagem, através de comentários e compartilhamento
+RNF17 | A aplicação deve fazer a verificação de conta com dados da universidade
+RNF18 | O sistema deve se tratar de uma PWA (Progressive web app)
+RNF19 | A aplicação deve ter uma experiência de uso simples e familiar, de linguagem fácil e intuitiva
+RNF20 | Assegurar a segurança de dados dos usuários
+RNF21 | A aplicação só poderá ser usada dentro das dependências as universidade
 
 
 ## 8. Referências
