@@ -2,8 +2,8 @@
 
 | Data       | Versão | Descrição            | Autor             |
 |:----------:|:------:|:--------------------:|:-----------------:|
-| 15/09/2020 | 1.0 | Criação do documento com template inicial  | Enzo Gabriel|
-| 06/10/2020 | 1.1 | Revisão do documento | Emily Dias |
+| 15/09/2020 | 1.0 | Criação do documento com template inicial  | Enzo Gabriel |
+| 06/10/2020 | 1.1 | Revisão do documento | Emily Dias e Enzo Gabriel |
 
 
 ### Introdução
