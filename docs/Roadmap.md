@@ -5,7 +5,8 @@
 |:-:|:-:|:-:|:-:|
 |09/09/2020|1.0|Abertura do Documento|Enzo Gabriel e Daniel Barcelos|
 |23/09/2020|1.1|Revisando o Documento|Enzo Gabriel e Daniel Barcelos|
-|05/10/2020|1.2|Revisando o Documento e atualizando informações da sprint 5 e 6| Enzo Gabriel
+|05/10/2020|1.2|Revisando o Documento e atualizando informações da sprint 5 e 6| Enzo Gabriel|
+|06/10/2020|1.3|Revisando o Documento|Emily Dias|
 
 # Release 1
 
@@ -67,18 +68,18 @@
 
 | ID | Issue |
 |:--:| ------- | 
-| Issue | US01  Realizar postagem anônima
-| Issue | Criar perfil de comunidade Open Source no FrontEnd
+| Issue | US01  Realizar postagem anônima |
+| Issue | Criar perfil de comunidade Open Source no FrontEnd |
 
 ## Sprint 6
 
 | ID | Issue |
 | :--:| ------- |
-| Issue | US02  Visualizar toda a lista de postagens realizadas
-| Issue | US04  Visualizar o status de resolução dos problemas
-| Issue | US05  Tela de fazer cadastro
-| Issue | US06  Tela de login
-| Issue | Revisar documentação
-| Issue | Preparar apresentação da Release 1
+| Issue | US02  Visualizar toda a lista de postagens realizadas |
+| Issue | US04  Visualizar o status de resolução dos problemas |
+| Issue | US05  Tela de fazer cadastro |
+| Issue | US06  Tela de login |
+| Issue | Revisar documentação |
+| Issue | Preparar apresentação da Release 1 |
 
 
