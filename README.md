@@ -1,3 +1,13 @@
+<!--- Título e Descrição -->
+
+<div align="center">
+    <img width=30% src="docs/Imagens/vamosCuidarIcon.png" alt="Vamos Cuidar" class="lg">
+</div>
+
+<h1 align="center">Vamos Cuidar</h1>
+
+<p align="center"> Sistema de postagem de problemas da Universidades de Brasília</p>
+
 <!--- Badges -->
 <div align="center">
     <a href="https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/blob/master/LICENSE">
@@ -11,33 +21,67 @@
     </a>
 </div>
 
-<!--- Título e Descrição -->
-
-<div align="center">
-    <img width=20% src="docs/Imagens/vamosCuidarIcon.png" alt="Vamos Cuidar" class="lg">
-</div>
-
-<h1 align="center">Vamos Cuidar</h1>
-
-<p align="center"> Sistema de postagem de problemas da Universidades de Brasília</p>
-
-
-## Sobre o projeto
-Vamos Cuidar - é uma aplicação que agiliza a comunicação entre a comunidade acadêmica e adminstração para o relato e a resolução de problemas que há na universidade.
-
 <h4 align="center"> 
 	🚧  Vamos Cuidar: Em desenvolvimento...  🚧
 </h4>
 
-<!--- ## Funcionalidades -->
+<p align="center">
+	 <a href="#sobre-o-projeto">Sobre</a> •
+	 <a href="#idéia-e-motivação">Idéia e Motivação</a> •
+	 <a href="#funcionalidades">Funcionalidades</a> • 
+	 <a href="#aplicação">Aplicação</a> • 
+	 <a href="#Como-rodar-o-projeto">Rodar o projeto</a> • 
+	 <a href="#tecnologias">Tecnologias</a> • 
+	 <a href="#como-contribuir-para-o-projeto">Como Contribuir</a> • 
+	 <a href="#Desenvolvedores">Desenvolvedores</a> • 
+	 <a href="#Liçensa">Liçensa</a>
+</p>
 
-<!--- ## Aplicação -->
+---
 
-<!--- ## Como rodar o projeto -->
+## Sobre o projeto
+Vamos Cuidar - é uma aplicação que agiliza a comunicação entre a comunidade acadêmica e adminstração para o relato e a resolução de problemas que há na universidade.
 
-<!--- ## Tecnologias -->
+## Idéia e Motivação
 
-## Contribuidores
+
+## Funcionalidades
+- Criar postagens anônimas:
+  - 
+- Listar todas as postagens criadas;
+- Visualizar detalhes da postagem.
+
+## Aplicação
+
+## Como rodar o projeto
+
+## Tecnologias
+
+### Front End ([Vue.js](https://vuejs.org/)):
+  - Docker;
+  - MongoDB;
+  - Vue.js;
+  - Node.js.
+
+### Back End ([Node.js](https://nodejs.org/en/) + [MongoDB](https://www.mongodb.com/)):
+- Express;
+- Cors;
+- Bcrypt;
+- Body-parser;
+- Dotenv;
+- mongoose;
+- multer;
+- nodemom
+
+
+## Como contribuir para o projeto
+
+Esse é um projeto Open Source que está disponível para que qualquer um da comunidade possa contribuir e aprimora-lo.
+
+Para contribuir, por favor acesse nosso processo de contribuição: [Como Contribuir](https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/develop/CONTRIBUTING.md).
+
+
+## Desenvolvedores
 
 <table>
     <tr>
@@ -50,6 +94,6 @@ Vamos Cuidar - é uma aplicação que agiliza a comunicação entre a comunidade
     </tr>
 </table>
 
-<!--- ## Como contribuir para o projeto -->
+## Liçensa
 
-<!--- ## Liçensa -->
+Este projeto esta sobe a licença [GPL v3.0](https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/master/LICENSE).
