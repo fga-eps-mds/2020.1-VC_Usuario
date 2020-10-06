@@ -10,6 +10,7 @@
 - [Plano de Riscos](/docs/Plano_riscos.md)
 - [Protótipos](/docs/Prototipos.md)
 - [Código de Conduta](/CODE_OF_CONDUCT.md)
+- [Políticas](/docs/Policies.md)
 - [**Sprints**](#)
     - [**Sprint 0**](#)
         - [Planning Sprint 0](/docs/sprints/sprint_0/Planning_Sprint_0.md)
