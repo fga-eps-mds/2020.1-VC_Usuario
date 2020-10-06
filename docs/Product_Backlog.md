@@ -10,6 +10,7 @@
 | 22/09/2020 | 2.0 | Revisão do documento perante a nova visão do projeto            | Bruno Félix |
 | 05/10/2020 | 2.1 | Inserção da pontuação de novas Histórias de Usuário no tópico 3 | Bruno Félix |
 | 05/10/2020 | 2.2 | Inserção da data nos tópicos 3.1 e 3.2                          | Bruno Félix |
+| 06/10/2020 | 2.3 | Revisão da US08                                                 | Bruno Félix |
 
 
 ## 1. Épicos
@@ -30,7 +31,7 @@
 | E2 | FT03 | Listagem das postagens |
 | E2 | FT04 | Visualizar detalhes da postagem |
 | E2 | FT05 | Feedback e Progresso de solução das postagens |
-| E3 | FT06 | Comentário, Reação e Compartilhamento nas postagens |
+| E3 | FT06 | Comentário, Apoio e Compartilhamento nas postagens |
 | E3 | FT07 | Denúncia de postagens |
 | E3 | FT08 | Abas de Notícias, Notificações e Atualizações |
 | E3 | FT09 | Gamificação |
@@ -48,7 +49,7 @@
 | E1 | FT01 | US05 | Eu, como usuário, desejo fazer um cadastro                                                          | 2 |
 | E1 | FT01 | US06 | Eu, como usuário, desejo fazer e desfazer login em minha conta                                      | 2 |
 | E2 | FT02 | US07 | Eu, como usuário logado, desejo realizar uma postagem não anônima                                   | 3 |
-| E3 | FT06 | US08 | Eu, como usuário logado, desejo reagir (positivamente ou negativamente) a uma determinada postagem  | 3 |
+| E3 | FT06 | US08 | Eu, como usuário logado, desejo apoiar a uma determinada postagem                                   | 3 |
 | E3 | FT08 | US09 | Eu, como usuário, desejo ter uma área de notificações, relatórios e atualizações sobre as postagens | 5 |
 | E3 | FT09 | US10 | Eu, como usuário logado, desejo receber pontuação por cada ação minha na aplicação                  | 3 |
 | E2 | FT02 | US11 | Eu, como usuário logado, desejo editar minhas postagens realizadas                                  | 3 |
