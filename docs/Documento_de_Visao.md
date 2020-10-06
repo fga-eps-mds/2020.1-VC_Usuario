@@ -19,7 +19,7 @@
 | 17/09/2020 | 1.4 | Inserção dos itens 4, 5, 6 e 7                             | Bruno Félix |
 | 22/09/2020 | 2.0 | Revisão e alinhamento do documento a nova visão de produto | Bruno Félix |
 | 23/09/2020 | 2.1 | Atualização do Tópico 7 | Bruno Félix |
-| 05/10/2020 | 2.2 | Correção de alguns erros ortográficos od documento | Enzo Gabriel
+| 05/10/2020 | 2.2 | Correção de alguns erros ortográficos do documento | Enzo Gabriel
 
 ## 1. Introdução
 

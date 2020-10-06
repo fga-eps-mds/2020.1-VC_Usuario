@@ -5,6 +5,7 @@
 |:----------:|:------:|:-----------------------------------------------------------------:|:-------------------------------------------:|
 |12/09| 1.0| Criação do Documento |Emily Dias|
 |13/09| 1.1| Tabela de riscos |Emily Dias|
+|06/10| 1.2| Revisão da Tabela |Emily Dias e Daniel Barcelos|
 
 
 ## 1. Introdução
@@ -14,7 +15,7 @@ O Plano de Gerenciamento de Riscos tem por objetivo a identificação, análise 
 
 ## 2. Estrutura Analítica de Riscos (EAR)
 
-É uma ferramenta pela qual você agrupa riscos e organiza-os em categorias, serve como um guia para análise do contexto, da documentação, e também para questionamento das partes interessadas. Abaixo terá as categorias do EAR: </p>
+É uma ferramenta pela qual você agrupa riscos e organiza-os em categorias, serve como um guia para análise do contexto, da documentação, e também para questionamento das partes interessadas. Abaixo terá as categorias do EAR:
 
 * **Técnico**: Esses são os riscos associados à tecnologia, complexidade, requisitos e qualidade.
 * **Externo**: Esses são os riscos relativos ao cliente, mercado ou ambiente.
@@ -92,11 +93,12 @@ Sendo que:
 |**R11**| Conflito entre entregas da sprint e de tarefas de outras disciplinas| Diminuir o escopo da sprint e redistribuir tarefas| Externo| 5| 4| 12|
 |**R12**| Falta de um grupo de EPS para gerenciar o grupo e não ter uma gestão boa| Ir atrás de pessoas mais experientes em casos de dúvidas e aprender metodologias de gerência| Organizacional| 3| 4| 20|
 |**R13**| Alteração nas datas da disciplina| Redefinir datas das entregas| Externo| 2| 4| 8|
+|**R14**| Greve na UNB| Não há nenhuma ação a ser feita| Externo| 2| 5| 1|
 
 
 ## 5. Bibliografia
 
-* RODRIGUES, Eli. EAR para projetos de software. Disponível em https://www.elirodrigues.com/2013/09/21/gerenciamento-de-riscos-ear-para-projetos-de-software/. Acesso em 12 set 2020.
+* RODRIGUES, Eli. EAR para projetos de software. Disponível em <https://www.elirodrigues.com/2013/09/21/gerenciamento-de-riscos-ear-para-projetos-de-software/>. Acesso em 12 set 2020.
 
 * JOÃO, Lucas. Plano de Gerenciamento de Riscos do grupo ArBC. Disponível em: <https://github.com/fga-eps-mds/2019.2-ArBC/blob/develop/docs/Plano-Gerenciamento-Riscos.md>. Acesso em 12 set 2020.
 
@@ -106,4 +108,4 @@ Sendo que:
 
 * VITOR, Lucas. Plano de Gerenciamento de Riscos do grupo Aix. Disponível em: <https://fga-eps-mds.github.io/2019.1-Aix/gerencia/2019/04/06/plano-de-gerenciamento-de-riscos/>. Acesso em 12 set 2020.
 
-* SIQUEIRA, Lucas; OLIVEIRA, Caio. Plano de Gerenciamento de Riscos do grupo +Monitoria. Disponível em: https://fga-eps-mds.github.io/2019.1-MaisMonitoria/docs/plano-riscos. Acesso em 12 set 2020.
+* SIQUEIRA, Lucas; OLIVEIRA, Caio. Plano de Gerenciamento de Riscos do grupo +Monitoria. Disponível em: <https://fga-eps-mds.github.io/2019.1-MaisMonitoria/docs/plano-riscos>. Acesso em 12 set 2020.
