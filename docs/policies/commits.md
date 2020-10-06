@@ -2,13 +2,14 @@
 
 | Data       | Versão | Descrição            | Autor             |
 |:----------:|:------:|:--------------------:|:-----------------:|
-| 15/09/2020 | 1.0 | Criação do documento com template inicial  | Enzo Gabriel|
+| 15/09/2020 | 1.0 | Criação do documento com template inicial  | Enzo Gabriel |
+| 06/10/2020 | 1.1 | Revisão do documento | Emily Dias |
 
 Os commits devem ser claros e diretos, descrevendo as alterações feitas.
 
 Regras para escrita das mensagens nos commits:
 
-* Devem ser escritos em português no gerúndio, e conter uma breve descrição.
+* Devem ser escritos em português e no gerúndio, contendo uma breve descrição.
 
 <b>Exemplo: <b>
 
@@ -29,7 +30,7 @@ Criando novo documento.
 ```
 git config --local core.commentChar '!'
 ```
-* Caso 2 pessoas tenham feito o trabalho, para que ambos envolvidos no commit sejam incluidos como contribuintes no gráfico de commits do GitHub, basta incluir a instrução ```Co-authored-by:``` na mensagem:
+* Caso 2 ou mais pessoas tenham feito o trabalho, para que ambos envolvidos no commit sejam incluídos como contribuintes no gráfico de commits do GitHub, basta incluir a instrução ```Co-authored-by:``` na mensagem:
 
 <b>Exemplo: <b>
 
