@@ -7,6 +7,7 @@
 |23/09/2020|1.1|Revisando o Documento|Enzo Gabriel e Daniel Barcelos|
 |05/10/2020|1.2|Revisando o Documento e atualizando informações da sprint 5 e 6| Enzo Gabriel|
 |06/10/2020|1.3|Revisando o Documento|Emily Dias|
+ 06/10/2020|1.4|Adicionando as issues da release 2|Enzo Gabriel e Emily Dias|
 
 # Release 1
 
@@ -50,8 +51,7 @@
 | Issue | Desenvolver [**Identidade Visual**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/66)
 | Issue | Desenvolvimento do [**Product Backlog**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/64)
 | Issue | Desenvolvimento do [**Planejamento de Riscos**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/56)
-| Issue | Desenvolvimento do [**Protótipo de Baixa Fidelidade**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/67)
-| Issue | Revisar [**contributing e políticas de contribuição**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/62)
+| Issue | Desenvolvimento do [**Protótipo de Baixa Fidelidade**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-UsuarioRevisar documentaçã)
 | Issue | Criar [**GitHub Page**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/55)
 | Issue | Finalizar [**Documento de visão**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/59)
 
@@ -63,7 +63,7 @@
 | Issue | Revisar [**Product Backlog e Requisitos**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/90) e [**Roadmap**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/86)
 | Issue | Desenvolver [**Protótipo de Alta Fidelidade**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/93)
 | Issue | Reunião com [**DAF, grupo do Dashboard e grupo do Hackathon**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/87)
-
+Revisar documentaçã
 ## Sprint 5
 
 | ID | Issue |
@@ -83,3 +83,69 @@
 | Issue | Preparar apresentação da Release 1 |
 
 
+# Release 2
+
+## Sprint 7
+
+| ID | Issue |
+|:--:| ------- | 
+| Issue  | US05 Tela de fazer cadastro |
+| Issue  | US06 Tela de login |
+| Issue  | US07 Usuário logado fazer postagem anônima |
+
+## Sprint 8
+
+| ID | Issue |
+|:--:| ------- | 
+| Issue  | US08 Usuário logado reagir a uma postagem |
+| Issue  | US09 Usuário acessar uma área de notificações, relatórios e atualização sobre as postagens |
+
+## Sprint 9
+
+| ID | Issue |
+|:--:| ------- | 
+| Issue  | US10 Usuário logado receber pontuação por suas ações na aplicação |
+| Issue  | US11 Usuário logado editar suas postagens realizadas |
+| Issue  | US12 Usuário logado excluir suas postagens realizadas |
+
+## Sprint 10
+
+| ID | Issue |
+|:--:| ------- | 
+| Issue  | US13 Usuário logado poder editar sua conta |
+| Issue  | US14 Usuário logado poder excluir sua conta |
+
+## Sprint 11
+
+| ID | Issue |
+|:--:| ------- | 
+| Issue  | US15 Usuário filtrar a lista de postagens por categoria | 
+| Issue  | US16 Usuário logado receber notificação caso sua postagem seja resolvida, reportada ou não aceita |
+
+## Sprint 12
+
+| ID | Issue |
+|:--:| ------- | 
+| Issue  | US18 Usuário poder usar a aplicação somente dentro das depêndencias da universidade
+
+
+## Sprint 13
+
+| ID | Issue |
+|:--:| ------- | 
+| Issue  | US20 Usuário logado denunciar postagem |
+| Issue  | US21 Usuário compartilhar postagem | 
+
+## Sprint 14
+
+| ID | Issue |
+|:--:| ------- | 
+| Issue  | US22 Usuário logado comentar uma postagem | 
+| Issue  | Fazer testes de bugs na aplicação |
+
+## Sprint 15
+
+| ID | Issue |
+|:--:| ------- | 
+| Issue  | Preparar apresentação |
+| Issue  | Revisar documentação |
