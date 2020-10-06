@@ -9,6 +9,7 @@
 - [Backlog do Produto](/docs/Product_Backlog.md)
 - [Plano de Riscos](/docs/Plano_riscos.md)
 - [Protótipos](/docs/Prototipos.md)
+- [Contribuição](/docs/CONTRIBUTING.md)
 - [Código de Conduta](/CODE_OF_CONDUCT.md)
 - [Políticas](/docs/Policies.md)
 - [**Sprints**](#)
