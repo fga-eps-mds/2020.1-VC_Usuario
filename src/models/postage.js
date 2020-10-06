@@ -14,8 +14,14 @@ const PostageSchema = new mongoose.Schema({
         required: true,
     },
     post_created_at:{
-        type: Date,
-        default: Date.now,
+        type: String,
+        default: function formated_date(){
+            var date = new Date(),
+                day  = date.getDate().toString().padStart(2, '0'),
+                month  = (date.getMonth()+1).toString().padStart(2, '0'), 
+                year  = date.getFullYear();
+            return day+"/"+month+"/"+year;
+        }
     },
     post_title: {
         type: String,
@@ -33,8 +39,9 @@ const PostageSchema = new mongoose.Schema({
         required: true,
     },
     post_permission:{
-        type: Boolean,
+        type: [Boolean],
         required: true,
+        default: [true, false]
     },/*
     apoio:{
         type: [ObjectId],

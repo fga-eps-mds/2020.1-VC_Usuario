@@ -1,4 +1,5 @@
 const { json } = require('body-parser');
+const { update } = require('../models/postage.js');
 const Postage = require ('../models/postage.js');
 
 module.exports = {
@@ -51,11 +52,26 @@ module.exports = {
 
     async list_common (req, res){
         try{
-            const posts = await Postage.find( { $where: "this.fk_user_id != null" } );
+            const posts = await Postage.find({ $where: "this.fk_user_id != null" }, { 
+                post_category: 0, 
+                post_description: 0,
+                post_permission: 0
+            });
+            
             console.log(posts);
             return res.status(200).json({posts});
         }catch(err){
             return res.status(400).send({error: err.message});
         }
     },
+
+    async update_status (req, res){
+        try{
+            Postage.findByIdAndUpdate(req.params.id, req.body.post_status).then(post => {
+                return res.status(200).json({post});
+            })
+        }catch(err){
+            return res.status(400).send({error: err.message});
+        }
+    }
 }
