@@ -72,9 +72,8 @@ module.exports = {
 
     async update_status (req, res){
         try{
-            Postage.findByIdAndUpdate(req.params.id, req.body.post_status).then(post => {
-                return res.status(200).json({post});
-            })
+          	const post = await Postage.findByIdAndUpdate(req.params.id, req.body.post_status)          
+		return res.status(200).json({post});
         }catch(err){
             return res.status(400).send({error: err.message});
         }
