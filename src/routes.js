@@ -6,5 +6,6 @@ const multerConfig = require('./config/multer');
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_anon);
 router.get('/postage/list_all', Postage.list);
 router.delete('/postage/delete/:id', Postage.delete);
+router.get('/postage/list_one/:id', Postage.list_one);
 
 module.exports = router;

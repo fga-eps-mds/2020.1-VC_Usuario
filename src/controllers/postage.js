@@ -5,7 +5,7 @@ module.exports = {
         try{
             if(req.file){
                 console.log(req.file);
-                req.body.post_midia = req.file.path;
+                req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
             req.body.fk_user_id = null;
             const postage = await Postage.create(req.body);
@@ -19,6 +19,11 @@ module.exports = {
 
     async list (req, res){
         const posts = await Postage.find();
+        return res.json(posts);
+    },
+
+    async list_one (req, res){
+        const posts = await Postage.findById(req.params.id);
         return res.json(posts);
     },
 
