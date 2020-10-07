@@ -1,8 +1,10 @@
 # O que fazer antes de contribuir?
 
-* Leia o [Readme](https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/gh-page/README.md).
-* Leia o [código de conduta](https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/gh-page/docs/CODE_OF_CONDUCT.md).
-* Leia as políticas de branch, issue, commit e pull request que se encontram neste [link](https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/gh-page/docs/policies/policies.md).
+* Acesse os repositórios do projeto no GitHub:
+    * [Repositório Vamos Cuidar Usuário - Front-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario)
+    * [Repositório Vamos Cuidar Usuário - Back-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario-FrontEnd)
+* Leia o [código de conduta](/CODE_OF_CONDUCT.md).
+* Veja as [políticas do projeto](/docs/Policies.md).
 
 
 # Como contribuir?
