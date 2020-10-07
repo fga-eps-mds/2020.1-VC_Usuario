@@ -39,6 +39,11 @@ module.exports = {
         return res.json(posts);
     },
 
+    async list_one (req, res){
+        const posts = await Postage.findById(req.params.id);
+        return res.json(posts);
+    },
+
     async delete (req, res){
         const post = await Postage.findById(req.params.id);
         await post.remove();
