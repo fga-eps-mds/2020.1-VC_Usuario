@@ -1,11 +1,11 @@
-# Sprint 3 - Jabuti
+# Sprint 5 - Urso
 
 ## Planejamento 
 
 ## 1. Visão Geral
-**Número da Sprint:** 3<br>
-**Data de Início:** 10/09/2020<br>
-**Data de Término:** 16/09/2020<br>
+**Número da Sprint:** 5<br>
+**Data de Início:** 24/09/2020<br>
+**Data de Término:** 30/09/2020<br>
 **Duração:** 7 dias<br>
 
 ## 2. Papéis
@@ -23,65 +23,19 @@
 
 
 ## 3. Objetivos
-A sprint 3 tem como objetivo:
-- Desenvolvimento, revisão e finalização de documentação
-- Criação do protótipo de identidade visual
-- Criação da página para documentação - Github Page
-- Reunião com o outro grupo responsável pelo projeto
-- Criação do ambiente de desenvolvimento e definição das tecnologias
+A sprint 5 tem como objetivo:
+- Criar uma model para a postagem e para o usuário.
+- Definir uma rota para a postagem e testar no back se a postagem foi criada.
+- Criar a tela de criar a postagem e fazer a mesma pegar a rota para a postagem.
 
 ## 4. Sprint Backlog
 Issues adicionadas: 
-1. **Issue:** #55 Criar página para documentação - GitHub Page <br>
-**Responsáveis:** Daniel Porto<br>
-**Pontuação:** 2
-
-2. **Issue:** #56 Estudo e Desenvolvimento do Planejamento de Riscos<br>
-**Responsáveis:** Emily<br>
-**Pontuação:** 3
-
-3. **Issue:** #57 Documentação do planejamento e resultado das Sprints<br>
-**Responsáveis:** Denys<br>
-**Pontuação:** 3
-
-4. **Issue:** #58 Desenvolvimento do Product Backlog<br>
-**Responsáveis:** Bruno<br>
-**Pontuação:** 2
-
-5. **Issue:** #59 Finalizar Desenvolvimento do Documento de Visão<br>
-**Responsáveis:** Bruno<br>
-**Pontuação:** 2
-
-6. **Issue:** #60 Desenvolvimento do README<br>
-**Responsáveis:** Bruno<br>
-**Pontuação:** 1
-
-7. **Issue:** #62 Revisar Contributing<br>
-**Responsáveis:** Enzo<br>
-**Pontuação:** 3
-
-8. **Issue:** #64 Desenvolver o documento de arquitetura<br>
-**Responsáveis:** Enzo<br>
-**Pontuação:** 5
-
-9. **Issue:** #66 Desenvolver Identidade Visual<br>
-**Responsáveis:** Denys e Daniel Porto<br>
-**Pontuação:** 3
-
-10. **Issue:** #67 Desenvolver protótipo de baixa fidelidade<br>
-**Responsáveis:** Daniel Porto e Denys<br>
-**Pontuação:** 3
-
-11. **Issue:** #70 Reunião com grupo Dashboard<br>
-**Responsáveis:** Bruno, Daniel Porto e Denys<br>
-**Pontuação:** 2
-
-12. **Issue:** #72 Criar ambiente de desenvolvimento<br>
-**Responsáveis:** Daniel Barcelos<br>
-**Pontuação:** 5
-
-13. **Issue:** #80 Definição da stack de tecnologias<br>
+1. **Issue:** #104 US01 - Postagem Anonima<br>
 **Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo<br>
-**Pontuação:** 3
+**Pontuação:** 2
+
+2. **Issue:** #106 Criar perfil de comunidade Open Source - FrontEnd<br>
+**Responsáveis:** Bruno<br>
+**Pontuação:** 
 
 

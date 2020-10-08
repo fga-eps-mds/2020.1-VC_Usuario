@@ -1,14 +1,14 @@
-# Sprint 2
+# Sprint 2 - Pato
 
 ## Planejamento 
 
-## 1.Visão Geral
+## 1. Visão Geral
 **Número da Sprint:** 2<br>
 **Data de Início:** 03/09/2020<br>
 **Data de Término:** 09/09/2020<br>
 **Duração:** 7 dias<br>
 
-## 2.Papéis
+## 2. Papéis
 
 <table>
     <tr>
@@ -22,7 +22,7 @@
     </table>
 
 
-## 3.Objetivos
+## 3. Objetivos
 A sprint 2 tem como objetivo:
 - Desenvolvimento da documentação
 - Debate sobre tecnologias, escopo e documentos 
@@ -30,7 +30,7 @@ A sprint 2 tem como objetivo:
 - Estudo e levantamento de tecnologias 
 - Reunião com clientes, grupo aliado e membros representantes da UnB
 
-## 4.Sprint Backlog
+## 4. Sprint Backlog
 Issues adicionadas: 
 1. **Issue:** #38 Estudo, levantamento e debate sobre os requisitos do produto<br>
 **Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo<br>

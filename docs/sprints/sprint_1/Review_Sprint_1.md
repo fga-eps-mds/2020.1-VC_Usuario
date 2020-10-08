@@ -78,9 +78,20 @@
 - Pensar de maneira processual 
 
 ## 4. Quadro de Conhecimento
-<img src = "https://i.ibb.co/qYc8XS5/Quadro-Conhecimento-Sprint1.png" width = 90%>
 
-## 5. Análise do Scrum Master
+![Quadro de Conhecimentos](../../Imagens/Sprints/Quadro_conhecimento_S1.png)
+
+## 5. Presença  Daily 
+
+![Presença](../../Imagens/Sprints/Daily_Sprint1.png)
+
+## 6. Animal da Sprint
+Os saguis são pequenos macacos que são muito ágeis, inteligentes e curiosos. Nesta Sprint a equipe demonstrou muita competência, agilidade e curiosidade.
+
+
+## 7. Análise do Scrum Master
 Acredito que a equipe tenha tido um bom entendimentos das práticas e valores do ágil e isso tem se refletido no trabalho realizado até então. Ao longo da Sprint um membro teve problemas de conexão com a internet, mas a equipe se adaptou bem a situação e conseguimos entregar o planejado. Outro ponto relevante é o critério de aprovação que deve ser repensado de maneira mais crítica nas próximas Sprints para não causar morosidade como ocorreu nesta.
+
+Obs: Em razão da falta de conhecimento do grupo em relação ao planning poker e a pontuação das issues, o Burndown não foi feito.
 
 

@@ -1,11 +1,11 @@
-# Sprint 3 - Jabuti
+# Sprint 4 - Ganguru 
 
 ## Planejamento 
 
 ## 1. Visão Geral
-**Número da Sprint:** 3<br>
-**Data de Início:** 10/09/2020<br>
-**Data de Término:** 16/09/2020<br>
+**Número da Sprint:** 4<br>
+**Data de Início:** 17/09/2020<br>
+**Data de Término:** 23/09/2020<br>
 **Duração:** 7 dias<br>
 
 ## 2. Papéis
@@ -21,67 +21,44 @@
         </tr>
     </table>
 
-
 ## 3. Objetivos
-A sprint 3 tem como objetivo:
-- Desenvolvimento, revisão e finalização de documentação
-- Criação do protótipo de identidade visual
-- Criação da página para documentação - Github Page
-- Reunião com o outro grupo responsável pelo projeto
-- Criação do ambiente de desenvolvimento e definição das tecnologias
+A sprint 4 tem como objetivo:
+- Documentação do planejamento e resultado da Sprint 3
+- Reunião com o grupo do dashboard, DAF e ganhadores do Hackathon
+- Revisão do Roadmap e do Product Backlog
+- Atualizar o GitHub Pages
+- Desenvolver protótipo de alta fidelidade
 
 ## 4. Sprint Backlog
 Issues adicionadas: 
-1. **Issue:** #55 Criar página para documentação - GitHub Page <br>
-**Responsáveis:** Daniel Porto<br>
+1. **Issue:** #84 Atualizar a GitHub Page <br>
+**Responsáveis:** Daniel Porto e Denys<br>
 **Pontuação:** 2
 
-2. **Issue:** #56 Estudo e Desenvolvimento do Planejamento de Riscos<br>
-**Responsáveis:** Emily<br>
-**Pontuação:** 3
-
-3. **Issue:** #57 Documentação do planejamento e resultado das Sprints<br>
+2. **Issue:** #85 Documentação do planejamento e resultado da Sprint 3<br>
 **Responsáveis:** Denys<br>
+**Pontuação:** 2
+
+3. **Issue:** #86 Revisar Roadmap<br>
+**Responsáveis:** Daniel Barcelos e Enzo<br>
 **Pontuação:** 3
 
-4. **Issue:** #58 Desenvolvimento do Product Backlog<br>
-**Responsáveis:** Bruno<br>
-**Pontuação:** 2
+4. **Issue:** #87 Reunião com o grupo do dashboard, DAF e Hackathon<br>
+**Responsáveis:** Bruno e Daniel Porto<br>
+**Pontuação:** 
 
-5. **Issue:** #59 Finalizar Desenvolvimento do Documento de Visão<br>
-**Responsáveis:** Bruno<br>
-**Pontuação:** 2
-
-6. **Issue:** #60 Desenvolvimento do README<br>
+5. **Issue:** #88 Considerações dos documentos gerados - Políticas<br>
 **Responsáveis:** Bruno<br>
 **Pontuação:** 1
 
-7. **Issue:** #62 Revisar Contributing<br>
-**Responsáveis:** Enzo<br>
-**Pontuação:** 3
-
-8. **Issue:** #64 Desenvolver o documento de arquitetura<br>
-**Responsáveis:** Enzo<br>
-**Pontuação:** 5
-
-9. **Issue:** #66 Desenvolver Identidade Visual<br>
-**Responsáveis:** Denys e Daniel Porto<br>
-**Pontuação:** 3
-
-10. **Issue:** #67 Desenvolver protótipo de baixa fidelidade<br>
-**Responsáveis:** Daniel Porto e Denys<br>
-**Pontuação:** 3
-
-11. **Issue:** #70 Reunião com grupo Dashboard<br>
-**Responsáveis:** Bruno, Daniel Porto e Denys<br>
+6. **Issue:** #90 Revisar Product Backlog e requisitos<br>
+**Responsáveis:** Bruno<br>
 **Pontuação:** 2
 
-12. **Issue:** #72 Criar ambiente de desenvolvimento<br>
-**Responsáveis:** Daniel Barcelos<br>
-**Pontuação:** 5
+7. **Issue:** #92 Considerações dos documentos gerados - Documentos do projeto<br>
+**Responsáveis:** Bruno<br>
+**Pontuação:** 1
 
-13. **Issue:** #80 Definição da stack de tecnologias<br>
-**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo<br>
-**Pontuação:** 3
-
-
+8. **Issue:** #93 Desenvolver protótipo de alta fidelidade<br>
+**Responsáveis:** Bruno e Emily<br>
+**Pontuação:** 2

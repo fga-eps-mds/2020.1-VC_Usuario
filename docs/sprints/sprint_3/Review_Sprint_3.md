@@ -37,7 +37,7 @@
 **Pontuação:** 1<br>
 **Status:** Concluído<br>
 
-7. **Issue:** #62 Revisar Contributing<br>
+7. **Issue:** #62 Revisar Contributing e Políticas de Contribuição<br>
 **Responsáveis:** Enzo<br>
 **Pontuação:** 3<br>
 **Status:** Concluído<br>
@@ -72,10 +72,14 @@
 **Pontuação:** 3<br>
 **Status:** Concluído<br>
 
+### 2.1 Pontuação 
+- Pontos totais: 35
+- Pontos concluídos: 20
+
 
 
 ## 3. Burndown
-<img src = "https://i.ibb.co/8Kkgqj2/Burndown-S3.png" width = 70%><br>
+![Burndown](../../Imagens/Sprints/Burndown_S3.png)
 
 ## 4. Retrospective
 ### Pontos Positivos:
@@ -95,10 +99,18 @@
 - Melhorar planejamento da sprint
 - Melhorar Roadmap
 
-## 5. Quadro de Conhecimento
-<img src = "https://i.ibb.co/7pXdxKH/Quadro-conhecimento-S3.png" width = 90%><br>
+## 4. Quadro de Conhecimento
 
-## 6. Análise do Scrum Master
+![Quadro de Conhecimentos](../../Imagens/Sprints/Quadro_conhecimento_S3.png)
+
+## 5. Presença  Daily 
+
+![Presença](../../Imagens/Sprints/Daily_Sprint3.png)
+
+## 7. Animal da Sprint
+Jabutis são animais lentos, estritamente terrestres e bem solitário. Nesta Sprint, embora tenhamos ganhado mais independência, houve uma grande demora na criação das issues e pecamos em fazer pareamento. 
+
+## 8. Análise do Scrum Master
 Esta foi a primeira sprint na qual houve depedências técnicas e tal afirmação pode ser explicada pela falta de pareamento que deveria ter nas issues pontuadas com score máximo. As issues de prototipação e identidade visual não foram fechadas pois foi considerado que tais issues deveriam ter uma maior dedicação devido à importância pro projeto. Outro fator importante a pontuar é que foi feita uma reunião com o outro grupo responsável por desenvolver o Dashboard e após alguns pontos serem esclarecidos, a equipe se sentiu mais confiante e independente. Embora tenhamos melhorado a estruturação e o escopo do projeto, ainda é observado que há uma relativa demora na criação das issues e um mau uso do workflow do ZenHub.
 
 

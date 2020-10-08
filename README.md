@@ -1,27 +1,29 @@
-# Vamos Cuidar ?
 
-<div >
+<div align="center" >
     <img src="/style/icons/logoVC.png" alt="Vamos Cuidar" class="lg">
 </div>
+
+<h1 align="center">Vamos Cuidar</h1>
+
+---
 
 <p align="center"> Sistema de postagem de problemas da Universidades de Brasília</p>
 
 
 ## Sobre o projeto
 
-Vamos Cuidar é uma aplicação que agiliza a comunicação entre a comunidade acadêmica e adminstração para o relato e a resolução de problemas que há na universidade.
+<p style="text-align: justify;">&emsp;&emsp; 
+O Vamos Cuidar é uma <strong>aplicação PWA</strong> que tem como objetivo auxiliar a UnB na <strong>maior agilidade em resolver problemas</strong>, sejam eles estruturais, acadêmicos, processuais entre outros, que impactam negativamente o dia a dia da universidade. <strong>Com uma plataforma prática e direta</strong>, a comunidade universitária pode <strong>fazer postagens sobre problemas</strong> que enfrentam no cotidiano, e com isto, os gestores podem analisar e tomar as medidas necessárias para <strong>resolver esses problemas reportados</strong></br>&emsp;&emsp;Esta página contém a documentação sobre o produto, seu gerenciamento e desenvolvimento, além de guias de conduta e contribuição.
+</p>
 
 <h4 align="center"> 
 	🚧  Vamos Cuidar: Em desenvolvimento...  🚧
 </h4>
 
-<!--- ## Funcionalidades -->
+## Links
 
-<!--- ## Aplicação -->
-
-<!--- ## Como rodar o projeto -->
-
-<!--- ## Tecnologias -->
+* [Repositório Vamos Cuidar Usuário - Front-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario-FrontEnd)
+* [Repositório Vamos Cuidar Usuário - Back-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario)
 
 ## Equipe 
 <br />
@@ -89,6 +91,6 @@ Vamos Cuidar é uma aplicação que agiliza a comunicação entre a comunidade a
     </div>
 </div>
 
-<!--- ## Como contribuir para o projeto -->
+### Deseja contribuir ?
 
-<!--- ## Liçensa -->
+Siga para o nosso [Guia de Contribuição](/CONTRIBUTING.md)
