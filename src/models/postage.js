@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const ObjectId = mongoose.Schema.ObjectId;
 
-
 const PostageSchema = new mongoose.Schema({
     fk_user_id:{
         type: ObjectId
@@ -15,8 +14,14 @@ const PostageSchema = new mongoose.Schema({
         required: true,
     },
     post_created_at:{
-        type: Date,
-        default: Date.now,
+        type: String,
+        default: function formated_date(){
+            var date = new Date(),
+                day  = date.getDate().toString().padStart(2, '0'),
+                month  = (date.getMonth()+1).toString().padStart(2, '0'), 
+                year  = date.getFullYear();
+            return day+"/"+month+"/"+year;
+        }
     },
     post_title: {
         type: String,
@@ -34,8 +39,9 @@ const PostageSchema = new mongoose.Schema({
         required: true,
     },
     post_permission:{
-        type: Boolean,
+        type: [Boolean],
         required: true,
+        default: [true, false]
     },/*
     apoio:{
         type: [ObjectId],
@@ -48,11 +54,6 @@ const PostageSchema = new mongoose.Schema({
     }
 	*/
 });
-
-
-/* PostageSchema.pre('save', function (){
-    
-}); será definido método para criar url da imagem, caso tenha*/
 
 const Postage = mongoose.model('Postage', PostageSchema);
 module.exports = Postage;
