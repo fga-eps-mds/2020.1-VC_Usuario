@@ -1,6 +1,6 @@
 
 <div align="center" >
-    <img src="/style/icons/logoVC.png" alt="Vamos Cuidar" class="lg">
+    <img src="./style/icons/logoVC.png" alt="Vamos Cuidar" class="lg">
 </div>
 
 <h1 align="center">Vamos Cuidar</h1>
