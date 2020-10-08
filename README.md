@@ -22,8 +22,8 @@ O Vamos Cuidar é uma <strong>aplicação PWA</strong> que tem como objetivo aux
 
 ## Links
 
-* [Repositório Vamos Cuidar Usuário - Front-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario)
-* [Repositório Vamos Cuidar Usuário - Back-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario-FrontEnd)
+* [Repositório Vamos Cuidar Usuário - Front-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario-FrontEnd)
+* [Repositório Vamos Cuidar Usuário - Back-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario)
 
 ## Equipe 
 <br />

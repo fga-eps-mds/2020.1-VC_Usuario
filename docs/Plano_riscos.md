@@ -3,9 +3,9 @@
 
 |    Data    | Versão |                             Alteração                             |                    Autor                    |
 |:----------:|:------:|:-----------------------------------------------------------------:|:-------------------------------------------:|
-|12/09| 1.0| Criação do Documento |Emily Dias|
-|13/09| 1.1| Tabela de riscos |Emily Dias|
-|06/10| 1.2| Revisão da Tabela |Emily Dias e Daniel Barcelos|
+|12/09| 0.1 | Criação do Documento |Emily Dias |
+|13/09| 0.2 | Tabela de riscos |Emily Dias |
+|06/10| 0.3 | Revisão da Tabela |Emily Dias e Daniel Barcelos |
 
 
 ## 1. Introdução

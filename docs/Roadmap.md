@@ -3,11 +3,10 @@
 
 |Data|Versão|Alteração|Autor|
 |:-:|:-:|:-:|:-:|
-|09/09/2020|1.0|Abertura do Documento|Enzo Gabriel e Daniel Barcelos|
-|23/09/2020|1.1|Revisando o Documento|Enzo Gabriel e Daniel Barcelos|
-|05/10/2020|1.2|Revisando o Documento e atualizando informações da sprint 5 e 6| Enzo Gabriel|
-|06/10/2020|1.3|Revisando o Documento|Emily Dias|
- 06/10/2020|1.4|Adicionando as issues da release 2|Enzo Gabriel e Emily Dias|
+|09/09/2020|0.1|Abertura do Documento|Enzo Gabriel e Daniel Barcelos|
+|23/09/2020|0.2|Revisando o Documento|Enzo Gabriel e Daniel Barcelos|
+|05/10/2020|0.3|Revisando o Documento e atualizando informações da sprint 5 e 6| Enzo Gabriel|
+|06/10/2020|0.4|Revisando o Documento e Adicionando as issues da release 2|Emily Dias e Enzo|
 
 # Release 1
 
@@ -51,7 +50,7 @@
 | Issue | Desenvolver [**Identidade Visual**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/66)
 | Issue | Desenvolvimento do [**Product Backlog**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/64)
 | Issue | Desenvolvimento do [**Planejamento de Riscos**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues/56)
-| Issue | Desenvolvimento do [**Protótipo de Baixa Fidelidade**](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-UsuarioRevisar documentaçã)
+| Issue | Desenvolvimento do [**Protótipo de Baixa Fidelidade**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/67)
 | Issue | Criar [**GitHub Page**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/55)
 | Issue | Finalizar [**Documento de visão**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/59)
 
