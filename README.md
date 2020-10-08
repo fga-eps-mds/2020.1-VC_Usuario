@@ -28,7 +28,6 @@
     <a href="https://github.com/fga-eps-mds/2020.1-VC_Usuario/pulls">
         <img alt="Numero de PRs closed" src="https://img.shields.io/github/issues-pr-closed/fga-eps-mds/2020.1-VC_Usuario">
     </a>
-	
 </div>
 
 <h4 align="center"> 
@@ -41,6 +40,7 @@
 <p align="center">
 	 <a href="#-sobre-o-projeto">Sobre</a> •
 	 <a href="#-ideia-e-incentivo">Ideia e Incentivo</a> •
+	 <a href="#-release-1-0810">Release 1</a> •
 	 <a href="#%EF%B8%8F-funcionalidades">Funcionalidades</a> • 
 	 <a href="#-aplicação">Aplicação</a> • 
 	 <a href="#-tecnologias">Tecnologias</a> • 
@@ -73,19 +73,41 @@ O projeto tem o <strong>incentivo e apoio do DAF</strong>, Decanato de Administr
 A universidade é um espaço público, que passa de geração a geração. O efetivo desenvolvimento do produto, <strong>agrega significativamente</strong> o cotidiano da comunidade universitária, <strong>preservando e enriquecendo</strong> a Universidade de Brasília do <strong>presente e a do futuro</strong>.
 </p>-->
 
+## 📦 Release 1 08/10
+
+### :point_right: Slide: [Slide Release 1](https://www.canva.com/design/DAEJ8ADMuMY/2atFykuyQTcYDCRogS3hsw/view?utm_content=DAEJ8ADMuMY&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent);
+### :point_right: Vídeo: [Vídeo Release 1](https://www.youtube.com/watch?v=jbmP2RJcWDU&ab_channel=DenysR%C3%B3geres).
 
 
 ---
 
 
 ## ⚙️ Funcionalidades
-- Criar postagens anônimas
-- Listar todas as postagens criadas;
-- Visualizar detalhes da postagem.
+
+### :point_right: Criar postagens anônimas:
+
+### :point_right: Listar todas as postagens;
+
+### :point_right: Visualizar detalhes da postagem.
 
 
 ## 💻 Aplicação
 
+<p align="center">
+  <kbd>
+    <img src="https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/111-Revisao_README/docs/Imagens/Print_README/localhost_8080_iPhone_X.png" width="250">
+  </kbd>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <kbd>
+    <img src="https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/111-Revisao_README/docs/Imagens/Print_README/localhost_8080_iPhone_X_1.png" width="250">
+  </kbd>
+</p>
+
+<p align="center">
+  <kbd>
+    <img src="https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/111-Revisao_README/docs/Imagens/Print_README/Captura_de_tela_de_2020-10-07_23-09-32.png" width="800">
+  </kbd>
+</p>
 
 ---
 
@@ -111,20 +133,44 @@ A universidade é um espaço público, que passa de geração a geração. O efe
 
 ### :white_check_mark: Pré requisitos
 
+- Docker;
+- Docker-compose;
+- Node/ npm.
+
+**Saiba como instalar os pré requisitos** [aqui](https://github.com/fga-eps-mds/2020.1-VC_Usuario/wiki/Instalar-Pr%C3%A9-Requisitos)
+
 ### :heavy_check_mark: Instalando e Executando
 
-**Rodando o Backend**
+#### :point_right: Rodando o Backend
 ```bash
 # Clonando o Repositório
 $ git clone https://github.com/fga-eps-mds/2020.1-VC_Usuario.git
+$ cd 2020.1-VC_Usuario
 ```
 
-**Rodando o FrontEnd**
+```bash
+# Rodando o docker-compose
+$ sudo docker-compose build
+$ sudo docker-compose up
+```
+
+#### :point_right: Rodando o FrontEnd
 ```bash
 # Clonando o Repositório
 $ git clone https://github.com/fga-eps-mds/2020.1-VC_Usuario-FrontEnd
+$ cd 2020.1-VC_Usuario-FrontEnd
 ```
 
+```bash
+# Rodando o docker-compose
+$ sudo docker-compose build
+$ sudo docker-compose up
+```
+
+#### :point_right: Rodando toda a aplicação
+**É necessário rodar simultaneamente o backend e o frontend para o funcionamento completo**;<br>
+**O BackEnd rodará na porta:** [localhost:8000](http://localhost:8000/);<br>
+**O FrontEnd rodará na porta:** [localhost:8080](http://localhost:8080/).<br>
 
 ## 🤝 Como contribuir para o projeto
 
