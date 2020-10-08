@@ -1,7 +1,7 @@
 <!--- Logo, Título e Descrição -->
 
 <div align="center">
-    <img width=30% src="docs/Imagens/vamosCuidarIcon.png" alt="Vamos Cuidar" class="lg">
+    <img width=30% src="https://user-images.githubusercontent.com/38890440/95414994-78bbeb80-0905-11eb-89ea-2264a1bf109d.png" alt="Vamos Cuidar" class="lg">
 </div>
 
 <h1 align="center">Vamos Cuidar</h1>
