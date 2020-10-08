@@ -1,4 +1,16 @@
+<!--- Logo, Título e Descrição -->
+
+<div align="center">
+    <img width=30% src="docs/Imagens/vamosCuidarIcon.png" alt="Vamos Cuidar" class="lg">
+</div>
+
+<h1 align="center">Vamos Cuidar</h1>
+
+<p align="center"> Sistema de postagem de problemas da Universidades de Brasília</p>
+
+
 <!--- Badges -->
+
 <div align="center">
     <a href="https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/blob/master/LICENSE">
         <img alt="License" src="https://img.shields.io/github/license/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario">
@@ -6,33 +18,171 @@
     <a href="https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/milestones">
         <img alt="Numero de Milestones" src="https://img.shields.io/github/milestones/all/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario">
     </a>
-    <a href="https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues?q=is%3Aissue+is%3Aclosed">
-        <img alt="Numero de issues closed" src="https://img.shields.io/github/issues-closed-raw/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario">
+    <a><img alt="Numero de linguagens" src="https://img.shields.io/github/languages/count/fga-eps-mds/2020.1-VC_Usuario"></a>
+    <!---<a href="https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues?q=is%3Aissue+is%3Aclosed">
+        <img alt="Versão da Release" src="https://img.shields.io/github/v/release/fga-eps-mds/2020.1-VC_Usuario">
+    </a>-->
+    <a href="https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues">
+        <img alt="Numero de issues closed" src="https://img.shields.io/github/issues-closed/fga-eps-mds/2020.1-VC_Usuario">
+    </a>
+    <a href="https://github.com/fga-eps-mds/2020.1-VC_Usuario/pulls">
+        <img alt="Numero de PRs closed" src="https://img.shields.io/github/issues-pr-closed/fga-eps-mds/2020.1-VC_Usuario">
     </a>
 </div>
-
-<!--- Título e Descrição -->
-<h1 align="center">Vamos Cuidar</h1>
-
-<p align="center"> Sistema de postagem de problemas da Universidades de Brasília</p>
-
-
-## Sobre o projeto
-Vamos Cuidar - é uma aplicação que agiliza a comunicação entre a comunidade acadêmica e adminstração para o relato e a resolução de problemas que há na universidade.
 
 <h4 align="center"> 
 	🚧  Vamos Cuidar: Em desenvolvimento...  🚧
 </h4>
 
-<!--- ## Funcionalidades -->
 
-<!--- ## Aplicação -->
+<!--- Sumário -->
 
-<!--- ## Como rodar o projeto -->
+<p align="center">
+	 <a href="#-sobre-o-projeto">Sobre</a> •
+	 <a href="#-ideia-e-incentivo">Ideia e Incentivo</a> •
+	 <a href="#-release-1-0810">Release 1</a> •
+	 <a href="#%EF%B8%8F-funcionalidades">Funcionalidades</a> • 
+	 <a href="#-aplicação">Aplicação</a> • 
+	 <a href="#-tecnologias">Tecnologias</a> • 
+	 <a href="#-como-rodar-o-projeto">Rodar o projeto</a> • 
+	 <a href="#-como-contribuir-para-o-projeto">Como Contribuir</a> • 
+	 <a href="#-desenvolvedores">Desenvolvedores</a> • 
+	 <a href="#%EF%B8%8F-licença">Licença</a>
+</p>
 
-<!--- ## Tecnologias -->
 
-## Contribuidores
+---
+
+
+## 🏆 Sobre o projeto
+<p style="text-align: justify;">&emsp;&emsp; 
+O Vamos Cuidar é uma <strong>aplicação PWA</strong> que tem como objetivo auxiliar a UnB na <strong>maior agilidade em resolver problemas</strong>, sejam eles estruturais, acadêmicos, processuais entre outros, que impactam negativamente o dia a dia da universidade. <strong>Com uma plataforma prática e direta</strong>, a comunidade universitária pode <strong>fazer postagens sobre problemas</strong> que enfrentam no cotidiano, e com isto, os gestores podem analisar e tomar as medidas necessárias para <strong>resolver esses problemas reportados</strong>.
+</p>
+
+
+## 💡 Ideia e Incentivo
+<p style="text-align: justify;">&emsp;&emsp; 
+O projeto se baseia numa proposta do evento, ocorrido nos dias 21 e 22 de novembro de 2019, <strong>"Hackathon DAF e PCTec/UnB"</strong>, que tinha como tema <strong>"UnB na palma da sua mão"</strong>. Nesse Hackathon, o objetivo era desenvolver uma aplicação que as pessoas pudessem <strong>relatar problemas</strong> para os administradores e assim serem <strong>rapidamente resolvidos</strong>.
+</p>
+
+<p style="text-align: justify;">&emsp;&emsp; 
+O projeto tem o <strong>incentivo e apoio do DAF</strong>, Decanato de Administração da UnB. A falta de um <strong>meio de comunicação não burocrático e prático</strong> para a notificação desses tais problemas pode ocasionar inúmeros prejuízos para a universidade.
+</p>
+
+<!---<p style="text-align: justify;">&emsp;&emsp; 
+A universidade é um espaço público, que passa de geração a geração. O efetivo desenvolvimento do produto, <strong>agrega significativamente</strong> o cotidiano da comunidade universitária, <strong>preservando e enriquecendo</strong> a Universidade de Brasília do <strong>presente e a do futuro</strong>.
+</p>-->
+
+## 📦 Release 1 08/10
+
+### :point_right: Slide: [Slide Release 1](https://www.canva.com/design/DAEJ8ADMuMY/2atFykuyQTcYDCRogS3hsw/view?utm_content=DAEJ8ADMuMY&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent);
+### :point_right: Vídeo: [Vídeo Release 1](https://www.youtube.com/watch?v=jbmP2RJcWDU&ab_channel=DenysR%C3%B3geres).
+
+
+---
+
+
+## ⚙️ Funcionalidades
+
+### :point_right: Criar postagens anônimas:
+
+### :point_right: Listar todas as postagens;
+
+### :point_right: Visualizar detalhes da postagem.
+
+
+## 💻 Aplicação
+
+<p align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/38890440/95411288-87ea6b80-08fc-11eb-8ca9-f28f3943977f.png" width="250">
+  </kbd>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/38890440/95411287-8751d500-08fc-11eb-9078-394683d67a03.png" width="250">
+  </kbd>
+</p>
+
+<p align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/38890440/95411285-86b93e80-08fc-11eb-8525-0c585bdd0883.png" width="800">
+  </kbd>
+</p>
+
+---
+
+
+## 🛠 Tecnologias
+
+### :point_right: Front End ([Vue.js](https://vuejs.org/))
+  - Axios;
+  - Vue/cli.
+
+### :point_right: Back End ([Node.js](https://nodejs.org/en/) + [MongoDB](https://www.mongodb.com/))
+- Express;
+- Cors;
+- Bcrypt;
+- Body-parser;
+- Dotenv;
+- Mongoose;
+- Multer;
+- Nodemon.
+
+
+## 🚀 Como rodar o projeto
+
+### :white_check_mark: Pré requisitos
+
+- Docker;
+- Docker-compose;
+- Node/ npm.
+
+**Saiba como instalar os pré requisitos** [aqui](https://github.com/fga-eps-mds/2020.1-VC_Usuario/wiki/Instalar-Pr%C3%A9-Requisitos)
+
+### :heavy_check_mark: Instalando e Executando
+
+#### :point_right: Rodando o Backend
+```bash
+# Clonando o Repositório
+$ git clone https://github.com/fga-eps-mds/2020.1-VC_Usuario.git
+$ cd 2020.1-VC_Usuario
+```
+
+```bash
+# Rodando o docker-compose
+$ sudo docker-compose build
+$ sudo docker-compose up
+```
+
+#### :point_right: Rodando o FrontEnd
+```bash
+# Clonando o Repositório
+$ git clone https://github.com/fga-eps-mds/2020.1-VC_Usuario-FrontEnd
+$ cd 2020.1-VC_Usuario-FrontEnd
+```
+
+```bash
+# Rodando o docker-compose
+$ sudo docker-compose build
+$ sudo docker-compose up
+```
+
+#### :point_right: Rodando toda a aplicação
+**É necessário rodar simultaneamente o backend e o frontend para o funcionamento completo**;<br>
+**O BackEnd rodará na porta:** [localhost:8000](http://localhost:8000/);<br>
+**O FrontEnd rodará na porta:** [localhost:8080](http://localhost:8080/).<br>
+
+## 🤝 Como contribuir para o projeto
+
+Esse é um projeto Open Source que está disponível para que qualquer um da comunidade possa contribuir e aprimora-lo.
+
+Para contribuir, por favor acesse nosso processo de contribuição: [Como Contribuir](https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/develop/CONTRIBUTING.md). :punch:
+
+
+---
+
+
+## 💆‍ Desenvolvedores
 
 <table>
     <tr>
@@ -45,6 +195,7 @@ Vamos Cuidar - é uma aplicação que agiliza a comunicação entre a comunidade
     </tr>
 </table>
 
-<!--- ## Como contribuir para o projeto -->
 
-<!--- ## Liçensa -->
+## 🛡️ Licença
+
+Este projeto esta sobe a licença [GPL v3.0](https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/master/LICENSE).
