@@ -3,9 +3,10 @@
 
 |    Data    | Versão |                             Alteração                             |                    Autor                    |
 |:----------:|:------:|:-----------------------------------------------------------------:|:-------------------------------------------:|
-|12/09| 0.1 | Criação do Documento |Emily Dias |
-|13/09| 0.2 | Tabela de riscos |Emily Dias |
-|06/10| 0.3 | Revisão da Tabela |Emily Dias e Daniel Barcelos |
+|12/09/2020|0.1|Criação do Documento|Emily Dias|
+|13/09/20020|0.2|Tabela de riscos|Emily Dias|
+|06/10/2020|0.3|Revisão da Tabela|Emily Dias e Daniel Barcelos|
+|09/10/2020|0.4|Adicionando tabela de ações corretiva|Emily Dias| 
 
 
 ## 1. Introdução
@@ -78,7 +79,7 @@ Sendo que:
 
 ## Riscos levantados
 
-|Risco| Descrição|	Ação |Categoria	|Probabilidade	|Impacto|	Prioridade|
+|Risco| Descrição| Ação Preventiva|Ação Corretiva|Categoria|Probabilidade|Impacto|	Prioridade|
 |:----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |**R01**| Dificuldade com as tecnologias do projeto | Estudo e pareamentos efetivos| Técnico| 3| 5| 22|
 |**R02**| Entregas atrasadas| Definir novas datas e caso precise um novo pareamento| Gerência| 4| 4| 13|
