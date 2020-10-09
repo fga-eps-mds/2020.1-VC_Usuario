@@ -21,6 +21,7 @@
 | 23/09/2020 | 2.1 | Atualização do Tópico 7                                    | Bruno Félix |
 | 05/10/2020 | 2.2 | Revisão do Tópico 7                                        | Bruno Félix |
 | 05/10/2020 | 2.3 | Correção de alguns erros ortográficos do documento         | Enzo Gabriel |
+| 09/10/2020 | 2.4 | Inserção de restrições e correção de erros ortográficos    | Daniel Porto e Emily Dias|
 
 ## 1. Introdução
 
@@ -50,7 +51,7 @@ Ao longo de um semestre letivo, é comum se visualizar certos problemas que demo
 </p>
 
 <p style="text-align: justify;">&emsp;&emsp; 
-A universidade é um espaço público, que passa de geração a geração de estudantes, professores, servidores e outros. A efetiva aplicação e desenvolvimento de um produto com raiz nesse tema de Hackathon agregado a problemática levantada, pode-se gerar um grande projeto que agregue o cotidiano e beneficie a vida da comunidade universitária, preservando e enriquecendo a Universidade de Brasília do presente e do futuro.
+A universidade é um espaço público, que passa de geração em geração de estudantes, professores, servidores e outros. A efetiva aplicação e desenvolvimento de um produto com raiz nesse tema de Hackathon agregado a problemática levantada, pode-se gerar um grande projeto que agregue ao cotidiano e beneficie a vida da comunidade universitária, preservando e enriquecendo a Universidade de Brasília do presente e a do futuro.
 </p>
 
 
@@ -82,7 +83,7 @@ Referências: exposição das referências utilizadas.
 ### 2.1 Oportunidade de negócios
 
 <p style="text-align: justify;">&emsp;&emsp;
-Analisando o difícil acesso a canais de comunicação quando e diz respeito a delação de problemas no campus e na universidade, agregado a demora da administração de reconhecer esses mesmos problemas e resolvemos, foi identificado a oportunidade de desenvolver uma aplicação PWA para fornecer um sistema rápido, prático e democrático para a comunidade universitária postar seus problemas do dia a dia através computadores e smartphones.
+Analisando o difícil acesso a canais de comunicação quando se diz respeito à delação de problemas no campus e na universidade, agregado a demora da administração de reconhecer esses mesmos problemas e resolvemos, foi identificado a oportunidade de desenvolver uma aplicação PWA para fornecer um sistema rápido, prático e democrático para a comunidade universitária postar seus problemas do dia a dia através de computadores e smartphones.
 </p>
 
 
@@ -90,7 +91,7 @@ Analisando o difícil acesso a canais de comunicação quando e diz respeito a d
 
 | **Questão** | **Informações do Produto** |
 | --- | --- |
-| **O problema é**         | O difícil relato de problemas e defeitos encontrados na universidades |
+| **O problema é**         | A dificuldade em relatar problemas e defeitos encontrados na universidade |
 | **Que Afeta**            | A comunidade acadêmica |
 | **Cujo impacto é**       | A demora ou ineficácia da resolução desses problemas por parte da universidade |
 | **Uma boa solução seria**| Uma aplicação onde a comunidade pudesse relatar os problemas encontrados diretamente para universidade. Otimizando o diálogo e a solução | 
@@ -129,7 +130,7 @@ Analisando o difícil acesso a canais de comunicação quando e diz respeito a d
 ### 3.4 Ambiente dos Usuários
 
 <p style="text-align: justify;">&emsp;&emsp;
-Somente dentro das dependências universidade os usuários poderão utilizar a aplicação Vamos Cuidar, através da PWA em múltiplas plataformas, sempre que encontrarem algum problema no campus para que possam ser resolvido pela administração.
+Somente dentro das dependências da universidade, os usuários poderão utilizar a aplicação Vamos Cuidar através da PWA em múltiplas plataformas, sempre que encontrarem algum problema no campus para que possam ser resolvido pela administração.
 </p>
 
 
@@ -177,11 +178,11 @@ Atualmente é possível estar por dentro das notícias da universidade através 
 ### 4.1 Perspectiva do Produto
 
 <p style="text-align: justify;">&emsp;&emsp; 
-O produto desenvolvido neste documento faz parte de sistema maior, onde ele fica responsável pela aplicação voltada ao usuário, na postagem e visualização de problemas que se encontra na universidade. O sistema é dividido em 2 aplicações, uma aplicação voltada aos administradores e gestores, e a outra voltada aos os usuários da comunidade universitária.
+O produto desenvolvido neste documento faz parte de sistema maior, onde ele fica responsável pela aplicação voltada ao usuário, na postagem e visualização de problemas que se encontram na universidade. O sistema é dividido em duas aplicações, uma aplicação voltada aos administradores e gestores, e a outra voltada aos os usuários da comunidade universitária.
 </p>
 
 <p style="text-align: justify;">&emsp;&emsp; 
-Essas duas aplicações interagem através de APIs, onde é focada nos usuários encaminharem informações como as postagens geradas, que serão resolvidas como se achar necessário. Já a focada nos administradores e gestores encaminha informações como o status de solução da postagem e as notícias e relatórios, que serão disponibilizadas como se achar necessário.
+Essas duas aplicações interagem através de APIs. A aplicação focada nos usuários encaminha informações como as postagens geradas e seus atributos. Já a focada nos administradores e gestores encaminha informações como o status de solução da postagem e as notícias e relatórios, que serão disponibilizadas aos usuários.
 </p>
 
 
@@ -242,10 +243,18 @@ Exibir uma página direcionada às notificações, relatórios e atualizações 
 
 ## 6. Restrições
 
-- Ter um computador ou aparelho celular;
-- Estar nas dependências da universidade;
-- Conexão com a internet.
- 
+### 6.1 Restrições de Desenvolvimento e Implementação
+- O sistema será implementado usando Vue.js, Node.js e MongoDb;
+- O sistema será desenvolvido de forma remota devido a pandemia;
+- Estudantes inexperientes com as tecnologias utilizadas;
+- O sistema deve estar pronto até o dia 10 de Dezembro de 2020;
+- O acesso deve ser realizado por navegadores com suporte às funcionalidades de PWA;
+- Conexão com a internet em uma rede da UnB.
+
+### 6.2 Restrições Externas
+- O sistema será desenvolvido de forma desacoplada com outra parte crucial para funcionamento da plataforma como um todo;
+- Sistema de gestão deve estar funcional para a implementação completa;
+
 
 ## 7. Outros Requisitos do Produto
 

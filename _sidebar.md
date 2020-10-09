@@ -1,7 +1,7 @@
 <!-- docs/_sidebar.md -->
 
 - [**Home**](README.md)
-- [Documento de visao](/docs/Documento_de_Visao.md)
+- [Documento de Visão](/docs/Documento_de_Visao.md)
 - [Documento de Arquiteura](/docs/Documento_de_Arquitetura.md)
 - [Canvas](/docs/Canvas.md)
 - [Identidade Visual](/docs/Identidade_Visual)
