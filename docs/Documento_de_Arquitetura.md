@@ -13,6 +13,7 @@ Data|Versão|Descrição|Autor
 22/09|1.2| Atualização do item 2.3.1 | Daniel Porto
 24/09|1.3| Inserção dos diagramas de pacotes |Daniel Porto
 06/10|1.4| Revisão do documento: padronizaçãos do versionamento, correção das referências e atualização dos tópicos 2.1.1, 2.2.1, 2.3.1 e 4.1. Inclusão do tópico 5 | Daniel Porto e Emily Dias
+09/10|1.5| Inserindo uma descrição melhor sobre a frente VCG | Daniel Porto
 
 ## 1. Introdução
 
@@ -70,6 +71,7 @@ Sendo dividido em:</p>
 ## 2. Representação da Arquitetura
 ![Diagrama de relações](./Imagens/Documento_de_Arquitetura/Diagrama_Rel.jpg)
 <p align = "justify"> &emsp;&emsp;A plataforma Vamos Cuidar é composta por duas frentes de desenvolvimento desacoplados: VCG e VCU.</br>
+&emsp;&emsp;A frente VCG é responsável pelo desenvolvimento da parte da plataforma que tem como usuários os administradores e gestores enquanto a frente VCU tem como usuários os estudantes e servidores da universidade. É importante ressaltar que o sistema VCU estará trocando informações com o VCG. Para maiores detalhes sobre o escopo da frente VCG, acesse o seu<a href="https://github.com/fga-eps-mds/2020.1-VC_Gestor-BackEnd"> Repositório</a>.</br>
 &emsp;&emsp;A arquitetura utilizada no sistema desenvolvido pelo nosso grupo, VCU, utiliza o modelo MVC, sendo, portanto, composta por três camadas e o banco de dados. Para o desenvolvimento na nossa frente do projeto, separamos as camadas de forma que a camada de view seja representada e trabalhada no front-end e as camadas controller e model no back-end.</p>
 
 ### 2.1 Font-end
