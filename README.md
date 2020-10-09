@@ -176,7 +176,7 @@ $ sudo docker-compose up
 
 Esse é um projeto Open Source que está disponível para que qualquer um da comunidade possa contribuir e aprimora-lo.
 
-Para contribuir, por favor acesse nosso processo de contribuição: [Como Contribuir](https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/develop/CONTRIBUTING.md). :punch:
+Para contribuir, por favor acesse nosso processo de contribuição: [Como Contribuir](https://fga-eps-mds.github.io/2020.1-VC_Usuario/#/CONTRIBUTING). :punch:
 
 
 ---
