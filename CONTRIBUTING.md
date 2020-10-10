@@ -1,3 +1,12 @@
+# O que fazer antes de contribuir?
+
+* Acesse os repositórios do projeto no GitHub:
+    * [Repositório Vamos Cuidar Usuário - Front-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario-FrontEnd)
+    * [Repositório Vamos Cuidar Usuário - Back-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario)
+* Leia o [código de conduta](/CODE_OF_CONDUCT.md).
+* Veja as [políticas do projeto](https://fga-eps-mds.github.io/2020.1-VC_Usuario/#/docs/Policies).
+
+
 # Como contribuir?
 
 ## Reportando um Bug
