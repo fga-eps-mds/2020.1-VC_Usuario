@@ -17,6 +17,7 @@ Utilizando os conceitos de design thinking, o canvas foi feito de uma formas sim
 
 ![Canvas](../docs/Imagens/Canvas/Business_model_canvas.jpg)
 
+- [Link do protótipo que foi feito na plataforma chamada Miro](https://miro.com/welcomeonboard/5T7z9EMHZsD1v3m5pzv1GO2X2KJVy8lgaE8QTrNInmWskFwi9aMEbm4zlBcmHmwM)
 
 ## Bibliografia
 

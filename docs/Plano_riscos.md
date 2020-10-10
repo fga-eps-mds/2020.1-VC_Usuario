@@ -3,9 +3,10 @@
 
 |    Data    | Versão |                             Alteração                             |                    Autor                    |
 |:----------:|:------:|:-----------------------------------------------------------------:|:-------------------------------------------:|
-|12/09| 0.1 | Criação do Documento |Emily Dias |
-|13/09| 0.2 | Tabela de riscos |Emily Dias |
-|06/10| 0.3 | Revisão da Tabela |Emily Dias e Daniel Barcelos |
+|12/09/2020|0.1|Criação do Documento|Emily Dias|
+|13/09/20020|0.2|Tabela de riscos|Emily Dias|
+|06/10/2020|0.3|Revisão da Tabela|Emily Dias e Daniel Barcelos|
+|09/10/2020|0.4|Adicionando tabela de ações corretiva|Emily Dias| 
 
 
 ## 1. Introdução
@@ -78,22 +79,22 @@ Sendo que:
 
 ## Riscos levantados
 
-|Risco| Descrição|	Ação |Categoria	|Probabilidade	|Impacto|	Prioridade|
-|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|**R01**| Dificuldade com as tecnologias do projeto | Estudo e pareamentos efetivos| Técnico| 3| 5| 22|
-|**R02**| Entregas atrasadas| Definir novas datas e caso precise um novo pareamento| Gerência| 4| 4| 13|
-|**R03**| Qualidade do projeto não atender às expectativas do cliente| Ter reuniões frequentes com o cliente para obter validação do projeto| Externo| 3| 4| 20|
-|**R04**| Alguns dos membros ficarem doentes| Seguir as dicas do ministério da saúde| Externo| 3| 4| 10|
-|**R05**| Indisponibilidade de membros da equipe| Ter uma maior organização de tempo e redistribuição de tarefas| Externo| 2| 4| 10|
-|**R06**| Baixa produtividade dos integrantes do grupo| Motivação dos membros, e uma maior integração com reuniões constantes| Gerência| 3| 5| 15|
-|**R07**| Presença dos membros durante Daily e reunião de planejamento| Definir datas, horários e locais que sejam acessíveis a todos| Gerência| 4| 5| 13|
-|**R08**| Alteração do escopo| Planejar corretamente a sprint, documentar e aprimorar os requisitos| Gerência| 5| 4| 20|
-|**R09**| Desistência da disciplina| Estimular a máxima participação dos membros da equipe| Gerência| 2| 5| 10|
-|**R10**| Falta de comunicação| Elaborar e seguir plano de comunicações| Organizacional| 4| 3| 13|
-|**R11**| Conflito entre entregas da sprint e de tarefas de outras disciplinas| Diminuir o escopo da sprint e redistribuir tarefas| Externo| 5| 4| 12|
-|**R12**| Falta de um grupo de EPS para gerenciar o grupo e não ter uma gestão boa| Ir atrás de pessoas mais experientes em casos de dúvidas e aprender metodologias de gerência| Organizacional| 3| 4| 20|
-|**R13**| Alteração nas datas da disciplina| Redefinir datas das entregas| Externo| 2| 4| 8|
-|**R14**| Greve na UNB| Não há nenhuma ação a ser feita| Externo| 2| 5| 1|
+|Risco|Descrição|Ação Preventiva|Ação Corretiva|Categoria|Probabilidade|Impacto|Prioridade|
+|:----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|**R01**|Dificuldade com as tecnologias do projeto|Criar tarefas para estudo|Estudo e pareamentos efetivos|Técnico|3|5|22|
+|**R02**|Entregas atrasadas|Atenção ao velocity e ao burndown do Github|Definir novas datas e caso precise um novo pareamento|Gerência|4|4|13|
+|**R03**|Qualidade do projeto não atender às expectativas do cliente|Ter reuniões frequentes com o cliente para obter validação do projeto|Adaptar o projeto de acordo com as demandas do cliente|Externo|3|5|23|
+|**R04**|Alguns dos membros contrair o Corona Vírus ou outra doença|Seguir as dicas do Ministério da Saúde|Distribuir as tarefas do membro adoentado para outras pessoas do grupo|Externo|3|5|25|
+|**R05**|Indisponibilidade de membros da equipe|Ter uma transparência de horários disponíveis e indisponíveis|Ter uma maior organização de tempo e redistribuição de tarefas|Externo|2|4|10|
+|**R06**|Baixa produtividade dos integrantes do grupo|Motivação dos membros, e uma maior integração com reuniões constantes|Ter conversas para saber o motivo e agir diretamente no problema|Gerência|3|5|15|
+|**R07**|Falta dos membros durante Daily e reunião de planejamento|Definir datas, horários e locais que sejam acessíveis a todos|Procurar saber os motivos da pessoa, e agir sobre esses motivos|Gerência|4|5|13|
+|**R08**|Alteração do escopo|Manter boa comunicação com as partes envolvidas do projeto|Documentar e aprimorar os requisitos|Gerência|5|4|20|
+|**R09**|Desistência da disciplina|Estimular a máxima participação dos membros da equipe|Distribuir tarefas para a quantidade de membros atuais do projeto|Gerência|2|5|15|
+|**R10**|Falta de comunicação|Elaborar e seguir plano de comunicações|Rever plano de comunicação|Organizacional|4|3|13|
+|**R11**|Conflito entre entregas da sprint e de tarefas de outras disciplinas|Organização das tarefas para não haver choque de entrega|Diminuir o escopo da sprint e redistribuir tarefas|Externo|5|4|12|
+|**R12**|Falta de um grupo de EPS para gerenciar o grupo e não ter uma gestão boa|Não há ação a ser feita|Ir atrás de pessoas mais experientes em casos de dúvidas e aprender metodologias de gerência|Organizacional|3|4|20|
+|**R13**|Alteração nas datas da disciplina|Não há nenhuma ação a ser feita|Redefinir datas das entregas|Externo|2|4|8|
+|**R14**|Greve na UNB|Não há nenhuma ação a ser feita|Não há nenhuma ação a ser feita|Externo|2|5|1|
 
 
 ## 5. Bibliografia
