@@ -5,18 +5,18 @@ module.exports = {
         const { user_email } = req.body;
         try{
             if (await Users.findOne({ user_email }))
-                return res.status(400).send({ error: 'Email já cadastrado'})
+                return res.send({ msg: 'Email já cadastrado'})
 
             const User = await Users.create(req.body);
             console.log(User); 
-            return res.status(200).json({User});
+            return res.status(200).send({User, msg: 'Cadastro feito com sucesso!'});
         }catch(err){
             return res.status(400).send({ error: err.message});
         }
 
     },
 
-    async list_all (req, res){
+    async list (req, res){
         const users = await Users.find();
         return res.json(users);
     }

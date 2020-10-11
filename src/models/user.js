@@ -3,7 +3,7 @@ const ObjectId = mongoose.Schema.ObjectId;
 const bcrypt = require('bcrypt');
 
 const UserSchema = new mongoose.Schema({
-    /* unique_id:{
+    /* user_unique_id:{
         type: ObjectId,
         required: true,
     }, */
@@ -14,7 +14,7 @@ const UserSchema = new mongoose.Schema({
     user_password:{
         type: String,
         required: true,
-        /* select: false, */
+        select: false
 
     },
     user_name:{
