@@ -17,7 +17,7 @@ router.get('/postage/list_one/:id', Postage.list_one);
 
 //Users routers
 router.post('/user/register_user', User.register);
-router.get('/user/list_all', User.list);
+router.get('/user/list_all', Auth.session_authentication, User.list);
 router.post('/user/login', Auth.authentication);
 
 module.exports = router;
