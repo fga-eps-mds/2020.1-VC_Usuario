@@ -9,6 +9,7 @@ module.exports = {
         const user = await Users.findOne({ user_email: req.body.email })
 
         if(!user) {
+
             return res.status(401).send({ msg: 'Usuário não cadastrado.' })
         }
 
@@ -18,7 +19,7 @@ module.exports = {
 
         user.user_password = undefined
 
-        const token = JWT.sign({ id: user._id}, auth_config.secret, {
+        const token = JWT.sign({ id: user._id }, auth_config.secret, {
             expiresIn: 7200,
         });
 
@@ -28,26 +29,40 @@ module.exports = {
     },
 
     async session_authentication (req, res, next) {
-        const auth_token = req.headers.autorization;
+        const auth_token = req.headers.authorization;
 
         if(!auth_token)
-            res.status(401).send({msg: 'Permissão negada'});
+            return res.status(401).send({msg: 'Permissão negada'});
 
         const token_parts = auth_token.split(" ");
 
         if(token_parts.length != 2)
-            res.status(401).send({msg: 'Algo de errado não está certo'});
+            return res.status(401).send({msg: 'Algo de errado não está certo'});
 
-        const [ scheme, token] = token_parts;
+        const [ scheme, token ] = token_parts;
 
         if(!/^Bearer$/i.test(scheme))
-            res.status(401).send({msg: 'Token mal formatado'});
+            return res.status(401).send({msg: 'Token mal formatado'});
 
         JWT.verify(token, auth_config.secret, (err, decoded) => {
-            if (err) return res.status(401).send({error: 'Token inválido'});
+            if (err) return res.status(401).send({msg: 'Token inválido'});
         
             req.user_id = decoded.id;
+            console.log('fui!')
             return next();
         });        
     },
+
+    refresh_token (req, res){
+
+        /**
+         * Aqui se deve desenvolver uma lógica para invalidar o token antigo.
+         */
+
+        const new_token = JWT.sign({ id: req.body.user_id }, auth_config.secret, {
+            expiresIn: 7200,
+        });
+
+        return res.status(200).json({new_token})
+    }
 }

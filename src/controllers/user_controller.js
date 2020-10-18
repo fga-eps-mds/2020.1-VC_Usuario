@@ -5,13 +5,13 @@ module.exports = {
         const { user_email } = req.body;
         try{
             if (await Users.findOne({ user_email }))
-                return res.send({ msg: 'Email já cadastrado'})
+                return res.status(400).send({ msg: 'Email já cadastrado'})
 
             const User = await Users.create(req.body);
             console.log(User); 
             return res.status(200).send({User, msg: 'Cadastro feito com sucesso!'});
         }catch(err){
-            return res.status(400).send({ error: err.message});
+            return res.status(400).send({ msg: err.message});
         }
 
     },
