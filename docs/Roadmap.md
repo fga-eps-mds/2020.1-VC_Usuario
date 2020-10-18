@@ -90,7 +90,9 @@ Revisar documentaçã
 |:--:| ------- | 
 | Issue  | US05 Tela de fazer cadastro |
 | Issue  | US06 Tela de login |
-| Issue  | US07 Usuário logado fazer postagem anônima |
+| Issue  | Identidade visual |
+| Issue  | Estudo sobre segurança | 
+| Issue  | Feedback Realease 1 documentação |
 
 ## Sprint 8
 
