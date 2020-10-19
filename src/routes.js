@@ -3,6 +3,7 @@ const multer = require('multer');
 const Postage = require('./controllers/postage_controller');
 const User = require('./controllers/user_controller')
 const multerConfig = require('./config/multer');
+const Auth = require('./controllers/auth_controller');
 
 //Postages routes
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_anon);
@@ -16,7 +17,8 @@ router.get('/postage/list_one/:id', Postage.list_one);
 
 //Users routers
 router.post('/user/register_user', User.register);
-router.get('/user/list_all', User.list);
-
+router.get('/user/list_all', Auth.session_authentication, User.list);
+router.post('/user/login', Auth.authentication);
+router.get('/user/validate_session', Auth.session_authentication, Auth.refresh_token);
 
 module.exports = router;
