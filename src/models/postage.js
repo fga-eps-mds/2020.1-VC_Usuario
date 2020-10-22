@@ -42,17 +42,19 @@ const PostageSchema = new mongoose.Schema({
         type: [Boolean],
         required: true,
         default: [true, false]
-    },/*
+    },
+    post_support_number: {
+        type: Number,
+        default: 0
+    }
+    /*
     apoio:{
         type: [ObjectId],
     },
     comentarios: {
         type: [ObjectId],
     }
-    relev_degree: {
-    	type: double,
-    }
-	*/
+    */
 });
 
 const Postage = mongoose.model('Postage', PostageSchema);

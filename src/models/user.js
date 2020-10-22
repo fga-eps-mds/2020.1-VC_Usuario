@@ -23,6 +23,10 @@ const UserSchema = new mongoose.Schema({
     user_score:{
         type: Number,
         default: 0,
+    },
+    user_array_UPS:{
+        type: Array,
+        default: null,
     }
 });
 
