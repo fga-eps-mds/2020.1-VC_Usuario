@@ -15,7 +15,6 @@ router.delete('/postage/delete/:id', Postage.delete);
 router.delete('/postage/delete_all', Postage.delete_all);
 router.put('/postage/update_status/:id', Postage.update_status);
 router.get('/postage/list_one/:id', Postage.list_one);
-router.put('/postage/support_postage', Postage.support_postage);
 
 //Users routers
 router.post('/user/register_user', User.register);
@@ -26,5 +25,7 @@ router.get('/user/validate_session', Auth.session_authentication, Auth.refresh_t
 //UPS routers
 router.post('/ups/create', UPS.create_ups);
 router.get('/ups/list_all', UPS.list_all);
+router.delete('/ups/delete_all', UPS.delete_all);
+router.put('/ups/support_postage', UPS.check_exist_user_and_postage, UPS.support_postage);
 
 module.exports = router;
