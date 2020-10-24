@@ -2,11 +2,12 @@
 # Histórico de Revisão
 
 |Data|Versão|Alteração|Autor|
-|:-:|:-:|:-:|:-:|
-|09/09/2020|0.1|Abertura do Documento|Enzo Gabriel e Daniel Barcelos|
-|23/09/2020|0.2|Revisando o Documento|Enzo Gabriel e Daniel Barcelos|
-|05/10/2020|0.3|Revisando o Documento e atualizando informações da sprint 5 e 6| Enzo Gabriel|
-|06/10/2020|0.4|Revisando o Documento e Adicionando as issues da release 2|Emily Dias e Enzo|
+| --- | --- | --- | --- |
+|09/09/2020|0.1|Abertura do documento|Enzo Gabriel e Daniel Barcelos|
+|23/09/2020|0.2|Revisão do documento|Enzo Gabriel e Daniel Barcelos|
+|05/10/2020|0.3|Revisão do documento e atualização das informações das sprints 5 e 6| Enzo Gabriel|
+|06/10/2020|0.4|Revisão do documento e e inserção das issues da release 2|Emily Dias e Enzo Gabriel|
+|23/10/2020|0.5|Correção e atualização do documento nas informações das sprints 8, 9 e 10|Daniel Porto|
 
 # Release 1
 
@@ -62,7 +63,6 @@
 | Issue | Revisar [**Product Backlog e Requisitos**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/90) e [**Roadmap**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/86)
 | Issue | Desenvolver [**Protótipo de Alta Fidelidade**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/93)
 | Issue | Reunião com [**DAF, grupo do Dashboard e grupo do Hackathon**](https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/87)
-Revisar documentaçã
 ## Sprint 5
 
 | ID | Issue |
@@ -98,23 +98,27 @@ Revisar documentaçã
 
 | ID | Issue |
 |:--:| ------- | 
-| Issue  | US08 Usuário logado reagir a uma postagem |
-| Issue  | US09 Usuário acessar uma área de notificações, relatórios e atualização sobre as postagens |
+| Issue  | US07 Usuário logado realizar uma postagem não anônima|
+| Issue  | US08 Usuário logado apoiar uma postagem |
+| Issue  | US09 Estrutura básica do feed de notícia |
 
 ## Sprint 9
 
 | ID | Issue |
 |:--:| ------- | 
-| Issue  | US10 Usuário logado receber pontuação por suas ações na aplicação |
-| Issue  | US11 Usuário logado editar suas postagens realizadas |
-| Issue  | US12 Usuário logado excluir suas postagens realizadas |
+| Issue  | US13 Usuário logado poder editar sua conta |
+| Issue  | US14 Usuário logado poder excluir sua conta |
+| Issue  | Implementação de testes |
+
 
 ## Sprint 10
 
 | ID | Issue |
 |:--:| ------- | 
-| Issue  | US13 Usuário logado poder editar sua conta |
-| Issue  | US14 Usuário logado poder excluir sua conta |
+| Issue  | US09 Usuário acessar uma área de notificações, relatórios e atualização sobre as postagens |
+| Issue  | US10 Usuário logado receber pontuação por suas ações na aplicação |
+| Issue  | US11 Usuário logado editar suas postagens realizadas |
+| Issue  | US12 Usuário logado excluir suas postagens realizadas |
 
 ## Sprint 11
 
