@@ -15,7 +15,7 @@ module.exports = {
 
     },
 
-    async list (req, res){
+    async list(req, res){
         const users = await Users.find();
         return res.json(users);
     },
@@ -24,9 +24,27 @@ module.exports = {
         const user = await Users.findById(req.params.id);
         try{
             await user.remove();
-            return res.status(200).send({msg: 'Usuário deletado com sucesso!'}); 
+            return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
         }catch(err){
             return res.status(400).send({msg: err.message});
+        }
+    },
+
+    async update(req, res){
+        try{
+            const user = await Users.findByIdAndUpdate(req.params.id, 
+                {user_name: req.body.user_name, 
+                user_email: req.body.user_email, 
+                user_password: req.body.user_password},
+                function(err, cb){
+                    if (err) {
+                        return res.status(400).send({msg: err.message});
+                    } else {
+                        return res.status(200).send({cb});
+                    }
+                });
+        }catch(err){
+            return res.status(400).send({error: err.message});
         }
     }
 }
