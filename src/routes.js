@@ -17,8 +17,10 @@ router.get('/postage/list_one/:id', Postage.list_one);
 
 //Users routers
 router.post('/user/register_user', User.register);
-router.get('/user/list_all', Auth.session_authentication, User.list);
+router.get('/user/list_all', User.list);
+// Auth.session_authentication, User.list
 router.post('/user/login', Auth.authentication);
 router.get('/user/validate_session', Auth.session_authentication, Auth.refresh_token);
+router.get('/user/list_postages/:id', User.list_postages);
 
 module.exports = router;

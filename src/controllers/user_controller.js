@@ -1,4 +1,5 @@
 const Users = require('../models/user.js');
+const Postage = require ('../models/postage.js');
 
 module.exports = {
     async register(req, res){
@@ -19,5 +20,10 @@ module.exports = {
     async list (req, res){
         const users = await Users.find();
         return res.json(users);
+    },
+
+    async list_postages (req, res){
+        const posts = await Postage.find({ fk_user_id: req.params.id});
+        return res.json(posts);
     }
 }
