@@ -74,7 +74,7 @@ module.exports = {
                 UPS.create(req.body)
 
                 console.log("New UPS successfully created\n" + "---\n")
-                return res.status(200).send({UPS_check_exist_user_and_postage: "New UPS successfully created"});
+                return res.status(200).send({support_postage: "New UPS successfully created"});
             }
             else if(array_UPSs.length == 1){
                 
@@ -84,19 +84,19 @@ module.exports = {
                 const check_ups_remove = await UPS.findById(array_UPSs[0]._id);
                 if(check_ups_remove == null){
                     console.log("UPS already created, successfully deleted\n" + "---\n")
-                    return res.status(200).send({UPS_check_exist_user_and_postage: "UPS already created, successfully deleted"});
+                    return res.status(200).send({support_postage: "UPS already created, successfully deleted"});
                 }
                 else{
                     console.log("UPS already created, error delete\n" + "---\n")
-                    return res.status(400).send({error_UPS_check_exist_user_and_postage: "UPS already created, error delete"});
+                    return res.status(400).send({error_support_postage: "UPS already created, error delete"});
                 }
             }
             else{
                 console.log("To much UPSs created\n" + "---\n")
-                return res.status(400).send({error_UPS_check_exist_user_and_postage: "To much UPSs created"});
+                return res.status(400).send({error_support_postage: "To much UPSs created with this parameters"});
             }
         }catch(err){
-            return res.status(400).send({error_UPS_support_postage: err.message});
+            return res.status(400).send({error_support_postage: err.message});
         }
     }
 }
