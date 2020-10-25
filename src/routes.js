@@ -21,6 +21,7 @@ router.post('/user/register_user', User.register);
 router.get('/user/list_all', User.list);
 router.post('/user/login', Auth.authentication);
 router.get('/user/validate_session', Auth.session_authentication, Auth.refresh_token);
+router.delete('/user/delete_all', User.delete_all);
 
 //UPS routers
 router.post('/ups/create', UPS.create_ups);
