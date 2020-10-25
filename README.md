@@ -1,8 +1,3 @@
-
-<div align="center" >
-    <img src="./style/icons/logoVC.png" alt="Vamos Cuidar" class="lg">
-</div>
-
 <h1 align="center">Vamos Cuidar</h1>
 
 ---
@@ -13,7 +8,7 @@
 ## Sobre o projeto
 
 <p style="text-align: justify;">&emsp;&emsp; 
-O Vamos Cuidar é uma <strong>aplicação PWA</strong> que tem como objetivo auxiliar a UnB na <strong>maior agilidade em resolver problemas</strong>, sejam eles estruturais, acadêmicos, processuais entre outros, que impactam negativamente o dia a dia da universidade. <strong>Com uma plataforma prática e direta</strong>, a comunidade universitária pode <strong>fazer postagens sobre problemas</strong> que enfrentam no cotidiano, e com isto, os gestores podem analisar e tomar as medidas necessárias para <strong>resolver esses problemas reportados</strong></br>&emsp;&emsp;Esta página contém a documentação sobre o produto, seu gerenciamento e desenvolvimento, além de guias de conduta e contribuição.
+O Vamos Cuidar é uma <strong>aplicação PWA</strong> que tem como objetivo auxiliar a UnB na <strong>maior agilidade em resolver problemas</strong>, sejam eles estruturais, acadêmicos, processuais entre outros, que impactam negativamente o dia a dia da universidade. <strong>Com uma plataforma prática e direta</strong>, a comunidade universitária pode <strong>fazer postagens sobre problemas</strong> que enfrentam no cotidiano, e com isto, os gestores podem analisar e tomar as medidas necessárias para <strong>resolver esses problemas reportados</strong>.</br>&emsp;&emsp;Esta página contém a documentação sobre o produto, seu gerenciamento e desenvolvimento, além de guias de conduta e contribuição.
 </p>
 
 <h4 align="center"> 

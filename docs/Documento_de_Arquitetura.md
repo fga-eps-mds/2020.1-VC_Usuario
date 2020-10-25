@@ -13,7 +13,8 @@ Data|Versão|Descrição|Autor
 22/09|1.2| Atualização do item 2.3.1 | Daniel Porto
 24/09|1.3| Inserção dos diagramas de pacotes |Daniel Porto
 06/10|1.4| Revisão do documento: padronizaçãos do versionamento, correção das referências e atualização dos tópicos 2.1.1, 2.2.1, 2.3.1 e 4.1. Inclusão do tópico 5 | Daniel Porto e Emily Dias
-09/10|1.5| Inserindo uma descrição melhor sobre a frente VCG | Daniel Porto
+09/10|1.5| Inserção de uma descrição melhor sobre a frente VCG | Daniel Porto
+23/10|1.6| Atualização do diagrama de pacotes do front-end | Daniel Porto
 
 ## 1. Introdução
 
