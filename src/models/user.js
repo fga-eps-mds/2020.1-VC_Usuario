@@ -20,10 +20,10 @@ const UserSchema = new mongoose.Schema({
         type: Number,
         default: 0,
     },
-    /* user_array_UPS:{
+    user_array_UPS:{
         type: Array,
-        default: null,
-    } */
+        default: [],
+    }
 });
 
 UserSchema.pre('save', async function (next){

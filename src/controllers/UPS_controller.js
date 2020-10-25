@@ -71,14 +71,36 @@ module.exports = {
             console.log("---\n" + "Support Postage...\n")
             if(array_UPSs.length == 0){
 
-                UPS.create(req.body)
+                const created_ups = await UPS.create(req.body)
+
+                const user_for_insert_ups = await User.findById(req.body.fk_user_id)
+           
+                user_for_insert_ups.user_array_UPS.unshift(created_ups)
+                user_for_insert_ups.save()
 
                 console.log("New UPS successfully created\n" + "---\n")
-                return res.status(200).send({support_postage: "New UPS successfully created"});
+                return res.status(200).json(user_for_insert_ups.user_array_UPS[0]);
             }
             else if(array_UPSs.length == 1){
                 
                 const ups_remove = await UPS.findById(array_UPSs[0]._id);
+
+                /* const user_for_insert_ups = await User.findById(req.body.fk_user_id)
+
+                console.log("=>" + user_for_insert_ups.user_array_UPS.length)
+                for(var i=0; i<user_for_insert_ups.user_array_UPS.length; i++) {
+                    if(user_for_insert_ups.user_array_UPS[i].fk_postage_id == ups_remove.fk_postage_id && user_for_insert_ups.user_array_UPS[0].fk_user_id == ups_remove.fk_user_id){
+                        console.log("++++ Index:")
+                        console.log(user_for_insert_ups.user_array_UPS.indexOf(user_for_insert_ups.user_array_UPS[i]))
+                        user_for_insert_ups.user_array_UPS.slice(i, 1)
+                        user_for_insert_ups.save()
+                        console.log(user_for_insert_ups.user_array_UPS)
+                        console.log("++++")
+                        break
+                    }
+                }
+                console.log("=>>" + user_for_insert_ups.user_array_UPS.length) */
+
                 await ups_remove.remove();
 
                 const check_ups_remove = await UPS.findById(array_UPSs[0]._id);
