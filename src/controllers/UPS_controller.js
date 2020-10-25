@@ -66,40 +66,38 @@ module.exports = {
     async support_postage (req, res){   
         
         try{
-            const array_UPSs = await UPS.find({ fk_user_id: req.body.fk_user_id, fk_postage_id: req.body.fk_postage_id })          
+            const array_UPSs = await UPS.find({ 
+                fk_user_id: req.body.fk_user_id, 
+                fk_postage_id: req.body.fk_postage_id 
+            })
 
             console.log("---\n" + "Support Postage...\n")
+
+            const user_related_ups = await User.findById(req.body.fk_user_id)
+
             if(array_UPSs.length == 0){
 
                 const created_ups = await UPS.create(req.body)
 
-                const user_for_insert_ups = await User.findById(req.body.fk_user_id)
-           
-                user_for_insert_ups.user_array_UPS.unshift(created_ups)
-                user_for_insert_ups.save()
+                user_related_ups.user_array_UPS.unshift(created_ups)
+                user_related_ups.save()
 
                 console.log("New UPS successfully created\n" + "---\n")
-                return res.status(200).json(user_for_insert_ups.user_array_UPS[0]);
+                return res.status(200).json(user_related_ups.user_array_UPS[0]);
             }
             else if(array_UPSs.length == 1){
                 
                 const ups_remove = await UPS.findById(array_UPSs[0]._id);
 
-                /* const user_for_insert_ups = await User.findById(req.body.fk_user_id)
+                for(var i = 0; i < user_related_ups.user_array_UPS.length; i++) {
+                    if(user_related_ups.user_array_UPS[i].fk_postage_id == ups_remove.fk_postage_id && user_related_ups.user_array_UPS[0].fk_user_id == ups_remove.fk_user_id){
+                        
+                        user_related_ups.user_array_UPS.splice(i, 1)
+                        user_related_ups.save()
 
-                console.log("=>" + user_for_insert_ups.user_array_UPS.length)
-                for(var i=0; i<user_for_insert_ups.user_array_UPS.length; i++) {
-                    if(user_for_insert_ups.user_array_UPS[i].fk_postage_id == ups_remove.fk_postage_id && user_for_insert_ups.user_array_UPS[0].fk_user_id == ups_remove.fk_user_id){
-                        console.log("++++ Index:")
-                        console.log(user_for_insert_ups.user_array_UPS.indexOf(user_for_insert_ups.user_array_UPS[i]))
-                        user_for_insert_ups.user_array_UPS.slice(i, 1)
-                        user_for_insert_ups.save()
-                        console.log(user_for_insert_ups.user_array_UPS)
-                        console.log("++++")
                         break
                     }
                 }
-                console.log("=>>" + user_for_insert_ups.user_array_UPS.length) */
 
                 await ups_remove.remove();
 
