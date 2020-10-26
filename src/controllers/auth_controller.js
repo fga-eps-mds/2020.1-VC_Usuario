@@ -9,7 +9,6 @@ module.exports = {
         const user = await Users.findOne({ user_email: req.body.email })
 
         if(!user) {
-
             return res.status(401).send({ msg: 'Usuário não cadastrado.' })
         }
 
@@ -25,7 +24,7 @@ module.exports = {
 
         console.log(token)
 
-        res.status(200).json({user, token, msg: 'Bem vindo!'})
+        return res.status(200).json({user, token, msg: 'Bem vindo!'})
     },
 
     async session_authentication (req, res, next) {
