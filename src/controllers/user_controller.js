@@ -22,8 +22,17 @@ module.exports = {
     },
 
     async delete(req, res){
-        const user = await Users.findById(req.params.id);
         try{
+            const user = await Users.findById(req.params.id);
+
+            if(!user){
+                return res.status(400).send({msg: 'Usuário não encontrado'})
+            }
+
+            if(!await bcrypt.compare(req.body.password, user.user_password)){
+                return res.status(401).send({msg: 'senha invalida'})
+            }
+
             await user.remove();
             return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
         }catch(err){
@@ -34,7 +43,7 @@ module.exports = {
     async update(req, res){
 
         try{
-            const user = await Users.findById(req.params.id)
+            const user = await Users.findById(req.params.id);
 
             if(!await bcrypt.compare(req.body.password, user.user_password)){
                 return res.status(401).send({msg: 'senha invalida'})
