@@ -63,7 +63,7 @@ module.exports = {
         }
     },
 
-    async support_postage (req, res){   
+    async support_postage (req, res, next){   
         
         try{
             const array_UPSs = await UPS.find({ 
@@ -83,7 +83,7 @@ module.exports = {
                 user_related_ups.save()
 
                 console.log("New UPS successfully created\n" + "---\n")
-                return res.status(200).json(user_related_ups.user_array_UPS[0]);
+                /* return res.status(200).json(user_related_ups.user_array_UPS[0]); */
             }
             else if(array_UPSs.length == 1){
                 
@@ -104,7 +104,7 @@ module.exports = {
                 const check_ups_remove = await UPS.findById(array_UPSs[0]._id);
                 if(check_ups_remove == null){
                     console.log("UPS already created, successfully deleted\n" + "---\n")
-                    return res.status(200).send({support_postage: "UPS already created, successfully deleted"});
+                    /* return res.status(200).send({support_postage: "UPS already created, successfully deleted"}); */
                 }
                 else{
                     console.log("UPS already created, error delete\n" + "---\n")
@@ -115,8 +115,56 @@ module.exports = {
                 console.log("To much UPSs created\n" + "---\n")
                 return res.status(400).send({error_support_postage: "To much UPSs created with this parameters"});
             }
+
+            return next()
         }catch(err){
             return res.status(400).send({error_support_postage: err.message});
+        }
+    },
+
+    async post_support_number_alteration (req, res){
+
+        try{
+            console.log("---\n" + "post_support_number_alteration...\n")
+
+            const array_UPSs = await UPS.find({ 
+                fk_user_id: req.body.fk_user_id, 
+                fk_postage_id: req.body.fk_postage_id 
+            })
+            
+            const postage_related_ups = await Postage.findById(req.body.fk_postage_id)
+            var postage_UPSs_number = postage_related_ups.post_support_number
+
+            if(array_UPSs.length == 0){
+                if(postage_UPSs_number <= 0){
+                    return res.status(400).send({error_post_support_number_alteration: "post_support_number = 0, something is wrong"});
+                }
+                else{
+
+                    postage_UPSs_number = postage_UPSs_number - 1
+                    postage_related_ups.post_support_number = postage_UPSs_number
+                    postage_related_ups.save()
+
+                    console.log("post_support_number: " + postage_UPSs_number)
+                    
+                    return res.status(200).send(postage_related_ups);
+                }
+            }
+            else if(array_UPSs.length == 1){
+                
+                postage_UPSs_number = postage_UPSs_number + 1
+                postage_related_ups.post_support_number = postage_UPSs_number
+                postage_related_ups.save()
+
+                console.log("post_support_number: " + postage_UPSs_number)
+
+                return res.status(200).json(postage_related_ups);
+            }
+            else{
+                return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
+            }
+        }catch(err){
+            return res.status(400).send({error_post_support_number_alteration: err.message});
         }
     }
 }
