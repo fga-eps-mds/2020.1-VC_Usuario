@@ -11,7 +11,12 @@ module.exports = {
                 console.log(req.file);
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
+
             const postage = await Postage.create(req.body);
+
+            postage.post_support_number = 0
+            postage.save()
+            
             console.log(postage);
             return res.status(200).json({postage});
             
@@ -26,8 +31,14 @@ module.exports = {
                 console.log(req.file);
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
+
             req.body.fk_user_id = null;
+
             const postage = await Postage.create(req.body);
+            
+            postage.post_support_number = 0
+            postage.save()
+
             console.log(postage);
             return res.status(200).json({postage});
             
