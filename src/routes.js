@@ -27,6 +27,6 @@ router.delete('/user/delete_all', User.delete_all);
 router.post('/ups/create', UPS.create_ups);
 router.get('/ups/list_all', UPS.list_all);
 router.delete('/ups/delete_all', UPS.delete_all);
-router.put('/ups/support_postage', UPS.check_exist_user_and_postage, UPS.support_postage);
+router.put('/ups/support_postage', UPS.check_exist_user_and_postage, UPS.support_postage, UPS.post_support_number_alteration);
 
 module.exports = router;
