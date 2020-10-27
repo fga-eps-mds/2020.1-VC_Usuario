@@ -91,4 +91,47 @@ module.exports = {
             return res.status(400).send({error: err.message});
         }
     },
+
+    async UPS_list_for_user (req, res){
+
+        try{
+            console.log(req.params)
+            const user = await User.findById(req.params.id)
+            if(user == null){
+                console.log("User not exist\n" + "++++\n")
+                return res.status(400).send({error_UPS_list_for_user: "User not exist"});
+            }
+            
+            const postages_list = await Postage.find();
+            
+            let array_UPSs = null
+            console.log("-----")
+            for (var i = 0; i < postages_list.length; i++){
+
+                    console.log(postages_list[i])
+                    array_UPSs = await UPS.find({ 
+                    fk_user_id: user._id,
+                    fk_postage_id: postages_list[i]._id
+                })
+
+                console.log(" : " + array_UPSs.length)
+                if(array_UPSs.length == 0){
+                    console.log("Não Apoiado")
+
+                    postages_list[i].post_supporting = false
+                }
+                else{
+                    console.log("Apoiado")
+
+                    postages_list[i].post_supporting = true
+                }
+                console.log("-----")
+            }
+            
+            return res.json(postages_list);
+
+        }catch(err){
+            return res.status(400).send({error: err.message});        
+        }
+    }
 }
