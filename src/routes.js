@@ -15,6 +15,7 @@ router.delete('/postage/delete/:id', Postage.delete);
 router.delete('/postage/delete_all', Postage.delete_all);
 router.put('/postage/update_status/:id', Postage.update_status);
 router.get('/postage/list_one/:id', Postage.list_one);
+router.get('/postage/UPS_list_for_user/:id', Postage.UPS_list_for_user);
 
 //Users routers
 router.post('/user/register_user', User.register);
