@@ -29,12 +29,13 @@ module.exports = {
                 return res.status(400).send({msg: 'Usuário não encontrado'})
             }
 
-            if(!await bcrypt.compare(req.body.password, user.user_password)){
-                return res.status(401).send({msg: 'senha invalida'})
+            if(!await bcrypt.compare(req.query.password, user.user_password)){
+                return res.status(401).send({msg: 'senha invalida'});
             }
 
             await user.remove();
             return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
+
         }catch(err){
             return res.status(400).send({msg: err.message});
         }
@@ -46,14 +47,14 @@ module.exports = {
             const user = await Users.findById(req.params.id);
 
             if(!await bcrypt.compare(req.body.password, user.user_password)){
-                return res.status(401).send({msg: 'senha invalida'})
+                return res.status(401).send({msg: 'senha invalida'});
             }            
             
-            await user.update({user_email: req.body.email, user_name: req.body.nome})
+            await user.update({user_email: req.body.email, user_name: req.body.nome});
 
             if(req.body.novaSenha){
                 const hash = await bcrypt.hash(req.body.novaSenha, 10);
-                await user.update({user_password: hash})
+                await user.update({user_password: hash});
             }
 
             return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
