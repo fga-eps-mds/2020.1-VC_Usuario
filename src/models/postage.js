@@ -46,7 +46,11 @@ const PostageSchema = new mongoose.Schema({
     post_support_number: {
         type: Number,
         default: 0
-    }
+    },
+    post_supporting:{
+        type: Boolean,
+        default: false
+    },
     /*
     apoio:{
         type: [ObjectId],
