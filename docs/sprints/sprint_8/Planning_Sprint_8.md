@@ -37,26 +37,36 @@ Issues adicionadas:
 **Responsáveis:** Emily<br>
 **Pontuação:** 1
 
-2. **Issue:** #139 US09 Feed de Notícias<br>
+2. **Issue:** #136 US07 Usuário logado realizar uma postagem não anônima<br>
+**Responsáveis:** Daniel Barcelos e Enzo<br>
+**Pontuação:** 3
+
+3. **Issue:** #137 US08 Usuário apoiar postagem<br>
+**Responsáveis:** Bruno e Daniel Barcelos<br>
+**Pontuação:** 3
+
+4. **Issue:** #139 US09 Feed de Notícias<br>
 **Responsáveis:** Bruno e Daniel Porto<br>
 **Pontuação:** 5
 
-3. **Issue:** #140 Reunião Release 1 com DAF e Dashboard<br>
+5. **Issue:** #140 Reunião Release 1 com DAF e Dashboard<br>
 **Responsáveis:** Bruno<br>
 **Pontuação:** 2
 
-4. **Issue:** #141 Code climate e integrar ao repositório<br>
+6. **Issue:** #141 Code climate e integrar ao repositório<br>
 **Responsáveis:** Enzo e Emily<br>
 **Pontuação:** 3
 
-5. **Issue:** #143 Reunião de Sincronização com grupo Dashboard<br>
+7. **Issue:** #143 Reunião de Sincronização com grupo Dashboard<br>
 **Responsáveis:** Bruno<br>
 **Pontuação:** 2
 
-6. **Issue:** #144 US11, 12, 13 e 14 - Tela de Perfil de Usuário<br>
+8. **Issue:** #144 US11, 12, 13 e 14 - Tela de Perfil de Usuário<br>
 **Responsáveis:** Denys e Emily<br>
 **Pontuação:** 3
 
-7. **Issue:** #146 Documentação Sprint 7<br>
+9. **Issue:** #146 Documentação Sprint 7<br>
 **Responsáveis:** Denys<br>
 **Pontuação:** 1
+
+
