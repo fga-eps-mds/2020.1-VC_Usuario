@@ -147,7 +147,7 @@ module.exports = {
 
                     console.log("post_support_number: " + postage_UPSs_number)
                     
-                    return res.status(200).send(postage_related_ups);
+                    return res.status(200).send("Postagem " + postage_related_ups.post_title + " Desapoiada");
                 }
             }
             else if(array_UPSs.length == 1){
@@ -158,7 +158,7 @@ module.exports = {
 
                 console.log("post_support_number: " + postage_UPSs_number)
 
-                return res.status(200).json(postage_related_ups);
+                return res.status(200).send("Postagem " + postage_related_ups.post_title + " Apoiada");
             }
             else{
                 return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
