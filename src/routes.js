@@ -12,7 +12,7 @@ router.post('/postage/create_common', multer(multerConfig).single("file"), Posta
 router.get('/postage/list_all', Postage.list);
 router.get('/postage/list_common', Postage.list_common);
 router.get('/postage/list_one/:id', Postage.list_one);
-router.get('/postage/UPS_list_for_user/:id', Postage.UPS_list_for_user);
+router.get('/postage/list_all_with_UPS/:id', Postage.list_all_postages_with_UPS_by_user);
 router.delete('/postage/delete/:id', Postage.delete);
 router.delete('/postage/delete_all', Postage.delete_all);
 router.put('/postage/update_status/:id', Postage.update_status);

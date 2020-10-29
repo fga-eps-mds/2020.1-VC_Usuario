@@ -92,7 +92,7 @@ module.exports = {
         }
     },
 
-    async UPS_list_for_user (req, res){
+    async list_all_postages_with_UPS_by_user (req, res){ 
 
         try{
             console.log(req.params)
