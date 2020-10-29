@@ -86,7 +86,7 @@ module.exports = {
     async update_status (req, res){
         try{
           	const post = await Postage.findByIdAndUpdate(req.params.id, req.body.post_status)          
-		return res.status(200).json({post});
+		    return res.status(200).json({post});
         }catch(err){
             return res.status(400).send({error: err.message});
         }
@@ -95,7 +95,6 @@ module.exports = {
     async list_all_postages_with_UPS_by_user (req, res){ 
 
         try{
-            console.log(req.params)
             const user = await User.findById(req.params.id)
             if(user == null){
                 console.log("User not exist\n" + "++++\n")
@@ -104,30 +103,31 @@ module.exports = {
             
             const postages_list = await Postage.find();
             
+            console.log("-----\n\n" + "LIST POSTAGES WITH UPSs:")
+            console.log("\nListing all postages...\n")
+
             let array_UPSs = null
-            console.log("-----")
             for (var i = 0; i < postages_list.length; i++){
 
-                    console.log(postages_list[i])
                     array_UPSs = await UPS.find({ 
                     fk_user_id: user._id,
                     fk_postage_id: postages_list[i]._id
                 })
 
-                console.log(" : " + array_UPSs.length)
                 if(array_UPSs.length == 0){
-                    console.log("Não Apoiado")
+                    console.log("Postage " + postages_list[i]._id + " Is not supported\n")
 
                     postages_list[i].post_supporting = false
                 }
                 else{
-                    console.log("Apoiado")
+                    console.log("Postage " + postages_list[i]._id + " Is supported\n")
 
                     postages_list[i].post_supporting = true
                 }
-                console.log("-----")
             }
             
+            console.log("-----\n")
+
             return res.json(postages_list);
 
         }catch(err){
