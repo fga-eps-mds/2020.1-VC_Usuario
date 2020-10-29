@@ -11,16 +11,16 @@ router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage
 router.post('/postage/create_common', multer(multerConfig).single("file"), Postage.create_common);
 router.get('/postage/list_all', Postage.list);
 router.get('/postage/list_common', Postage.list_common);
+router.get('/postage/list_one/:id', Postage.list_one);
+router.get('/postage/UPS_list_for_user/:id', Postage.UPS_list_for_user);
 router.delete('/postage/delete/:id', Postage.delete);
 router.delete('/postage/delete_all', Postage.delete_all);
 router.put('/postage/update_status/:id', Postage.update_status);
-router.get('/postage/list_one/:id', Postage.list_one);
-router.get('/postage/UPS_list_for_user/:id', Postage.UPS_list_for_user);
 
 //Users routers
 router.post('/user/register_user', User.register);
-router.get('/user/list_all', User.list);
 router.post('/user/login', Auth.authentication);
+router.get('/user/list_all', User.list);
 router.get('/user/validate_session', Auth.session_authentication, Auth.refresh_token);
 router.delete('/user/delete_all', User.delete_all);
 
