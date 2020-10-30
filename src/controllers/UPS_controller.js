@@ -43,20 +43,13 @@ module.exports = {
             const exist_user = await User.findById(req.body.fk_user_id)
             const exist_postage = await Postage.findById(req.body.fk_postage_id)
 
-            if(exist_user == null && exist_postage == null){
+            if(exist_user == null || exist_postage == null){
                 console.log("User and Postage not exist\n" + "-----\n")
-                return res.status(400).send({error_UPS_check_exist_user_and_postage: "User and Postage not exist"});
+                return res.status(400).send({error_UPS_check_exist_user_and_postage: "User or Postage not exist"});
             }
-            else if(exist_user == null){
-                console.log("User not exist\n" + "-----\n")
-                return res.status(400).send({error_UPS_check_exist_user_and_postage: "User not exist"});
+            else{
+                console.log("User and Postage exist!\n")
             }
-            else if(exist_postage == null){
-                console.log("Postage not exist\n" + "-----\n")
-                return res.status(400).send({error_UPS_check_exist_user_and_postage: "Postage not exist"});
-            }
-
-            console.log("User and Postage exist!\n")
 
             return next();   
         }catch(err){

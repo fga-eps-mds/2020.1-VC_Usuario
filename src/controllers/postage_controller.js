@@ -120,10 +120,8 @@ module.exports = {
                     postages_list[i].post_supporting = true
                 }
 
-                console.log("Postage " + postages_list[i]._id + ": " + postages_list[i].post_supporting + "\n")
+                console.log("Postage " + postages_list[i]._id + ": " + postages_list[i].post_supporting + "\n-----")
             }
-            
-            console.log("-----\n")
 
             return res.json(postages_list);
 
