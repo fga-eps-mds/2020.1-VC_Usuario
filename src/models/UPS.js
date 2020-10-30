@@ -3,11 +3,11 @@ const ObjectId = mongoose.Schema.ObjectId;
 
 const UPSSchema = new mongoose.Schema({
     fk_user_id:{
-        type: ObjectId,
+        type: String,
         required: true,
     },
     fk_postage_id:{
-        type: ObjectId,
+        type: String,
         required: true,
     },
 })

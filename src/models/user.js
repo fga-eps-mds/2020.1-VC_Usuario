@@ -3,10 +3,6 @@ const ObjectId = mongoose.Schema.ObjectId;
 const bcrypt = require('bcrypt');
 
 const UserSchema = new mongoose.Schema({
-    /* user_unique_id:{
-        type: ObjectId,
-        required: true,
-    }, */
     user_email:{
         type: String,
         required: true,
@@ -23,6 +19,10 @@ const UserSchema = new mongoose.Schema({
     user_score:{
         type: Number,
         default: 0,
+    },
+    user_array_UPS:{
+        type: Array,
+        default: [],
     }
 });
 

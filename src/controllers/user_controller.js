@@ -19,5 +19,10 @@ module.exports = {
     async list (req, res){
         const users = await Users.find();
         return res.json(users);
-    }
+    },
+
+    async delete_all (req, res){
+        const users = await Users.deleteMany({})
+        return res.send(users);
+    },
 }
