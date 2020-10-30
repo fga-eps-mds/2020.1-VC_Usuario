@@ -130,38 +130,29 @@ module.exports = {
                 fk_user_id: req.body.fk_user_id, 
                 fk_postage_id: req.body.fk_postage_id 
             })
+
+            if(array_UPSs.length > 1){
+                return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
+            }
             
             const postage_related_ups = await Postage.findById(req.body.fk_postage_id)
             var postage_UPSs_number = postage_related_ups.post_support_number
 
+            var aux = 0
             if(array_UPSs.length == 0){
-                if(postage_UPSs_number <= 0){
-                    return res.status(400).send({error_post_support_number_alteration: "post_support_number is gonna be < 0, something is wrong"});
-                }
-                else{
-
-                    postage_UPSs_number = postage_UPSs_number - 1
-                    postage_related_ups.post_support_number = postage_UPSs_number
-                    postage_related_ups.save()
-
-                    console.log("post_support_number: " + postage_UPSs_number + "\n\n-----\n")
-                    
-                    return res.status(200).send("Postagem " + postage_related_ups.post_title + " Desapoiada");
-                }
+                aux = -1
             }
             else if(array_UPSs.length == 1){
-                
-                postage_UPSs_number = postage_UPSs_number + 1
-                postage_related_ups.post_support_number = postage_UPSs_number
-                postage_related_ups.save()
-
-                console.log("post_support_number: " + postage_UPSs_number + "\n\n-----\n")
-
-                return res.status(200).send("Postagem " + postage_related_ups.post_title + " Apoiada");
+                aux = +1
             }
-            else{
-                return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
-            }
+
+            postage_UPSs_number += aux
+
+            postage_related_ups.post_support_number = postage_UPSs_number
+            postage_related_ups.save()
+
+            return res.status(200).send("Apoio da Postagem " + postage_related_ups.post_title + " foi modificado");
+
         }catch(err){
             return res.status(400).send({error_post_support_number_alteration: err.message});
         }
