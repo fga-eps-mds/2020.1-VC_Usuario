@@ -113,17 +113,14 @@ module.exports = {
                     fk_user_id: user._id,
                     fk_postage_id: postages_list[i]._id
                 })
-
-                if(array_UPSs.length == 0){
-                    console.log("Postage " + postages_list[i]._id + " Is not supported\n")
-
-                    postages_list[i].post_supporting = false
-                }
-                else{
-                    console.log("Postage " + postages_list[i]._id + " Is supported\n")
-
+                
+                postages_list[i].post_supporting = false
+                
+                if(array_UPSs.length != 0){
                     postages_list[i].post_supporting = true
                 }
+
+                console.log("Postage " + postages_list[i]._id + ": " + postages_list[i].post_supporting + "\n")
             }
             
             console.log("-----\n")
