@@ -40,3 +40,6 @@
     - [**Sprint 8**](#)
 	    - [Planning Sprint 8](/docs/sprints/sprint_8/Planning_Sprint_8.md)
 	    - [Review Sprint 8](/docs/sprints/sprint_8/Review_Sprint_8.md)
+    - [**Sprint 9**](#)
+	    - [Planning Sprint 9](/docs/sprints/sprint_9/Planning_Sprint_9.md)
+	    - [Review Sprint 9](/docs/sprints/sprint_9/Review_Sprint_9.md)
