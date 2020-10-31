@@ -4,7 +4,6 @@ const bcrypt = require('bcrypt')
 module.exports = {
     
     async register(req, res){
-
         const { user_email } = req.body;
         try{
             if (await Users.findOne({ user_email }))
@@ -19,13 +18,11 @@ module.exports = {
     },
 
     async list(req, res){
-
         const users = await Users.find();
         return res.json(users);
     },
 
     async delete(req, res){
-        
         try{
             await req.body.user.remove();
             return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
@@ -36,7 +33,6 @@ module.exports = {
     },
 
     async update(req, res){
-
         try{
             const user = await Users.findById(req.params.id);
 
@@ -57,4 +53,9 @@ module.exports = {
             return res.status(400).send({error: err.message});
         }
     }
+
+    async delete_all (req, res){
+        const users = await Users.deleteMany({})
+        return res.send(users);
+    },
 }

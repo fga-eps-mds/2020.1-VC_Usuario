@@ -1,6 +1,8 @@
 const { json } = require('body-parser');
 const { update } = require('../models/postage.js');
 const Postage = require ('../models/postage.js');
+const UPS = require('../models/UPS.js');
+const User = require('../models/user.js');
 
 module.exports = {
     async create_common (req, res){
@@ -9,7 +11,12 @@ module.exports = {
                 console.log(req.file);
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
+
             const postage = await Postage.create(req.body);
+
+            postage.post_support_number = 0
+            postage.save()
+            
             console.log(postage);
             return res.status(200).json({postage});
             
@@ -24,8 +31,14 @@ module.exports = {
                 console.log(req.file);
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
+
             req.body.fk_user_id = null;
+
             const postage = await Postage.create(req.body);
+            
+            postage.post_support_number = 0
+            postage.save()
+
             console.log(postage);
             return res.status(200).json({postage});
             
@@ -73,9 +86,47 @@ module.exports = {
     async update_status (req, res){
         try{
           	const post = await Postage.findByIdAndUpdate(req.params.id, req.body.post_status)          
-		return res.status(200).json({post});
+		    return res.status(200).json({post});
         }catch(err){
             return res.status(400).send({error: err.message});
+        }
+    },
+
+    async list_all_postages_with_UPS_by_user (req, res){ 
+
+        try{
+            const user = await User.findById(req.params.id)
+            if(user == null){
+                console.log("User not exist\n" + "++++\n")
+                return res.status(400).send({error_UPS_list_for_user: "User not exist"});
+            }
+            
+            const postages_list = await Postage.find();
+            
+            console.log("-----\n\n" + "LIST POSTAGES WITH UPSs:")
+            console.log("\nListing all postages...\n")
+
+            let array_UPSs = null
+            for (var i = 0; i < postages_list.length; i++){
+
+                    array_UPSs = await UPS.find({ 
+                    fk_user_id: user._id,
+                    fk_postage_id: postages_list[i]._id
+                })
+                
+                postages_list[i].post_supporting = false
+                
+                if(array_UPSs.length != 0){
+                    postages_list[i].post_supporting = true
+                }
+
+                console.log("Postage " + postages_list[i]._id + ": " + postages_list[i].post_supporting + "\n-----")
+            }
+
+            return res.json(postages_list);
+
+        }catch(err){
+            return res.status(400).send({error: err.message});        
         }
     }
 }
