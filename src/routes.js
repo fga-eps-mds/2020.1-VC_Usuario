@@ -20,8 +20,8 @@ router.post('/user/register_user', User.register);
 router.put('/user/update/:id', User.update);
 router.get('/user/list_all', User.list);
 router.post('/user/login', Auth.authentication);
-router.delete('/user/delete/:id', User.delete);
+router.delete('/user/delete/:id', Auth.find_user, User.delete);
 router.get('/user/validate_session', Auth.session_authentication, Auth.refresh_token);
-router.post('/user/validade_password/:id', Auth.find_user, Auth.password_validation, Auth.password_return);
+router.post('/user/validate_password/:id', Auth.find_user, Auth.password_validation, Auth.password_return);
 
 module.exports = router;

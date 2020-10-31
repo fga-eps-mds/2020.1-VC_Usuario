@@ -25,9 +25,9 @@ module.exports = {
     },
 
     async delete(req, res){
-
+        
         try{
-            await user.remove();
+            await req.body.user.remove();
             return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
 
         }catch(err){
