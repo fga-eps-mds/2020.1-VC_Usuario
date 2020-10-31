@@ -34,3 +34,6 @@
     - [**Sprint 6**](#)
 	    - [Planning Sprint 6](/docs/sprints/sprint_6/Planning_Sprint_6.md)
 	    - [Review Sprint 6](/docs/sprints/sprint_6/Review_Sprint_6.md)
+    - [**Sprint 7**](#)
+	    - [Planning Sprint 7](/docs/sprints/sprint_7/Planning_Sprint_7.md)
+	    - [Review Sprint 7](/docs/sprints/sprint_7/Review_Sprint_7.md)
