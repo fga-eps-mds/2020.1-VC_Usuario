@@ -42,11 +42,16 @@ const PostageSchema = new mongoose.Schema({
         type: [Boolean],
         required: true,
         default: [true, false]
-    },/*
-    apoio:{
-        type: [ObjectId],
     },
-    comentarios: {
+    post_support_number: {
+        type: Number,
+        default: 0
+    },
+    post_supporting:{
+        type: Boolean,
+        default: false
+    },
+    /* comentarios: {
         type: [ObjectId],
     }
     relev_degree: {
