@@ -128,5 +128,10 @@ module.exports = {
         }catch(err){
             return res.status(400).send({error: err.message});        
         }
-    }
+    },
+
+    async update_postage (req, res){
+        
+        return res.status(200).json(req.body)
+    },
 }
