@@ -17,7 +17,7 @@ router.delete('/postage/delete_for_test/:id', Postage.delete_one_for_test);
 router.delete('/postage/delete_all', Postage.delete_all);
 router.delete('/postage/delete_one/:id', Postage.delete_one);
 router.put('/postage/update_status/:id', Postage.update_status);
-router.put('/postage/update_one', Postage.update_postage);
+router.put('/postage/update_one', Postage.update_one);
 
 //Users routers
 router.post('/user/register_user', User.register);

@@ -130,7 +130,7 @@ module.exports = {
         }
     },
 
-    async update_postage (req, res){
+    async update_one (req, res){
         
         return res.status(200).json(req.body)
     },
