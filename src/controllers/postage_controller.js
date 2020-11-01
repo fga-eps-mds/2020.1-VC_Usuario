@@ -130,14 +130,30 @@ module.exports = {
         }
     },
 
+    async check_postage_is_not_anon (req, res, next){
+        try{
+            const post = await Postage.findById(req.body.fk_postage_id);
+
+            if(post.fk_user_id == null){
+                return res.status(400).send({check_postage_is_not_anon: "Postagem é anonima"});   
+            }
+            else{
+                return next()
+            }
+        }catch(err){
+            return res.status(400).send({error: err.message});   
+        }
+    },
+
     async update_one (req, res){
         
         return res.status(200).json(req.body)
     },
 
     async delete_one (req, res){
-        const post = await Postage.findById(req.params.id);
+        const post = await Postage.findById(req.body.fk_postage_id);
         await post.remove();
-        return res.send();
+
+        return res.status(200).send("Postagem " + req.body.fk_postage_id + " foi removida");
     }
 }
