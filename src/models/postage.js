@@ -53,7 +53,14 @@ const PostageSchema = new mongoose.Schema({
     },
     /* comentarios: {
         type: [ObjectId],
-    } */
+    }
+    relev_degree: {
+    	type: double,
+    }
+    */
+   post_author:{
+       type: String
+   }
 });
 
 const Postage = mongoose.model('Postage', PostageSchema);

@@ -1,4 +1,5 @@
 const Users = require('../models/user.js');
+const Postage = require ('../models/postage.js');
 
 module.exports = {
     async register(req, res){
@@ -21,6 +22,11 @@ module.exports = {
         return res.json(users);
     },
 
+    async list_postages (req, res){
+        const posts = await Postage.find({ fk_user_id: req.params.id});
+        return res.json(posts);
+    },
+    
     async delete_all (req, res){
         const users = await Users.deleteMany({})
         return res.send(users);
