@@ -57,7 +57,7 @@ module.exports = {
         return res.json(posts);
     },
 
-    async delete (req, res){
+    async delete_one_for_test (req, res){
         const post = await Postage.findById(req.params.id);
         await post.remove();
         return res.send();
@@ -134,4 +134,10 @@ module.exports = {
         
         return res.status(200).json(req.body)
     },
+
+    async delete_one (req, res){
+        const post = await Postage.findById(req.params.id);
+        await post.remove();
+        return res.send();
+    }
 }
