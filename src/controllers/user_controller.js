@@ -52,7 +52,7 @@ module.exports = {
         }catch(err){
             return res.status(400).send({error: err.message});
         }
-    }
+    },
 
     async delete_all (req, res){
         const users = await Users.deleteMany({})
