@@ -150,10 +150,37 @@ module.exports = {
         return res.status(200).json(req.body)
     },
 
-    async delete_one (req, res){
-        const post = await Postage.findById(req.body.fk_postage_id);
-        await post.remove();
+    async check_user_of_postage (req, res, next){
 
-        return res.status(200).send("Postagem " + req.body.fk_postage_id + " foi removida");
+        const post = await Postage.findById(req.body.fk_postage_id);
+
+        if(post.fk_user_id != req.body.fk_user_id){
+            return res.status(400).send({error: "Usuario da postagem diferente do usuario da requisicao"}); 
+        }
+        else{
+            return next()
+        }
+    },
+
+    async delete_one (req, res){
+        
+        try{
+            const post = await Postage.findById(req.body.fk_postage_id);
+            await post.remove();
+
+            return res.status(200).send("Postagem " + req.body.fk_postage_id + " foi removida");
+        }catch(err){
+            return res.status(400).send({error: err.message}); 
+        }
     }
 }
+
+/* 
+async aux (req, res, next){
+
+    req.post = 15
+    return next()
+},
+async delete_one (req, res){
+
+    return res.status(200).send("Aqui: " +  req.post) */
