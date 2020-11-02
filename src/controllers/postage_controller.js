@@ -83,6 +83,21 @@ module.exports = {
         }
     },
 
+    async list_by_category (req, res){
+        try{
+            const posts = await Postage.find({ $where: "this.post_category" }, { 
+                post_category: 0, 
+                post_description: 0,
+                post_permission: 0
+            });
+            
+            console.log(posts);
+            return res.status(200).json({posts});
+        }catch(err){
+            return res.status(400).send({error: err.message});
+        }
+    },
+
     async update_status (req, res){
         try{
           	const post = await Postage.findByIdAndUpdate(req.params.id, req.body.post_status)          
