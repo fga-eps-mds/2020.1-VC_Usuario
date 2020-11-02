@@ -152,9 +152,9 @@ module.exports = {
 
     async check_user_of_postage (req, res, next){
 
-        const post = await Postage.findById(req.body.fk_postage_id);
+        req.post = await Postage.findById(req.body.fk_postage_id);
 
-        if(post.fk_user_id != req.body.fk_user_id){
+        if(req.post.fk_user_id != req.body.fk_user_id){
             return res.status(400).send({error: "Usuario da postagem diferente do usuario da requisicao"}); 
         }
         else{
@@ -165,10 +165,9 @@ module.exports = {
     async delete_one (req, res){
         
         try{
-            const post = await Postage.findById(req.body.fk_postage_id);
-            await post.remove();
+            await req.post.remove();
 
-            return res.status(200).send("Postagem " + req.body.fk_postage_id + " foi removida");
+            return res.status(200).send("Postagem foi removida");
         }catch(err){
             return res.status(400).send({error: err.message}); 
         }
