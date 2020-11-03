@@ -45,6 +45,21 @@ module.exports = {
         }
     },
 
+    async change_password(req, res){
+        try{
+            const user = req.body.user
+            console.log('senha', req.body.novaSenha)
+            if(req.body.novaSenha){
+                const hash = await bcrypt.hash(req.body.novaSenha, 10);
+                await user.update({user_password: hash});
+            }
+
+            return res.status(200).send({msg: 'Senha Atualizados com sucesso!'});
+        }catch(err){
+            return res.status(400).send({msg: err.message});
+        }
+    },
+
     async delete_all (req, res){
         const users = await Users.deleteMany({})
         return res.send(users);

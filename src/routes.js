@@ -24,7 +24,7 @@ router.get('/user/list_all', User.list);
 router.post('/user/login', Auth.authentication);
 router.delete('/user/delete/:id', Auth.find_user, User.delete);
 router.get('/user/validate_session', Auth.session_authentication, Auth.find_user, Auth.refresh_token_and_data);
-router.post('/user/validate_password/:id', Auth.find_user, Auth.password_validation, Auth.password_return);
+router.put('/user/change_password/:id', Auth.find_user, User.change_password);
 router.delete('/user/delete_all', User.delete_all);
 
 //UPS routers
