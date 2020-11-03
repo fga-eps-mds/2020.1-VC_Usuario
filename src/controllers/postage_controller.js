@@ -84,15 +84,12 @@ module.exports = {
     },
 
     async list_by_category (req, res){
-        const post_category = req.query.post_category;
-        this.post_category = post_category;
+        const categoria = req.query.categoria;
         try{
-            const posts = await Postage.find({ $where: "this.post_category" }, { 
+            const posts = await Postage.find({ post_category: categoria}, { 
                 post_description: 0,
                 post_permission: 0
             });
-
-            console.log(posts);
 
             return res.status(200).json({posts});
         }catch(err){
