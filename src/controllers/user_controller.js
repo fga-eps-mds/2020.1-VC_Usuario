@@ -34,18 +34,9 @@ module.exports = {
 
     async update(req, res){
         try{
-            const user = await Users.findById(req.params.id);
-
-            if(!await bcrypt.compare(req.body.password, user.user_password)){
-                return res.status(401).send({msg: 'senha invalida'});
-            }            
-            
-            await user.update({user_email: req.body.email, user_name: req.body.nome});
-
-            if(req.body.novaSenha){
-                const hash = await bcrypt.hash(req.body.novaSenha, 10);
-                await user.update({user_password: hash});
-            }
+            const user = await Users.findById(req.params.id);            
+            var version = user.__v + 1
+            await user.update({user_email: req.body.email, user_name: req.body.nome, __v: version});
 
             return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
 
