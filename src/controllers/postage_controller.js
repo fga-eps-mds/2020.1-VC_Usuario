@@ -132,7 +132,7 @@ module.exports = {
 
     async check_postage_is_not_anon (req, res, next){
         try{
-            const post = await Postage.findById(req.body.fk_postage_id);
+            const post = await Postage.findById(req.body._id);
 
             if(post.fk_user_id == null){
                 return res.status(400).send({check_postage_is_not_anon: "Postagem é anonima"});   
@@ -146,15 +146,25 @@ module.exports = {
     },
 
     async update_one (req, res){
-        
-        return res.status(200).json(req.body)
+
+        try{
+            var { post_title, post_description, post_category, post_place } = req.body;
+            const teste = { post_title, post_description, post_category, post_place }
+    
+            const edited_post = await Postage.findByIdAndUpdate(req.post._id, teste)
+    
+            return res.status(200).json(edited_post)
+
+        }catch(err){
+            return res.status(400).send({error: err.message}); 
+        }
     },
 
     async check_user_of_postage (req, res, next){
 
-        req.post = await Postage.findById(req.body.fk_postage_id);
+        req.post = await Postage.findById(req.body._id);
 
-        if(req.post.fk_user_id != req.body.fk_user_id){
+        if(req.post.fk_user_id != req.body.fk_user_id_logged){
             return res.status(400).send({error: "Usuario da postagem diferente do usuario da requisicao"}); 
         }
         else{
@@ -173,13 +183,3 @@ module.exports = {
         }
     }
 }
-
-/* 
-async aux (req, res, next){
-
-    req.post = 15
-    return next()
-},
-async delete_one (req, res){
-
-    return res.status(200).send("Aqui: " +  req.post) */
