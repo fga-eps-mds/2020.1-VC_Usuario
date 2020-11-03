@@ -71,21 +71,22 @@ module.exports = {
         JWT.verify(token, auth_config.secret, (err, decoded) => {
             if (err) return res.status(401).send({msg: 'Token inválido'});
         
-            req.user_id = decoded.id;
+            req.params.id = decoded.id;
+            console.log(decoded.id)
             return next();
         });        
     },
 
-    refresh_token (req, res){
+    refresh_token_and_data (req, res){
 
         /**
          * Aqui se deve desenvolver uma lógica para invalidar o token antigo.
          */
 
-        const new_token = JWT.sign({ id: req.body.user_id }, auth_config.secret, {
+        const new_token = JWT.sign({ id: req.params.id }, auth_config.secret, {
             expiresIn: 7200,
         });
-
-        return res.status(200).json({new_token})
+        const refreshed_user = req.body.user
+        return res.status(200).json({new_token, refreshed_user})
     }
 }
