@@ -132,7 +132,7 @@ module.exports = {
 
     async check_postage_is_not_anon (req, res, next){
         try{
-            const post = await Postage.findById(req.body._id);
+            const post = await Postage.findById(req.body.postage_id);
 
             if(post.fk_user_id == null){
                 return res.status(400).send({error_check_postage_is_not_anon: "Postagem é anonima"});   
@@ -162,9 +162,9 @@ module.exports = {
 
     async check_user_of_postage (req, res, next){
 
-        req.post = await Postage.findById(req.body._id);
-
-        if(req.post.fk_user_id != req.body.fk_user_id_logged){
+        req.post = await Postage.findById(req.body.postage_id);
+        
+        if(req.post.fk_user_id != req.body.user_id){
             return res.status(400).send({error_check_user_of_postage: "Usuario da postagem diferente do usuario da requisicao"}); 
         }
         else{

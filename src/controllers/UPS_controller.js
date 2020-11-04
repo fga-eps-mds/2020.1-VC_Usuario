@@ -40,8 +40,8 @@ module.exports = {
             console.log("\n-----\n\n" + "SUPPORT POSTAGE:")
             console.log("\nChecking User and Post Exist...")
 
-            const exist_user = await User.findById(req.body.fk_user_id)
-            const exist_postage = await Postage.findById(req.body.fk_postage_id)
+            const exist_user = await User.findById(req.body.user_id)
+            const exist_postage = await Postage.findById(req.body.postage_id)
 
             if(exist_user == null || exist_postage == null){
                 console.log("User and Postage not exist\n" + "-----\n")
