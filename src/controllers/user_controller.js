@@ -48,7 +48,6 @@ module.exports = {
     async change_password(req, res){
         try{
             const user = req.body.user
-            console.log('senha', req.body.novaSenha)
             if(req.body.novaSenha){
                 const hash = await bcrypt.hash(req.body.novaSenha, 10);
                 await user.update({user_password: hash});

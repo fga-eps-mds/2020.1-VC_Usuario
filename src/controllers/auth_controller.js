@@ -17,8 +17,6 @@ module.exports = {
     },
 
     async password_validation(req, res, next) {
-        console.log("################", req.body.password);
-        console.log("@@@@@@@@@@@@@@@@@@@@@", req.body.user.user_password);
         if(!await bcrypt.compare(req.body.password, req.body.user.user_password)){
             return res.status(401).send({msg: 'senha invalida'});
         }
@@ -47,8 +45,6 @@ module.exports = {
             expiresIn: 7200,
         });
 
-        console.log(token);
-
         return res.status(200).json({user, token, msg: 'Bem vindo!'})
     },
 
@@ -72,7 +68,6 @@ module.exports = {
             if (err) return res.status(401).send({msg: 'Token inválido'});
         
             req.params.id = decoded.id;
-            console.log(decoded.id)
             return next();
         });        
     },
