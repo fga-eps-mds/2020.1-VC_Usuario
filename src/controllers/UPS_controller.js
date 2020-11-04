@@ -20,7 +20,7 @@ module.exports = {
             return res.status(200).json(ups);
 
         } catch(error){
-            return res.status(400).send({ error: err.message});
+            return res.status(400).send({ error_create_ups: err.message});
         }
     },
 
