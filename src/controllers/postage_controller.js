@@ -21,7 +21,7 @@ module.exports = {
             return res.status(200).json({postage});
             
         }catch(err){
-            return res.status(400).send({ error: err.message});
+            return res.status(400).send({ error_create_common: err.message});
         }
     },
 
@@ -43,7 +43,7 @@ module.exports = {
             return res.status(200).json({postage});
             
         }catch(err){
-            return res.status(400).send({ error: err.message});
+            return res.status(400).send({ error_create_anon: err.message});
         }
     },
 
@@ -79,7 +79,7 @@ module.exports = {
             console.log(posts);
             return res.status(200).json({posts});
         }catch(err){
-            return res.status(400).send({error: err.message});
+            return res.status(400).send({error_list_common: err.message});
         }
     },
 
@@ -88,7 +88,7 @@ module.exports = {
           	const post = await Postage.findByIdAndUpdate(req.params.id, req.body.post_status)          
 		    return res.status(200).json({post});
         }catch(err){
-            return res.status(400).send({error: err.message});
+            return res.status(400).send({error_update_status: err.message});
         }
     },
 
@@ -98,7 +98,7 @@ module.exports = {
             const user = await User.findById(req.params.id)
             if(user == null){
                 console.log("User not exist\n" + "++++\n")
-                return res.status(400).send({error_UPS_list_for_user: "User not exist"});
+                return res.status(400).send({error_list_all_postages_with_UPS_by_user: "User not exist"});
             }
             
             const postages_list = await Postage.find();
@@ -126,7 +126,7 @@ module.exports = {
             return res.json(postages_list);
 
         }catch(err){
-            return res.status(400).send({error: err.message});        
+            return res.status(400).send({error_list_all_postages_with_UPS_by_user: err.message});        
         }
     },
 
@@ -135,13 +135,13 @@ module.exports = {
             const post = await Postage.findById(req.body._id);
 
             if(post.fk_user_id == null){
-                return res.status(400).send({check_postage_is_not_anon: "Postagem é anonima"});   
+                return res.status(400).send({error_check_postage_is_not_anon: "Postagem é anonima"});   
             }
             else{
                 return next()
             }
         }catch(err){
-            return res.status(400).send({error: err.message});   
+            return res.status(400).send({error_check_postage_is_not_anon: err.message});   
         }
     },
 
@@ -156,7 +156,7 @@ module.exports = {
             return res.status(200).json(edited_post)
 
         }catch(err){
-            return res.status(400).send({error: err.message}); 
+            return res.status(400).send({error_update_one: err.message}); 
         }
     },
 
@@ -165,7 +165,7 @@ module.exports = {
         req.post = await Postage.findById(req.body._id);
 
         if(req.post.fk_user_id != req.body.fk_user_id_logged){
-            return res.status(400).send({error: "Usuario da postagem diferente do usuario da requisicao"}); 
+            return res.status(400).send({error_check_user_of_postage: "Usuario da postagem diferente do usuario da requisicao"}); 
         }
         else{
             return next()
@@ -179,7 +179,7 @@ module.exports = {
 
             return res.status(200).send("Postagem foi removida");
         }catch(err){
-            return res.status(400).send({error: err.message}); 
+            return res.status(400).send({error_delete_one: err.message}); 
         }
     }
 }
