@@ -115,7 +115,6 @@ module.exports = {
     },
 
     async post_support_number_alteration (req, res){
-
         try{
             console.log("Changing support number...")
 
@@ -141,7 +140,6 @@ module.exports = {
             }
 
             postage_UPSs_number += aux
-
             postage_related_ups.post_support_number = postage_UPSs_number
             postage_related_ups.save()
 
