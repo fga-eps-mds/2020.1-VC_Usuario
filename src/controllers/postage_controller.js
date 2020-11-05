@@ -1,5 +1,5 @@
 const { json } = require('body-parser');
-const { update } = require('../models/postage.js');
+const { update, find } = require('../models/postage.js');
 const Postage = require ('../models/postage.js');
 const UPS = require('../models/UPS.js');
 const User = require('../models/user.js');
@@ -97,14 +97,13 @@ module.exports = {
         try{
             const user = await User.findById(req.params.id)
             if(user == null){
-                console.log("User not exist\n" + "++++\n")
+                console.log("User not exist!\n" + "\n-----\n")
                 return res.status(400).send({error_list_all_postages_with_UPS_by_user: "User not exist"});
             }
             
             const postages_list = await Postage.find();
             
-            console.log("-----\n\n" + "LIST POSTAGES WITH UPSs:")
-            console.log("\nListing all postages...\n")
+            console.log("\n-----\n" + "\nListing all postages...")
 
             let array_UPSs = null
             for (var i = 0; i < postages_list.length; i++){
@@ -120,7 +119,7 @@ module.exports = {
                     postages_list[i].post_supporting = true
                 }
 
-                console.log("Postage " + postages_list[i]._id + ": " + postages_list[i].post_supporting + "\n-----")
+                console.log("Postage " + postages_list[i]._id + ": " + postages_list[i].post_supporting + "\n-----\n")
             }
 
             return res.json(postages_list);
@@ -135,7 +134,7 @@ module.exports = {
             const post = await Postage.findById(req.body.postage_id);
 
             if(post.fk_user_id == null){
-                return res.status(400).send({error_check_postage_is_not_anon: "Postagem é anonima"});   
+                return res.status(400).send({error_check_postage_is_not_anon: "Postage is Anonymous"});   
             }
             else{
                 return next()
@@ -168,7 +167,7 @@ module.exports = {
         req.post = await Postage.findById(req.body.postage_id);
         
         if(req.post.fk_user_id != req.body.user_id){
-            return res.status(400).send({error_check_user_of_postage: "Usuario da postagem diferente do usuario da requisicao"}); 
+            return res.status(400).send({error_check_user_of_postage: "User is different from user's postage"}); 
         }
         else{
             return next()

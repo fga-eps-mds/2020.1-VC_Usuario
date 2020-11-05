@@ -37,14 +37,13 @@ module.exports = {
     async check_exist_user_and_postage (req, res, next){
 
         try{
-            console.log("\n-----")
-            console.log("\nChecking User and Post Exist...")
+            console.log("\n-----\n" + "\nChecking User and Post Exist...")
 
             const exist_user = await User.findById(req.body.user_id)
             const exist_postage = await Postage.findById(req.body.postage_id)
 
             if(exist_user == null || exist_postage == null){
-                console.log("User and Postage not exist\n" + "-----\n")
+                console.log("User or Postage not exist\n" + "\n-----\n")
                 return res.status(400).send({error_UPS_check_exist_user_and_postage: "User or Postage not exist"});
             }
             else{
@@ -99,12 +98,12 @@ module.exports = {
                     console.log("UPS already created, successfully deleted!\n")
                 }
                 else{
-                    console.log("Error, UPS still exists, fail to delete\n" + "-----\n")
+                    console.log("Error, UPS still exists, fail to delete\n" + "\n-----\n")
                     return res.status(400).send({error_support_postage: "UPS already created, error delete"});
                 }
             }
             else{
-                console.log("Error, to much UPSs created\n" + "-----\n")
+                console.log("Error, to much UPSs created\n" + "\n-----\n")
                 return res.status(400).send({error_support_postage: "To much UPSs created with this parameters"});
             }
 
@@ -121,7 +120,7 @@ module.exports = {
             const array_UPSs = await UPS.find({ fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id })
             
             if(array_UPSs.length > 1){
-                console.log("Error, To much UPSs created with this parameters\n" + "-----\n")
+                console.log("Error, To much UPSs created with this parameters\n" + "\n-----\n")
                 return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
             }
             
