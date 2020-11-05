@@ -17,8 +17,8 @@ router.delete('/postage/delete_for_test/:id', Postage.delete_one_for_test);
 router.delete('/postage/delete_all', Postage.delete_all);
 router.put('/postage/update_status/:id', Postage.update_status);
 
-router.delete('/postage/delete_one', UPS.check_exist_user_and_postage, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_one);
-router.put('/postage/update_one', Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.update_one);
+router.put('/postage/delete_one', UPS.check_exist_user_and_postage, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_one);
+router.put('/postage/update_one', UPS.check_exist_user_and_postage, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.update_one);
 
 //Users routers
 router.post('/user/register_user', User.register);
