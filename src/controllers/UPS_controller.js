@@ -37,7 +37,7 @@ module.exports = {
     async check_exist_user_and_postage (req, res, next){
 
         try{
-            console.log("\n-----\n\n" + "SUPPORT POSTAGE:")
+            console.log("\n-----")
             console.log("\nChecking User and Post Exist...")
 
             const exist_user = await User.findById(req.body.user_id)
@@ -125,6 +125,7 @@ module.exports = {
             })
 
             if(array_UPSs.length > 1){
+                console.log("Error, To much UPSs created with this parameters\n" + "-----\n")
                 return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
             }
             
@@ -144,6 +145,7 @@ module.exports = {
             postage_related_ups.post_support_number = postage_UPSs_number
             postage_related_ups.save()
 
+            console.log("Change in support number successfully done!\n" + "\n-----\n")
             return res.status(200).send("Apoio da Postagem " + postage_related_ups.post_title + " foi modificado");
 
         }catch(err){

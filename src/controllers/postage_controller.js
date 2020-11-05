@@ -148,11 +148,14 @@ module.exports = {
     async update_one (req, res){
 
         try{
+            console.log("Editing Postage...")
+
             var { post_title, post_description, post_category, post_place } = req.body;
-            const teste = { post_title, post_description, post_category, post_place }
+            const new_postage_params = { post_title, post_description, post_category, post_place }
     
-            const edited_post = await Postage.findByIdAndUpdate(req.post._id, teste)
-    
+            const edited_post = await Postage.findByIdAndUpdate(req.post._id, new_postage_params)
+            console.log("Postage successfully edited!\n" + "\n-----\n")
+
             return res.status(200).json(edited_post)
 
         }catch(err){
@@ -175,7 +178,10 @@ module.exports = {
     async delete_one (req, res){
         
         try{
+            console.log("Removing Postage...")
+            
             await req.post.remove();
+            console.log("Postage successfully deleted!\n" + "\n-----\n")
 
             return res.status(200).send("Postagem foi removida");
         }catch(err){
