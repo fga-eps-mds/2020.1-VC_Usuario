@@ -8,7 +8,6 @@ module.exports = {
     async create_common (req, res){
         try{
             if(req.file){
-                console.log(req.file);
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
 
@@ -17,7 +16,6 @@ module.exports = {
             postage.post_support_number = 0
             postage.save()
             
-            console.log(postage);
             return res.status(200).json({postage});
             
         }catch(err){
@@ -28,7 +26,6 @@ module.exports = {
     async create_anon (req, res){
         try{
             if(req.file){
-                console.log(req.file);
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
 
@@ -39,7 +36,6 @@ module.exports = {
             postage.post_support_number = 0
             postage.save()
 
-            console.log(postage);
             return res.status(200).json({postage});
             
         }catch(err){
@@ -75,8 +71,7 @@ module.exports = {
                 post_description: 0,
                 post_permission: 0
             });
-            
-            console.log(posts);
+
             return res.status(200).json({posts});
         }catch(err){
             return res.status(400).send({error: err.message});
@@ -111,14 +106,10 @@ module.exports = {
         try{
             const user = await User.findById(req.params.id)
             if(user == null){
-                console.log("User not exist\n" + "++++\n")
                 return res.status(400).send({error_UPS_list_for_user: "User not exist"});
             }
             
             const postages_list = await Postage.find();
-            
-            console.log("-----\n\n" + "LIST POSTAGES WITH UPSs:")
-            console.log("\nListing all postages...\n")
 
             let array_UPSs = null
             for (var i = 0; i < postages_list.length; i++){
