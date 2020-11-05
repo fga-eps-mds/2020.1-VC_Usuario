@@ -60,18 +60,18 @@ module.exports = {
     async support_postage (req, res, next){   
         
         try{
-            const array_UPSs = await UPS.find({ 
-                fk_user_id: req.body.fk_user_id, 
-                fk_postage_id: req.body.fk_postage_id 
+            const array_UPSs = await UPS.find({
+                fk_user_id: req.body.user_id, 
+                fk_postage_id: req.body.postage_id 
             })
 
             console.log("Support Postage...")
 
-            const user_related_ups = await User.findById(req.body.fk_user_id)
+            const user_related_ups = await User.findById(req.body.user_id)
 
             if(array_UPSs.length == 0){
 
-                const created_ups = await UPS.create(req.body)
+                const created_ups = await UPS.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
 
                 user_related_ups.user_array_UPS.unshift(created_ups)
                 user_related_ups.save()
@@ -120,15 +120,15 @@ module.exports = {
             console.log("Changing support number...")
 
             const array_UPSs = await UPS.find({ 
-                fk_user_id: req.body.fk_user_id, 
-                fk_postage_id: req.body.fk_postage_id 
+                fk_user_id: req.body.user_id, 
+                fk_postage_id: req.body.postage_id 
             })
 
             if(array_UPSs.length > 1){
                 return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
             }
             
-            const postage_related_ups = await Postage.findById(req.body.fk_postage_id)
+            const postage_related_ups = await Postage.findById(req.body.postage_id)
             var postage_UPSs_number = postage_related_ups.post_support_number
 
             var aux = 0
