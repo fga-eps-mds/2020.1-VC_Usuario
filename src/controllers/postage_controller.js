@@ -101,7 +101,7 @@ module.exports = {
                 return res.status(400).send({error_UPS_list_for_user: "User not exist"});
             }
             
-            const postages_list = await Postage.find();
+            const postages_list = await Postage.find({$where: "this.fk_user_id != null"});
             
             console.log("-----\n\n" + "LIST POSTAGES WITH UPSs:")
             console.log("\nListing all postages...\n")
