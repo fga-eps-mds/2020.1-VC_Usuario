@@ -19,12 +19,16 @@ router.put('/postage/update_status/:id', Postage.update_status);
 
 //Users routers
 router.post('/user/register_user', User.register);
+router.put('/user/update/:id', User.update);
 router.get('/user/list_all', User.list);
+
 // Auth.session_authentication, User.list
 router.post('/user/login', Auth.authentication);
-router.get('/user/validate_session', Auth.session_authentication, Auth.refresh_token);
+router.get('/user/validate_session', Auth.session_authentication, Auth.find_user, Auth.refresh_token_and_data);
 router.get('/user/list_postages/:id', User.list_postages);
 router.delete('/user/delete_all', User.delete_all);
+router.delete('/user/delete/:id', Auth.find_user, User.delete);
+router.put('/user/change_password/:id', Auth.find_user, User.change_password);
 
 //UPS routers
 router.post('/ups/create', UPS.create_ups);
