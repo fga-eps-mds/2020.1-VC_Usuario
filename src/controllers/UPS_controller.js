@@ -118,11 +118,8 @@ module.exports = {
         try{
             console.log("Changing support number...")
 
-            const array_UPSs = await UPS.find({ 
-                fk_user_id: req.body.user_id, 
-                fk_postage_id: req.body.postage_id 
-            })
-
+            const array_UPSs = await UPS.find({ fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id })
+            
             if(array_UPSs.length > 1){
                 console.log("Error, To much UPSs created with this parameters\n" + "-----\n")
                 return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
@@ -145,7 +142,6 @@ module.exports = {
 
             console.log("Change in support number successfully done!\n" + "\n-----\n")
             return res.status(200).send("Apoio da Postagem " + postage_related_ups.post_title + " foi modificado");
-
         }catch(err){
             return res.status(400).send({error_post_support_number_alteration: err.message});
         }
