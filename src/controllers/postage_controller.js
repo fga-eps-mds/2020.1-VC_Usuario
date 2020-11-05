@@ -130,17 +130,42 @@ module.exports = {
     },
 
     async check_postage_is_not_anon (req, res, next){
+
         try{
+            console.log("Checking the postage is not anonymous...")
+
             const post = await Postage.findById(req.body.postage_id);
 
             if(post.fk_user_id == null){
+                console.log("Error, Postage is anonymous!\n" + "\n-----\n")
                 return res.status(400).send({error_check_postage_is_not_anon: "Postage is Anonymous"});   
             }
             else{
+                console.log("Postage is not anonymous!\n")
                 return next()
             }
         }catch(err){
             return res.status(400).send({error_check_postage_is_not_anon: err.message});   
+        }
+    },
+
+    async check_user_of_postage (req, res, next){
+
+        try{
+            console.log("Checking user's postage...")
+
+            req.post = await Postage.findById(req.body.postage_id);
+        
+            if(req.post.fk_user_id != req.body.user_id){
+                console.log("Error, User is different from user's postage!\n" + "\n-----\n")
+                return res.status(400).send({error_check_user_of_postage: "User is different from user's postage"}); 
+            }
+            else{
+                console.log("User's postage is equal to User!\n")
+                return next()
+            }
+        }catch(err){
+            return res.status(400).send({error_check_user_of_postage: err.message});
         }
     },
 
@@ -159,18 +184,6 @@ module.exports = {
 
         }catch(err){
             return res.status(400).send({error_update_one: err.message}); 
-        }
-    },
-
-    async check_user_of_postage (req, res, next){
-
-        req.post = await Postage.findById(req.body.postage_id);
-        
-        if(req.post.fk_user_id != req.body.user_id){
-            return res.status(400).send({error_check_user_of_postage: "User is different from user's postage"}); 
-        }
-        else{
-            return next()
         }
     },
 
