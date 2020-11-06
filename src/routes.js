@@ -7,8 +7,8 @@ const Auth = require('./controllers/auth_controller');
 const UPS = require('./controllers/UPS_controller');
 
 //Postages routes
-router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.insert_file, Postage.create_anon);
-router.post('/postage/create_common', multer(multerConfig).single("file"), Postage.insert_file, Postage.create_common);
+router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_anon);
+router.post('/postage/create_common', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_common);
 router.get('/postage/list_all', Postage.list);
 router.get('/postage/list_common', Postage.list_common);
 router.get('/postage/list_one/:id', Postage.list_one);
