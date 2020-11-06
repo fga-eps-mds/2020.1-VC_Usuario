@@ -180,8 +180,7 @@ module.exports = {
             const edited_post = await Postage.findByIdAndUpdate(req.post._id, new_postage_params)
             console.log("Postage successfully edited!\n" + "\n-----\n")
 
-            return res.status(200).json(edited_post)
-
+            return res.status(200).send("Postage successfully edited!")
         }catch(err){
             return res.status(400).send({error_update_one: err.message}); 
         }
@@ -195,7 +194,7 @@ module.exports = {
             await req.post.remove();
             console.log("Postage successfully deleted!\n" + "\n-----\n")
 
-            return res.status(200).send("Postagem foi removida");
+            return res.status(200).send("Postage successfully deleted!");
         }catch(err){
             return res.status(400).send({error_delete_one: err.message}); 
         }
