@@ -82,7 +82,7 @@ module.exports = {
     async list_by_category (req, res){
         const categoria = req.query.categoria;
         try{
-            const posts = await Postage.find({ post_category: categoria}, { 
+            const posts = await Postage.find({ post_category: categoria, $where: "this.fk_user_id != null"}, { 
                 post_description: 0,
                 post_permission: 0
             });
