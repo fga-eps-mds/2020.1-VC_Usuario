@@ -5,13 +5,22 @@ const UPS = require('../models/UPS.js');
 const User = require('../models/user.js');
 
 module.exports = {
-    async create_common (req, res){
+
+    async insert_file (req, res, next){
         try{
             if(req.file){
                 console.log(req.file);
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
+    
+            return next()
+        }catch(err){
+            return res.status(400).send({ error: err.message});
+        }
+    },
 
+    async create_common (req, res){
+        try{
             const postage = await Postage.create(req.body);
 
             postage.post_support_number = 0
@@ -27,15 +36,9 @@ module.exports = {
 
     async create_anon (req, res){
         try{
-            if(req.file){
-                console.log(req.file);
-                req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
-            }
-
-            req.body.fk_user_id = null;
-
             const postage = await Postage.create(req.body);
             
+            postage.fk_user_id = null
             postage.post_support_number = 0
             postage.save()
 
