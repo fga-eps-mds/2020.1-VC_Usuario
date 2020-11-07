@@ -67,6 +67,7 @@ module.exports = {
             console.log("Support Postage...")
 
             const user_related_ups = await User.findById(req.body.user_id)
+            const exist_user = await User.findById(req.body.user_id)
 
             if(array_UPSs.length == 0){
 
@@ -74,6 +75,10 @@ module.exports = {
 
                 user_related_ups.user_array_UPS.unshift(created_ups)
                 user_related_ups.save()
+                
+                exist_user.user_score += 10;
+                exist_user.save()
+                console.log(exist_user.user_score)
 
                 console.log("New UPS successfully created!\n")
             }
@@ -94,7 +99,13 @@ module.exports = {
                 await ups_remove.remove();
 
                 const check_ups_remove = await UPS.findById(array_UPSs[0]._id);
+
                 if(check_ups_remove == null){
+                    
+                    exist_user.user_score -= 10;
+                    exist_user.save()
+                    console.log(exist_user.user_score)
+
                     console.log("UPS already created, successfully deleted!\n")
                 }
                 else{
