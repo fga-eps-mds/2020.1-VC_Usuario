@@ -1,5 +1,5 @@
 const { json } = require('body-parser');
-const { update } = require('../models/postage.js');
+const { update, find } = require('../models/postage.js');
 const Postage = require ('../models/postage.js');
 const UPS = require('../models/UPS.js');
 const User = require('../models/user.js');
@@ -20,7 +20,7 @@ module.exports = {
             return res.status(200).json({postage});
             
         }catch(err){
-            return res.status(400).send({ error: err.message});
+            return res.status(400).send({ error_create_common: err.message});
         }
     },
 
@@ -40,7 +40,7 @@ module.exports = {
             return res.status(200).json({postage});
             
         }catch(err){
-            return res.status(400).send({ error: err.message});
+            return res.status(400).send({ error_create_anon: err.message});
         }
     },
 
@@ -54,7 +54,7 @@ module.exports = {
         return res.json(posts);
     },
 
-    async delete (req, res){
+    async delete_one_for_test (req, res){
         const post = await Postage.findById(req.params.id);
         await post.remove();
         return res.send();
@@ -89,7 +89,7 @@ module.exports = {
 
             return res.status(200).json({posts});
         }catch(err){
-            return res.status(400).send({error: err.message});
+            return res.status(400).send({error_list_common: err.message});
         }
     },
 
@@ -98,7 +98,7 @@ module.exports = {
           	const post = await Postage.findByIdAndUpdate(req.params.id, req.body.post_status)          
 		    return res.status(200).json({post});
         }catch(err){
-            return res.status(400).send({error: err.message});
+            return res.status(400).send({error_update_status: err.message});
         }
     },
 
@@ -107,8 +107,8 @@ module.exports = {
         try{
             const user = await User.findById(req.params.id)
             if(user == null){
-                console.log("User not exist\n" + "++++\n")
-                return res.status(400).send({error_UPS_list_for_user: "User not exist"});
+                console.log("User not exist!\n" + "\n-----\n")
+                return res.status(400).send({error_list_all_postages_with_UPS_by_user: "User not exist"});
             }
             
             const postages_list = await Postage.find({$where: "this.fk_user_id != null"});
@@ -130,13 +130,84 @@ module.exports = {
                     postages_list[i].post_supporting = true
                 }
 
-                console.log("Postage " + postages_list[i]._id + ": " + postages_list[i].post_supporting + "\n-----")
+                console.log("Postage " + postages_list[i]._id + ": " + postages_list[i].post_supporting + "\n-----\n")
             }
 
             return res.json(postages_list);
 
         }catch(err){
-            return res.status(400).send({error: err.message});        
+            return res.status(400).send({error_list_all_postages_with_UPS_by_user: err.message});        
+        }
+    },
+
+    async check_postage_is_not_anon (req, res, next){
+
+        try{
+            console.log("Checking the postage is not anonymous...")
+
+            const post = await Postage.findById(req.body.postage_id);
+
+            if(post.fk_user_id == null){
+                console.log("Error, Postage is anonymous!\n" + "\n-----\n")
+                return res.status(400).send({error_check_postage_is_not_anon: "Postage is Anonymous"});   
+            }
+            else{
+                console.log("Postage is not anonymous!\n")
+                return next()
+            }
+        }catch(err){
+            return res.status(400).send({error_check_postage_is_not_anon: err.message});   
+        }
+    },
+
+    async check_user_of_postage (req, res, next){
+
+        try{
+            console.log("Checking user's postage...")
+
+            req.post = await Postage.findById(req.body.postage_id);
+        
+            if(req.post.fk_user_id != req.body.user_id){
+                console.log("Error, User is different from user's postage!\n" + "\n-----\n")
+                return res.status(400).send({error_check_user_of_postage: "User is different from user's postage"}); 
+            }
+            else{
+                console.log("User's postage is equal to User!\n")
+                return next()
+            }
+        }catch(err){
+            return res.status(400).send({error_check_user_of_postage: err.message});
+        }
+    },
+
+    async update_one (req, res){
+
+        try{
+            console.log("Editing Postage...")
+
+            var { post_title, post_description, post_category, post_place } = req.body;
+            const new_postage_params = { post_title, post_description, post_category, post_place }
+    
+            const edited_post = await Postage.findByIdAndUpdate(req.post._id, new_postage_params)
+            console.log("Postage successfully edited!\n" + "\n-----\n")
+
+            return res.status(200).send("Postage successfully edited!")
+        }catch(err){
+            return res.status(400).send({error_update_one: err.message}); 
+        }
+    },
+
+    async delete_one (req, res){
+        
+        try{
+            console.log("Removing Postage...")
+            
+            await req.post.remove();
+            console.log("Postage successfully deleted!\n" + "\n-----\n")
+
+            return res.status(200).send("Postage successfully deleted!");
+        }catch(err){
+            return res.status(400).send({error_delete_one: err.message}); 
         }
     }
 }

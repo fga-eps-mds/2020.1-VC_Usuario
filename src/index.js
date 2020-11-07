@@ -27,7 +27,8 @@ app.get('/', (req, res) => {
 mongoose.Promise = global.Promise;
 mongoose.connect(`${process.env.DB_HOST}`, { 
     useNewUrlParser: true, 
-    useUnifiedTopology: true 
+    useUnifiedTopology: true, 
+    useFindAndModify: false
 }).then(() => {
     console.log("MongoDB Conectado!")
 }).catch((err) => {
