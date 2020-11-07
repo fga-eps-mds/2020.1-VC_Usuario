@@ -16,6 +16,10 @@ module.exports = {
 
             postage.post_support_number = 0
             postage.save()
+            const user = await User.findById(req.body.fk_user_id)
+            user.user_score += 100;
+            user.save()
+            console.log(user.user_score);
             
             return res.status(200).json({postage});
             
