@@ -20,7 +20,7 @@ module.exports = {
             return res.status(200).json(ups);
 
         } catch(error){
-            return res.status(400).send({ error: err.message});
+            return res.status(400).send({ error_create_ups: err.message});
         }
     },
 
@@ -37,14 +37,13 @@ module.exports = {
     async check_exist_user_and_postage (req, res, next){
 
         try{
-            console.log("\n-----\n\n" + "SUPPORT POSTAGE:")
-            console.log("\nChecking User and Post Exist...")
+            console.log("\n-----\n" + "\nChecking User and Post Exist...")
 
-            const exist_user = await User.findById(req.body.fk_user_id)
-            const exist_postage = await Postage.findById(req.body.fk_postage_id)
+            const exist_user = await User.findById(req.body.user_id)
+            const exist_postage = await Postage.findById(req.body.postage_id)
 
             if(exist_user == null || exist_postage == null){
-                console.log("User and Postage not exist\n" + "-----\n")
+                console.log("User or Postage not exist\n" + "\n-----\n")
                 return res.status(400).send({error_UPS_check_exist_user_and_postage: "User or Postage not exist"});
             }
             else{
@@ -60,18 +59,18 @@ module.exports = {
     async support_postage (req, res, next){   
         
         try{
-            const array_UPSs = await UPS.find({ 
-                fk_user_id: req.body.fk_user_id, 
-                fk_postage_id: req.body.fk_postage_id 
+            const array_UPSs = await UPS.find({
+                fk_user_id: req.body.user_id, 
+                fk_postage_id: req.body.postage_id 
             })
 
             console.log("Support Postage...")
 
-            const user_related_ups = await User.findById(req.body.fk_user_id)
+            const user_related_ups = await User.findById(req.body.user_id)
 
             if(array_UPSs.length == 0){
 
-                const created_ups = await UPS.create(req.body)
+                const created_ups = await UPS.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
 
                 user_related_ups.user_array_UPS.unshift(created_ups)
                 user_related_ups.save()
@@ -99,12 +98,12 @@ module.exports = {
                     console.log("UPS already created, successfully deleted!\n")
                 }
                 else{
-                    console.log("Error, UPS still exists, fail to delete\n" + "-----\n")
+                    console.log("Error, UPS still exists, fail to delete\n" + "\n-----\n")
                     return res.status(400).send({error_support_postage: "UPS already created, error delete"});
                 }
             }
             else{
-                console.log("Error, to much UPSs created\n" + "-----\n")
+                console.log("Error, to much UPSs created\n" + "\n-----\n")
                 return res.status(400).send({error_support_postage: "To much UPSs created with this parameters"});
             }
 
@@ -115,20 +114,17 @@ module.exports = {
     },
 
     async post_support_number_alteration (req, res){
-
         try{
             console.log("Changing support number...")
 
-            const array_UPSs = await UPS.find({ 
-                fk_user_id: req.body.fk_user_id, 
-                fk_postage_id: req.body.fk_postage_id 
-            })
-
+            const array_UPSs = await UPS.find({ fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id })
+            
             if(array_UPSs.length > 1){
+                console.log("Error, To much UPSs created with this parameters\n" + "\n-----\n")
                 return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
             }
             
-            const postage_related_ups = await Postage.findById(req.body.fk_postage_id)
+            const postage_related_ups = await Postage.findById(req.body.postage_id)
             var postage_UPSs_number = postage_related_ups.post_support_number
 
             var aux = 0
@@ -140,12 +136,11 @@ module.exports = {
             }
 
             postage_UPSs_number += aux
-
             postage_related_ups.post_support_number = postage_UPSs_number
             postage_related_ups.save()
 
+            console.log("Change in support number successfully done!\n" + "\n-----\n")
             return res.status(200).send("Apoio da Postagem " + postage_related_ups.post_title + " foi modificado");
-
         }catch(err){
             return res.status(400).send({error_post_support_number_alteration: err.message});
         }
