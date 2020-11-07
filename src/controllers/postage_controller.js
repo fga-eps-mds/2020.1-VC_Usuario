@@ -5,10 +5,10 @@ const UPS = require('../models/UPS.js');
 const User = require('../models/user.js');
 
 module.exports = {
+    
     async create_common (req, res){
         try{
             if(req.file){
-                console.log(req.file);
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
 
@@ -17,7 +17,6 @@ module.exports = {
             postage.post_support_number = 0
             postage.save()
             
-            console.log(postage);
             return res.status(200).json({postage});
             
         }catch(err){
@@ -28,7 +27,6 @@ module.exports = {
     async create_anon (req, res){
         try{
             if(req.file){
-                console.log(req.file);
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
 
@@ -39,7 +37,6 @@ module.exports = {
             postage.post_support_number = 0
             postage.save()
 
-            console.log(postage);
             return res.status(200).json({postage});
             
         }catch(err){
@@ -75,8 +72,21 @@ module.exports = {
                 post_description: 0,
                 post_permission: 0
             });
-            
-            console.log(posts);
+
+            return res.status(200).json({posts});
+        }catch(err){
+            return res.status(400).send({error: err.message});
+        }
+    },
+
+    async list_by_category (req, res){
+        const categoria = req.query.categoria;
+        try{
+            const posts = await Postage.find({ post_category: categoria, $where: "this.fk_user_id != null"}, { 
+                post_description: 0,
+                post_permission: 0
+            });
+
             return res.status(200).json({posts});
         }catch(err){
             return res.status(400).send({error: err.message});
@@ -102,7 +112,7 @@ module.exports = {
             }
             
             const postages_list = await Postage.find({$where: "this.fk_user_id != null"});
-            
+
             console.log("-----\n\n" + "LIST POSTAGES WITH UPSs:")
             console.log("\nListing all postages...\n")
 
