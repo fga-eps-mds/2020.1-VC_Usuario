@@ -99,7 +99,20 @@ module.exports = {
 
     async update_status (req, res){
         try{
-          	const post = await Postage.findByIdAndUpdate(req.params.id, req.body.post_status)          
+            const post = await Postage.findByIdAndUpdate(req.params.id, { post_status: req.body.post_status })
+            const user = await User.findById(post.fk_user_id)
+            
+            if(post.post_status == "Em Andamento") {
+                user.user_score += 100;
+                user.save()
+                console.log(user.user_score);
+            }
+
+            else if (post.post_status == 'Resolvido') {
+                user.user_score += 400;
+                user.save()
+                console.log(user.user_score);
+            }          
 		    return res.status(200).json({post});
         }catch(err){
             return res.status(400).send({error_update_status: err.message});
