@@ -5,9 +5,10 @@
 | --- | --- | --- | --- |
 |09/09/2020|0.1|Abertura do documento|Enzo Gabriel e Daniel Barcelos|
 |23/09/2020|0.2|Revisão do documento|Enzo Gabriel e Daniel Barcelos|
-|05/10/2020|0.3|Revisão do documento e atualização das informações das sprints 5 e 6| Enzo Gabriel|
+|05/10/2020|0.3|Revisão do documento e atualização das informações das sprints 5 e 6|Enzo Gabriel|
 |06/10/2020|0.4|Revisão do documento e e inserção das issues da release 2|Emily Dias e Enzo Gabriel|
 |23/10/2020|0.5|Correção e atualização do documento nas informações das sprints 8, 9 e 10|Daniel Porto|
+|08/11/2020|0.6|Atualização do documento a partir da sprint 10|Daniel Porto|
 
 # Release 1
 
@@ -114,39 +115,38 @@
 ## Sprint 10
 
 | ID | Issue |
-|:--:| ------- | 
-| Issue  | US09 Usuário acessar uma área de notificações, relatórios e atualização sobre as postagens |
-| Issue  | US10 Usuário logado receber pontuação por suas ações na aplicação |
+|:--:| ------- |
 | Issue  | US11 Usuário logado editar suas postagens realizadas |
 | Issue  | US12 Usuário logado excluir suas postagens realizadas |
+| Issue  | US15 Usuário filtrar a lista de postagens por categoria | 
 
 ## Sprint 11
 
 | ID | Issue |
 |:--:| ------- | 
-| Issue  | US15 Usuário filtrar a lista de postagens por categoria | 
-| Issue  | US16 Usuário logado receber notificação caso sua postagem seja resolvida, reportada ou não aceita |
+| Issue  | US10 Usuário logado receber pontuação por suas ações na aplicação |
 
 ## Sprint 12
 
 | ID | Issue |
 |:--:| ------- | 
-| Issue  | US18 Usuário poder usar a aplicação somente dentro das depêndencias da universidade
-
+| Issue  | US09 Usuário acessar uma área de notificações, relatórios e atualização sobre as postagens |
+| Issue  | US22 Usuário logado comentar uma postagem | 
 
 ## Sprint 13
 
 | ID | Issue |
 |:--:| ------- | 
-| Issue  | US20 Usuário logado denunciar postagem |
-| Issue  | US21 Usuário compartilhar postagem | 
+| Issue  | US16 Usuário logado receber notificação caso sua postagem seja resolvida, reportada ou não aceita |
+| Issue  | US18 Usuário poder usar a aplicação somente dentro das depêndencias da universidade |
 
 ## Sprint 14
 
 | ID | Issue |
 |:--:| ------- | 
-| Issue  | US22 Usuário logado comentar uma postagem | 
-| Issue  | Fazer testes de bugs na aplicação |
+| Issue  | Fazer testes de Sistema |
+| Issue  | US20 Usuário logado denunciar postagem |
+| Issue  | US21 Usuário compartilhar postagem |
 
 ## Sprint 15
 
