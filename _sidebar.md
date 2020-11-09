@@ -43,3 +43,6 @@
     - [**Sprint 9**](#)
 	    - [Planning Sprint 9](/docs/sprints/sprint_9/Planning_Sprint_9.md)
 	    - [Review Sprint 9](/docs/sprints/sprint_9/Review_Sprint_9.md)
+    - [**Sprint 10**](#)
+	    - [Planning Sprint 10](/docs/sprints/sprint_10/Planning_Sprint_10.md)
+	    - [Review Sprint 10](/docs/sprints/sprint_10/Review_Sprint_10.md)
