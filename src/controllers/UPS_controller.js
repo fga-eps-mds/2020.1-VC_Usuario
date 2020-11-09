@@ -75,7 +75,6 @@ module.exports = {
                 user_related_ups.user_array_UPS.unshift(created_ups)
                 user_related_ups.user_score += 10;
                 user_related_ups.save()
-                console.log("@@@@@@@@@@@@",user_related_ups.user_score)
 
                 console.log("New UPS successfully created!\n")
             }
@@ -101,7 +100,6 @@ module.exports = {
                     
                     user_related_ups.user_score -= 10;
                     await user_related_ups.update({user_score: user_related_ups.user_score});
-                    console.log("##################",user_related_ups.user_score)
 
                     console.log("UPS already created, successfully deleted!\n")
                 }
