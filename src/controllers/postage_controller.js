@@ -16,10 +16,10 @@ module.exports = {
 
             postage.post_support_number = 0
             postage.save()
+
             const user = await User.findById(req.body.fk_user_id)
             user.user_score += 100;
-            user.save()
-            console.log(user.user_score);
+            await user.update({user_score: user.user_score});
             
             return res.status(200).json({postage});
             
@@ -104,13 +104,13 @@ module.exports = {
             
             if(post.post_status == "Em Andamento") {
                 user.user_score += 100;
-                user.save()
+                await user.update({user_score: user.user_score});
                 console.log(user.user_score);
             }
 
             else if (post.post_status == 'Resolvido') {
                 user.user_score += 400;
-                user.save()
+                await user.update({user_score: user.user_score});
                 console.log(user.user_score);
             }          
 		    return res.status(200).json({post});
