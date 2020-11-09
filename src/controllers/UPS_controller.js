@@ -59,21 +59,12 @@ module.exports = {
     async support_postage (req, res, next){   
         
         try{
-            const array_UPSs = await UPS.find({
-                fk_user_id: req.body.user_id, 
-                fk_postage_id: req.body.postage_id 
-            })
-
             console.log("Support Postage...")
-
-            const user_related_ups = await User.findById(req.body.user_id)
-
+            
+            const array_UPSs = await UPS.find({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
             if(array_UPSs.length == 0){
 
-                const created_ups = await UPS.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
-
-                user_related_ups.user_array_UPS.unshift(created_ups)
-                user_related_ups.save()
+                await UPS.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
 
                 console.log("New UPS successfully created!\n")
             }
@@ -81,29 +72,11 @@ module.exports = {
                 
                 const ups_remove = await UPS.findById(array_UPSs[0]._id);
 
-                for(var i = 0; i < user_related_ups.user_array_UPS.length; i++) {
-                    if(user_related_ups.user_array_UPS[i].fk_postage_id == ups_remove.fk_postage_id && user_related_ups.user_array_UPS[0].fk_user_id == ups_remove.fk_user_id){
-                        
-                        user_related_ups.user_array_UPS.splice(i, 1)
-                        user_related_ups.save()
-
-                        break
-                    }
-                }
-
                 await ups_remove.remove();
-
-                const check_ups_remove = await UPS.findById(array_UPSs[0]._id);
-                if(check_ups_remove == null){
-                    console.log("UPS already created, successfully deleted!\n")
-                }
-                else{
-                    console.log("Error, UPS still exists, fail to delete\n" + "\n-----\n")
-                    return res.status(400).send({error_support_postage: "UPS already created, error delete"});
-                }
+                console.log("UPS already created, successfully deleted!\n")
             }
             else{
-                console.log("Error, to much UPSs created\n" + "\n-----\n")
+                console.log("Error, to much UPSs created!\n" + "\n-----\n")
                 return res.status(400).send({error_support_postage: "To much UPSs created with this parameters"});
             }
 
