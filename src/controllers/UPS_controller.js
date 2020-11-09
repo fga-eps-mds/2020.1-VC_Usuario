@@ -67,18 +67,15 @@ module.exports = {
             console.log("Support Postage...")
 
             const user_related_ups = await User.findById(req.body.user_id)
-            const exist_user = await User.findById(req.body.user_id)
 
             if(array_UPSs.length == 0){
 
                 const created_ups = await UPS.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
 
                 user_related_ups.user_array_UPS.unshift(created_ups)
+                user_related_ups.user_score += 10;
                 user_related_ups.save()
-                
-                exist_user.user_score += 10;
-                exist_user.save()
-                console.log(exist_user.user_score)
+                console.log("@@@@@@@@@@@@",user_related_ups.user_score)
 
                 console.log("New UPS successfully created!\n")
             }
@@ -102,9 +99,9 @@ module.exports = {
 
                 if(check_ups_remove == null){
                     
-                    exist_user.user_score -= 10;
-                    exist_user.save()
-                    console.log(exist_user.user_score)
+                    user_related_ups.user_score -= 10;
+                    await user_related_ups.update({user_score: user_related_ups.user_score});
+                    console.log("##################",user_related_ups.user_score)
 
                     console.log("UPS already created, successfully deleted!\n")
                 }
