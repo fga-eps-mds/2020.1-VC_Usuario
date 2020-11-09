@@ -105,13 +105,11 @@ module.exports = {
             if(post.post_status == "Em Andamento") {
                 user.user_score += 100;
                 await user.update({user_score: user.user_score});
-                console.log(user.user_score);
             }
 
             else if (post.post_status == 'Resolvido') {
                 user.user_score += 400;
                 await user.update({user_score: user.user_score});
-                console.log(user.user_score);
             }          
 		    return res.status(200).json({post});
         }catch(err){
