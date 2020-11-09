@@ -11,9 +11,8 @@ module.exports = {
                 return res.status(400).send({ msg: 'Email já cadastrado'})
 
             const User = await Users.create(req.body);
-            User.user_score += 300;
-            User.save()
-            console.log(User.user_score);
+            await User.update({user_score: 300});
+            
             return res.status(200).send({User, msg: 'Cadastro feito com sucesso!'});
         }catch(err){
             return res.status(400).send({ msg: err.message});
