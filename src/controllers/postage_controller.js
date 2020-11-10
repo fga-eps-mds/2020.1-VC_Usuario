@@ -5,40 +5,39 @@ const UPS = require('../models/UPS.js');
 const User = require('../models/user.js');
 
 module.exports = {
-    
-    async create_common (req, res){
+
+    async create_postage (req, res, next){
         try{
             if(req.file){
                 req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
             }
-
-            const postage = await Postage.create(req.body);
-
-            postage.post_support_number = 0
-            postage.save()
             
-            return res.status(200).json({postage});
-            
+            req.postage = await Postage.create(req.body)
+
+            req.postage.post_support_number = 0
+            req.postage.post_supporting = false
+            req.postage.save()
+
+            return next()            
         }catch(err){
-            return res.status(400).send({ error_create_common: err.message});
+            return res.status(400).send({error_create_postage: err.message});
+        }
+    },
+
+    async create_common (req, res){
+        try{
+            return res.status(200).json(req.postage);
+        }catch(err){
+            return res.status(400).send({error_create_common: err.message});
         }
     },
 
     async create_anon (req, res){
         try{
-            if(req.file){
-                req.body.post_midia = `${process.env.APP_HOST}/img/${req.file.filename}`;
-            }
+            req.postage.fk_user_id = null
+            req.postage.save()
 
-            req.body.fk_user_id = null;
-
-            const postage = await Postage.create(req.body);
-            
-            postage.post_support_number = 0
-            postage.save()
-
-            return res.status(200).json({postage});
-            
+            return res.status(200).json(req.postage);            
         }catch(err){
             return res.status(400).send({ error_create_anon: err.message});
         }
