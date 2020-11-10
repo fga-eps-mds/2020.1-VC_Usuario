@@ -88,8 +88,8 @@ module.exports = {
                     if(user_related_ups.user_array_UPS[i].fk_postage_id == ups_remove.fk_postage_id && user_related_ups.user_array_UPS[0].fk_user_id == ups_remove.fk_user_id){
                         
                         user_related_ups.user_array_UPS.splice(i, 1)
-                        user_related_ups.save()
-
+                        await user_related_ups.update({user_array_UPS: user_related_ups.user_array_UPS});
+                        
                         break
                     }
                 }
@@ -145,7 +145,7 @@ module.exports = {
 
             postage_UPSs_number += aux
             postage_related_ups.post_support_number = postage_UPSs_number
-            postage_related_ups.save()
+            await postage_related_ups.update({post_support_number: postage_related_ups.post_support_number});
 
             console.log("Change in support number successfully done!\n" + "\n-----\n")
             return res.status(200).send("Apoio da Postagem " + postage_related_ups.post_title + " foi modificado");
