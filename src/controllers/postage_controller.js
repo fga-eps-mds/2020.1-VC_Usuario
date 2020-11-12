@@ -70,7 +70,7 @@ module.exports = {
 
     async list_common (req, res){
         try{
-            const posts = await Postage.find({ $where: "this.fk_user_id != null" }, { 
+            const posts = await Postage.find({ "fk_user_id": { $exists: true, $ne: null } }, { 
                 post_category: 0, 
                 post_description: 0,
                 post_permission: 0
@@ -85,7 +85,7 @@ module.exports = {
     async list_by_category (req, res){
         const categoria = req.query.categoria;
         try{
-            const posts = await Postage.find({ post_category: categoria, $where: "this.fk_user_id != null"}, { 
+            const posts = await Postage.find({ post_category: categoria, "fk_user_id": { $exists: true, $ne: null }}, { 
                 post_description: 0,
                 post_permission: 0
             });
@@ -125,7 +125,7 @@ module.exports = {
                 return res.status(400).send({error_list_all_postages_with_UPS_by_user: "User not exist"});
             }
             
-            const postages_list = await Postage.find({$where: "this.fk_user_id != null"});
+            const postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
 
             console.log("-----\n\n" + "LIST POSTAGES WITH UPSs:")
             console.log("\nListing all postages...\n")

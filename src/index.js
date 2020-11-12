@@ -35,4 +35,4 @@ mongoose.connect(`${process.env.DB_HOST}`, {
     console.log("Erro: "+err)
 })
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 8000);
