@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon src/index.js"
   },
   "repository": {
@@ -32,5 +32,9 @@
     "mongoose": "^5.10.6",
     "multer": "^1.4.2",
     "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^1.2.3",
+    "jest": "^26.6.3"
   }
 }
