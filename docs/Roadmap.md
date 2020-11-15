@@ -9,7 +9,7 @@
 |06/10/2020|0.4|Revisão do documento e e inserção das issues da release 2|Emily Dias e Enzo Gabriel|
 |23/10/2020|0.5|Correção e atualização do documento nas informações das sprints 8, 9 e 10|Daniel Porto|
 |08/11/2020|0.6|Atualização do documento a partir da sprint 10|Daniel Porto|
-|15/11/2020|0.6|Atualização do documento a partir da sprint 11|Denys Rógeres|
+|15/11/2020|0.7|Atualização do documento a partir da sprint 11|Denys Rógeres|
 
 # Release 1
 
