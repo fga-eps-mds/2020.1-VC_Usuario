@@ -8,10 +8,6 @@ const CommentSchema = new mongoose.Schema({
     fk_postage_id:{
         type: ObjectId
     },
-    fk_comment_id: {
-        type: String,
-        required: true
-    },
     comment_description: {
         type: String,
         required: true
