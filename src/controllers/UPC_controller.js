@@ -1,7 +1,6 @@
-const UPS = require ('../models/UPS.js');
+const UPC = require ('../models/UPC')
 const User = require('../models/user.js');
 const Postage = require ('../models/postage.js');
-const Comment = require ('../models/comment')
 
 module.exports = {
 
@@ -10,7 +9,7 @@ module.exports = {
     },
 
     async list_all_comments (req, res){
-        const comment = await Comment.find();
-        return res.json(comment);
+        const upc = await UPC.find();
+        return res.json(upc);
     },
 }
