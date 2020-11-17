@@ -43,5 +43,6 @@ router.put('/ups/support_postage', UPS.check_exist_user_and_postage, UPS.support
 //UPC routers
 router.put('/upc/comment_postage', UPS.check_exist_user_and_postage, UPC.comment_postage)
 router.get('/upc/list_all', UPC.list_all);
+router.delete('/upc/delete_all', UPC.delete_all);
 
 module.exports = router;
