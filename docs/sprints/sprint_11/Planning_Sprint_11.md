@@ -1,9 +1,9 @@
-# Sprint 11 
+# Sprint 11 - Camelo
 
 ## Planejamento 
 
 ## 1. Visão Geral
-**Número da Sprint:** 10<br>
+**Número da Sprint:** 11<br>
 **Data de Início:** 05/11/2020<br>
 **Data de Término:** 11/11/2020<br>
 **Duração:** 7 dias<br>
@@ -22,7 +22,7 @@
     </table>
 
 ## 3. Objetivos
-A sprint 10 tem como objetivo:
+A sprint 11 tem como objetivo:
 - Configurar os padrões PWA;
 - Desenvolvimento dos testes unitários;
 - Desenvolvimento da User Story que o usuário recebe pontos por sua ações.
