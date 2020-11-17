@@ -5,6 +5,7 @@ const User = require('./controllers/user_controller')
 const multerConfig = require('./config/multer');
 const Auth = require('./controllers/auth_controller');
 const UPS = require('./controllers/UPS_controller');
+const UPC = require('./controllers/UPC_controller');
 
 //Postages routes
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_anon);
@@ -38,5 +39,9 @@ router.post('/ups/create', UPS.create_ups);
 router.get('/ups/list_all', UPS.list_all);
 router.delete('/ups/delete_all', UPS.delete_all);
 router.put('/ups/support_postage', UPS.check_exist_user_and_postage, UPS.support_postage, UPS.post_support_number_alteration);
+
+//UPC routers
+router.put('/upc/comment_postage', UPS.check_exist_user_and_postage, UPC.comment_postage)
+router.get('/upc/list_all', UPC.list_all);
 
 module.exports = router;

@@ -8,8 +8,12 @@ module.exports = {
         return res.status(200)
     },
 
-    async list_all_comments (req, res){
+    async list_all (req, res){
         const upc = await UPC.find();
-        return res.json(upc);
+        return res.status(200).send("UPC list_all route successfully tested!");
     },
+
+    async comment_postage(req, res){
+        return res.status(200).send("UPC comment_postage route successfully tested!")
+    }
 }
