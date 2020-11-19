@@ -2,6 +2,7 @@ const { json } = require('body-parser');
 const { update, find } = require('../models/postage.js');
 const Postage = require ('../models/postage.js');
 const UPS = require('../models/UPS.js');
+const UPC = require('../models/UPC.js');
 const User = require('../models/user.js');
 
 module.exports = {
@@ -222,6 +223,27 @@ module.exports = {
             return res.status(200).send("Postage successfully deleted!");
         }catch(err){
             return res.status(400).send({error_delete_one: err.message}); 
+        }
+    },
+
+    async list_UPCs_by_postage (req, res){
+
+        try{
+            const postage = await Postage.findById(req.params.id)
+            if(postage == null){
+                console.log("Postage not exist!\n" + "\n-----\n")
+                return res.status(400).send({list_UPCs_by_postage: "Postage not exist"});
+            }
+
+            console.log("-----\n\n" + "Listing all comments...\n")
+            
+            const auxUPS = await UPC.find({ fk_postage_id: postage._id })
+
+            console.log(auxUPS.length + " Comments listed!\n" + "\n-----\n")
+
+            return res.status(200).json(auxUPS);
+        }catch(err){
+            return res.status(400).send({list_UPCs_by_postage: err.message}); 
         }
     }
 }
