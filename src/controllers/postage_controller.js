@@ -229,15 +229,9 @@ module.exports = {
     async list_UPCs_by_postage (req, res){
 
         try{
-            const postage = await Postage.findById(req.params.id)
-            if(postage == null){
-                console.log("Postage not exist!\n" + "\n-----\n")
-                return res.status(400).send({list_UPCs_by_postage: "Postage not exist"});
-            }
-
             console.log("-----\n\n" + "Listing all comments...\n")
             
-            const auxUPS = await UPC.find({ fk_postage_id: postage._id })
+            const auxUPS = await UPC.find({ fk_postage_id: req.params.id })
 
             console.log(auxUPS.length + " Comments listed!\n" + "\n-----\n")
 
