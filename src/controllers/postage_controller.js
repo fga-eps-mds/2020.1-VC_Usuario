@@ -71,11 +71,7 @@ module.exports = {
 
     async list_common (req, res){
         try{
-            const posts = await Postage.find({ "fk_user_id": { $exists: true, $ne: null } }, { 
-                post_category: 0, 
-                post_description: 0,
-                post_permission: 0
-            });
+            const posts = await Postage.find({ "fk_user_id": { $exists: true, $ne: null } });
 
             return res.status(200).json({posts});
         }catch(err){
