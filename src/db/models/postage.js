@@ -40,7 +40,6 @@ const PostageSchema = new mongoose.Schema({
     },
     post_permission:{
         type: [Boolean],
-        required: true,
         default: [true, false]
     },
     post_support_number: {

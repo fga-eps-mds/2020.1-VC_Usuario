@@ -1,8 +1,8 @@
 const { json } = require('body-parser');
-const { update, find } = require('../models/postage.js');
-const Postage = require ('../models/postage.js');
-const UPS = require('../models/UPS.js');
-const User = require('../models/user.js');
+const { update, find } = require('../db/models/postage.js');
+const Postage = require ('../db/models/postage.js');
+const UPS = require('../db/models/UPS.js');
+const User = require('../db/models/user.js');
 
 module.exports = {
 
@@ -16,11 +16,6 @@ module.exports = {
 
             req.postage.post_support_number = 0
             req.postage.post_supporting = false
-            req.postage.save()
-
-            const user = await User.findById(req.body.fk_user_id)
-            user.user_score += 100;
-            await user.update({user_score: user.user_score});
 
             return next()            
         }catch(err){
@@ -30,6 +25,10 @@ module.exports = {
 
     async create_common (req, res){
         try{
+            req.postage.save()
+            const user = await User.findById(req.body.fk_user_id)
+            user.user_score += 100;
+            await user.update({user_score: user.user_score});
             return res.status(200).json(req.postage);
         }catch(err){
             return res.status(400).send({error_create_common: err.message});

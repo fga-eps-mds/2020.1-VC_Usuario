@@ -1,6 +1,6 @@
-const UPS = require ('../models/UPS.js');
-const User = require('../models/user.js');
-const Postage = require ('../models/postage.js');
+const UPS = require ('../db/models/UPS.js');
+const User = require('../db/models/user.js');
+const Postage = require ('../db/models/postage.js');
 const { search } = require('../routes.js');
 
 module.exports = {

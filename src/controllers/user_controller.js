@@ -1,6 +1,6 @@
-const Users = require('../models/user.js');
+const Users = require('../db/models/user.js');
 const bcrypt = require('bcrypt')
-const Postage = require ('../models/postage.js');
+const Postage = require ('../db/models/postage.js');
 
 module.exports = {
     
