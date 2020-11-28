@@ -26,9 +26,9 @@ module.exports = {
     async create_common (req, res){
         try{
             req.postage.save()
-            const user = await User.findById(req.body.fk_user_id)
-            user.user_score += 100;
-            await user.update({user_score: user.user_score});
+            // const user = await User.findById(req.body.fk_user_id)
+            // user.user_score += 100;
+            // await user.update({user_score: user.user_score});
             return res.status(200).json(req.postage);
         }catch(err){
             return res.status(400).send({error_create_common: err.message});
