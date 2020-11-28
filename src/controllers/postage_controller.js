@@ -133,11 +133,11 @@ module.exports = {
     async list_common_postages (req, res, next){ 
 
         try{
-            req.user = await User.findById(req.params.id)
+            /* req.user = await User.findById(req.params.id)
             if(req.user == null){
                 console.log("User not exist!\n" + "\n-----\n")
                 return res.status(400).send({error_list_common_postages: "User not exist"});
-            }
+            } */
             
             req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
 
