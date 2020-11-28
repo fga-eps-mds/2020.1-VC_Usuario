@@ -58,6 +58,23 @@ module.exports = {
         return res.json(posts);
     },
 
+    async list_one_logged (req, res){
+        const posts_logged = await Postage.findById(req.params.postage_id);
+
+        const array_UPSs = await UPS.find({ 
+            fk_user_id: req.params.user_id,
+            fk_postage_id: req.params.postage_id
+        })
+        
+        posts_logged.post_supporting = false
+        
+        if(array_UPSs.length != 0){
+            posts_logged.post_supporting = true
+        }
+
+        return res.json(posts_logged);
+    },
+
     async delete_one_for_test (req, res){
         const post = await Postage.findById(req.params.id);
         await post.remove();
@@ -113,41 +130,50 @@ module.exports = {
         }
     },
 
-    async list_all_postages_with_UPS_by_user (req, res){ 
+    async list_common_postages (req, res, next){ 
 
         try{
-            const user = await User.findById(req.params.id)
-            if(user == null){
+            req.user = await User.findById(req.params.id)
+            if(req.user == null){
                 console.log("User not exist!\n" + "\n-----\n")
-                return res.status(400).send({error_list_all_postages_with_UPS_by_user: "User not exist"});
+                return res.status(400).send({error_list_common_postages: "User not exist"});
             }
             
-            const postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
+            req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
 
-            console.log("-----\n\n" + "LIST POSTAGES WITH UPSs:")
-            console.log("\nListing all postages...\n")
+            console.log("-----\n\n" + "LIST COMMON POSTAGES WITH UPSs:")
+            console.log("\nListing common postages...")
 
+            return next()
+        }catch(err){
+            return res.status(400).send({error_list_common_postages: err.message});        
+        }
+    },
+
+    async take_ups_of_postages (req, res){
+        
+        try{
             let array_UPSs = null
-            for (var i = 0; i < postages_list.length; i++){
+            
+            for (var i = 0; i < req.postages_list.length; i++){
 
                     array_UPSs = await UPS.find({ 
-                    fk_user_id: user._id,
-                    fk_postage_id: postages_list[i]._id
+                    fk_user_id: req.user._id,
+                    fk_postage_id: req.postages_list[i]._id
                 })
                 
-                postages_list[i].post_supporting = false
+                req.postages_list[i].post_supporting = false
                 
                 if(array_UPSs.length != 0){
-                    postages_list[i].post_supporting = true
+                    req.postages_list[i].post_supporting = true
                 }
-
-                console.log("Postage " + postages_list[i]._id + ": " + postages_list[i].post_supporting + "\n-----\n")
             }
 
-            return res.json(postages_list);
+            console.log("Postages listed!\n" + "\n-----\n")
 
+            return res.status(200).json(req.postages_list)
         }catch(err){
-            return res.status(400).send({error_list_all_postages_with_UPS_by_user: err.message});        
+            return res.status(400).send({error_list_common_postages: err.message});        
         }
     },
 
@@ -178,7 +204,7 @@ module.exports = {
 
             req.post = await Postage.findById(req.body.postage_id);
         
-            if(req.post.fk_user_id != req.body.user_id){
+            if(req.post.fk_user_id != req.user_id){
                 console.log("Error, User is different from user's postage!\n" + "\n-----\n")
                 return res.status(400).send({error_check_user_of_postage: "User is different from user's postage"}); 
             }
