@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "jest",
-    "start": "nodemon src/index.js"
+    "test": "env-cmd ./src/config/test.env jest --detectOpenHandles --forceExit",
+    "start": "env-cmd ./src/config/dev.env nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,8 @@
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.2.3",
-    "jest": "^26.6.3"
+    "env-cmd": "^8.0.2",
+    "jest": "^26.6.3",
+    "supertest": "^6.0.1"
   }
 }
