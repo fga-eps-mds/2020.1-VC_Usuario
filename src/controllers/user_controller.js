@@ -71,4 +71,18 @@ module.exports = {
         const users = await Users.deleteMany({})
         return res.send(users);
     },
+
+    async check_exist (req, res, next){
+        try{
+            const user = await Users.findById(req.body.fk_user_id)
+            if(user == null){
+                console.log("User not exist!\n" + "\n-----\n")
+                return res.status(400).send({error_check_exist1: "User not exist"});
+            }
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_check_exist: err.message});
+        }
+    }
 }
