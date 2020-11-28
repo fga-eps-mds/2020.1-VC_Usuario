@@ -6,6 +6,11 @@ const multerConfig = require('./config/multer');
 const Auth = require('./controllers/auth_controller');
 const UPS = require('./controllers/UPS_controller');
 
+//Main
+router.get('/', (req, res) => {
+    res.json({"esta": "funcionando"});
+});
+
 //Postages routes
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_anon);
 router.post('/postage/create_common', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_common);
