@@ -72,7 +72,7 @@ module.exports = {
         return res.send(users);
     },
 
-    async check_exist (req, res, next){
+    async check_user_exist (req, res, next){
         try{
             const user = await Users.findById(req.body.fk_user_id)
             if(user == null){
