@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+/* const mongoose = require('mongoose'); */
 const bcrypt = require('bcrypt');
-const user_model = require('../../src/models/user');
+const user_model = require('../../src/db/models/user');
 const user_data = {
     user_email: 'ney@vc.com',
     user_name: 'Menino Ney',
@@ -9,7 +9,7 @@ const user_data = {
 
 describe('User Model Test', () => {
 
-    // It's just so easy to connect to the MongoDB Memory Server 
+/*     // It's just so easy to connect to the MongoDB Memory Server 
     // By using mongoose.connect
     beforeAll(async () => {
         await mongoose.connect(global.__MONGO_URI__, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (err) => {
@@ -18,7 +18,7 @@ describe('User Model Test', () => {
                 process.exit(1);
             }
         });
-    });
+    }); */
     
     it('create & save user successfully', async () => {
         const valid_user = new user_model(user_data);
@@ -33,10 +33,10 @@ describe('User Model Test', () => {
         expect(compare_hash).toBe(true);
     });
 
-    afterAll(async (done) => {
+/*     afterAll(async (done) => {
         console.log("After Test User")
         await mongoose.connection.dropDatabase();
         await mongoose.connection.close();
         done();
-    }); 
+    });  */
 })
