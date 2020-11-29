@@ -77,12 +77,12 @@ module.exports = {
             const user = await Users.findById(req.body.fk_user_id)
             if(user == null){
                 console.log("User not exist!\n" + "\n-----\n")
-                return res.status(400).send({error_check_exist1: "User not exist"});
+                return res.status(400).send({error_check_user_exist: "User not exist"});
             }
 
             return next()
         }catch(err){
-            return res.status(400).send({error_check_exist: err.message});
+            return res.status(400).send({error_check_user_exist: err.message});
         }
     }
 }
