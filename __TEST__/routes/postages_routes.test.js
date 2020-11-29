@@ -19,6 +19,7 @@ const posts = [{
     },
     {
         fk_user_id: '7eaddfeaf110e8001879a324',
+        _id: '5fc3742e172665fbbf5b8d2e',
         post_place: 'FCE',
         post_category: 'Meio Ambiente',
         post_title: 'Everyday girls day',
@@ -30,7 +31,7 @@ const posts = [{
 beforeEach(async () => {
 // Para testar a listagem, como devo definir um user_id como null?
     await Postage.deleteMany({})
-    posts[0].fk_user_id = null
+    // posts[0].fk_user_id = null
     await Postage(posts[0]).save();
     await Postage(posts[1]).save();
     await Postage(posts[2]).save();
@@ -76,7 +77,6 @@ it('List posts by category', async (done) => {
     // O response.body não está retornando nenhuma postagem. Como passar a categoria que quero filtrar?
     const response = await request(app).get('/postage/list_by_category')
     .expect(200)
-    // console.log(response.body)
     done()
 })
 
@@ -97,6 +97,44 @@ it('List all posts with UPS', async (done) => {
     .expect(404)
     done()
 })
+
+it('Delete all posts', async (done) => {
+    const response = await request(app).delete(`/postage/delete_all`)
+    .expect(200)
+    done()
+})
+
+it('Update post status', async (done) => {
+    // Se eu alterar qualquer coisa do response o teste passa e posso alterar o status para qualquer nome
+    const response = await request(app).post('/postage/create_common').send(posts[1])
+
+    await request(app).put(`/postage/update_status/${response.body._id}`)
+    .send(response.body.post_status = 'Resolvido')
+    .expect(200)
+    done()
+})
+
+// it('Delete one post', async (done) => {
+//     //  expected 200 "OK", got 400 "Bad Request" não consegui testar
+//     // "error_UPS_check_exist_user_and_postage": "User or Postage not exist" que se encontra
+//     // dentro da controller do ups não permite testar
+//     const response = await request(app).post('/postage/create_common').send(posts[2])
+
+//     await (await request(app).put('/postage/delete_one'))
+//     .expect(200)
+//     console.log(response2)
+//     done()
+// })
+
+// it('Update one post', async (done) => {
+//     // "error_UPS_check_exist_user_and_postage": "User or Postage not exist" que se encontra
+//     // dentro da controller do ups não permite testar
+//     const response = await request(app).post('/postage/create_common').send(posts[1])
+
+//     await request(app).put('/postage/update_one')
+//     .expect(200)
+//     done()
+// })
 
 afterAll((done) => {
     console.log("All postage tests is done.")
