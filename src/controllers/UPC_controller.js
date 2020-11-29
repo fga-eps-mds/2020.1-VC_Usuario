@@ -31,14 +31,29 @@ module.exports = {
                 UPC_description: req.body.comment_descripton
             })
 
-            postage_related_upc.post_comments.unshift(new_UPC._id)
-            await postage_related_upc.updateOne({post_comments: postage_related_upc.post_comments});
+            /* postage_related_upc.post_comments.unshift(new_UPC._id)
+            await postage_related_upc.updateOne({post_comments: postage_related_upc.post_comments}); */
 
             console.log("New UPC successfully created!\n" + "\n-----\n")
 
             return res.status(200).send("Comentário à Postagem " + postage_related_upc.post_title + " foi feito!");
         }catch(err){
             return res.status(400).send({error_comment_postage: err.message});
+        }
+    },
+
+    async delete_UPCs (req, res, next){
+        
+        try{
+            console.log("Removing Postage's UPCs...")
+
+            await UPC.deleteMany({ fk_postage_id: req.post._id })
+
+            console.log("Postage's UPCs successfully deleted!\n")
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_UPCs: err.message});
         }
     }
 }

@@ -123,5 +123,20 @@ module.exports = {
         }catch(err){
             return res.status(400).send({error_post_support_number_alteration: err.message});
         }
+    },
+
+    async delete_UPSs (req, res, next){
+        
+        try{
+            console.log("Removing Postage's UPSs...")
+
+            await UPS.deleteMany({ fk_postage_id: req.post._id })
+
+            console.log("Postage's UPSs successfully deleted!\n")
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_UPSs: err.message});
+        }
     }
 }
