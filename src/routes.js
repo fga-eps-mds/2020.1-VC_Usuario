@@ -24,7 +24,7 @@ router.get('/postage/list_UPC/:id', Postage.list_UPCs_by_postage);
 
 //Users routers
 router.post('/user/register_user', User.register);
-router.put('/user/update/:id', User.update);
+router.put('/user/update/:id', User.update, User.update_user_postages_author);
 router.get('/user/list_all', User.list);
 
 // Auth.session_authentication, User.list

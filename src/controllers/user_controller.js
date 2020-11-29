@@ -37,16 +37,29 @@ module.exports = {
         }
     },
 
-    async update(req, res){
+    async update(req, res, next){
         try{
             const user = await Users.findById(req.params.id);            
             var version = user.__v + 1
             await user.update({user_email: req.body.email, user_name: req.body.nome, __v: version});
 
-            return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
-
+            return next()
         }catch(err){
             return res.status(400).send({error: err.message});
+        }
+    },
+
+    async update_user_postages_author(req, res){
+        try{
+            const postage_list = await Postage.find({ fk_user_id: req.params.id })
+
+            for (var i = 0; i < postage_list.length; i++){
+                await postage_list[i].update({ post_author: req.body.nome })
+            }
+
+            return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
+        }catch(err){
+            return res.status(400).send({error_update_user_postages_author: err.message});
         }
     },
 
