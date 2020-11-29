@@ -1,6 +1,8 @@
 const Users = require('../models/user.js');
 const bcrypt = require('bcrypt')
 const Postage = require ('../models/postage.js');
+const UPS = require('../models/UPS.js');
+const UPC = require('../models/UPC.js');
 
 module.exports = {
     
@@ -83,6 +85,36 @@ module.exports = {
             return next()
         }catch(err){
             return res.status(400).send({error_check_user_exist: err.message});
+        }
+    },
+
+    async delete_user_UPSs (req, res, next){
+        
+        try{
+            console.log("Removing User's UPSs...")
+
+            await UPS.deleteMany({ fk_user_id: req.params.id })
+
+            console.log("User's UPSs successfully deleted!\n")
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_user_UPSs: err.message});
+        }
+    },
+
+    async delete_user_UPCs (req, res, next){
+        
+        try{
+            console.log("Removing User's UPCs...")
+
+            await UPC.deleteMany({ fk_user_id: req.params.id })
+
+            console.log("User's UPCs successfully deleted!\n")
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_user_UPCs: err.message});
         }
     },
 

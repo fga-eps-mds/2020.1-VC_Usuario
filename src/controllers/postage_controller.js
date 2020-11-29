@@ -239,5 +239,35 @@ module.exports = {
         }catch(err){
             return res.status(400).send({list_UPCs_by_postage: err.message}); 
         }
+    },
+
+    async delete_postage_UPSs (req, res, next){
+        
+        try{
+            console.log("Removing Postage's UPSs...")
+
+            await UPS.deleteMany({ fk_postage_id: req.post._id })
+
+            console.log("Postage's UPSs successfully deleted!\n")
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_postage_UPSs: err.message});
+        }
+    },
+
+    async delete_postage_UPCs (req, res, next){
+        
+        try{
+            console.log("Removing Postage's UPCs...")
+
+            await UPC.deleteMany({ fk_postage_id: req.post._id })
+
+            console.log("Postage's UPCs successfully deleted!\n")
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_postage_UPCs: err.message});
+        }
     }
 }
