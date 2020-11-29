@@ -125,7 +125,7 @@ module.exports = {
         }
     },
 
-    async delete_UPSs (req, res, next){
+    async delete_postage_UPSs (req, res, next){
         
         try{
             console.log("Removing Postage's UPSs...")
@@ -136,7 +136,22 @@ module.exports = {
 
             return next()
         }catch(err){
-            return res.status(400).send({error_delete_UPSs: err.message});
+            return res.status(400).send({error_delete_postage_UPSs: err.message});
+        }
+    },
+
+    async delete_user_UPSs (req, res, next){
+        
+        try{
+            console.log("Removing User's UPSs...")
+
+            await UPS.deleteMany({ fk_user_id: req.params.id })
+
+            console.log("User's UPSs successfully deleted!\n")
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_user_UPSs: err.message});
         }
     }
 }

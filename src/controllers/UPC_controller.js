@@ -42,7 +42,7 @@ module.exports = {
         }
     },
 
-    async delete_UPCs (req, res, next){
+    async delete_postage_UPCs (req, res, next){
         
         try{
             console.log("Removing Postage's UPCs...")
@@ -53,7 +53,22 @@ module.exports = {
 
             return next()
         }catch(err){
-            return res.status(400).send({error_delete_UPCs: err.message});
+            return res.status(400).send({error_delete_postage_UPCs: err.message});
+        }
+    },
+
+    async delete_user_UPCs (req, res, next){
+        
+        try{
+            console.log("Removing User's UPCs...")
+
+            await UPC.deleteMany({ fk_user_id: req.params.id })
+
+            console.log("User's UPCs successfully deleted!\n")
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_user_UPCs: err.message});
         }
     }
 }
