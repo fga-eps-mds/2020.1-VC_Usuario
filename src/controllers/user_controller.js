@@ -65,8 +65,8 @@ module.exports = {
     async list_user_postages (req, res, next){
 
         try{
-            /* req.user = await Users.findById(req.params.id)
-            if(req.user == null){
+            req.user = await Users.findById(req.params.id)
+            /* if(req.user == null){
                 console.log("User not exist!\n" + "\n-----\n")
                 return res.status(400).send({error_list_user_postages: "User not exist"});
             } */
