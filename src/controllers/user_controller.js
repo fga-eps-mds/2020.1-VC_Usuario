@@ -84,5 +84,20 @@ module.exports = {
         }catch(err){
             return res.status(400).send({error_check_user_exist: err.message});
         }
+    },
+
+    async delete_user_postages (req, res, next){
+        
+        try{
+            console.log("Removing User's Postages...")
+
+            await Postage.deleteMany({ fk_user_id: req.params.id })
+
+            console.log("User's Postages successfully deleted!\n")
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_user_postages: err.message});
+        }
     }
 }

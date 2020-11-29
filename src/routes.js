@@ -32,7 +32,7 @@ router.post('/user/login', Auth.authentication);
 router.get('/user/validate_session', Auth.session_authentication, Auth.find_user, Auth.refresh_token_and_data);
 router.get('/user/list_postages/:id', User.list_postages);
 router.delete('/user/delete_all', User.delete_all);
-router.delete('/user/delete/:id', Auth.find_user, UPS.delete_user_UPSs, UPC.delete_user_UPCs, User.delete);
+router.delete('/user/delete/:id', Auth.find_user, UPS.delete_user_UPSs, UPC.delete_user_UPCs, User.delete_user_postages, User.delete);
 router.put('/user/change_password/:id', Auth.find_user, User.change_password);
 
 //UPS routers
