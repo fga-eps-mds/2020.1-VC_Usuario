@@ -133,14 +133,10 @@ module.exports = {
         try{
             req.user = await User.findById(req.params.id)
             /* if(req.user == null){
-                console.log("User not exist!\n" + "\n-----\n")
                 return res.status(400).send({error_list_common_postages: "User not exist"});
             } */
             
             req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
-
-            console.log("-----\n\n" + "LIST COMMON POSTAGES WITH UPSs:")
-            console.log("\nListing common postages...")
 
             return next()
         }catch(err){
@@ -167,8 +163,6 @@ module.exports = {
                 }
             }
 
-            console.log("Postages listed!\n" + "\n-----\n")
-
             return res.status(200).json(req.postages_list)
         }catch(err){
             return res.status(400).send({error_list_common_postages: err.message});        
@@ -178,16 +172,12 @@ module.exports = {
     async check_postage_is_not_anon (req, res, next){
 
         try{
-            console.log("Checking the postage is not anonymous...")
-
             const post = await Postage.findById(req.body.postage_id);
 
             if(post.fk_user_id == null){
-                console.log("Error, Postage is anonymous!\n" + "\n-----\n")
                 return res.status(400).send({error_check_postage_is_not_anon: "Postage is Anonymous"});   
             }
             else{
-                console.log("Postage is not anonymous!\n")
                 return next()
             }
         }catch(err){
@@ -198,15 +188,11 @@ module.exports = {
     async check_user_of_postage (req, res, next){
 
         try{
-            console.log("Checking user's postage...")
-
             req.post = await Postage.findById(req.body.postage_id);
             if(req.post.fk_user_id != req.body.user_id){
-                console.log("Error, User is different from user's postage!\n" + "\n-----\n")
                 return res.status(400).send({error_check_user_of_postage: "User is different from user's postage"}); 
             }
             else{
-                console.log("User's postage is equal to User!\n")
                 return next()
             }
         }catch(err){
@@ -217,13 +203,10 @@ module.exports = {
     async update_one (req, res){
 
         try{
-            console.log("Editing Postage...")
-
             var { post_title, post_description, post_category, post_place } = req.body;
             const new_postage_params = { post_title, post_description, post_category, post_place }
     
             const edited_post = await Postage.findByIdAndUpdate(req.post._id, new_postage_params)
-            console.log("Postage successfully edited!\n" + "\n-----\n")
 
             return res.status(200).send("Postage successfully edited!")
         }catch(err){
@@ -234,13 +217,11 @@ module.exports = {
     async delete_one (req, res){
         
         try{
-            console.log("Removing Postage...")
             const user = await User.findById(req.body.user_id)
             user.user_score -= 100;
             await user.update({user_score: user.user_score});
             
             await req.post.remove();
-            console.log("Postage successfully deleted!\n" + "\n-----\n")
 
             return res.status(200).send("Postage successfully deleted!");
         }catch(err){
@@ -251,11 +232,7 @@ module.exports = {
     async list_UPCs_by_postage (req, res){
 
         try{
-            console.log("-----\n\n" + "Listing all comments...\n")
-            
             const auxUPS = await UPC.find({ fk_postage_id: req.params.id })
-
-            console.log(auxUPS.length + " Comments listed!\n" + "\n-----\n")
 
             return res.status(200).json(auxUPS);
         }catch(err){
@@ -266,11 +243,7 @@ module.exports = {
     async delete_postage_UPSs (req, res, next){
         
         try{
-            console.log("Removing Postage's UPSs...")
-
             await UPS.deleteMany({ fk_postage_id: req.post._id })
-
-            console.log("Postage's UPSs successfully deleted!\n")
 
             return next()
         }catch(err){
@@ -281,11 +254,7 @@ module.exports = {
     async delete_postage_UPCs (req, res, next){
         
         try{
-            console.log("Removing Postage's UPCs...")
-
             await UPC.deleteMany({ fk_postage_id: req.post._id })
-
-            console.log("Postage's UPCs successfully deleted!\n")
 
             return next()
         }catch(err){

@@ -82,14 +82,10 @@ module.exports = {
         try{
             req.user = await Users.findById(req.params.id)
             /* if(req.user == null){
-                console.log("User not exist!\n" + "\n-----\n")
                 return res.status(400).send({error_list_user_postages: "User not exist"});
             } */
 
             req.postages_list = await Postage.find({ fk_user_id: req.params.id});
-
-            console.log("-----\n\n" + "LIST USER POSTAGES:")
-            console.log("\nListing user's postages...")
 
             return next() 
         }catch(err){
@@ -111,7 +107,6 @@ module.exports = {
         try{
             const user = await Users.findById(req.body.fk_user_id)
             if(user == null){
-                console.log("User not exist!\n" + "\n-----\n")
                 return res.status(400).send({error_check_user_exist: "User not exist"});
             }
 
@@ -124,11 +119,7 @@ module.exports = {
     async delete_user_UPSs (req, res, next){
         
         try{
-            console.log("Removing User's UPSs...")
-
             await UPS.deleteMany({ fk_user_id: req.params.id })
-
-            console.log("User's UPSs successfully deleted!\n")
 
             return next()
         }catch(err){
@@ -139,11 +130,7 @@ module.exports = {
     async delete_user_UPCs (req, res, next){
         
         try{
-            console.log("Removing User's UPCs...")
-
             await UPC.deleteMany({ fk_user_id: req.params.id })
-
-            console.log("User's UPCs successfully deleted!\n")
 
             return next()
         }catch(err){
@@ -154,11 +141,7 @@ module.exports = {
     async delete_user_postages (req, res, next){
         
         try{
-            console.log("Removing User's Postages...")
-
             await Postage.deleteMany({ fk_user_id: req.params.id })
-
-            console.log("User's Postages successfully deleted!\n")
 
             return next()
         }catch(err){

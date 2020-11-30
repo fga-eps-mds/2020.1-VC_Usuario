@@ -21,8 +21,6 @@ module.exports = {
     async comment_postage (req, res){
 
         try{
-            console.log("Comment Postage...")
-
             const postage_related_upc = await Postage.findById(req.body.postage_id)
 
             const new_UPC = await UPC.create({
@@ -33,8 +31,6 @@ module.exports = {
 
             /* postage_related_upc.post_comments.unshift(new_UPC._id)
             await postage_related_upc.updateOne({post_comments: postage_related_upc.post_comments}); */
-
-            console.log("New UPC successfully created!\n" + "\n-----\n")
 
             return res.status(200).send("Comentário à Postagem " + postage_related_upc.post_title + " foi feito!");
         }catch(err){
