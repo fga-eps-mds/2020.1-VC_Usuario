@@ -237,6 +237,9 @@ module.exports = {
         
         try{
             console.log("Removing Postage...")
+            const user = await User.findById(req.body.user_id)
+            user.user_score -= 100;
+            await user.update({user_score: user.user_score});
             
             await req.post.remove();
             console.log("Postage successfully deleted!\n" + "\n-----\n")
