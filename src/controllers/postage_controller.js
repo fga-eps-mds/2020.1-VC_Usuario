@@ -75,12 +75,6 @@ module.exports = {
         return res.json(posts_logged);
     },
 
-    async delete_one_for_test (req, res){
-        const post = await Postage.findById(req.params.id);
-        await post.remove();
-        return res.send();
-    },
-
     async delete_all (req, res){
         const post = await Postage.deleteMany({})
         return res.send(post);

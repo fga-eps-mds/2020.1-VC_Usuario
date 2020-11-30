@@ -16,7 +16,6 @@ router.get('/postage/list_by_category', Postage.list_by_category);
 router.get('/postage/list_one/:id', Postage.list_one);
 router.get('/postage/list_one_logged/:postage_id/:user_id', Postage.list_one_logged);
 router.get('/postage/list_all_with_UPS/:id', Postage.list_common_postages, Postage.take_ups_of_postages);
-router.delete('/postage/delete_for_test/:id', Postage.delete_one_for_test);
 router.delete('/postage/delete_all', Postage.delete_all);
 router.put('/postage/update_status/:id', Postage.update_status);
 router.put('/postage/delete_one', UPS.check_exist_user_and_postage, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_postage_UPSs, Postage.delete_postage_UPCs, Postage.delete_one);
