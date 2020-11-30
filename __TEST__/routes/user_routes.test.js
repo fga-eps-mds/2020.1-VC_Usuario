@@ -12,6 +12,12 @@ const user2 = {
     user_email: 'hyeri@vc.com',
     user_password: 'hyeri123'
 }
+let createdUser, createdUser2;
+
+beforeEach(async () => {
+    createdUser = await User.create(user)
+    createdUser2 = await User.create(user2)
+});
 
 it('User registration', async (done) => {
     await request(app).post('/user/register_user').send({
@@ -24,22 +30,25 @@ it('User registration', async (done) => {
 })
 
 it('User update', async (done) => {
-    // Como passar os dados para serem atualizados?
-    const response = await request(app).post('/user/register_user').send(user)
-
-    const res2 = await request(app).put(`/user/update/${response.body.User._id}`).send({
-        user_name: 'teste',
+    // Como passar os dados para serem atualizados? Não funciona direito
+    await request(app).put(`/user/update/${createdUser._id}`).send({
+        nome: 'Atualizando nome',
     })
     .expect(200)
-    console.log(res2.body)
     done()
 })
 
 it('User list', async (done) => {
-    await request(app).post('/user/register_user').send(user)
-    await request(app).post('/user/register_user').send(user2)
-
     await request(app).get('/user/list_all')
+    .expect(200)
+    done()
+})
+
+it('User login', async (done) => {
+    const response2 = await request(app).post('/user/login').send({
+        email: createdUser.user_email,
+        password: 'teste123'
+    })
     .expect(200)
     done()
 })
