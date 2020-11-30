@@ -260,5 +260,16 @@ module.exports = {
         }catch(err){
             return res.status(400).send({list_UPCs_by_postage: err.message}); 
         }
+    },
+
+    async report_postage (req, res) {
+        // try{
+        //     console.log("Reporting this postage")
+        //     const array_report = await Postage.find({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
+
+        //     if(array_report.length == 5) {
+        //         delete_one (req, res)
+        //     }
+        // }
     }
 }
