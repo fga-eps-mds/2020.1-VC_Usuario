@@ -17,10 +17,6 @@ module.exports = {
 
             req.postage.post_support_number = 0
             req.postage.post_supporting = false
-            req.postage.save()
-
-            req.user.user_score += 100;
-            await req.user.update({user_score: req.user.user_score});
 
             return next()            
         }catch(err){
@@ -30,6 +26,12 @@ module.exports = {
 
     async create_common (req, res){
         try{
+            req.postage.post_author = req.user.user_name
+            req.postage.save()
+
+            req.user.user_score += 100;
+            await req.user.update({user_score: req.user.user_score});
+
             return res.status(200).json(req.postage);
         }catch(err){
             return res.status(400).send({error_create_common: err.message});
@@ -39,6 +41,7 @@ module.exports = {
     async create_anon (req, res){
         try{
             req.postage.fk_user_id = null
+            req.postage.post_author = null
             req.postage.save()
 
             return res.status(200).json(req.postage);            
