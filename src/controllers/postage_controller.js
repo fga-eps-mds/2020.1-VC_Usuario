@@ -203,8 +203,7 @@ module.exports = {
             console.log("Checking user's postage...")
 
             req.post = await Postage.findById(req.body.postage_id);
-        
-            if(req.post.fk_user_id != req.user_id){
+            if(req.post.fk_user_id != req.body.user_id){
                 console.log("Error, User is different from user's postage!\n" + "\n-----\n")
                 return res.status(400).send({error_check_user_of_postage: "User is different from user's postage"}); 
             }
