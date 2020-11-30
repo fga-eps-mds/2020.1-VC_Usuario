@@ -112,6 +112,10 @@ module.exports = {
 
     async update_status (req, res){
         try{
+            if(req.body.post_status != "Aguardando" || req.body.post_status != "Em Andamento" || req.body.post_status != "Resolvido"){
+                return res.status(400).send({msg: 'Status incorreto'});
+            }
+
             const post = await Postage.findByIdAndUpdate(req.params.id, { post_status: req.body.post_status })
             const user = await User.findById(post.fk_user_id)
             
