@@ -19,9 +19,8 @@ module.exports = {
             req.postage.post_supporting = false
             req.postage.save()
 
-            const user = await User.findById(req.body.fk_user_id)
-            user.user_score += 100;
-            await user.update({user_score: user.user_score});
+            req.user.user_score += 100;
+            await req.user.update({user_score: req.user.user_score});
 
             return next()            
         }catch(err){

@@ -105,8 +105,8 @@ module.exports = {
 
     async check_user_exist (req, res, next){
         try{
-            const user = await Users.findById(req.body.fk_user_id)
-            if(user == null){
+            req.user = await Users.findById(req.body.fk_user_id)
+            if(req.user == null){
                 return res.status(400).send({error_check_user_exist: "User not exist"});
             }
 
