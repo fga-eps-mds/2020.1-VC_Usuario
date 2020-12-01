@@ -22,7 +22,7 @@ router.put('/postage/update_status/:id', Postage.update_status);
 router.put('/postage/delete_one', UPS.check_exist_user_and_postage, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_one);
 router.put('/postage/update_one', UPS.check_exist_user_and_postage, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.update_one);
 router.get('/postage/list_UPC/:id', Postage.list_UPCs_by_postage);
-router.post('/postage/report_postage', Postage.report_postage);
+router.post('/postage/report_postage', UPS.check_exist_user_and_postage, Postage.report_postage, Postage.postage_report_number_alteration);
 
 //Users routers
 router.post('/user/register_user', User.register);
