@@ -50,9 +50,11 @@ const PostageSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    /* comentarios: {
-        type: [ObjectId],
-    }
+    post_comments: {
+        type: Array,
+        default: []
+    },
+    /* 
     relev_degree: {
     	type: double,
     }
