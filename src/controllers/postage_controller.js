@@ -171,12 +171,24 @@ module.exports = {
         }
     },
 
+    async check_postage_exist (req, res, next){
+
+        try{
+            req.postage = await Postage.findById(req.body.fk_postage_id)
+            if(req.postage == null){
+                return res.status(400).send({error_check_postage_exist: "Postage not exist"});
+            }
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_check_postage_exist: err.message});
+        }
+    },
+
     async check_postage_is_not_anon (req, res, next){
 
         try{
-            const post = await Postage.findById(req.body.postage_id);
-
-            if(post.fk_user_id == null){
+            if(req.postage.fk_user_id == null){
                 return res.status(400).send({error_check_postage_is_not_anon: "Postage is Anonymous"});   
             }
             else{
@@ -190,8 +202,7 @@ module.exports = {
     async check_user_of_postage (req, res, next){
 
         try{
-            req.post = await Postage.findById(req.body.postage_id);
-            if(req.post.fk_user_id != req.body.user_id){
+            if(req.postage.fk_user_id != req.body.fk_user_id){
                 return res.status(400).send({error_check_user_of_postage: "User is different from user's postage"}); 
             }
             else{
@@ -202,32 +213,31 @@ module.exports = {
         }
     },
 
-    async update_one (req, res){
+    async update_postage (req, res){
 
         try{
             var { post_title, post_description, post_category, post_place } = req.body;
             const new_postage_params = { post_title, post_description, post_category, post_place }
     
-            const edited_post = await Postage.findByIdAndUpdate(req.post._id, new_postage_params)
+            await Postage.findByIdAndUpdate(req.postage._id, new_postage_params)
 
             return res.status(200).send("Postage successfully edited!")
         }catch(err){
-            return res.status(400).send({error_update_one: err.message}); 
+            return res.status(400).send({error_update_postage: err.message}); 
         }
     },
 
-    async delete_one (req, res){
+    async delete_postage (req, res){
         
         try{
-            const user = await User.findById(req.body.user_id)
-            user.user_score -= 100;
-            await user.update({user_score: user.user_score});
+            req.user.user_score -= 100;
+            await req.user.update({user_score: req.user.user_score});
             
-            await req.post.remove();
+            await req.postage.remove();
 
             return res.status(200).send("Postage successfully deleted!");
         }catch(err){
-            return res.status(400).send({error_delete_one: err.message}); 
+            return res.status(400).send({error_delete_postage: err.message}); 
         }
     },
 
@@ -245,7 +255,7 @@ module.exports = {
     async delete_postage_UPSs (req, res, next){
         
         try{
-            await UPS.deleteMany({ fk_postage_id: req.post._id })
+            await UPS.deleteMany({ fk_postage_id: req.postage._id })
 
             return next()
         }catch(err){
@@ -256,7 +266,7 @@ module.exports = {
     async delete_postage_UPCs (req, res, next){
         
         try{
-            await UPC.deleteMany({ fk_postage_id: req.post._id })
+            await UPC.deleteMany({ fk_postage_id: req.postage._id })
 
             return next()
         }catch(err){

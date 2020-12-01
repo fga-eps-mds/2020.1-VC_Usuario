@@ -27,41 +27,24 @@ module.exports = {
         return res.send(ups);
     },
 
-    async check_exist_user_and_postage (req, res, next){
-
-        try{
-            const exist_user = await User.findById(req.body.user_id)
-            const exist_postage = await Postage.findById(req.body.postage_id)
-
-            if(exist_user == null || exist_postage == null){
-                return res.status(400).send({error_UPS_check_exist_user_and_postage: "User or Postage not exist"});
-            }
-
-            return next();   
-        }catch(err){
-            return res.status(400).send({error_UPS_check_exist_user_and_postage: err.message});
-        }
-    },
-
     async support_postage (req, res, next){   
         
         try{
-            const array_UPSs = await UPS.find({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
-            const user_related_ups = await User.findById(req.body.user_id)
+            req.UPS_list = await UPS.find({fk_user_id: req.user._id, fk_postage_id: req.postage._id})
             
-            if(array_UPSs.length == 0){
+            if(req.UPS_list.length == 0){
 
-                await UPS.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
-                user_related_ups.user_score += 10;
-                await user_related_ups.update({user_score: user_related_ups.user_score});
+                await UPS.create({fk_user_id: req.user._id, fk_postage_id: req.postage._id})
+                req.user.user_score += 10;
+                await req.user.update({user_score: req.user.user_score});
             }
-            else if(array_UPSs.length == 1){
+            else if(req.UPS_list.length == 1){
                 
-                const ups_remove = await UPS.findById(array_UPSs[0]._id);
+                const ups_remove = await UPS.findById(req.UPS_list[0]._id);
                 await ups_remove.remove();
 
-                user_related_ups.user_score -= 10;
-                await user_related_ups.update({user_score: user_related_ups.user_score});
+                req.user.user_score -= 10;
+                await req.user.update({user_score: req.user.user_score});
             }
             else{
                 return res.status(400).send({error_support_postage: "To much UPSs created with this parameters"});
@@ -74,29 +57,24 @@ module.exports = {
     },
 
     async post_support_number_alteration (req, res){
+        
         try{
-            const array_UPSs = await UPS.find({ fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id })
+            req.UPS_list = await UPS.find({fk_user_id: req.user._id, fk_postage_id: req.postage._id})
             
-            if(array_UPSs.length > 1){
+            if(req.UPS_list.length > 1){
                 return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
             }
-            
-            const postage_related_ups = await Postage.findById(req.body.postage_id)
-            var postage_UPSs_number = postage_related_ups.post_support_number
 
-            var aux = 0
-            if(array_UPSs.length == 0){
-                aux = -1
+            if(req.UPS_list.length == 0){
+                req.postage.post_support_number -= 1
             }
-            else if(array_UPSs.length == 1){
-                aux = +1
+            else if(req.UPS_list.length == 1){
+                req.postage.post_support_number += 1
             }
 
-            postage_UPSs_number += aux
-            postage_related_ups.post_support_number = postage_UPSs_number
-            await postage_related_ups.update({post_support_number: postage_related_ups.post_support_number});
+            await req.postage.update({post_support_number: req.postage.post_support_number});
 
-            return res.status(200).send("Apoio da Postagem " + postage_related_ups.post_title + " foi modificado");
+            return res.status(200).send("Apoio da Postagem " + req.postage.post_title + " foi modificado");
         }catch(err){
             return res.status(400).send({error_post_support_number_alteration: err.message});
         }
