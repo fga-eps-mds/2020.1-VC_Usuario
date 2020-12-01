@@ -62,6 +62,6 @@ afterEach(async(done) => {
 })
 
 afterAll((done) => {
-    console.log("All UPS tests is done.")
+    console.log("All UPS tests are done.")
     done();
 });

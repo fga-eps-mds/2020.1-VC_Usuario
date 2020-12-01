@@ -156,16 +156,14 @@ it('Update one post', async (done) => {
     done()
 })
 
-// it('List UPC by postage id', async (done) => {
-//     const response = await request(app).get('/postage/list_UPC/:id')
-
-//     await request(app).put('/postage/update_one')
-//     .expect(200)
-//     done()
-// })
+it('List UPC by postage id', async (done) => {
+    await request(app).get(`/postage/list_UPC/${postCommon._id}`)
+    .expect(200)
+    done()
+})
 
 afterAll((done) => {
-    console.log("All postage tests is done.")
+    console.log("All postage tests are done.")
     done()
 });
 

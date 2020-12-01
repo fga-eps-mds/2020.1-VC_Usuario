@@ -93,6 +93,6 @@ afterEach(async(done) => {
 })
 
 afterAll((done) => {
-    console.log("All user tests is done.")
+    console.log("All user tests are done.")
     done();
 });
