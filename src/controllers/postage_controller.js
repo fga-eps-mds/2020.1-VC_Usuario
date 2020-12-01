@@ -139,7 +139,7 @@ module.exports = {
                 return res.status(400).send({error_list_common_postages: "User not exist"});
             } */
             
-            req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
+            req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }, "post_reports": { $exists: true, $ne: null }});
 
             console.log("-----\n\n" + "LIST COMMON POSTAGES WITH UPSs:")
             console.log("\nListing common postages...")
@@ -270,7 +270,7 @@ module.exports = {
             const array_reports = await UPS.find({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
 
             
-            if(array_reports.length <= 1){
+            if(array_reports.length < 1){
 
                 await UPS.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
 
@@ -308,7 +308,7 @@ module.exports = {
                 console.log("mais um report")
             }
             else{
-                req.postage.fk_user_id = null
+                Postage.findById(req.body.postage_id).fk_user_id = null
                 req.postage.save()
                 console.log("Report successfully done!\n" + "\n-----\n")
                 return res.status(200).send("Postagem " + postage_related_reports.post_title + " excluída devido a repetidos reports!");
