@@ -5,19 +5,8 @@ const bcrypt = require('bcrypt');
 
 module.exports = {
 
-    async find_user(req, res, next) {
-        const user = await Users.findById(req.params.id);
-
-        if(!user){
-            return res.status(400).send({msg: 'Usuário não encontrado'});
-        }
-
-        req.body.user = user;
-        return next();
-    },
-
     async password_validation(req, res, next) {
-        if(!await bcrypt.compare(req.body.password, req.body.user.user_password)){
+        if(!await bcrypt.compare(req.body.password, req.user.user_password)){
             return res.status(401).send({msg: 'senha invalida'});
         }
 
@@ -73,15 +62,10 @@ module.exports = {
     },
 
     refresh_token_and_data (req, res){
-
-        /**
-         * Aqui se deve desenvolver uma lógica para invalidar o token antigo.
-         */
-
         const new_token = JWT.sign({ id: req.params.id }, auth_config.secret, {
             expiresIn: 7200,
         });
-        const refreshed_user = req.body.user
+        const refreshed_user = req.user
         return res.status(200).json({new_token, refreshed_user})
     }
 }
