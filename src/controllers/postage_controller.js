@@ -4,6 +4,7 @@ const Postage = require ('../models/postage.js');
 const UPS = require('../models/UPS.js');
 const UPC = require('../models/UPC.js');
 const User = require('../models/user.js');
+const UPR = require('../models/UPR.js');
 
 module.exports = {
 
@@ -65,12 +66,23 @@ module.exports = {
             fk_user_id: req.params.user_id,
             fk_postage_id: req.params.postage_id
         })
+
+        const array_UPRs = await UPR.find({
+            fk_user_id: req.params.user_id,
+            fk_postage_id: req.params.postage_id
+        }) 
         
+        posts_logged.post_reports = false
+
         posts_logged.post_supporting = false
         
         if(array_UPSs.length != 0){
             posts_logged.post_supporting = true
         }
+
+        if(array_UPRs.length != 0){
+            posts_logged.post_reports = true
+        } 
 
         return res.json(posts_logged);
     },
@@ -260,68 +272,6 @@ module.exports = {
         }catch(err){
             return res.status(400).send({list_UPCs_by_postage: err.message}); 
         }
-    },
-
-    async report_postage (req, res, next){   
-        
-        try{
-            console.log("Reporting Postage...")
-            
-            const array_reports = await UPS.find({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
-
-            
-            if(array_reports.length < 1){
-
-                await UPS.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
-
-                console.log("New report successfully created!\n")
-            }
-            else{
-                console.log("Error, to much reports created!\n" + "\n-----\n")
-                return res.status(400).send({error_report_postage: "To much reports created with this parameters"});
-            }
-
-            return next()
-        }catch(err){
-            return res.status(400).send({error_report_postage: err.message});
-        }
-    },
-
-    async postage_report_number_alteration (req, res) {
-        try{
-            console.log("Reporting this postage...")
-
-            const array_report = await Postage.find({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
-
-            if(array_report.length > 1){
-                console.log("Error, To much reports created with this parameters\n" + "\n-----\n")
-                return res.status(400).send({error_post_report_number_alteration: "To much reports created with this parameters"});
-            }
-
-            const postage_related_reports = await Postage.findById(req.body.postage_id)
-            var postage_reports_number = postage_related_reports.post_reports
-
-            //var aux = req.body.user_id
-
-            if(array_report.length <= 3){
-                postage_reports_number += 1
-                console.log("mais um report")
-            }
-            else{
-                Postage.findById(req.body.postage_id).fk_user_id = null
-                req.postage.save()
-                console.log("Report successfully done!\n" + "\n-----\n")
-                return res.status(200).send("Postagem " + postage_related_reports.post_title + " excluída devido a repetidos reports!");
-            }
-
-            postage_related_reports.post_reports = postage_reports_number
-            await postage_related_reports.update({post_reports: postage_related_reports.post_reports});
-
-            console.log("Report successfully done!\n" + "\n-----\n")
-            return res.status(200).send("Denuncia da postagem " + postage_related_reports.post_title + " feita com sucesso!");
-
-        }catch(err){
-            return res.status(400).send({error_post_reports_alteration: err.message});
-        }
     }
+
 }
