@@ -15,7 +15,7 @@ router.get('/postage/list_common', Postage.list_common);
 router.get('/postage/list_by_category', Postage.list_by_category);
 router.get('/postage/list_UPC/:id', Postage.list_UPCs_by_postage);
 router.get('/postage/list_one/:id', Postage.list_one);
-router.get('/postage/list_one_logged/:postage_id/:user_id', Postage.list_one_logged);
+router.get('/postage/list_one_logged/:postage_id/:id', User.find_user, Postage.list_one_logged, Postage.take_ups_of_postages);
 router.get('/postage/list_all_with_UPS/:id', User.find_user, Postage.list_common_postages, Postage.take_ups_of_postages);
 router.put('/postage/update_status/:id', Postage.update_status);
 router.put('/postage/delete_one', Postage.check_postage_exist, User.check_user_exist, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_postage_UPSs, Postage.delete_postage_UPCs, Postage.delete_postage);

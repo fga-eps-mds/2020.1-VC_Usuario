@@ -71,8 +71,8 @@ module.exports = {
             const posts_logged = await Postage.findById(req.params.postage_id);
 
             const array_UPSs = await UPS.find({ 
-                fk_user_id: req.params.user_id,
-                fk_postage_id: req.params.postage_id
+                fk_user_id: req.user._id,
+                fk_postage_id: posts_logged._id
             })
             
             posts_logged.post_supporting = false
