@@ -128,7 +128,7 @@ module.exports = {
         }
     },
 
-    async delete_user_UPSs (req, res, next){
+    async delete_user_objects_child (req, res, next){
         try{
             req.postages_list = await Postage.find();
             req.UPS_list = await UPS.find({fk_user_id: req.params.id})
@@ -144,30 +144,12 @@ module.exports = {
             }
             
             await UPS.deleteMany({ fk_user_id: req.params.id })
+            await UPC.deleteMany({ fk_user_id: req.params.id })
+            await Postage.deleteMany({ fk_user_id: req.params.id })
 
             return next()
         }catch(err){
             return res.status(400).send({error_delete_user_UPSs: err.message});
         }
     },
-
-    async delete_user_UPCs (req, res, next){
-        try{
-            await UPC.deleteMany({ fk_user_id: req.params.id })
-
-            return next()
-        }catch(err){
-            return res.status(400).send({error_delete_user_UPCs: err.message});
-        }
-    },
-
-    async delete_user_postages (req, res, next){
-        try{
-            await Postage.deleteMany({ fk_user_id: req.params.id })
-
-            return next()
-        }catch(err){
-            return res.status(400).send({error_delete_user_postages: err.message});
-        }
-    }
 }

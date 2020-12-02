@@ -18,14 +18,14 @@ router.get('/postage/list_one/:id', Postage.list_one);
 router.get('/postage/list_one_logged/:postage_id/:id', User.find_user, Postage.list_one_logged, Postage.take_ups_of_postages);
 router.get('/postage/list_all_with_UPS/:id', User.find_user, Postage.list_common_postages, Postage.take_ups_of_postages);
 router.put('/postage/update_status/:id', Postage.update_status);
-router.put('/postage/delete_one', Postage.check_postage_exist, User.check_user_exist, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_postage_UPSs, Postage.delete_postage_UPCs, Postage.delete_postage);
+router.put('/postage/delete_one', Postage.check_postage_exist, User.check_user_exist, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_postage_objects_child, Postage.delete_postage);
 router.put('/postage/update_one', Postage.check_postage_exist, User.check_user_exist, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.update_postage);
 
 //Users routers
 router.post('/user/register_user', User.register);
 router.get('/user/list_postages/:id', User.find_user, User.list_user_postages, Postage.take_ups_of_postages);
 router.put('/user/update/:id', User.update, User.update_user_postages_author);
-router.delete('/user/delete/:id', User.find_user, User.delete_user_UPSs, User.delete_user_UPCs, User.delete_user_postages, User.delete);
+router.delete('/user/delete/:id', User.find_user, User.delete_user_objects_child, User.delete);
 
 //Auth routers
 router.post('/user/login', Auth.authentication);

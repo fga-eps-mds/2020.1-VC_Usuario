@@ -254,23 +254,14 @@ module.exports = {
         }
     },
 
-    async delete_postage_UPSs (req, res, next){
+    async delete_postage_objects_child (req, res, next){
         try{
             await UPS.deleteMany({ fk_postage_id: req.postage._id })
+            await UPC.deleteMany({ fk_postage_id: req.postage._id })
 
             return next()
         }catch(err){
             return res.status(400).send({error_delete_postage_UPSs: err.message});
         }
     },
-
-    async delete_postage_UPCs (req, res, next){
-        try{
-            await UPC.deleteMany({ fk_postage_id: req.postage._id })
-
-            return next()
-        }catch(err){
-            return res.status(400).send({error_delete_postage_UPCs: err.message});
-        }
-    }
 }
