@@ -11,5 +11,5 @@ const UPRSchema = new mongoose.Schema({
     },
 })
 
-const UPR = mongoose.model('UPS', UPRSchema);
+const UPR = mongoose.model('UPR', UPRSchema);
 module.exports = UPR;
