@@ -11,7 +11,7 @@ const UPC = require('./controllers/UPC_controller');
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_anon);
 router.post('/postage/create_common', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_common);
 router.get('/postage/list_all', Postage.list);
-router.get('/postage/list_common', Postage. check_reports_of_posts, Postage.list_common);
+router.get('/postage/list_common', Postage.list_common);
 router.get('/postage/list_by_category', Postage.list_by_category);
 router.get('/postage/list_one/:id', Postage.list_one);
 router.get('/postage/list_one_logged/:postage_id/:user_id', Postage.list_one_logged);
