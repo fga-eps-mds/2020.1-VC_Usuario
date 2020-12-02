@@ -1,5 +1,3 @@
-const { json } = require('body-parser');
-const { update, find } = require('../models/postage.js');
 const Postage = require ('../models/postage.js');
 const UPS = require('../models/UPS.js');
 const UPC = require('../models/UPC.js');

@@ -1,6 +1,4 @@
 const UPC = require ('../models/UPC')
-const User = require('../models/user.js');
-const Postage = require ('../models/postage.js');
 
 module.exports = {
 
