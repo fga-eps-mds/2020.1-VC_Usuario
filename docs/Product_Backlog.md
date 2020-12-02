@@ -75,5 +75,6 @@
 | --- | --- | --- | --- | --- | --- |
 | 22/09 | E1 | FT01 | US17 | Eu, como sistema, preciso verificar cadastro uma de nova conta conta por veio dos dados da universidade                                                                                                            | 5 | 
 | 22/09 | E3 | FT08 | US19 | Eu, como usuário, desejo ter uma área de ajuda de uso da aplicação                                                                                                               | 3 |
-| 01/12 | E3 | FT06 | US21 | Eu, como usuário, desejo compartilhar uma determinado postagem                                      | 3 |
 | 01/12 | E3 | FT10 | US18 | Eu, como usuário, posso usar a aplicação somente dentro das dependências da universidade            | 5 |
+| 01/12 | E3 | FT06 | US21 | Eu, como usuário, desejo compartilhar uma determinado postagem                                      | 3 |
+
