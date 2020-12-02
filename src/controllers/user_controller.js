@@ -7,8 +7,9 @@ const UPC = require('../models/UPC.js');
 module.exports = {
     
     async register(req, res){
-        const { user_email } = req.body;
         try{
+            const { user_email } = req.body;
+            
             if (await Users.findOne({ user_email }))
                 return res.status(400).send({ msg: 'Email já cadastrado'})
 
@@ -19,19 +20,22 @@ module.exports = {
         }catch(err){
             return res.status(400).send({ msg: err.message});
         }
-
     },
 
     async list(req, res){
-        const users = await Users.find();
-        return res.json(users);
+        try{
+            const users = await Users.find();
+            return res.json(users);
+        }catch(err){
+            return res.status(400).send({msg: err.message});
+        }
     },
 
     async delete(req, res){
         try{
             await req.body.user.remove();
-            return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
 
+            return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
         }catch(err){
             return res.status(400).send({msg: err.message});
         }
@@ -39,13 +43,14 @@ module.exports = {
 
     async update(req, res, next){
         try{
-            const user = await Users.findById(req.params.id);            
+            const user = await Users.findById(req.params.id);
+
             var version = user.__v + 1
             await user.update({user_email: req.body.email, user_name: req.body.nome, __v: version});
 
             return next()
         }catch(err){
-            return res.status(400).send({error: err.message});
+            return res.status(400).send({error_update: err.message});
         }
     },
 
@@ -66,6 +71,7 @@ module.exports = {
     async change_password(req, res){
         try{
             const user = req.body.user
+
             if(req.body.novaSenha){
                 const hash = await bcrypt.hash(req.body.novaSenha, 10);
                 await user.update({user_password: hash});
@@ -78,14 +84,9 @@ module.exports = {
     },
 
     async list_user_postages (req, res, next){
-
         try{
-            req.user = await Users.findById(req.params.id)
-            /* if(req.user == null){
-                return res.status(400).send({error_list_user_postages: "User not exist"});
-            } */
-
             req.postages_list = await Postage.find({ fk_user_id: req.params.id});
+            console.log(req.postages_list)
 
             return next() 
         }catch(err){
@@ -103,6 +104,17 @@ module.exports = {
         return res.send(users);
     },
 
+    async find_user(req, res, next) {
+        const user = await Users.findById(req.params.id);
+
+        if(!user){
+            return res.status(400).send({msg: 'Usuário não encontrado'});
+        }
+
+        req.user = user;
+        return next();
+    },
+
     async check_user_exist (req, res, next){
         try{
             req.user = await Users.findById(req.body.fk_user_id)
@@ -117,7 +129,6 @@ module.exports = {
     },
 
     async delete_user_UPSs (req, res, next){
-        
         try{
             req.postages_list = await Postage.find();
             req.UPS_list = await UPS.find({fk_user_id: req.params.id})
@@ -141,7 +152,6 @@ module.exports = {
     },
 
     async delete_user_UPCs (req, res, next){
-        
         try{
             await UPC.deleteMany({ fk_user_id: req.params.id })
 
@@ -152,7 +162,6 @@ module.exports = {
     },
 
     async delete_user_postages (req, res, next){
-        
         try{
             await Postage.deleteMany({ fk_user_id: req.params.id })
 
