@@ -22,7 +22,7 @@
     </table>
 
 ## 3. Objetivos
-A sprint 12 tem como objetivo:
+A sprint 13 tem como objetivo:
 - Descansar;
 - Assistir aos dois últimos filmes dos vingadores: Ultimato e Guerra Infinita
 
