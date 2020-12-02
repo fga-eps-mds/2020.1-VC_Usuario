@@ -86,19 +86,9 @@ module.exports = {
         return res.send(post);
     },
 
-    async check_reports_of_posts (req, res, next){
-        try{
-            const posts = await Postage.find({ "post_reports": { $lt: 5 } });
-
-            return res.status(200).json({posts});
-        }catch(err){
-            return res.status(400).send({error: err.message});
-        }
-    },
-
     async list_common (req, res){
         try{
-            const posts = await Postage.find({ "fk_user_id": { $exists: true, $ne: null } });
+            const posts = await Postage.find({"fk_user_id": { $exists: true, $ne: null }, "post_reports": { $lt: 5 }});
 
             return res.status(200).json({posts});
         }catch(err){
@@ -149,8 +139,7 @@ module.exports = {
                 return res.status(400).send({error_list_common_postages: "User not exist"});
             } */
             
-            req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
-            req.postages_list = await Postage.find({"post_reports": { $eq:0 }});
+            req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }, "post_reports": { $lt: 5 }});
 
             console.log("-----\n\n" + "LIST COMMON POSTAGES WITH UPSs:")
             console.log("\nListing common postages...")
