@@ -6,6 +6,7 @@ const multerConfig = require('./config/multer');
 const Auth = require('./controllers/auth_controller');
 const UPS = require('./controllers/UPS_controller');
 const UPC = require('./controllers/UPC_controller');
+const UPR = require('./controllers/UPR_controller');
 
 //Postages routes
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_anon);
@@ -22,7 +23,7 @@ router.put('/postage/update_status/:id', Postage.update_status);
 router.put('/postage/delete_one', UPS.check_exist_user_and_postage, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_one);
 router.put('/postage/update_one', UPS.check_exist_user_and_postage, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.update_one);
 router.get('/postage/list_UPC/:id', Postage.list_UPCs_by_postage);
-router.post('/postage/report_postage', UPS.check_exist_user_and_postage, Postage.report_postage, Postage.postage_report_number_alteration);
+//router.post('/postage/report_postage', UPS.check_exist_user_and_postage, Postage.report_postage, Postage.postage_report_number_alteration);
 
 //Users routers
 router.post('/user/register_user', User.register);
@@ -47,5 +48,10 @@ router.put('/ups/support_postage', UPS.check_exist_user_and_postage, UPS.support
 router.post('/upc/comment_postage', UPS.check_exist_user_and_postage, UPC.comment_postage)
 router.get('/upc/list_all', UPC.list_all);
 router.delete('/upc/delete_all', UPC.delete_all);
+
+//UPR routers
+router.post('/upr/report_postage', UPS.check_exist_user_and_postage, UPR.report_postage, UPR.postage_report_number_alteration);
+router.get('/upr/list_all', UPR.list_all);
+router.delete('/upr/delete_all', UPR.delete_all);
 
 module.exports = router;
