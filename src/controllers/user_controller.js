@@ -1,12 +1,15 @@
 const Users = require('../models/user.js');
 const bcrypt = require('bcrypt')
 const Postage = require ('../models/postage.js');
+const UPS = require('../models/UPS.js');
+const UPC = require('../models/UPC.js');
 
 module.exports = {
     
     async register(req, res){
-        const { user_email } = req.body;
         try{
+            const { user_email } = req.body;
+            
             if (await Users.findOne({ user_email }))
                 return res.status(400).send({ msg: 'Email já cadastrado'})
 
@@ -17,7 +20,6 @@ module.exports = {
         }catch(err){
             return res.status(400).send({ msg: err.message});
         }
-
     },
 
     async list(req, res){
@@ -27,30 +29,45 @@ module.exports = {
 
     async delete(req, res){
         try{
-            await req.body.user.remove();
-            return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
+            await req.user.remove();
 
+            return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
         }catch(err){
             return res.status(400).send({msg: err.message});
         }
     },
 
-    async update(req, res){
+    async update(req, res, next){
         try{
-            const user = await Users.findById(req.params.id);            
+            const user = await Users.findById(req.params.id);
+
             var version = user.__v + 1
             await user.update({user_email: req.body.email, user_name: req.body.nome, __v: version});
 
-            return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
-
+            return next()
         }catch(err){
-            return res.status(400).send({error: err.message});
+            return res.status(400).send({error_update: err.message});
+        }
+    },
+
+    async update_user_postages_author(req, res){
+        try{
+            const postage_list = await Postage.find({ fk_user_id: req.params.id })
+
+            for (var i = 0; i < postage_list.length; i++){
+                await postage_list[i].update({ post_author: req.body.nome })
+            }
+
+            return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
+        }catch(err){
+            return res.status(400).send({error_update_user_postages_author: err.message});
         }
     },
 
     async change_password(req, res){
         try{
-            const user = req.body.user
+            const user = req.user
+
             if(req.body.novaSenha){
                 const hash = await bcrypt.hash(req.body.novaSenha, 10);
                 await user.update({user_password: hash});
@@ -63,18 +80,9 @@ module.exports = {
     },
 
     async list_user_postages (req, res, next){
-
         try{
-            req.user = await Users.findById(req.params.id)
-            /* if(req.user == null){
-                console.log("User not exist!\n" + "\n-----\n")
-                return res.status(400).send({error_list_user_postages: "User not exist"});
-            } */
-
             req.postages_list = await Postage.find({ fk_user_id: req.params.id});
-
-            console.log("-----\n\n" + "LIST USER POSTAGES:")
-            console.log("\nListing user's postages...")
+            console.log(req.postages_list)
 
             return next() 
         }catch(err){
@@ -90,5 +98,57 @@ module.exports = {
     async delete_all (req, res){
         const users = await Users.deleteMany({})
         return res.send(users);
+    },
+
+    async find_user(req, res, next) {
+        const user = await Users.findById(req.params.id);
+
+        if(!user){
+            return res.status(400).send({msg: 'Usuário não encontrado'});
+        }
+
+        req.user = user;
+        return next();
+    },
+
+    async check_user_and_postage_exist (req, res, next){
+        try{
+            req.user = await Users.findById(req.body.fk_user_id)
+            if(req.user == null){
+                return res.status(400).send({error_check_user_and_postage_exist: "User not exist"});
+            }
+            
+            req.postage = await Postage.findById(req.body.fk_postage_id)
+            if(req.postage){
+                if(req.postage == null){
+                    return res.status(400).send({error_check_user_and_postage_exist: "Postage not exist"});
+                }
+            }
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_check_user_and_postage_exist: err.message});
+        }
+    },
+
+    async delete_user_objects_child (req, res, next){
+        try{
+            req.UPS_list = await UPS.find({fk_user_id: req.params.id})
+
+            for (var i = 0; i < req.UPS_list.length; i++){
+                req.postages_list = await Postage.findById(req.UPS_list[i].fk_postage_id)
+
+                req.postages_list.post_support_number -= 1
+                await req.postages_list.update({post_support_number: req.postages_list.post_support_number});
+            }
+            
+            await UPS.deleteMany({ fk_user_id: req.params.id })
+            await UPC.deleteMany({ fk_user_id: req.params.id })
+            await Postage.deleteMany({ fk_user_id: req.params.id })
+
+            return next()
+        }catch(err){
+            return res.status(400).send({error_delete_user_objects_child: err.message});
+        }
     },
 }

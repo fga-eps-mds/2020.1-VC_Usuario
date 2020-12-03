@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const ObjectId = mongoose.Schema.ObjectId;
 const bcrypt = require('bcrypt');
 
 const UserSchema = new mongoose.Schema({
@@ -18,10 +17,6 @@ const UserSchema = new mongoose.Schema({
     user_score:{
         type: Number,
         default: 0,
-    },
-    user_array_UPS:{
-        type: Array,
-        default: [],
     }
 });
 
