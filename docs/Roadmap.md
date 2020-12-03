@@ -10,6 +10,7 @@
 |23/10/2020|0.5|Correção e atualização do documento nas informações das sprints 8, 9 e 10|Daniel Porto|
 |08/11/2020|0.6|Atualização do documento a partir da sprint 10|Daniel Porto|
 |15/11/2020|0.7|Atualização do documento a partir da sprint 11|Denys Rógeres|
+|01/12/2020|0.8|Atualização do documento a partir da sprint 14|Denys Rógeres|
 
 # Release 1
 
@@ -146,8 +147,6 @@
 |:--:| ------- | 
 | Issue  | Fazer testes de Sistema |
 | Issue  | US20 Usuário logado denunciar postagem |
-| Issue  | US21 Usuário compartilhar postagem |
-| Issue  | US18 Usuário poder usar a aplicação somente dentro das depêndencias da universidade |
 
 ## Sprint 15
 
