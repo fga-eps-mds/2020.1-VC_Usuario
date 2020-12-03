@@ -53,5 +53,6 @@ router.delete('/upc/delete_all', UPC.delete_all);
 router.post('/upr/report_postage', UPS.check_exist_user_and_postage, UPR.report_postage, UPR.postage_report_number_alteration);
 router.get('/upr/list_all', UPR.list_all);
 router.delete('/upr/delete_all', UPR.delete_all);
+router.post('/upr/create', UPR.create_report);
 
 module.exports = router;
