@@ -137,17 +137,13 @@ module.exports = {
 
     async delete_user_objects_child (req, res, next){
         try{
-            req.postages_list = await Postage.find();
             req.UPS_list = await UPS.find({fk_user_id: req.params.id})
 
             for (var i = 0; i < req.UPS_list.length; i++){
-                for (var j = 0; j < req.postages_list.length; j++){
-                    if(req.UPS_list[i].fk_postage_id == req.postages_list[j]._id){
-                        req.postages_list[j].post_support_number -= 1
+                req.postages_list = await Postage.findById(req.UPS_list[i].fk_postage_id)
 
-                        await req.postages_list[j].update({post_support_number: req.postages_list[j].post_support_number});
-                    }
-                }
+                req.postages_list.post_support_number -= 1
+                await req.postages_list.update({post_support_number: req.postages_list.post_support_number});
             }
             
             await UPS.deleteMany({ fk_user_id: req.params.id })
@@ -156,7 +152,7 @@ module.exports = {
 
             return next()
         }catch(err){
-            return res.status(400).send({error_delete_user_UPSs: err.message});
+            return res.status(400).send({error_delete_user_objects_child: err.message});
         }
     },
 }
