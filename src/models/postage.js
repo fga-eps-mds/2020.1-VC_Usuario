@@ -38,11 +38,6 @@ const PostageSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    post_permission:{
-        type: [Boolean],
-        required: true,
-        default: [true, false]
-    },
     post_support_number: {
         type: Number,
         default: 0
@@ -51,24 +46,13 @@ const PostageSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    post_comments: {
-        type: Array,
-        default: []
-    },
-    /* 
-    relev_degree: {
-    	type: double,
-    }
-    */
     post_author:{
        type: String
     },
-
     post_reporting:{
         type: Boolean,
         default: false
     },
-
     post_reports: {
        type: Number,
        default: 0
