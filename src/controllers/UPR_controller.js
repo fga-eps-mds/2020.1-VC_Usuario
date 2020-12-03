@@ -1,4 +1,4 @@
-const UPR = require ('../models/UPS.js');
+const UPR = require ('../models/UPR.js');
 const User = require('../models/user.js');
 const Postage = require ('../models/postage.js');
 const { search } = require('../routes.js');
@@ -6,7 +6,8 @@ const { search } = require('../routes.js');
 module.exports = {
 
     async create_report (req, res){
-        return res.status(200)
+        const upr = await UPR.create(req.body);
+        return res.status(200).json(upr);
     },
 
     async list_all (req, res){
@@ -26,7 +27,6 @@ module.exports = {
             
             const array_reports = await UPR.find({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
 
-            
             if(array_reports.length < 1){
 
                 await UPR.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
@@ -60,7 +60,6 @@ module.exports = {
 
             if(array_report.length <= 3){
                 postage_reports_number += 1
-                console.log("mais um report")
             }
             else{
                 Postage.findById(req.body.postage_id).fk_user_id = null

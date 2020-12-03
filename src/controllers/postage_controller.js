@@ -18,6 +18,7 @@ module.exports = {
 
             req.postage.post_support_number = 0
             req.postage.post_supporting = false
+            req.postage.post_post_reporting = false
             req.postage.save()
 
             const user = await User.findById(req.body.fk_user_id)
@@ -72,7 +73,7 @@ module.exports = {
             fk_postage_id: req.params.postage_id
         }) 
         
-        posts_logged.post_reports = false
+        posts_logged.post_reporting = false
 
         posts_logged.post_supporting = false
         
@@ -81,9 +82,9 @@ module.exports = {
         }
 
         if(array_UPRs.length != 0){
-            posts_logged.post_reports = true
+            posts_logged.post_reporting = true
         } 
-
+    
         return res.json(posts_logged);
     },
 
