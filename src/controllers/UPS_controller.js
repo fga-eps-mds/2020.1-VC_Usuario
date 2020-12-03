@@ -1,7 +1,4 @@
 const UPS = require ('../models/UPS.js');
-const User = require('../models/user.js');
-const Postage = require ('../models/postage.js');
-const { search } = require('../routes.js');
 
 module.exports = {
 
@@ -58,18 +55,16 @@ module.exports = {
 
     async post_support_number_alteration (req, res){
         
-        try{
-            req.UPS_list = await UPS.find({fk_user_id: req.user._id, fk_postage_id: req.postage._id})
-            
+        try{            
             if(req.UPS_list.length > 1){
                 return res.status(400).send({error_post_support_number_alteration: "To much UPSs created with this parameters"});
             }
 
             if(req.UPS_list.length == 0){
-                req.postage.post_support_number -= 1
+                req.postage.post_support_number += 1
             }
             else if(req.UPS_list.length == 1){
-                req.postage.post_support_number += 1
+                req.postage.post_support_number -= 1
             }
 
             await req.postage.update({post_support_number: req.postage.post_support_number});

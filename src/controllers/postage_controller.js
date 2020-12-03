@@ -1,5 +1,3 @@
-const { json } = require('body-parser');
-const { update, find } = require('../models/postage.js');
 const Postage = require ('../models/postage.js');
 const UPS = require('../models/UPS.js');
 const UPC = require('../models/UPC.js');
@@ -56,30 +54,42 @@ module.exports = {
     },
 
     async list_one (req, res){
-        const posts = await Postage.findById(req.params.id);
-        return res.json(posts);
+        try{
+            const posts = await Postage.findById(req.params.id);
+            return res.json(posts);
+        }catch(err){
+            return res.status(400).send({ error_list_one: err.message});
+        }
     },
 
     async list_one_logged (req, res){
-        const posts_logged = await Postage.findById(req.params.postage_id);
+        try{
+            const posts_logged = await Postage.findById(req.params.postage_id);
 
-        const array_UPSs = await UPS.find({ 
-            fk_user_id: req.params.user_id,
-            fk_postage_id: req.params.postage_id
-        })
-        
-        posts_logged.post_supporting = false
-        
-        if(array_UPSs.length != 0){
-            posts_logged.post_supporting = true
+            const array_UPSs = await UPS.find({ 
+                fk_user_id: req.user._id,
+                fk_postage_id: posts_logged._id
+            })
+            
+            posts_logged.post_supporting = false
+            
+            if(array_UPSs.length != 0){
+                posts_logged.post_supporting = true
+            }
+
+            return res.json(posts_logged);
+        }catch(err){
+            return res.status(400).send({ error_list_one_logged: err.message});
         }
-
-        return res.json(posts_logged);
     },
 
     async delete_all (req, res){
-        const post = await Postage.deleteMany({})
-        return res.send(post);
+        try{
+            const post = await Postage.deleteMany({})
+            return res.send(post);
+        }catch(err){
+            return res.status(400).send({error_delete_all: err.message});
+        }
     },
 
     async list_common (req, res){
@@ -88,13 +98,14 @@ module.exports = {
 
             return res.status(200).json({posts});
         }catch(err){
-            return res.status(400).send({error: err.message});
+            return res.status(400).send({error_list_common: err.message});
         }
     },
 
     async list_by_category (req, res){
-        const categoria = req.query.categoria;
         try{
+            const categoria = req.query.categoria;
+
             const posts = await Postage.find({ post_category: categoria, "fk_user_id": { $exists: true, $ne: null }}, { 
                 post_description: 0,
                 post_permission: 0
@@ -102,7 +113,7 @@ module.exports = {
 
             return res.status(200).json({posts});
         }catch(err){
-            return res.status(400).send({error_list_common: err.message});
+            return res.status(400).send({error_list_by_category: err.message});
         }
     },
 
@@ -131,13 +142,7 @@ module.exports = {
     },
 
     async list_common_postages (req, res, next){ 
-
-        try{
-            req.user = await User.findById(req.params.id)
-            /* if(req.user == null){
-                return res.status(400).send({error_list_common_postages: "User not exist"});
-            } */
-            
+        try{            
             req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
 
             return next()
@@ -146,8 +151,7 @@ module.exports = {
         }
     },
 
-    async take_ups_of_postages (req, res){
-        
+    async take_ups_of_postages (req, res){ 
         try{
             let array_UPSs = null
 
@@ -167,26 +171,11 @@ module.exports = {
 
             return res.status(200).json(req.postages_list)
         }catch(err){
-            return res.status(400).send({error_list_common_postages: err.message});        
-        }
-    },
-
-    async check_postage_exist (req, res, next){
-
-        try{
-            req.postage = await Postage.findById(req.body.fk_postage_id)
-            if(req.postage == null){
-                return res.status(400).send({error_check_postage_exist: "Postage not exist"});
-            }
-
-            return next()
-        }catch(err){
-            return res.status(400).send({error_check_postage_exist: err.message});
+            return res.status(400).send({error_take_ups_of_postages: err.message});        
         }
     },
 
     async check_postage_is_not_anon (req, res, next){
-
         try{
             if(req.postage.fk_user_id == null){
                 return res.status(400).send({error_check_postage_is_not_anon: "Postage is Anonymous"});   
@@ -200,7 +189,6 @@ module.exports = {
     },
 
     async check_user_of_postage (req, res, next){
-
         try{
             if(req.postage.fk_user_id != req.body.fk_user_id){
                 return res.status(400).send({error_check_user_of_postage: "User is different from user's postage"}); 
@@ -214,7 +202,6 @@ module.exports = {
     },
 
     async update_postage (req, res){
-
         try{
             var { post_title, post_description, post_category, post_place } = req.body;
             const new_postage_params = { post_title, post_description, post_category, post_place }
@@ -228,7 +215,6 @@ module.exports = {
     },
 
     async delete_postage (req, res){
-        
         try{
             req.user.user_score -= 100;
             await req.user.update({user_score: req.user.user_score});
@@ -242,7 +228,6 @@ module.exports = {
     },
 
     async list_UPCs_by_postage (req, res){
-
         try{
             const UPC_list = await UPC.find({ fk_postage_id: req.params.id })
 
@@ -252,25 +237,14 @@ module.exports = {
         }
     },
 
-    async delete_postage_UPSs (req, res, next){
-        
+    async delete_postage_objects_child (req, res, next){
         try{
             await UPS.deleteMany({ fk_postage_id: req.postage._id })
+            await UPC.deleteMany({ fk_postage_id: req.postage._id })
 
             return next()
         }catch(err){
             return res.status(400).send({error_delete_postage_UPSs: err.message});
         }
     },
-
-    async delete_postage_UPCs (req, res, next){
-        
-        try{
-            await UPC.deleteMany({ fk_postage_id: req.postage._id })
-
-            return next()
-        }catch(err){
-            return res.status(400).send({error_delete_postage_UPCs: err.message});
-        }
-    }
 }
