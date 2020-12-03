@@ -33,7 +33,7 @@ module.exports = {
 
     async delete(req, res){
         try{
-            await req.body.user.remove();
+            await req.user.remove();
 
             return res.status(200).send({msg: 'Usuário deletado com sucesso!'});
         }catch(err){
@@ -70,7 +70,7 @@ module.exports = {
 
     async change_password(req, res){
         try{
-            const user = req.body.user
+            const user = req.user
 
             if(req.body.novaSenha){
                 const hash = await bcrypt.hash(req.body.novaSenha, 10);
@@ -115,16 +115,23 @@ module.exports = {
         return next();
     },
 
-    async check_user_exist (req, res, next){
+    async check_user_and_postage_exist (req, res, next){
         try{
             req.user = await Users.findById(req.body.fk_user_id)
             if(req.user == null){
-                return res.status(400).send({error_check_user_exist: "User not exist"});
+                return res.status(400).send({error_check_user_and_postage_exist: "User not exist"});
+            }
+            
+            req.postage = await Postage.findById(req.body.fk_postage_id)
+            if(req.postage){
+                if(req.postage == null){
+                    return res.status(400).send({error_check_user_and_postage_exist: "Postage not exist"});
+                }
             }
 
             return next()
         }catch(err){
-            return res.status(400).send({error_check_user_exist: err.message});
+            return res.status(400).send({error_check_user_and_postage_exist: err.message});
         }
     },
 

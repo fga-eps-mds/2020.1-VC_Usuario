@@ -9,7 +9,7 @@ const UPC = require('./controllers/UPC_controller');
 
 //Postages routes
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_anon);
-router.post('/postage/create_common', multer(multerConfig).single("file"), User.check_user_exist, Postage.create_postage, Postage.create_common);
+router.post('/postage/create_common', multer(multerConfig).single("file"), User.check_user_and_postage_exist, Postage.create_postage, Postage.create_common);
 router.get('/postage/list_all', Postage.list);
 router.get('/postage/list_common', Postage.list_common);
 router.get('/postage/list_by_category', Postage.list_by_category);
@@ -18,8 +18,8 @@ router.get('/postage/list_one/:id', Postage.list_one);
 router.get('/postage/list_one_logged/:postage_id/:id', User.find_user, Postage.list_one_logged, Postage.take_ups_of_postages);
 router.get('/postage/list_all_with_UPS/:id', User.find_user, Postage.list_common_postages, Postage.take_ups_of_postages);
 router.put('/postage/update_status/:id', Postage.update_status);
-router.put('/postage/delete_one', Postage.check_postage_exist, User.check_user_exist, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_postage_objects_child, Postage.delete_postage);
-router.put('/postage/update_one', Postage.check_postage_exist, User.check_user_exist, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.update_postage);
+router.put('/postage/delete_one', User.check_user_and_postage_exist, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.delete_postage_objects_child, Postage.delete_postage);
+router.put('/postage/update_one', User.check_user_and_postage_exist, Postage.check_postage_is_not_anon, Postage.check_user_of_postage, Postage.update_postage);
 
 //Users routers
 router.post('/user/register_user', User.register);
@@ -33,10 +33,10 @@ router.get('/user/validate_session', Auth.session_authentication, User.find_user
 router.put('/user/change_password/:id', User.find_user, User.change_password);
 
 //UPS routers
-router.post('/ups/support_postage', Postage.check_postage_exist, User.check_user_exist, Postage.check_postage_is_not_anon, UPS.support_postage, UPS.post_support_number_alteration);
+router.post('/ups/support_postage', User.check_user_and_postage_exist, Postage.check_postage_is_not_anon, UPS.support_postage, UPS.post_support_number_alteration);
 
 //UPC routers
-router.post('/upc/comment_postage', Postage.check_postage_exist, User.check_user_exist, Postage.check_postage_is_not_anon, UPC.comment_postage)
+router.post('/upc/comment_postage', User.check_user_and_postage_exist, Postage.check_postage_is_not_anon, UPC.comment_postage)
 
 //Tests routers
 router.post('/ups/create', UPS.create_ups);

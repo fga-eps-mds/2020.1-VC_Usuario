@@ -179,19 +179,6 @@ module.exports = {
         }
     },
 
-    async check_postage_exist (req, res, next){
-        try{
-            req.postage = await Postage.findById(req.body.fk_postage_id)
-            if(req.postage == null){
-                return res.status(400).send({error_check_postage_exist: "Postage not exist"});
-            }
-
-            return next()
-        }catch(err){
-            return res.status(400).send({error_check_postage_exist: err.message});
-        }
-    },
-
     async check_postage_is_not_anon (req, res, next){
         try{
             if(req.postage.fk_user_id == null){
