@@ -126,11 +126,13 @@ it('Delete all posts', async (done) => {
 })
 
 it('Update post status', async (done) => {
-    // O status só é alterado no insomnia se enviar duas vezes
-    // Não consegui testar
     await request(app).put(`/postage/update_status/${postCommon._id}`)
     .send({post_status: 'Resolvido'})
     .expect(200)
+
+    const res = await request(app).get(`/postage/list_one/${postCommon._id}`)
+    expect(res.status).toBe(200)
+    expect(res.body.post_status).toBe('Resolvido')
     done()
 })
 
