@@ -23,12 +23,8 @@ module.exports = {
     },
 
     async list(req, res){
-        try{
-            const users = await Users.find();
-            return res.json(users);
-        }catch(err){
-            return res.status(400).send({msg: err.message});
-        }
+        const users = await Users.find();
+        return res.json(users);
     },
 
     async delete(req, res){

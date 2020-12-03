@@ -49,12 +49,8 @@ module.exports = {
     },
 
     async list (req, res){
-        try{
-            const posts = await Postage.find();
-            return res.json(posts);
-        }catch(err){
-            return res.status(400).send({ error_list: err.message});
-        }
+        const posts = await Postage.find();
+        return res.json(posts);
     },
 
     async list_one (req, res){
