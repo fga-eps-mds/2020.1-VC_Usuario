@@ -12,6 +12,10 @@ const UPCSchema = new mongoose.Schema({
     UPC_description: {
         type: String,
         required: true
+    },
+    UPC_author:{
+        type: String,
+        required: true
     }
 })
 

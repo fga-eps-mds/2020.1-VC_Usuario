@@ -22,7 +22,8 @@ module.exports = {
             await UPC.create({
                 fk_user_id: req.user._id, 
                 fk_postage_id: req.postage._id,
-                UPC_description: req.body.comment_descripton
+                UPC_description: req.body.comment_descripton,
+                UPC_author: req.user.user_name
             })
 
             return res.status(200).send("Comentário à Postagem " + req.postage.post_title + " foi feito!");

@@ -229,11 +229,11 @@ module.exports = {
 
     async list_UPCs_by_postage (req, res){
         try{
-            const auxUPS = await UPC.find({ fk_postage_id: req.params.id })
+            const UPC_list = await UPC.find({ fk_postage_id: req.params.id })
 
-            return res.status(200).json(auxUPS);
+            return res.status(200).json(UPC_list);
         }catch(err){
-            return res.status(400).send({list_UPCs_by_postage: err.message}); 
+            return res.status(400).send({error_list_UPCs_by_postage: err.message}); 
         }
     },
 
