@@ -64,6 +64,11 @@ const PostageSchema = new mongoose.Schema({
        type: String
     },
 
+    post_reporting:{
+        type: Boolean,
+        default: false
+    },
+
     post_reports: {
        type: Number,
        default: 0
