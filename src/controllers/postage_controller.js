@@ -74,8 +74,8 @@ module.exports = {
             })
 
             const array_UPRs = await UPR.find({
-                fk_user_id: req.params.user_id,
-                fk_postage_id: req.params.postage_id
+                fk_user_id: req.user._id,
+                fk_postage_id: posts_logged._id
             }) 
             
             posts_logged.post_supporting = false

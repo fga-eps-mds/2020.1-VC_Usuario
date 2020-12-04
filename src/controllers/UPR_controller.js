@@ -20,11 +20,11 @@ module.exports = {
 
     async report_postage (req, res, next){   
         try{            
-            const array_reports = await UPR.find({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
+            const array_reports = await UPR.find({fk_user_id: req.body.fk_user_id, fk_postage_id: req.body.fk_postage_id})
 
             if(array_reports.length < 1){
 
-                await UPR.create({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
+                await UPR.create({fk_user_id: req.body.fk_user_id, fk_postage_id: req.body.fk_postage_id})
             }
             else{
                 return res.status(400).send({error_report_postage: "To much reports created with this parameters"});
@@ -38,20 +38,20 @@ module.exports = {
 
     async postage_report_number_alteration (req, res) {
         try{
-            const array_report = await Postage.find({fk_user_id: req.body.user_id, fk_postage_id: req.body.postage_id})
+            const array_report = await Postage.find({fk_user_id: req.body.fk_user_id, fk_postage_id: req.body.fk_postage_id})
 
             if(array_report.length > 1){
                 return res.status(400).send({error_post_report_number_alteration: "To much reports created with this parameters"});
             }
 
-            const postage_related_reports = await Postage.findById(req.body.postage_id)
+            const postage_related_reports = await Postage.findById(req.body.fk_postage_id)
             var postage_reports_number = postage_related_reports.post_reports
 
             if(array_report.length <= 3){
                 postage_reports_number += 1
             }
             else{
-                Postage.findById(req.body.postage_id).fk_user_id = null
+                Postage.findById(req.body.fk_postage_id).fk_user_id = null
                 req.postage.save()
 
                 return res.status(200).send("Postagem " + postage_related_reports.post_title + " excluída devido a repetidos reports!");
