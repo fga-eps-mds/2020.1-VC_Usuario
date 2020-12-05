@@ -29,7 +29,7 @@ const posts = [{
     },
     {
         fk_user_id: '7eaddfeaf110e8001879a324',
-        _id: '5fc3742e172665fbbf5b8d2e',
+        //_id: '5fc3742e172665fbbf5b8d2e',
         post_place: 'FCE',
         post_category: 'Meio Ambiente',
         post_title: 'Everyday girls day',
@@ -47,7 +47,7 @@ beforeEach(async () => {
 });
 
 it('Anon post without image', async (done) => {
-    const response = await request(app).post('/postage/create_anon').send({
+    const response = await request(app).post('/postage/create_anon').send({ 
         post_place: 'DARCY',
         post_category: 'Limpeza',
         post_title: 'Dreamcatcher lendas',
@@ -60,7 +60,7 @@ it('Anon post without image', async (done) => {
 
 it('Common post without image', async (done) => {
     const response = await request(app).post('/postage/create_common').send({
-        fk_user_id: '7eaddfeaf110e8001879a324',
+        fk_user_id: createdUser._id,
         post_place: 'FCE',
         post_category: 'Segurança',
         post_title: 'Everyday girls day',
@@ -133,6 +133,13 @@ it('Update post status', async (done) => {
     const res = await request(app).get(`/postage/list_one/${postCommon._id}`)
     expect(res.status).toBe(200)
     expect(res.body.post_status).toBe('Resolvido')
+    done()
+})
+
+it('Invalid update post status', async (done) => {
+    await request(app).put(`/postage/update_status/${postCommon._id}`)
+    .send({post_status: 'Foo'})
+    .expect(400)
     done()
 })
 
