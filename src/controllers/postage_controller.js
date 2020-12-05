@@ -118,7 +118,7 @@ module.exports = {
         try{
             const categoria = req.query.categoria;
 
-            const posts = await Postage.find({ post_category: categoria, "fk_user_id": { $exists: true, $ne: null }}, { 
+            const posts = await Postage.find({ post_category: categoria, "fk_user_id": { $exists: true, $ne: null }, "post_reports": { $lt: 5 }}, { 
                 post_description: 0,
                 post_permission: 0
             });
@@ -155,7 +155,7 @@ module.exports = {
 
     async list_common_postages (req, res, next){ 
         try{            
-            req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
+            req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }, "post_reports": { $lt: 5 }});
 
             return next()
         }catch(err){
