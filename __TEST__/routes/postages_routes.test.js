@@ -29,7 +29,6 @@ const posts = [{
     },
     {
         fk_user_id: '7eaddfeaf110e8001879a324',
-        //_id: '5fc3742e172665fbbf5b8d2e',
         post_place: 'FCE',
         post_category: 'Meio Ambiente',
         post_title: 'Everyday girls day',
@@ -146,8 +145,8 @@ it('Invalid update post status', async (done) => {
 it('Delete one post', async (done) => {
     const response =  await request(app).put('/postage/delete_one')
     .send({
-        user_id: postCommon.fk_user_id,
-        postage_id: postCommon._id
+        fk_user_id: postCommon.fk_user_id,
+        fk_postage_id: postCommon._id
     })
     .expect(200)
     expect(response.text).toBe('Postage successfully deleted!')
