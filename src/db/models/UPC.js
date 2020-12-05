@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const ObjectId = mongoose.Schema.ObjectId;
 
 const UPCSchema = new mongoose.Schema({
     fk_user_id:{
@@ -11,6 +10,10 @@ const UPCSchema = new mongoose.Schema({
         required: true,
     },
     UPC_description: {
+        type: String,
+        required: true
+    },
+    UPC_author:{
         type: String,
         required: true
     }

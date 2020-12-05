@@ -1,6 +1,4 @@
 const UPC = require ('../db/models/UPC')
-const User = require('../db/models/user.js');
-const Postage = require ('../db/models/postage.js');
 
 module.exports = {
 
@@ -21,22 +19,14 @@ module.exports = {
     async comment_postage (req, res){
 
         try{
-            console.log("Comment Postage...")
-
-            const postage_related_upc = await Postage.findById(req.body.postage_id)
-
-            const new_UPC = await UPC.create({
-                fk_user_id: req.body.user_id, 
-                fk_postage_id: req.body.postage_id,
-                UPC_description: req.body.comment_descripton
+            await UPC.create({
+                fk_user_id: req.user._id, 
+                fk_postage_id: req.postage._id,
+                UPC_description: req.body.comment_descripton,
+                UPC_author: req.user.user_name
             })
 
-            postage_related_upc.post_comments.unshift(new_UPC._id)
-            await postage_related_upc.updateOne({post_comments: postage_related_upc.post_comments});
-
-            console.log("New UPC successfully created!\n" + "\n-----\n")
-
-            return res.status(200).send("Comentário à Postagem " + postage_related_upc.post_title + " foi feito!");
+            return res.status(200).send("Comentário à Postagem " + req.postage.post_title + " foi feito!");
         }catch(err){
             return res.status(400).send({error_comment_postage: err.message});
         }
