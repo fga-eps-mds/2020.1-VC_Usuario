@@ -2,6 +2,7 @@ const Postage = require ('../models/postage.js');
 const UPS = require('../models/UPS.js');
 const UPC = require('../models/UPC.js');
 const User = require('../models/user.js');
+const UPR = require('../models/UPR.js');
 
 module.exports = {
 
@@ -15,6 +16,7 @@ module.exports = {
 
             req.postage.post_support_number = 0
             req.postage.post_supporting = false
+            req.postage.post_post_reporting = false
 
             return next()            
         }catch(err){
@@ -70,13 +72,23 @@ module.exports = {
                 fk_user_id: req.user._id,
                 fk_postage_id: posts_logged._id
             })
+
+            const array_UPRs = await UPR.find({
+                fk_user_id: req.user._id,
+                fk_postage_id: posts_logged._id
+            }) 
             
             posts_logged.post_supporting = false
+            posts_logged.post_reporting = false
             
             if(array_UPSs.length != 0){
                 posts_logged.post_supporting = true
             }
 
+            if(array_UPRs.length != 0){
+                posts_logged.post_reporting = true
+            } 
+        
             return res.json(posts_logged);
         }catch(err){
             return res.status(400).send({ error_list_one_logged: err.message});
@@ -94,7 +106,7 @@ module.exports = {
 
     async list_common (req, res){
         try{
-            const posts = await Postage.find({ "fk_user_id": { $exists: true, $ne: null } });
+            const posts = await Postage.find({"fk_user_id": { $exists: true, $ne: null }, "post_reports": { $lt: 5 }});
 
             return res.status(200).json({posts});
         }catch(err){
@@ -106,7 +118,7 @@ module.exports = {
         try{
             const categoria = req.query.categoria;
 
-            const posts = await Postage.find({ post_category: categoria, "fk_user_id": { $exists: true, $ne: null }}, { 
+            const posts = await Postage.find({ post_category: categoria, "fk_user_id": { $exists: true, $ne: null }, "post_reports": { $lt: 5 }}, { 
                 post_description: 0,
                 post_permission: 0
             });
@@ -143,7 +155,7 @@ module.exports = {
 
     async list_common_postages (req, res, next){ 
         try{            
-            req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }});
+            req.postages_list = await Postage.find({"fk_user_id": { $exists: true, $ne: null }, "post_reports": { $lt: 5 }});
 
             return next()
         }catch(err){
@@ -246,5 +258,5 @@ module.exports = {
         }catch(err){
             return res.status(400).send({error_delete_postage_UPSs: err.message});
         }
-    },
+    }
 }

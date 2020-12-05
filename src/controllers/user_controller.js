@@ -22,7 +22,7 @@ module.exports = {
         }
     },
 
-    async list(req, res){
+    async list_all(req, res){
         const users = await Users.find();
         return res.json(users);
     },
@@ -82,7 +82,6 @@ module.exports = {
     async list_user_postages (req, res, next){
         try{
             req.postages_list = await Postage.find({ fk_user_id: req.params.id});
-            console.log(req.postages_list)
 
             return next() 
         }catch(err){

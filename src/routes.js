@@ -1,11 +1,12 @@
 const router = require('express').Router();
 const multer = require('multer');
-const Postage = require('./controllers/postage_controller');
-const User = require('./controllers/user_controller')
 const multerConfig = require('./config/multer');
 const Auth = require('./controllers/auth_controller');
+const Postage = require('./controllers/postage_controller');
+const User = require('./controllers/user_controller')
 const UPS = require('./controllers/UPS_controller');
 const UPC = require('./controllers/UPC_controller');
+const UPR = require('./controllers/UPR_controller');
 
 //Postages routes
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_anon);
@@ -32,20 +33,26 @@ router.post('/user/login', Auth.authentication);
 router.get('/user/validate_session', Auth.session_authentication, User.find_user, Auth.refresh_token_and_data);
 router.put('/user/change_password/:id', User.find_user, User.change_password);
 
-//UPS routers
+//UPS router
 router.post('/ups/support_postage', User.check_user_and_postage_exist, Postage.check_postage_is_not_anon, UPS.support_postage, UPS.post_support_number_alteration);
 
-//UPC routers
+//UPC router
 router.post('/upc/comment_postage', User.check_user_and_postage_exist, Postage.check_postage_is_not_anon, UPC.comment_postage)
+
+//UPR router
+router.post('/upr/report_postage', User.check_user_and_postage_exist, Postage.check_postage_is_not_anon, UPR.report_postage, UPR.postage_report_number_alteration);
 
 //Tests routers
 router.post('/ups/create', UPS.create_ups);
-router.get('/user/list_all', User.list);
+router.post('/upr/create', UPR.create_upr);
+router.get('/user/list_all', User.list_all);
 router.get('/ups/list_all', UPS.list_all);
 router.get('/upc/list_all', UPC.list_all);
+router.get('/upr/list_all', UPR.list_all);
 router.delete('/postage/delete_all', Postage.delete_all);
 router.delete('/user/delete_all', User.delete_all);
 router.delete('/ups/delete_all', UPS.delete_all);
 router.delete('/upc/delete_all', UPC.delete_all);
+router.delete('/upr/delete_all', UPR.delete_all);
 
 module.exports = router;
