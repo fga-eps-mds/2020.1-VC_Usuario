@@ -156,8 +156,8 @@ it('Delete one post', async (done) => {
 it('Update one post', async (done) => {
     await request(app).put('/postage/update_one')
     .send({
-        user_id: postCommon.fk_user_id,
-        postage_id: postCommon._id,
+        fk_user_id: postCommon.fk_user_id,
+        fk_postage_id: postCommon._id,
         post_title: 'Modificando o título',
     })
     .expect(200)
