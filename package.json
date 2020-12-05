@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "env-cmd ./src/config/test.env jest --detectOpenHandles --forceExit",
+    "test": "env-cmd ./src/config/test.env jest --detectOpenHandles --forceExit --coverage",
     "start": "env-cmd ./src/config/dev.env nodemon src/index.js"
   },
   "repository": {
