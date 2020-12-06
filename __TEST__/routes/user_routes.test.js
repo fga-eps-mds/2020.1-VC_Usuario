@@ -1,17 +1,12 @@
 const request = require('supertest');
 const app = require('../../src/app');
 const User = require('../../src/db/models/user')
-
-const user = {
-    user_name: 'Sojin',
-    user_email: 'sojin@vc.com',
-    user_password: 'teste123'
-}
+const data = require('../data/data')
 
 let createdUser;
 
 beforeEach(async () => {
-    createdUser = await User.create(user)
+    createdUser = await User.create(data.user)
 });
 
 it('User registration', async (done) => {
@@ -48,6 +43,24 @@ it('User login', async (done) => {
     done()
 })
 
+it('User login with invalid email', async (done) => {
+    await request(app).post('/user/login').send({
+        email: 'invalid@email',
+        password: 'teste123'
+    })
+    .expect(401)
+    done()
+})
+
+it('User login with invalid password', async (done) => {
+    await request(app).post('/user/login').send({
+        email: createdUser.user_email,
+        password: 'senhainvalida'
+    })
+    .expect(401)
+    done()
+})
+
 it('User validate session', async (done) => {
     const getToken = await request(app).post('/user/login').send({
         email: createdUser.user_email,
@@ -57,6 +70,48 @@ it('User validate session', async (done) => {
     await request(app).get('/user/validate_session')
     .set('Authorization', `Bearer ${getToken.body.token}`)
     .expect(200)
+    done()
+})
+
+it('User validate session without token', async (done) => {
+    await request(app).get('/user/validate_session')
+    .expect(401)
+    done()
+})
+
+it('User validate session without correct token', async (done) => {
+    const getToken = await request(app).post('/user/login').send({
+        email: createdUser.user_email,
+        password: 'teste123'
+    })
+
+    await request(app).get('/user/validate_session')
+    .set('Authorization', `${getToken.body.token}`)
+    .expect(401)
+    done()
+})
+
+it('User validate session with a bad formated token', async (done) => {
+    const getToken = await request(app).post('/user/login').send({
+        email: createdUser.user_email,
+        password: 'teste123'
+    })
+
+    await request(app).get('/user/validate_session')
+    .set('Authorization', `invalid ${getToken.body.token}`)
+    .expect(401)
+    done()
+})
+
+it('User validate session with a invalid token', async (done) => {
+    const getToken = await request(app).post('/user/login').send({
+        email: createdUser.user_email,
+        password: 'teste123'
+    })
+
+    await request(app).get('/user/validate_session')
+    .set('Authorization', `Bearer invalid`)
+    .expect(401)
     done()
 })
 
