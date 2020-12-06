@@ -5,44 +5,17 @@ const app = require('../../src/app');
 const Postage = require('../../src/db/models/postage')
 const Ups = require('../../src/db/models/UPS')
 const User = require('../../src/db/models/user')
+const data = require('../data/data')
 
 let postAnom, postCommon, createdUser;
-const user = {
-    user_name: 'Sojin',
-    user_email: 'sojin@vc.com',
-    user_password: 'teste123'
-}
-
-const posts = [{
-        fk_user_id: null,
-        post_place: 'FGA',
-        post_category: 'Segurança',
-        post_title: 'Postagem Anônima',
-        post_description: 'Mollit ipsum consectetur aliquip qui tempor excepteur. Elit enim do sit incididunt elit laborum fugiat labore adipisicing magna aute dolore. Velit ipsum consectetur labore ullamco ea eu deseruntl aborum ut.'
-    },
-    {
-        fk_user_id: '7eaddfeaf110e8001879a325',
-        post_place: 'FGA',
-        post_category: 'Limpeza',
-        post_title: 'Postagem comum',
-        post_description: 'Mollit ipsum consectetur aliquip qui tempor excepteur.'
-    },
-    {
-        fk_user_id: '7eaddfeaf110e8001879a324',
-        post_place: 'FCE',
-        post_category: 'Meio Ambiente',
-        post_title: 'Everyday girls day',
-        post_description: 'As maiores do kpop. Elit enim do sit incididunt elit laborum fugiat labore adipisicing magna aute dolore. Velit ipsum consectetur labore ullamco ea eu deseruntl aborum ut.'
-    }
-]
 
 beforeEach(async () => {
-    createdUser = await User.create(user)
-    posts[1].fk_user_id = createdUser._id
-    posts[2].fk_user_id = createdUser._id
-    postAnom = await Postage.create(posts[0])
-    postCommon = await Postage.create(posts[1])
-    await Postage.create(posts[2])
+    createdUser = await User.create(data.user)
+    data.posts[1].fk_user_id = createdUser._id
+    data.posts[2].fk_user_id = createdUser._id
+    postAnom = await Postage.create(data.posts[0])
+    postCommon = await Postage.create(data.posts[1])
+    await Postage.create(data.posts[2])
 });
 
 it('Anon post without image', async (done) => {
