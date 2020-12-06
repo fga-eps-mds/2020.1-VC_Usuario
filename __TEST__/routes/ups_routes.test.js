@@ -47,10 +47,10 @@ it('Support postage', async (done) => {
         post_description: 'As maiores do kpop.'
     })
 
-    const res = await request(app).put('/ups/support_postage')
+    const res = await request(app).post('/ups/support_postage')
     .send({
-        user_id: post.body.fk_user_id,
-        postage_id: post.body._id
+        fk_user_id: post.body.fk_user_id,
+        fk_postage_id: post.body._id
     })
     expect(res.text).toBe('Apoio da Postagem T-ara foi modificado')
     done()
