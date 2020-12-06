@@ -3,35 +3,16 @@ const app = require('../../src/app');
 const Postage = require('../../src/db/models/postage')
 const Upc = require('../../src/db/models/UPC')
 const User = require('../../src/db/models/user')
+const data = require('../data/data')
 
 let postCommon, createdUser, createdComment;
-const user = {
-    user_name: 'Sojin',
-    user_email: 'sojin@vc.com',
-    user_password: 'teste123'
-}
-
-const post = {
-    fk_user_id: '7eaddfeaf110e8001879a324',
-    post_place: 'FGA',
-    post_category: 'Segurança',
-    post_title: 'Postagem Comum',
-    post_description: 'Mollit ipsum consectetur aliquip qui tempor excepteur. Elit enim do sit incididunt elit laborum fugiat labore adipisicing magna aute dolore. Velit ipsum consectetur labore ullamco ea eu deseruntl aborum ut.'
-}
-
-const comment = {
-    fk_user_id: '7eaddfeaf110e8001879a324',
-    fk_postage_id: '7eaddfeaf110e8001879a324',
-    UPC_description: 'Isto é um comentário',
-    UPC_author: 'Sojin'
-}
 
 beforeEach(async () => {
-    createdUser = await User.create(user)
-    post.fk_user_id = createdUser._id
-    postCommon = await Postage.create(post)
-    comment.fk_postage_id = postCommon._id
-    createdComment = await Upc.create(comment)
+    createdUser = await User.create(data.user)
+    data.posts[1].fk_user_id = createdUser._id
+    postCommon = await Postage.create(data.posts[1])
+    data.comment.fk_postage_id = postCommon._id
+    createdComment = await Upc.create(data.comment)
 });
 
 it('Comment postage', async (done) => {
@@ -41,7 +22,7 @@ it('Comment postage', async (done) => {
         comment_descripton: 'Isso é um comentário.'
     })
     .expect(200)
-    expect(response.text).toBe('Comentário à Postagem Postagem Comum foi feito!')
+    expect(response.text).toBe('Comentário à Postagem Postagem comum foi feito!')
     done()
 })
 
