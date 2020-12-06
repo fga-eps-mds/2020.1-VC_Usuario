@@ -30,6 +30,28 @@ it('Anon post without image', async (done) => {
     done()
 })
 
+it('Anon post with image', async (done) => {
+    await request(app).post('/postage/create_anon')
+    .field('post_place', 'DARCY')
+    .field('post_category', 'Limpeza')
+    .field('post_title', 'Dreamcatcher lendas')
+    .field('post_description', 'Dream catcher perfeitas.')
+    .attach('file', '__TEST__/data/logoVC.png')
+    .expect(200)
+    done()
+})
+
+it('Anon post with image gif', async (done) => {
+    await request(app).post('/postage/create_anon')
+    .field('post_place', 'DARCY')
+    .field('post_category', 'Limpeza')
+    .field('post_title', 'Dreamcatcher lendas')
+    .field('post_description', 'Dream catcher perfeitas.')
+    .attach('file', '__TEST__/data/giphy.gif')
+    .expect(500)
+    done()
+})
+
 it('Common post without image', async (done) => {
     const response = await request(app).post('/postage/create_common').send({
         fk_user_id: createdUser._id,
