@@ -1,4 +1,4 @@
-# Sprint 14 
+# Sprint 14 - Cachorro
 
 ## Planejamento 
 
@@ -24,7 +24,7 @@
 ## 3. Objetivos
 A sprint 14 tem como objetivo:
 - Correção dos bugs encontrados;
-- Ajustes gerais da aplicação;
+- Ajustes gerais na aplicação;
 - Desenvolver US20 na qual o usuário poderá denunciar uma postagem.
 
 
