@@ -2,10 +2,6 @@ const UPC = require ('../db/models/UPC')
 
 module.exports = {
 
-    async create_comment (req, res){
-        return res.status(200)
-    },
-
     async list_all (req, res){
         const upc = await UPC.find();
         return res.status(200).json(upc);
@@ -19,6 +15,8 @@ module.exports = {
     async comment_postage (req, res){
 
         try{
+
+            console.log(req.user.user_name)
             await UPC.create({
                 fk_user_id: req.user._id, 
                 fk_postage_id: req.postage._id,
