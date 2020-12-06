@@ -22,7 +22,8 @@ const post = {
 const comment = {
     fk_user_id: '7eaddfeaf110e8001879a324',
     fk_postage_id: '7eaddfeaf110e8001879a324',
-    UPC_description: 'Isto é um comentário'
+    UPC_description: 'Isto é um comentário',
+    UPC_author: 'Sojin'
 }
 
 beforeEach(async () => {
@@ -35,12 +36,21 @@ beforeEach(async () => {
 
 it('Comment postage', async (done) => {
     const response = await request(app).post('/upc/comment_postage').send({
-        postage_id: postCommon._id,
-        user_id: createdUser._id,
-        comment_descripton: 'isso é um comentário'
+        fk_postage_id: postCommon._id,
+        fk_user_id: createdUser._id,
+        comment_descripton: 'Isso é um comentário.'
     })
     .expect(200)
     expect(response.text).toBe('Comentário à Postagem Postagem Comum foi feito!')
+    done()
+})
+
+it('Comment postage without description', async (done) => {
+    await request(app).post('/upc/comment_postage').send({
+        fk_postage_id: postCommon._id,
+        fk_user_id: createdUser._id,
+    })
+    .expect(400)
     done()
 })
 
