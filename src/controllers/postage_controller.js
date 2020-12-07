@@ -241,8 +241,22 @@ module.exports = {
 
     async list_UPCs_by_postage (req, res){
         try{
-            const UPC_list = await UPC.find({ fk_postage_id: req.params.id })
-
+            const list = await UPC.find({ fk_postage_id: req.params.id })
+            
+            let i = 0
+            let UPC_list = []
+            for (upc in list){
+                const user = await User.findById(list[upc].fk_user_id)
+                
+                if(!user){
+                    continue
+                }
+                console.log(i)
+                list[upc].UPC_author = user.user_name  
+                UPC_list[i] = list[upc]    
+                i++
+            }
+            
             return res.status(200).json(UPC_list);
         }catch(err){
             return res.status(400).send({error_list_UPCs_by_postage: err.message}); 
