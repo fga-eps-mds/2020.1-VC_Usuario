@@ -1,5 +1,4 @@
 <!--- Logo, Título e Descrição -->
-
 <div align="center">
     <img width=30% src="https://user-images.githubusercontent.com/38890440/95414994-78bbeb80-0905-11eb-89ea-2264a1bf109d.png" alt="Vamos Cuidar" class="lg">
 </div>
@@ -10,7 +9,6 @@
 
 
 <!--- Badges -->
-
 <div align="center">
     <a href="https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/blob/master/LICENSE">
         <img alt="License" src="https://img.shields.io/github/license/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario">
@@ -19,9 +17,6 @@
         <img alt="Numero de Milestones" src="https://img.shields.io/github/milestones/all/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario">
     </a>
     <a><img alt="Numero de linguagens" src="https://img.shields.io/github/languages/count/fga-eps-mds/2020.1-VC_Usuario"></a>
-    <!---<a href="https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues?q=is%3Aissue+is%3Aclosed">
-        <img alt="Versão da Release" src="https://img.shields.io/github/v/release/fga-eps-mds/2020.1-VC_Usuario">
-    </a>-->
     <a href="https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues">
         <img alt="Numero de issues closed" src="https://img.shields.io/github/issues-closed/fga-eps-mds/2020.1-VC_Usuario">
     </a>
@@ -34,12 +29,11 @@
 </div>
 
 <h4 align="center"> 
-	🚧  Vamos Cuidar: Em desenvolvimento...  🚧
+	🚧  Vamos Cuidar: Concluído!!  🚧
 </h4>
 
 
 <!--- Sumário -->
-
 <p align="center">
 	 <a href="#-sobre-o-projeto">Sobre</a> •
 	 <a href="#-ideia-e-incentivo">Ideia e Incentivo</a> •
@@ -72,14 +66,10 @@ O projeto se baseia numa proposta do evento, ocorrido nos dias 21 e 22 de novemb
 O projeto tem o <strong>incentivo e apoio do DAF</strong>, Decanato de Administração da UnB. A falta de um <strong>meio de comunicação não burocrático e prático</strong> para a notificação desses tais problemas pode ocasionar inúmeros prejuízos para a universidade.
 </p>
 
-<!---<p style="text-align: justify;">&emsp;&emsp; 
-A universidade é um espaço público, que passa de geração a geração. O efetivo desenvolvimento do produto, <strong>agrega significativamente</strong> o cotidiano da comunidade universitária, <strong>preservando e enriquecendo</strong> a Universidade de Brasília do <strong>presente e a do futuro</strong>.
-</p>-->
 
-## 📦 Release 1 08/10
+## 📦 Releases 1 e 2 
 
-### :point_right: Slide: [Slide Release 1](https://www.canva.com/design/DAEJ8ADMuMY/2atFykuyQTcYDCRogS3hsw/view?utm_content=DAEJ8ADMuMY&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent);
-### :point_right: Vídeo: [Vídeo Release 1](https://www.youtube.com/watch?v=jbmP2RJcWDU&ab_channel=DenysR%C3%B3geres).
+**Veja os slides e vídeos das Releases 1(08/10) e 2(10/12)** [aqui](https://github.com/fga-eps-mds/2020.1-VC_Usuario/wiki/Releases)
 
 
 ---
