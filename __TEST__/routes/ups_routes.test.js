@@ -46,12 +46,6 @@ it('Support postage', async (done) => {
         user_password: 'ups123'
     }).expect(200)
 
-    const user2 = await request(app).post('/user/register_user').send({
-        user_name: 'UPS Test2',
-        user_email: 'ups2@vc.com',
-        user_password: 'ups123'
-    }).expect(200)
-
     const post = await request(app).post('/postage/create_common').send({
         fk_user_id: user.body.User._id,
         post_place: 'FCE',

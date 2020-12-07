@@ -1,6 +1,4 @@
-const { json } = require('body-parser');
 const request = require('supertest');
-const { response } = require('../../src/app');
 const app = require('../../src/app');
 const Postage = require('../../src/db/models/postage')
 const Ups = require('../../src/db/models/UPS')
@@ -80,11 +78,11 @@ it('List common posts', async (done) => {
 })
 
 it('List posts by category', async (done) => {
-    // Como listar mais de uma postagem com base nas categorias?
-    // O response.body não está retornando nenhuma postagem. Como passar a categoria que quero filtrar?
-    await request(app).get('/postage/list_by_category')
+    
+    const response = await request(app).get('/postage/list_by_category')
+    .query({categoria: 'Limpeza'})
     .expect(200)
-    // expect(response.body.posts.post_category).toBe('Segurança')
+    expect(response.body.posts).toHaveLength(1)
     done()
 })
 

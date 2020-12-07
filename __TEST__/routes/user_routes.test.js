@@ -20,7 +20,7 @@ it('User registration', async (done) => {
 })
 
 it('User update', async (done) => {
-    // Como passar os dados para serem atualizados? Não funciona direito
+    
     await request(app).put(`/user/update/${createdUser._id}`).send({
         nome: 'Atualizando nome',
     })
@@ -107,7 +107,7 @@ it('User validate session with a invalid token', async (done) => {
     const getToken = await request(app).post('/user/login').send({
         email: createdUser.user_email,
         password: 'teste123'
-    })
+    }).expect(200)
 
     await request(app).get('/user/validate_session')
     .set('Authorization', `Bearer invalid`)

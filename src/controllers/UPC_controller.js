@@ -16,7 +16,6 @@ module.exports = {
 
         try{
 
-            console.log(req.user.user_name)
             await UPC.create({
                 fk_user_id: req.user._id, 
                 fk_postage_id: req.postage._id,
