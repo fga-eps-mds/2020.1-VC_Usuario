@@ -10,7 +10,7 @@ const UPR = require('./controllers/UPR_controller');
 
 //Main
 router.get('/', (req, res) => {
-    res.json({"esta": "funcionando"});
+    res.json({"API Vamos Cuidar - Usuario": "funcionando"});
 });
 
 //Postages routes
