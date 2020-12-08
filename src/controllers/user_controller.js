@@ -73,9 +73,11 @@ module.exports = {
     async update_user_comments_author(req, res){
         try{
             const comment_list = await UPC.find({ fk_user_id: req.params.id })
-
-            for (var i = 0; i < comment_list.length; i++){
+            
+            var i = 0
+            while(i < comment_list.length){
                 await comment_list[i].update({ UPC_author: req.body.nome })
+                i++
             }
 
             return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
