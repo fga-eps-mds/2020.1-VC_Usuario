@@ -8,6 +8,11 @@ const UPS = require('./controllers/UPS_controller');
 const UPC = require('./controllers/UPC_controller');
 const UPR = require('./controllers/UPR_controller');
 
+//Main
+router.get('/', (req, res) => {
+    res.json({"API Vamos Cuidar - Usuario": "funcionando"});
+});
+
 //Postages routes
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_anon);
 router.post('/postage/create_common', multer(multerConfig).single("file"), User.check_user_and_postage_exist, Postage.create_postage, Postage.create_common);

@@ -1,8 +1,8 @@
-const Users = require('../models/user.js');
+const Users = require('../db/models/user.js');
 const bcrypt = require('bcrypt')
-const Postage = require ('../models/postage.js');
-const UPS = require('../models/UPS.js');
-const UPC = require('../models/UPC.js');
+const Postage = require ('../db/models/postage.js');
+const UPS = require('../db/models/UPS.js');
+const UPC = require('../db/models/UPC.js');
 
 module.exports = {
     

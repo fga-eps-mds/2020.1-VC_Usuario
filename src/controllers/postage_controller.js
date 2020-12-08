@@ -1,8 +1,8 @@
-const Postage = require ('../models/postage.js');
-const UPS = require('../models/UPS.js');
-const UPC = require('../models/UPC.js');
-const User = require('../models/user.js');
-const UPR = require('../models/UPR.js');
+const Postage = require ('../db/models/postage.js');
+const UPS = require('../db/models/UPS.js');
+const UPC = require('../db/models/UPC.js');
+const User = require('../db/models/user.js');
+const UPR = require('../db/models/UPR.js');
 
 module.exports = {
 
@@ -131,7 +131,7 @@ module.exports = {
 
     async update_status (req, res){
         try{
-            if(req.body.post_status != "Aguardando" || req.body.post_status != "Em Andamento" || req.body.post_status != "Resolvido"){
+            if(req.body.post_status != "Aguardando" && req.body.post_status != "Em Andamento" && req.body.post_status != "Resolvido"){
                 return res.status(400).send({msg: 'Status incorreto'});
             }
 
@@ -147,7 +147,8 @@ module.exports = {
                 user.user_score += 400;
                 await user.update({user_score: user.user_score});
             }          
-		    return res.status(200).json({post});
+            
+            return res.status(200).json({post});
         }catch(err){
             return res.status(400).send({error_update_status: err.message});
         }

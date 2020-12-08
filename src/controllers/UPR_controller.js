@@ -1,5 +1,5 @@
-const UPR = require ('../models/UPR.js');
-const Postage = require ('../models/postage.js');
+const UPR = require ('../db/models/UPR.js');
+const Postage = require ('../db/models/postage.js');
 
 module.exports = {
 

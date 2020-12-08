@@ -1,4 +1,4 @@
-const UPS = require ('../models/UPS.js');
+const UPS = require ('../db/models/UPS.js');
 
 module.exports = {
 
@@ -9,7 +9,7 @@ module.exports = {
 
             return res.status(200).json(ups);
 
-        } catch(error){
+        } catch(err){
             return res.status(400).send({ error_create_ups: err.message});
         }
     },
