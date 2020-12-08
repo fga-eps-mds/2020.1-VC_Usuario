@@ -3,7 +3,7 @@
 ## Planejamento 
 
 ## 1. Visão Geral
-**Número da Sprint:** 14<br>
+**Número da Sprint:** 15<br>
 **Data de Início:** 03/11/2020<br>
 **Data de Término:** 09/12/2020<br>
 **Duração:** 7 dias<br>
