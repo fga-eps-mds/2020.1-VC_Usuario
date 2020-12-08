@@ -11,7 +11,8 @@
 | 05/10/2020 | 2.1 | Inserção da pontuação de novas Histórias de Usuário no tópico 3 | Bruno Félix |
 | 05/10/2020 | 2.2 | Inserção da data nos tópicos 3.1 e 3.2                          | Bruno Félix |
 | 06/10/2020 | 2.3 | Revisão da US08                                                 | Bruno Félix |
-| 01/12/2020 | 2.4 | Retirada da US18 e US21                                         | Denys Rógeres |
+| 01/12/2020 | 3.0 | Retirada da US16, US18 e US21 perante ao novo escopo do projeto | Denys Rógeres |
+
 
 ## 1. Épicos
 
@@ -57,7 +58,6 @@
 | E1 | FT01 | US13 | Eu, como usuário logado, desejo editar minha conta                                                  | 2 |
 | E1 | FT01 | US14 | Eu, como usuário logado, desejo excluir minha conta                                                 | 2 |
 | E2 | FT03 | US15 | Eu, como usuário, desejo filtrar a lista de postagens por categoria                                 | 3 |
-| E2 | FT05 | US16 | Eu, como usuário logado, desejo receber notificações caso uma postagem minha tenha sido resolvida, reportada ou não aceita                                                                                                            | 3 |
 | E3 | FT07 | US20 | Eu, como usuário logado, desejo denúnciar uma postagem                                              | 3 |
 | E3 | FT06 | US22 | Eu, como usuário logado, desejo comentar em uma determinada postagem                                | 3 |
 
@@ -74,7 +74,7 @@
 | **Data de Retirada** | **Épico** | **Feacture** | **História de Usuário** | **Descrição** | **Pontos** |
 | --- | --- | --- | --- | --- | --- |
 | 22/09 | E1 | FT01 | US17 | Eu, como sistema, preciso verificar cadastro uma de nova conta conta por veio dos dados da universidade                                                                                                            | 5 | 
-| 01/12 | E3 | FT10 | US18 | Eu, como usuário, posso usar a aplicação somente dentro das dependências da universidade            | 5 |
 | 22/09 | E3 | FT08 | US19 | Eu, como usuário, desejo ter uma área de ajuda de uso da aplicação                                                                                                               | 3 |
-| 01/12 | E3 | FT06 | US21 | Eu, como usuário, desejo compartilhar uma determinado postagem                                      | 3 |
-
+| 01/12 | E2 | FT05 | US16 | Eu, como usuário logado, desejo receber notificações caso uma postagem minha tenha sido resolvida, reportada ou não aceita                                                                                                 | 3 |
+| 01/12 | E3 | FT10 | US18 | Eu, como usuário, posso usar a aplicação somente dentro das dependências da universidade   | 5 |
+| 01/12 | E3 | FT06 | US21 | Eu, como usuário, desejo compartilhar uma determinado postagem                             | 3 |
