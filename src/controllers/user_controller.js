@@ -40,17 +40,23 @@ module.exports = {
     async update(req, res, next){
         try{
             const user = await Users.findById(req.params.id);
-
+            const need_update = !(user.user_name == req.body.nome)
             var version = user.__v + 1
             await user.update({user_email: req.body.email, user_name: req.body.nome, __v: version});
 
-            return next()
+            if(need_update){
+                return next()
+            }else{
+                return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
+            }
+
+            
         }catch(err){
             return res.status(400).send({error_update: err.message});
         }
     },
 
-    async update_user_postages_author(req, res){
+    async update_user_postages_author(req, res, next){
         try{
             const postage_list = await Postage.find({ fk_user_id: req.params.id })
 
@@ -58,9 +64,25 @@ module.exports = {
                 await postage_list[i].update({ post_author: req.body.nome })
             }
 
-            return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
+            return next();
         }catch(err){
             return res.status(400).send({error_update_user_postages_author: err.message});
+        }
+    },
+
+    async update_user_comments_author(req, res){
+        try{
+            const comment_list = await UPC.find({ fk_user_id: req.params.id })
+            
+            var i = 0
+            while(i < comment_list.length){
+                await comment_list[i].update({ UPC_author: req.body.nome })
+                i++
+            }
+
+            return res.status(200).send({msg: 'Dados Atualizados com sucesso!'});
+        }catch(err){
+            return res.status(400).send({error_update_user_comments_author: err.message});
         }
     },
 
