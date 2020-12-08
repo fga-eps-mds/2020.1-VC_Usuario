@@ -22,7 +22,7 @@
 | 05/10/2020 | 2.2 | Revisão do Tópico 7                                        | Bruno Félix |
 | 05/10/2020 | 2.3 | Correção de alguns erros ortográficos do documento         | Enzo Gabriel |
 | 09/10/2020 | 2.4 | Inserção de restrições e correção de erros ortográficos    | Daniel Porto e Emily Dias |
-| 08/12/2020 | 2.5 | Revisão do documento                                       | Bruno Félix |
+| 08/12/2020 | 3.0 | Revisão do documento                                       | Bruno Félix |
 
 
 ## 1. Introdução

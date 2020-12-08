@@ -11,7 +11,7 @@
 | 05/10/2020 | 2.1 | Inserção da pontuação de novas Histórias de Usuário no tópico 3 | Bruno Félix |
 | 05/10/2020 | 2.2 | Inserção da data nos tópicos 3.1 e 3.2                          | Bruno Félix |
 | 06/10/2020 | 2.3 | Revisão da US08                                                 | Bruno Félix |
-| 01/12/2020 | 3.0 | Retirada da US16, US18 e US21 perante ao novo escopo do projeto | Denys Rógeres |
+| 01/12/2020 | 3.0 | Revisão do documento perante ao novo escopo do projeto          | Denys Rógeres |
 
 
 ## 1. Épicos
