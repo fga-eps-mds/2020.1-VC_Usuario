@@ -4,7 +4,7 @@ const app = require('../../src/app')
 it('Main route test', async done => {
     await request(app).get('/')
     .expect(200)
-    .expect({"esta": "funcionando"})
+    .expect({"API Vamos Cuidar - Usuario": "funcionando"})
     done()
 })
 

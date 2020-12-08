@@ -28,6 +28,16 @@ it('User update', async (done) => {
     done()
 })
 
+it('User update just email', async (done) => {
+    
+    await request(app).put(`/user/update/${createdUser._id}`).send({
+        nome: createdUser.user_name,
+        email: 'att@VTTCue.com'
+    })
+    .expect(200)
+    done()
+})
+
 it('User list', async (done) => {
     await request(app).get('/user/list_all')
     .expect(200)

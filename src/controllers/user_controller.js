@@ -41,7 +41,6 @@ module.exports = {
         try{
             const user = await Users.findById(req.params.id);
             const need_update = !(user.user_name == req.body.nome)
-
             var version = user.__v + 1
             await user.update({user_email: req.body.email, user_name: req.body.nome, __v: version});
 
