@@ -1,29 +1,9 @@
-const Users = require('../models/user.js');
+const Users = require('../db/models/user.js');
 const auth_config = require('../config/auth.json');
 const JWT = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 module.exports = {
-
-    async password_validation(req, res, next) {
-        try{
-            if(!await bcrypt.compare(req.body.password, req.user.user_password)){
-                return res.status(401).send({msg: 'Senha Invalida'});
-            }
-    
-            return next();
-        }catch(err){
-            return res.status(400).send({error_password_validation: err.message});
-        }
-    },
-
-    async password_return(req, res) {
-        try{
-            return res.status(200).send({msg: 'Senha Validada'});
-        }catch(err){
-            return res.status(400).send({error_password_return: err.message});
-        }
-    },
 
     async authentication (req, res) {
         try{
