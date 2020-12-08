@@ -1,4 +1,4 @@
-# O que fazer antes de contribuir?
+# O que fazer antes de Contribuir?
 
 * Acesse os repositórios do projeto no GitHub:
     * [Repositório Vamos Cuidar Usuário - Back-end](https://github.com/fga-eps-mds/2020.1-VC_Usuario);
@@ -7,7 +7,7 @@
  e propósitos.
 
 
-# Como contribuir?
+# Como Contribuir?
 
 * Leia o [Código de Conduta](/CODE_OF_CONDUCT.md) do projeto;
 * Veja as [Políticas](https://fga-eps-mds.github.io/2020.1-VC_Usuario/#/docs/Policies) do projeto.
@@ -20,7 +20,7 @@
 
 * Submeta um [_Pull Request_](https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar/compare) seguindo o padrão do projeto;
 
-* Seu Pull Request será revisado e que agregará muito à aplicação!
+* Seu Pull Request será revisado e agregará muito à aplicação!
 
 ## Adicionando e/ou alterando alguma Funcionalidade
 
@@ -32,4 +32,4 @@
 
 * Seu Pull Request será revisado e agregará muito à aplicação!
 
-## Obrigado pela contribuição! 😊
+## Obrigado pela Contribuição! 😊
