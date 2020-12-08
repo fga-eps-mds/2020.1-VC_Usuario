@@ -10,5 +10,7 @@
 |08/11/2020|0.6|Atualização do documento a partir da sprint 10|Daniel Porto|
 |15/11/2020|0.7|Atualização do documento a partir da sprint 11|Denys Rógeres|
 |01/12/2020|0.8|Atualização do documento a partir da sprint 14|Denys Rógeres|
+|07/12/2020|1.0|Refatorando visualização do Roadmap|Denys Rógeres|
+
 # Roadmap
 ![Roadmap](../docs/Imagens/Roadmap/Roadmap-vamos-cuidar.png)
