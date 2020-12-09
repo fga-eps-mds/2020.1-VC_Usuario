@@ -157,3 +157,13 @@ Ao longo do semestre o que eu mais aprendi é que se eu não sei de algo, eu nã
 
 
 ## Conclusão
+<p style="text-align: justify;">&emsp;&emsp;
+Este semestre foi singular na história, a COVID-19 nos obrigou a viver sobre novas perspectivas, no meio acadêmico não foi diferente. O ensino a distância inferido pelas atuais circunstâncias trouxe notórias dificuldades para o grupo durante o desenvolvimento do projeto, a maneira de que a matéria era trabalhada, como aulas, reuniões e conversas, tiveram ser que totalmente adaptada para o ambiente online. Assim como todo o mundo, a adequação foi complicada mas aos poucos aconteceu de tal forma que no final estavamos totalmente imergidos nessa nova realidade.
+</p>
+ 
+<p style="text-align: justify;">&emsp;&emsp;
+Um padrão trabalhado em semestres anteriores na disciplina era de grupos de MDS trabalharem juntos a grupos de EPS, coisa que não aconteceu conosco. Essa falta de pessoas mais experientes ao nosso lado gerou inúmeras incertezas no início do projeto, a necessidade de estudar e entender tudo relacionado a desenvolvimento de software gerou dificuldades que só foram enfrentadas perante a um grande esforço de cada integrante em ajudar um ao outro no processo. Ao final de tudo ficou um aprendizado de confiar mais em si e nos semelhantes ao seu lado para juntos conseguirem buscar bons resultados, cada integrante certamente desenvolveu uma habilidade de aprendizado, independência e comprometimento que certamente irão aplicar em suas vidas acadêmicas.
+</p>
+ 
+<p style="text-align: justify;">&emsp;&emsp;
+Por fim, aprendemos que é crucial para um grupo funcionar que a relação entre seus integrantes seja boa e harmônica, aconteceu isso em nosso projeto. MDS é uma disciplina marcada pela regular necessidade de entrega e comprimento de prazos, a cada semana se deve obter pesquisas, funcionalidade, correções e outras demais coisas, sendo assim, é normal que alguns pegam o ritmo mais rápido que outro. Nas primeira semanas tivemos alguns integrantes muito sobrecarregados e outros pouco ouvidos justamente por essa urgência que a matéria propõe. Conseguimos sentar e conversar sobre todos os pontos que negativos que tínhamos naquele momento e traçar maneiras de, juntos, enfrentarmos esses problemas e construir uma comunicação melhor, mais participativa e processualmente mais coletiva. De lá pra cá o grupo criou uma amizade muito interessante, senso grupal, uma filosofia de um só que alavancou e muito nosso trabalho, proporcionando um ambiente bem favorável para o desenvolvimento do produto Vamos Cuidar.
