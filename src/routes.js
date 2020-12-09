@@ -8,6 +8,11 @@ const UPS = require('./controllers/UPS_controller');
 const UPC = require('./controllers/UPC_controller');
 const UPR = require('./controllers/UPR_controller');
 
+//Main
+router.get('/', (req, res) => {
+    res.json({"API Vamos Cuidar - Usuario": "funcionando"});
+});
+
 //Postages routes
 router.post('/postage/create_anon', multer(multerConfig).single("file"), Postage.create_postage, Postage.create_anon);
 router.post('/postage/create_common', multer(multerConfig).single("file"), User.check_user_and_postage_exist, Postage.create_postage, Postage.create_common);
@@ -25,7 +30,7 @@ router.put('/postage/update_one', User.check_user_and_postage_exist, Postage.che
 //Users routers
 router.post('/user/register_user', User.register);
 router.get('/user/list_postages/:id', User.find_user, User.list_user_postages, Postage.take_ups_of_postages);
-router.put('/user/update/:id', User.update, User.update_user_postages_author);
+router.put('/user/update/:id', User.update, User.update_user_postages_author, User.update_user_comments_author);
 router.delete('/user/delete/:id', User.find_user, User.delete_user_objects_child, User.delete);
 
 //Auth routers
