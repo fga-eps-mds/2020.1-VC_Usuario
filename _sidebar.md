@@ -1,7 +1,7 @@
 - [**Home**](README.md)
 - [Canvas](/docs/Canvas.md)
 - [Documento de Visão](/docs/Documento_de_Visao.md)
-- [Documento de Arquiteura](/docs/Documento_de_Arquitetura.md)
+- [Documento de Arquitetura](/docs/Documento_de_Arquitetura.md)
 - [Identidade Visual](/docs/Identidade_Visual)
 - [Plano de Riscos](/docs/Plano_riscos.md)
 - [Post Mortem](/docs/Post_Mortem.md)
