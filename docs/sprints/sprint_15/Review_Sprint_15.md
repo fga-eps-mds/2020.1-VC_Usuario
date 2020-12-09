@@ -78,12 +78,12 @@
 ![Presença](../../Imagens/Sprints/Daily_Sprint15.png)
 
 ## 7. Animal da Sprint
-A hiena vive em regiões da savana africana, sendo considerada um extraordinário predador. A fama de serem carniceiras não é merecida, pois são consideradas por alguns como caçadoras formidáveis, perseguindo suas presas a velocidades de até 64 km/h e caçando em grupos com até 100 indivíduos. São animais que são representados em filmes por sua "risada" característica e este é o nosso estado atual, rindo pelo fim do projeto.
+A hiena vive em regiões da savana africana, sendo considerada um extraordinário predador. A fama de serem carniceiras não é merecida, pois são consideradas por alguns como caçadoras formidáveis, perseguindo suas presas a velocidades de até 64 km/h e caçando em grupos com até 100 indivíduos. São animais que são representados em filmes por sua "risada" característica e este é o nosso estado atual, sorrindo com o fim do projeto.
 
 ## 8. Análise do Scrum Master
 Esta última sprint foi bem tranquila, deixamos para fazer os ajustes gerais, revisar alguns documentos e preparar a apresentação. 
 É notavél a evolução de cada integrante do grupo ao longo do desenvolvimento, evolução esta que é refletida tanto nas hard skills quanto nas soft skills.
-Acredito que o fato de não ter dito EPS, trouxe para a equipe bastante amadurecimento pois buscamos muito conhecimento para tormarmos as melhores decisões.
+Acredito que o fato de não ter tido EPS, trouxe para a equipe bastante amadurecimento pois buscamos muito conhecimento para tormarmos as melhores decisões.
 Entregamos nessa sprint nossa aplicação que é fruto de muito estudo e trabalho duro e isso trouxe bastente aprendizado para toda equipe.
 
 
