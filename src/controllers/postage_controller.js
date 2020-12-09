@@ -131,7 +131,7 @@ module.exports = {
 
     async update_status (req, res){
         try{
-            if(req.body.post_status != "Aguardando" && req.body.post_status != "Em Andamento" && req.body.post_status != "Resolvido"){
+            if(req.body.post_status != "Arquivado" && req.body.post_status != "Aguardando" && req.body.post_status != "Em andamento" && req.body.post_status != "Resolvido"){
                 return res.status(400).send({msg: 'Status incorreto'});
             }
 
