@@ -1,5 +1,4 @@
 <!--- Logo, Título e Descrição -->
-
 <div align="center">
     <img width=30% src="https://user-images.githubusercontent.com/38890440/95414994-78bbeb80-0905-11eb-89ea-2264a1bf109d.png" alt="Vamos Cuidar" class="lg">
 </div>
@@ -10,7 +9,6 @@
 
 
 <!--- Badges -->
-
 <div align="center">
     <a href="https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/blob/master/LICENSE">
         <img alt="License" src="https://img.shields.io/github/license/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario">
@@ -19,9 +17,6 @@
         <img alt="Numero de Milestones" src="https://img.shields.io/github/milestones/all/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario">
     </a>
     <a><img alt="Numero de linguagens" src="https://img.shields.io/github/languages/count/fga-eps-mds/2020.1-VC_Usuario"></a>
-    <!---<a href="https://github.com/fga-eps-mds/2020.1-Vamos_Cuidar-Usuario/issues?q=is%3Aissue+is%3Aclosed">
-        <img alt="Versão da Release" src="https://img.shields.io/github/v/release/fga-eps-mds/2020.1-VC_Usuario">
-    </a>-->
     <a href="https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues">
         <img alt="Numero de issues closed" src="https://img.shields.io/github/issues-closed/fga-eps-mds/2020.1-VC_Usuario">
     </a>
@@ -29,18 +24,16 @@
         <img alt="Numero de PRs closed" src="https://img.shields.io/github/issues-pr-closed/fga-eps-mds/2020.1-VC_Usuario">
     </a>
     <a href="https://codeclimate.com/github/fga-eps-mds/2020.1-VC_Usuario">
-      <img alt="Maintainability" src="https://api.codeclimate.com/v1/badges/9ceab9b0533182362c16/maintainability">
+        <img alt="Maintainability" src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" />
     </a>
-    
 </div>
 
 <h4 align="center"> 
-	🚧  Vamos Cuidar: Em desenvolvimento...  🚧
+	✅ Vamos Cuidar: Concluído!! ✅
 </h4>
 
 
 <!--- Sumário -->
-
 <p align="center">
 	 <a href="#-sobre-o-projeto">Sobre</a> •
 	 <a href="#-ideia-e-incentivo">Ideia e Incentivo</a> •
@@ -58,7 +51,7 @@
 ---
 
 
-## 🏆 Sobre o projeto
+## 🏆 Sobre o produto
 <p style="text-align: justify;">&emsp;&emsp; 
 O Vamos Cuidar é uma <strong>aplicação PWA</strong> que tem como objetivo auxiliar a UnB na <strong>maior agilidade em resolver problemas</strong>, sejam eles estruturais, acadêmicos, processuais entre outros, que impactam negativamente o dia a dia da universidade. <strong>Com uma plataforma prática e direta</strong>, a comunidade universitária pode <strong>fazer postagens sobre problemas</strong> que enfrentam no cotidiano, e com isto, os gestores podem analisar e tomar as medidas necessárias para <strong>resolver esses problemas reportados</strong>.
 </p>
@@ -73,14 +66,10 @@ O projeto se baseia numa proposta do evento, ocorrido nos dias 21 e 22 de novemb
 O projeto tem o <strong>incentivo e apoio do DAF</strong>, Decanato de Administração da UnB. A falta de um <strong>meio de comunicação não burocrático e prático</strong> para a notificação desses tais problemas pode ocasionar inúmeros prejuízos para a universidade.
 </p>
 
-<!---<p style="text-align: justify;">&emsp;&emsp; 
-A universidade é um espaço público, que passa de geração a geração. O efetivo desenvolvimento do produto, <strong>agrega significativamente</strong> o cotidiano da comunidade universitária, <strong>preservando e enriquecendo</strong> a Universidade de Brasília do <strong>presente e a do futuro</strong>.
-</p>-->
 
-## 📦 Release 1 08/10
+## 📦 Releases 1 e 2 
 
-### :point_right: Slide: [Slide Release 1](https://www.canva.com/design/DAEJ8ADMuMY/2atFykuyQTcYDCRogS3hsw/view?utm_content=DAEJ8ADMuMY&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent);
-### :point_right: Vídeo: [Vídeo Release 1](https://www.youtube.com/watch?v=jbmP2RJcWDU&ab_channel=DenysR%C3%B3geres).
+**Veja os slides e vídeos das Releases 1 e 2** [aqui](https://github.com/fga-eps-mds/2020.1-VC_Usuario/wiki/Releases)
 
 
 ---
@@ -98,54 +87,38 @@ A universidade é um espaço público, que passa de geração a geração. O efe
 ## 💻 Aplicação
 
 <p align="center">
-  <kbd>
-    <img src="https://user-images.githubusercontent.com/38890440/95411288-87ea6b80-08fc-11eb-8ca9-f28f3943977f.png" width="250">
-  </kbd>
-  &nbsp; &nbsp; &nbsp; &nbsp;
-  <kbd>
-    <img src="https://user-images.githubusercontent.com/38890440/95411287-8751d500-08fc-11eb-9078-394683d67a03.png" width="250">
-  </kbd>
+    <img src="https://user-images.githubusercontent.com/38890440/101406908-ddb9a080-38b8-11eb-8044-9a7cbf238294.png" width="350">
+    <img src="https://user-images.githubusercontent.com/38890440/101407107-2bcea400-38b9-11eb-8cd3-f4b91885e56e.png" width="350">
 </p>
 
 <p align="center">
-  <kbd>
-    <img src="https://user-images.githubusercontent.com/38890440/95411285-86b93e80-08fc-11eb-8525-0c585bdd0883.png" width="800">
-  </kbd>
+    <img src="https://user-images.githubusercontent.com/38890440/101640771-ad384a80-3a0f-11eb-9cc7-8f688b81b817.png" width="800">
 </p>
+
+**Veja mais imagens da aplicação** [aqui](https://github.com/fga-eps-mds/2020.1-VC_Usuario/wiki/Imagens-da-Aplica%C3%A7%C3%A3o)
 
 ---
 
 
-## 🛠 Tecnologias
-
-### :point_right: Front End ([Vue.js](https://vuejs.org/))
-  - Axios;
-  - Vue/cli.
-
-### :point_right: Back End ([Node.js](https://nodejs.org/en/) + [MongoDB](https://www.mongodb.com/))
-- Express;
-- Cors;
-- Bcrypt;
-- Body-parser;
-- Dotenv;
-- Mongoose;
-- Multer;
-- Nodemon.
-
-
 ## 🚀 Como rodar o projeto
 
-### :white_check_mark: Pré requisitos
 
+
+### 🛠 Tecnologias e Pré-Requisitos
+
+#### :white_check_mark: Pré-Requisitos
 - Docker;
 - Docker-compose;
 - Node/ npm.
 
-**Saiba como instalar os pré requisitos** [aqui](https://github.com/fga-eps-mds/2020.1-VC_Usuario/wiki/Instalar-Pr%C3%A9-Requisitos)
+#### :point_right: Front End ([Vue.js](https://vuejs.org/))
+#### :point_right: Back End ([Node.js](https://nodejs.org/en/) + [MongoDB](https://www.mongodb.com/))
+
+**Saiba todas as tecnologias e os pré-requisitos do projeto** [aqui](https://github.com/fga-eps-mds/2020.1-VC_Usuario/wiki/Instalar-Pr%C3%A9-Requisitos)
 
 ### :heavy_check_mark: Instalando e Executando
 
-#### :point_right: Rodando o Backend
+#### :white_check_mark: Rodando o Backend
 ```bash
 # Clonando o Repositório
 $ git clone https://github.com/fga-eps-mds/2020.1-VC_Usuario.git
@@ -157,8 +130,9 @@ $ cd 2020.1-VC_Usuario
 $ sudo docker-compose build
 $ sudo docker-compose up
 ```
+**O BackEnd localmente rodará na porta:** [localhost:8000](http://localhost:8000/)*
 
-#### :point_right: Rodando o FrontEnd
+#### :white_check_mark: Rodando o FrontEnd
 ```bash
 # Clonando o Repositório
 $ git clone https://github.com/fga-eps-mds/2020.1-VC_Usuario-FrontEnd
@@ -170,20 +144,20 @@ $ cd 2020.1-VC_Usuario-FrontEnd
 $ sudo docker-compose build
 $ sudo docker-compose up
 ```
+**O FrontEnd localmente rodará na porta:** [localhost:8080](http://localhost:8080/)*<br><br>
+<i>*É necessário rodar simultaneamente o backend e o frontend para o funcionamento completo.</i>
 
-#### :point_right: Rodando toda a aplicação
-**É necessário rodar simultaneamente o backend e o frontend para o funcionamento completo**;<br>
-**O BackEnd rodará na porta:** [localhost:8000](http://localhost:8000/);<br>
-**O FrontEnd rodará na porta:** [localhost:8080](http://localhost:8080/).<br>
+### :heavy_check_mark: Deploy da Aplicação [Vamos Cuidar](https://github.com/fga-eps-mds/2020.1-VC_Usuario/wiki/Deploy).<br>
+
+
+---
+
 
 ## 🤝 Como contribuir para o projeto
 
 Esse é um projeto Open Source que está disponível para que qualquer um da comunidade possa contribuir e aprimora-lo.
 
 Para contribuir, por favor acesse nosso processo de contribuição: [Como Contribuir](https://fga-eps-mds.github.io/2020.1-VC_Usuario/#/CONTRIBUTING). :punch:
-
-
----
 
 
 ## 💆‍ Desenvolvedores
