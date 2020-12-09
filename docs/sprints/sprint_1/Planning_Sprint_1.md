@@ -24,14 +24,14 @@
 
 ## 3. Objetivos
 A sprint 1 tem como objetivo:
-- Estudo das funções de uma equipe ágil 
-- Estudo sobre documentação
-- Criação de canal de comunicação no aplicativo Discord
-- Treinamento sobre documentação
-- Entrar em contato com os ganhadores do hackathon para melhor entendimento do tema 
-- Treinamento de tecnologias
-- Estudo sobre estruturação de uma aplicação
-- Treinamento de Git e GitFlow
+- Estudo das funções de uma equipe ágil; 
+- Estudo sobre documentação;
+- Criação de canal de comunicação no aplicativo Discord;
+- Treinamento sobre documentação;
+- Entrar em contato com os ganhadores do hackathon para melhor entendimento do tema;
+- Treinamento de tecnologias;
+- Estudo sobre estruturação de uma aplicação;
+- Treinamento de Git e GitFlow.
 
 
 

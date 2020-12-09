@@ -53,18 +53,18 @@
 
 ## 4. Retrospective
 ### Pontos Positivos:
-- Qualidade nos pareamentos
-- Proatividade
-- Melhora na comunicação e transparência
-- Melhora no compartilhamento de fontes de conhecimento
+- Qualidade nos pareamentos;
+- Proatividade;
+- Melhora na comunicação e transparência;
+- Melhora no compartilhamento de fontes de conhecimento.
 
 ### Pontos Negativos:
-- Overengineering 
+- Overengineering. 
 
 ### Pontos de Melhoria:
-- Organização na execução do vídeo para release
-- Melhorar velocidade de revisão dos Pull Requests
-- Burndown
+- Organização na execução do vídeo para release;
+- Melhorar velocidade de revisão dos Pull Requests;
+- Burndown.
 
 
 ## 5. Quadro de Conhecimento

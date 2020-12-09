@@ -24,8 +24,8 @@
 
 ## 3. Objetivos
 A sprint 5 tem como objetivo:
-- Criar uma model para a postagem e para o usuário.
-- Definir uma rota para a postagem e testar no back se a postagem foi criada.
+- Criar uma model para a postagem e para o usuário;
+- Definir uma rota para a postagem e testar no back se a postagem foi criada;
 - Criar a tela de criar a postagem e fazer a mesma pegar a rota para a postagem.
 
 ## 4. Sprint Backlog
