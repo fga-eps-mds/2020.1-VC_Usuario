@@ -24,11 +24,11 @@
 
 ## 3. Objetivos
 A sprint 2 tem como objetivo:
-- Desenvolvimento da documentação
-- Debate sobre tecnologias, escopo e documentos 
-- Estudo, levantamento e debate sobre os requisitos dos produtos
-- Estudo e levantamento de tecnologias 
-- Reunião com clientes, grupo aliado e membros representantes da UnB
+- Desenvolvimento da documentação;
+- Debate sobre tecnologias, escopo e documentos; 
+- Estudo, levantamento e debate sobre os requisitos dos produtos;
+- Estudo e levantamento de tecnologias; 
+- Reunião com clientes, grupo aliado e membros representantes da UnB.
 
 ## 4. Sprint Backlog
 Issues adicionadas: 

@@ -69,22 +69,22 @@
 
 ## 4. Retrospective
 ### Pontos Positivos:
-- Demos os primerios passos
-- Trabalho em equipe
-- Evolução na comunicação
-- Melhora na colaboração
-- Melhora no relacionamento com membros
-- Reuniões focadas
+- Demos os primerios passos;
+- Trabalho em equipe;
+- Evolução na comunicação;
+- Melhora na colaboração;
+- Melhora no relacionamento com membros;
+- Reuniões focadas.
 
 ### Pontos Negativos:
-- Empacados no projeto
-- Dependência de pessoas/fatores externos
-- Falta de transparência (sincronia e transmissão de informações)
-- Demora na criação das issues
+- Empacados no projeto;
+- Dependência de pessoas/fatores externos;
+- Falta de transparência (sincronia e transmissão de informações);
+- Demora na criação das issues.
 
 ### Pontos de Melhoria:
-- Melhorar a dependência externa
-- Melhorar comunicação com a professora
+- Melhorar a dependência externa;
+- Melhorar comunicação com a professora.
 
 ## 4. Quadro de Conhecimento
 

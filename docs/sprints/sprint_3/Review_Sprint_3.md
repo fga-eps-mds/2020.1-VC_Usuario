@@ -83,21 +83,21 @@
 
 ## 4. Retrospective
 ### Pontos Positivos:
-- Melhora na dependência
-- Colaboração
-- Estruturação do projeto
-- Amadurecimento do escopo
-- Comunicação com outras partes interessadas
+- Melhora na dependência;
+- Colaboração;
+- Estruturação do projeto;
+- Amadurecimento do escopo;
+- Comunicação com outras partes interessadas.
 
 ### Pontos Negativos:
-- Demora na criação das issues
-- Mau uso do workflow do ZenHub
-- Falta de pareamento nas issues difíceis, o que causou sobrecarga 
+- Demora na criação das issues;
+- Mau uso do workflow do ZenHub;
+- Falta de pareamento nas issues difíceis, o que causou sobrecarga. 
 
 ### Pontos de Melhoria:
-- Melhorar Burndown 
-- Melhorar planejamento da sprint
-- Melhorar Roadmap
+- Melhorar Burndown; 
+- Melhorar planejamento da sprint;
+- Melhorar Roadmap.
 
 ## 4. Quadro de Conhecimento
 

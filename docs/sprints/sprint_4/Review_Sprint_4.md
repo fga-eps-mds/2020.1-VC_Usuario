@@ -83,20 +83,20 @@
 
 ## 4. Retrospective
 ### Pontos Positivos:
-- Reunião com todas as partes interessadas
-- Feedback da Letícia e do João
-- Amadurecimento na documentação e no projeto em si
-- Burndown
+- Reunião com todas as partes interessadas;
+- Feedback da Letícia e do João;
+- Amadurecimento na documentação e no projeto em si;
+- Burndown.
 
 ### Pontos Negativos:
-- Planejar melhor as depedência da criação das issues
-- Má distribuição das issues
-- Respeitar a backlog da sprint
+- Planejar melhor as depedência da criação das issues;
+- Má distribuição das issues;
+- Respeitar a backlog da sprint.
 
 
 ### Pontos de Melhoria:
-- Melhorar tempo de aceitação do pull request
-- Melhorar pareamento
+- Melhorar tempo de aceitação do pull request;
+- Melhorar pareamento.
 
 
 ## 5. Quadro de Conhecimento

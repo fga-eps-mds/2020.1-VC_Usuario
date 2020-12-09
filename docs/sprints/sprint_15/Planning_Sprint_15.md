@@ -1,11 +1,11 @@
-# Sprint 1 - Sagui
+# Sprint 15 - Hiena
 
 ## Planejamento 
 
 ## 1. Visão Geral
-**Número da Sprint:** 1<br>
-**Data de Início:** 27/08/2020<br>
-**Data de Término:** 02/09/2020<br>
+**Número da Sprint:** 15<br>
+**Data de Início:** 03/11/2020<br>
+**Data de Término:** 09/12/2020<br>
 **Duração:** 7 dias<br>
 
 ## 2. Papéis
@@ -21,57 +21,54 @@
         </tr>
     </table>
 
-
 ## 3. Objetivos
-A sprint 1 tem como objetivo:
-- Estudo das funções de uma equipe ágil; 
-- Estudo sobre documentação;
-- Criação de canal de comunicação no aplicativo Discord;
-- Treinamento sobre documentação;
-- Entrar em contato com os ganhadores do hackathon para melhor entendimento do tema;
-- Treinamento de tecnologias;
-- Estudo sobre estruturação de uma aplicação;
-- Treinamento de Git e GitFlow.
-
+A sprint 15 tem como objetivo:
+- Preparar apresentação de MDS;
+- Fazer últimos ajustes e corrigir bugs;
+- Revisar documentação e todas funcionalidades;
+- Preparar Post Mortem.
 
 
 ## 4. Sprint Backlog
 Issues adicionadas: 
-1. **Issue:** #22 Assistir ao vídeo da reunião com o cliente<br>
-**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo
 
-2. **Issue:** #23 Treinamento sobre documento de arquitetura<br>
-**Responsáveis:** Daniel Porto e Enzo
+1. **Issue:** #196 Ajustes gerais<br>
+**Responsáveis:** Daniel Porto e Daniel Barcelos<br>
+**Pontuação:** 3<br>
 
-3. **Issue:** #24 Inserir o template do documento de arquitetura<br>
-**Responsáveis:** Daniel Porto e Enzo
+2. **Issue:** #202 Arrumando bug do deploy<br>
+**Responsáveis:** Emily<br>
+**Pontuação:** 1<br>
 
-4. **Issue:** #25 Treinamento sobre templates para a contribuição com o projeto<br>
-**Responsáveis:** Daniel Barcelos e Enzo
+3. **Issue:** #207 Revisão de documentação<br>
+**Responsáveis:** Bruno, Daniel Porto e Denys<br>
+**Pontuação:** 3<br>
 
-5. **Issue:** #26 Estudo da estrutura de uma aplicação web<br>
-**Responsáveis:** Emily e Daniel Barcelos
+4. **Issue:** #208 Elaborar Apresentação R2<br>
+**Responsáveis:** Bruno, Daniel Porto,Denys e Enzo<br>
+**Pontuação:** 2<br>
 
-6. **Issue:** #27 Estudo da função Scrum Master<br>
-**Responsáveis:** Denys
+5. **Issue:** #209 Post Mortem<br>
+**Responsáveis:** Bruno, Daniel Barcelos, Daniel Porto, Denys, Emily e Enzo<br>
+**Pontuação:** 2<br>
 
-7. **Issue:** #29 Conversar com nossos clientes<br>
-**Responsáveis:** Bruno e Denys
+6. **Issue:** #210 Revisar Readme<br>
+**Responsáveis:** Bruno e Daniel Barcelos<br>
+**Pontuação:** 2<br>
 
-8. **Issue:** #30 Treinamento de GitFlow e Git<br>
-**Responsáveis:** Bruno
+7. **Issue:** #211 Revisar todas as funcionalidades da aplicação<br>
+**Responsáveis:** Enzo e Daniel Barcelos<br>
+**Pontuação:** 3<br>
 
-9. **Issue:** #31 Treinamento sobre documento de visão<br>
-**Responsáveis:** Bruno e Daniel Barcelos
+8. **Issue:** #212 Documentação da Sprint 14<br>
+**Responsáveis:** Denys<br>
+**Pontuação:** 1<br>
 
-10. **Issue:** #32 Criar discord<br>
-**Responsáveis:** Emily
 
-11. **Issue:** #33 Estudar e planejar nossa GitHub Page<br>
-**Responsáveis:** Bruno, Daniel Porto e Denys
 
-12. **Issue:** #34 Estudo da função Product Owner<br>
-**Responsáveis:** Denys
 
-13. **Issue:** #35 Inserir o template do documento de visão<br>
-**Responsáveis:** Bruno e Daniel Barcelos
+
+
+
+
+

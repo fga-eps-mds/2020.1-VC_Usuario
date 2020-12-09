@@ -63,18 +63,18 @@
 
 ## 4. Retrospective
 ### Pontos Positivos:
-- Bom planejamento
-- Velocidade para fechar issues
-- Reunião com DAF e o VCG
+- Bom planejamento;
+- Velocidade para fechar issues;
+- Reunião com DAF e o VCG.
 
 ### Pontos Negativos:
-- Acúmulo de outras disciplinas 
-- Problemas de saúde de alguns membros
-- Dívidas técnicas de issues importantes
+- Acúmulo de outras disciplinas; 
+- Problemas de saúde de alguns membros;
+- Dívidas técnicas de issues importantes.
 
 ### Pontos de Melhoria:
-- Gestão do tempo levando em consideração outras disciplinas
-- Tempo para iniciar issues difíceis 
+- Gestão do tempo levando em consideração outras disciplinas;
+- Tempo para iniciar issues difíceis. 
 
 
 ## 5. Quadro de Conhecimento

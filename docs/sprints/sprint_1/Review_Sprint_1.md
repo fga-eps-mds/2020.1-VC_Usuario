@@ -62,20 +62,20 @@
 
 ## 3. Retrospective
 ### Pontos Positivos:
-- Indepência
-- Valores do Ágil
-- Comunicação evoluiu
-- Entendimento dos processos
+- Indepência;
+- Valores do Ágil;
+- Comunicação evoluiu;
+- Entendimento dos processos.
 
 ### Pontos Negativos:
-- Transparência
-- Internet do Daniel
-- Empacados em issues devido a falta de aprovação de todos
+- Transparência;
+- Internet do Daniel.
+- Empacados em issues devido a falta de aprovação de todos.
 
 ### Pontos de Melhoria:
-- Daniel arrumar internet
-- Pensar de uma maneira mais crítica o critério de aprovação
-- Pensar de maneira processual 
+- Daniel arrumar internet;
+- Pensar de uma maneira mais crítica o critério de aprovação;
+- Pensar de maneira processual. 
 
 ## 4. Quadro de Conhecimento
 
