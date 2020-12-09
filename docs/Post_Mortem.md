@@ -2,18 +2,32 @@
 
 ## Relatos Individuais
 
-
 ### Bruno Félix
 
 #### Pontos Fortes
+<p style="text-align: justify;">&emsp;&emsp; 
+O ponto mais importante desse projeto, sem sombras de dúvidas, foi o elevado grau de comprometimento e engajamento que todos os participantes tiveram ao longo das semanas. Era motivacional ver que estavam ali pelo mesmo motivo, de fazer um bom projeto e entregar o máximo que cada um tinha no caminho, juntos. Nas últimas dailys senti o grupo muito amigo, mostrando que no processo um grau de amizade foi sendo criado mesmo a distância e nas condições atuais. Não ter trabalhado com EPS gerou em nós desenvolvedores uma responsabilidade de sempre buscar, estudar, debater e fazer aquilo que se era preciso, gerando maturidade e experiências interessantíssimas em desenvolvimento de software que nos ajudará muito no futuro profissional. Particularmente pude me desenvolver e ter bastante contato com a frente que mais curto atualmente, o desenvolvimento web. Pude colaborar em todas as frentes do projeto, ajudando todos, interagindo de forma prática na construção do projeto e ajudando, com uma participação na qual orgulho, dessa empolgante aplicação.
+</p>
 
 #### Pontos Fracos
+<p style="text-align: justify;">&emsp;&emsp; 
+Senti que, em vários momentos de tomada de decisão, prejudiquei a comunicação e pensamento da equipe com minhas opiniões sempre expressivas. Por saber de múltiplas frentes do projeto sentia que tinha a necessidade de sempre manifestar minhas opiniões sobre tudo e sempre tentar mostrar que ela era a certa. A vontade de chamar responsabilidade me gerou múltiplos semanas totalmente carregado, coisas que podia ter pedido mais ajuda ou ter dividido mais. Sair na frente e conseguir entender/ aprender algo mais rápido não é uma vantagem, mas sim uma responsabilidade, essa de passar pra frente tudo que você já aprendeu, mostrar talvez caminhos mais fáceis e eficientes para se tentar chegar num objetivo, acredito que não conseguir aplicar isso gerou um certo desconforto nos integrantes que precisavam de mais ajuda em certo momentos.
+</p>
 
 #### Possíveis Melhorias
+<p style="text-align: justify;">&emsp;&emsp; 
+Quase como um juramento para mim mesmo tentarei ser uma pessoa mais comunicável e aberta a novas ideias e opiniões. Ter uma maneira mais clara, calma e eficiente de me expressar e expor minhas ideias. Escutar mais, perguntar, entender e concordar mais com o ponto de vista dos outros. Acredito que tenho que zelar mais que a visão de um produto é a soma das visões de todos os integrantes e que a minha é uma delas, nem melhor, nem pior. Percebo que tenho interessantes virtudes, mas elas podem me colocar em situações complicadas se não administradas, seguir um caminho de constante melhora e evolução, como pessoa e como profissional, é o mais importante, sempre.
+</p>
 
 #### Lições Aprendidas
+<p style="text-align: justify;">&emsp;&emsp; 
+A exatos 2 anos recebi um comunicado de estava sendo desligado da universidade. Passei por muitos momentos difíceis nessa época, a cada novo dia tinha que combater vários problemas internos que me faziam questionar o que estava fazendo da minha vida. Hoje fico feliz de perceber que tudo que pensei, que tudo que passei, me fez estar aonde estou hoje, em 2020, no meio da pandemia e de forma remota, entregando esse projeto de MDS. Agradeço muito por ter tido essa segunda chance e tento aproveitá-la da melhor maneira possível. MDS foi um sutil "tapinha nas costas" no Bruno do passado de que tudo valeu a pena! Tudo aquilo formou quem ele é e quem ele vai buscar ser no futuro. Lembrarei pra sempre desse semestre e dessas 5 pessoas incríveis que tive a honra e a bênção de aprender e compartilhar um dos meus mais desejáveis objetivos de vida.
+</p>
 
 #### Papel
+<p style="text-align: justify;">&emsp;&emsp; 
+Ter desempenhado o papel de Product Backlog foi uma das experiências mais incrível que pude vivenciar em MDS. Senti uma responsabilidade enorme em escutar o cliente, entender suas necessidades e como deveria criar e planejar uma aplicação que gerasse um real valor para todos aqueles que a usariam. A Insegurança na hora de elaborar o Product Backlog foi gigante porque o sucesso do projeto dependia em parte desse documento. No final de tudo consegui, junto a meus companheiros, criar uma aplicação que atinge exatamente tudo aquilo que queríamos e planejamos. Em uma das reuniões o DAF disse que nós tínhamos entendido melhor que eles o que queriam da aplicação, isso mostra que o trabalho foi bem feito.
+</p>
 
 
 ### Daniel Barcelos
@@ -38,6 +52,7 @@ Os membros terem mais confiança nas suas escolhas durante o desenvolvimento
 Aprendi como é importante o trabalho em equipe e como devo confiar nos membros para um bom rendimento. Também, a importância de se ter uma rotina para conciliar o desenvolvimento do projeto com outras tarefas
 </p>
 
+
 ### Daniel Porto
 
 #### Pontos Fortes
@@ -61,7 +76,7 @@ Muito do que atrapalha a desenvoltura em um projeto é o egoísmo que não permi
 </p>
 
 
-### Denys Rogeres
+### Denys Rógeres
 
 #### Pontos Fortes
 <p style="text-align: justify;">&emsp;&emsp; 
@@ -77,7 +92,6 @@ Acredito que os maiores pontos são em relação à inexperiência do grupo e o 
 <p style="text-align: justify;">&emsp;&emsp; 
 Embora a equipe esteja bem integrada, acredito que um ponto na qual todos devemos melhorar é na comunicação não-violenta e na empatia, pois são fatores extremamente relevantes para todo trabalho em equipe e merecem destaque.
 </p>
-
 
 #### Lições Aprendidas
 <p style="text-align: justify;">&emsp;&emsp; 
@@ -102,7 +116,6 @@ Também foi estimulante pois a equipe é composta por pessoas bem diferentes e t
 <p style="text-align: justify;">&emsp;&emsp; 
 Eu acredito que os pontos mais fortes que eu vi no geral do projeto em relação ao time foi o alto nível de proatividade, a maioria das pessoas sempre estavam atrás de dar o melhor, corriam atrás do que não sabiam, sempre disponibilizaram tempo para ajudar alguém da equipe. Desde o início o time entendeu o que deveria ser feito e deram o máximo para que o projeto desse certo, e por fim sempre teve o lado positivo dos membros tentarem fazer planejamentos de acordo com o que cada um pudesse fazer.
 </p>
-
 
 #### Pontos Fracos
 <p style="text-align: justify;">&emsp;&emsp; 
