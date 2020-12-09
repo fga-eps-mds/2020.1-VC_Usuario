@@ -44,17 +44,17 @@
 
 ## 4. Retrospective
 ### Pontos Positivos:
-- Tomada de decisão
-- Trabalho constante
+- Tomada de decisão;
+- Trabalho constante.
 
 ### Pontos Negativos:
-- Qualidade dos pareamentos 
-- Falta de replanejamento durante a sprint/Adaptação falha durante sprint
+- Qualidade dos pareamentos; 
+- Falta de replanejamento durante a sprint/Adaptação falha durante sprint.
 
 ### Pontos de Melhoria:
-- Melhorar entregas durante a sprint
-- Melhorar roadmap
-- Melhorar replanejamento quando houver 
+- Melhorar entregas durante a sprint;
+- Melhorar roadmap;
+- Melhorar replanejamento quando houver. 
 
 
 ## 5. Quadro de Conhecimento

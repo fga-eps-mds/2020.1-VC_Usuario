@@ -21,7 +21,9 @@
 | 23/09/2020 | 2.1 | Atualização do Tópico 7                                    | Bruno Félix |
 | 05/10/2020 | 2.2 | Revisão do Tópico 7                                        | Bruno Félix |
 | 05/10/2020 | 2.3 | Correção de alguns erros ortográficos do documento         | Enzo Gabriel |
-| 09/10/2020 | 2.4 | Inserção de restrições e correção de erros ortográficos    | Daniel Porto e Emily Dias|
+| 09/10/2020 | 2.4 | Inserção de restrições e correção de erros ortográficos    | Daniel Porto e Emily Dias |
+| 08/12/2020 | 3.0 | Revisão do documento                                       | Bruno Félix |
+
 
 ## 1. Introdução
 
@@ -62,12 +64,14 @@ A universidade é um espaço público, que passa de geração em geração de es
 | MDS | Métodos de Desenvolvimento de <i>Software</i> |  
 | FGA | Faculdade do Gama | 
 | UnB | Universidade de Brasília | 
-| PWA | Progressive Web App | 
+| DAF | Decanato de Administração |
+| PWA | <i>Progressive Web App</i> |
+| API | <i>Application Programming Interface</i> |
 
 
 ### 1.4 Visão geral
 
-&emsp;&emsp; Este documento contém informações a respeito das características do software que está sendo desenvolvido. O documento é dividido em 8 tópico, sendo:
+&emsp;&emsp; Este documento contém informações a respeito das características do <i>Software</i> que está sendo desenvolvido. O documento é dividido em 8 tópico, sendo:
 - Introdução: é apresentado o propósito, escopo e os detalhes em relação a visão do projeto.
 - Posicionamento: descrição do problema e do produto e oportunidade de negócios.
 - Descrição dos Envolvidos e dos Usuários: Detalhamento das partes envolvidas no projeto.
@@ -93,14 +97,14 @@ Analisando o difícil acesso a canais de comunicação quando se diz respeito à
 | --- | --- |
 | **O problema é**         | A dificuldade em relatar problemas e defeitos encontrados na universidade |
 | **Que Afeta**            | A comunidade acadêmica |
-| **Cujo impacto é**       | A demora ou ineficácia da resolução desses problemas por parte da universidade |
+| **Cujo impacto é**       | A demora ou ineficácia da solução desses problemas por parte da universidade |
 | **Uma boa solução seria**| Uma aplicação onde a comunidade pudesse relatar os problemas encontrados diretamente para universidade. Otimizando o diálogo e a solução | 
 
 
 ### 2.3 Descrição da posição do produto
 
 <p style="text-align: justify;">&emsp;&emsp; 
- A aplicação uma vez desenvolvida, poderá se posicionar no mercado como uma plataforma web que pode ser facilmente usada nos navegadores mobile com uma experiência semelhante a de um app nativo. Essa característica proporciona o usuário usar a aplicação em múltiplas plataformas com a mesma experiência de uso, facilitando a praticidade e rapidez de postar um problema e beneficiando a universidade na rápida detecção e resolução do mesmo.
+ A aplicação uma vez desenvolvida, poderá se posicionar no mercado como uma plataforma web que pode ser facilmente usada nos navegadores mobile com uma experiência semelhante a de um app nativo. Essa característica proporciona o usuário usar a aplicação em múltiplas plataformas com a mesma experiência de uso, facilitando a praticidade e rapidez de postar um problema e beneficiando a universidade na rápida detecção e solução do mesmo.
 </p>
 
 
@@ -110,22 +114,23 @@ Analisando o difícil acesso a canais de comunicação quando se diz respeito à
 
 | **Nome** | **Descrição** | **Responsabilidade** |
 | --- | --- | --- |
-| Equipe de Desenvolvimento de _Software_ | Estudantes da disciplina Métodos de Desenvolvimento de _Software_, na Universidade de Brasília.| Documentar, desenvolver e implementar a aplicação elaborada |
-| Equipe de orientação | Professora e monitores da disciplina MDS. | Auxiliar e guiar a equipe durante o desenvolvimento da aplicação. |    
+| Equipe de Desenvolvimento do _Software_ | Estudantes da disciplina MDS, no curso de Engenharia de <i>Software</i> da UnB - FGA | Documentar, desenvolver e implementar a aplicação elaborada |
+| Equipe de orientação | Professora e monitores da disciplina MDS | Auxiliar e guiar a equipe durante o desenvolvimento da aplicação |    
 
 
 ### 3.2 Resumo dos Usuários
 
 | **Nome** | **Descrição** |
 | --- | --- |
-| Comunidade Universitária | Todos os membros pertencentes a Universidade de Brasília. |
+| Comunidade Universitária | Todos os membros pertencentes a Universidade de Brasília |
 
 
 ### 3.3 Principais Necessidades dos Usuários e dos Envolvidos
 
 | **Usuário** | **Necessidade** | **Solução Atual** | **Solução Proposta** |
 | --- | --- | --- | --- |
-| Estudantes e servidores da UnB| Melhoria e/ou solução de alguma problema.| Real dificuldade de relatar os problemas da universidade.| Uma plataforma democrática onde a comunidade possa relatar os problemas que encontrarem. |
+| Estudantes e servidores da UnB| Melhoria e/ou solução de alguma problema | Real dificuldade de relatar os problemas da universidade | Uma plataforma democrática onde a comunidade possa relatar os problemas que encontrarem |
+
 
 ### 3.4 Ambiente dos Usuários
 
@@ -140,20 +145,20 @@ Somente dentro das dependências da universidade, os usuários poderão utilizar
 
 | **Representantes** | **Bruno Alves Félix, Daniel Barcelos Moreira, Daniel Porto de Souza, Denys Rogeres Leles dos Santos, Emily Dias Sousa e Enzo Gabriel Guedes Queiroz Saraiva** |
 |:-|:-|
-| **Tipo** | Estudantes de Métodos de Desenvolvimento de Software da Universidade de Brasília - UnB/Gama - FGA, curso Engenharia de Software. |
-| **Responsabilidade** | Desenvolvimento, testes, Documentação e implementação do software. |
-| **Critério de sucesso** | Finalizar o Software com todas as funcionalidades do escopo no prazo estipulado do ciclo da disciplina. |
-| **Envolvimento** | Alto
-| **Problemas/Comentários** | Inexperiência da equipe com desenvolvimento colaborativo. |
+| **Tipo** | Estudantes da disciplina MDS, no curso de Engenharia de <i>Software</i> da UnB - FGA |
+| **Responsabilidade** | Desenvolvimento, testes, Documentação e implementação do <i>Software</i> |
+| **Critério de sucesso** | Finalizar o <i>Software</i> com todas as funcionalidades do escopo no prazo estipulado do ciclo da disciplina |
+| **Envolvimento** | Alto |
+| **Problemas/Comentários** | Inexperiência da equipe com desenvolvimento colaborativo |
 
 
 #### 3.5.2 Orientadores:
 
 | **Representantes** | **Carla Silva Rocha Aguiar** |
 |:-|:-|
-| **Tipo** | Orientadora e avaliadora que dará auxílio no desenvolvimento da plataforma Vamos Cuidar. |
-| **Responsabilidade** | Avaliar a equipe de MDS e ajudá-los em eventuais dúvidas. |
-| **Envolvimento** | Médio. |
+| **Tipo** | Orientadora e avaliadora que dará auxílio no desenvolvimento da plataforma Vamos Cuidar |
+| **Responsabilidade** | Avaliar a equipe de MDS e ajudá-los em eventuais dúvidas |
+| **Envolvimento** | Médio |
 
 
 ### 3.6 Perfis dos Usuários
@@ -161,8 +166,8 @@ Somente dentro das dependências da universidade, os usuários poderão utilizar
 | **Representantes** | **Estudantes e Servidores** |
 |:-|:-|
 | **Tipo** | Estudantes, Professores e Servidores da UnB |
-| **Responsabilidade** | Usar a plataforma para tentar solucionar problemas da universidade. |
-| **Critério de sucesso** | Ter o problema postado solucionado. |
+| **Responsabilidade** | Usar a plataforma para tentar solucionar problemas da universidade |
+| **Critério de sucesso** | Ter o problema postado solucionado |
 | **Envolvimento** | Alto |
 
 
@@ -208,7 +213,7 @@ Outro ponto que a aplicação visa é de ser um catalisador de coleta de dados d
 ### 4.4 Licenciamento e instalação
 
 <p style="text-align: justify;">&emsp;&emsp; 
-A PWA Vamos Cuidar é desenvolvida sob a licença GPL 3.0.
+A PWA Vamos Cuidar é desenvolvida sob a <a href="https://github.com/fga-eps-mds/2020.1-VC_Usuario/blob/develop/LICENSE">licença (GPL 3.0)</a>.
 </p>
 
 
@@ -260,27 +265,25 @@ Exibir uma página direcionada às notificações, relatórios e atualizações 
 
 Identificador | Requisito
 -- | --
-RF01 | Permitir que usuários da comunidade acadêmica realize postagens, anonimamente ou não, de problemas da universidade
+RF01 | Permitir o usuário realizar postagens, anonimamente ou não, de problemas da universidade
 RF02 | Permitir o usuário editar e excluir suas postagens
-RF03 | Permitir que o usuário crie, edite e apaga sua conta
+RF03 | Permitir o usuário criar, editar e apagar sua conta
 RF04 | Permitir o usuário fazer e desfazer login de sua conta
-RF05 | Exibir a listagem de todas as postagens feitas
-RF06 | Permitir a visualização de todas informações de uma postagem
-RF07 | Permitir que o usuário visualize suas postagens feitas
-RF08 | Permitir a visualização do estágio de resolução da postagem
+RF05 | Permitir o usuário visualizar a listagem de todas as postagens feitas
+RF06 | Permitir o usuário visualizar todas informações de uma postagem
+RF07 | Permitir o usuário visualizar suas postagens feitas
+RF08 | Permitir o usuário visualizar do estágio de solução da postagem
 RF09 | Permitir que a listagem das postagens seja feita por filtros
 RF10 | Permitir o usuário apoie uma determinada postagem
-RF11 | Permitir o usuário compartilhar uma postagem
-RF12 | Permitir a postagem de uma postagem
-RF13 | Exibir ao usuário uma notificação caso uma postagem sua tenha sido resolvida com sucesso
-RF14 | Exibir uma página direcionada às notificações e atualizações da universidade sobre as postagens
-RF15 | Permitir ao usuário receber pontos por cada ação sua na aplicação, que podem ser trocados por benefícios
-RF16 | Permitir o usuário engajar com uma postagem, através de comentários e compartilhamento
-RNF16 | A aplicação deve fazer a verificação de conta com dados da universidade
-RNF17 | O sistema deve se tratar de uma PWA (Progressive web app)
-RNF18 | A aplicação deve ter uma experiência de uso simples e familiar, de linguagem fácil e intuitiva
-RNF19 | Assegurar a segurança de dados dos usuários
-RNF20 | A aplicação só poderá ser usada dentro das dependências as universidade
+RF11 | Permitir o usuário denunciar uma postagem
+RF12 | Exibir uma página direcionada às notificações e atualizações da universidade sobre as postagens
+RF13 | Permitir ao usuário receber pontos por cada ação sua na aplicação, que podem ser trocados por benefícios
+RF14 | Permitir o usuário comente uma postagem 
+RNF15 | A aplicação deve fazer a verificação de conta com dados da universidade
+RNF16 | O sistema deve se tratar de uma PWA (Progressive web app)
+RNF17 | A aplicação deve ter uma experiência de uso simples e familiar, de linguagem fácil e intuitiva
+RNF18 | Assegurar a segurança de dados dos usuários
+RNF19 | A aplicação só poderá ser usada dentro das dependências as universidade
 
 
 ## 8. Referências

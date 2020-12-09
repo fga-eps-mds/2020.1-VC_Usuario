@@ -1,9 +1,8 @@
 <h1 align="center">Vamos Cuidar</h1>
 
+<p align="center"><strong>Sistema de postagem de problemas da Universidades de Brasília</strong></p>
+
 ---
-
-<p align="center"> Sistema de postagem de problemas da Universidades de Brasília</p>
-
 
 ## Sobre o projeto
 
@@ -12,7 +11,7 @@ O Vamos Cuidar é uma <strong>aplicação PWA</strong> que tem como objetivo aux
 </p>
 
 <h4 align="center"> 
-	🚧  Vamos Cuidar: Em desenvolvimento...  🚧
+	✅  Vamos Cuidar: Concluído!!  ✅
 </h4>
 
 ## Links

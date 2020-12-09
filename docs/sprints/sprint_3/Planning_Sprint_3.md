@@ -24,11 +24,11 @@
 
 ## 3. Objetivos
 A sprint 3 tem como objetivo:
-- Desenvolvimento, revisão e finalização de documentação
-- Criação do protótipo de identidade visual
-- Criação da página para documentação - Github Page
-- Reunião com o outro grupo responsável pelo projeto
-- Criação do ambiente de desenvolvimento e definição das tecnologias
+- Desenvolvimento, revisão e finalização de documentação;
+- Criação do protótipo de identidade visual;
+- Criação da página para documentação - Github Page;
+- Reunião com o outro grupo responsável pelo projeto;
+- Criação do ambiente de desenvolvimento e definição das tecnologias.
 
 ## 4. Sprint Backlog
 Issues adicionadas: 

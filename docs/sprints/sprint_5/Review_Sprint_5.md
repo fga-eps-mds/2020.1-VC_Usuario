@@ -29,23 +29,23 @@
 
 ## 4. Retrospective
 ### Pontos Positivos:
-- Começamos a codar
-- Iniciamos pareamento no programação
-- Consciência maior de como será o projeto
-- Transparência na comunicação
+- Começamos a codar;
+- Iniciamos pareamento no programação;
+- Consciência maior de como será o projeto;
+- Transparência na comunicação.
 
 ### Pontos Negativos:
-- Concentração de tarefas em poucas pessoas
-- Sobrecarga de alguns membros
-- Mau planejamento da user story
+- Concentração de tarefas em poucas pessoas;
+- Sobrecarga de alguns membros;
+- Mau planejamento da user story.
 
 ### Pontos de Melhoria:
-- Proatividade
-- Melhorar qualidade do pareamento
-- Melhorar comunicação da equipe
-- Compartilhar fontes de conhecimento
-- Melhorar revisão dos Pull Requests
-- Acrescentar mais issues
+- Proatividade;
+- Melhorar qualidade do pareamento;
+- Melhorar comunicação da equipe;
+- Compartilhar fontes de conhecimento;
+- Melhorar revisão dos Pull Requests;
+- Acrescentar mais issues.
 
 
 ## 5. Quadro de Conhecimento

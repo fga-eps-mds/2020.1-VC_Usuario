@@ -23,11 +23,11 @@
 
 ## 3. Objetivos
 A sprint 4 tem como objetivo:
-- Documentação do planejamento e resultado da Sprint 3
-- Reunião com o grupo do dashboard, DAF e ganhadores do Hackathon
-- Revisão do Roadmap e do Product Backlog
-- Atualizar o GitHub Pages
-- Desenvolver protótipo de alta fidelidade
+- Documentação do planejamento e resultado da Sprint 3;
+- Reunião com o grupo do dashboard, DAF e ganhadores do Hackathon;
+- Revisão do Roadmap e do Product Backlog;
+- Atualizar o GitHub Pages;
+- Desenvolver protótipo de alta fidelidade.
 
 ## 4. Sprint Backlog
 Issues adicionadas: 
