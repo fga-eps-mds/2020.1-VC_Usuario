@@ -62,7 +62,7 @@
 
 ## 3. Retrospective
 ### Pontos Positivos:
-- Indepência;
+- Independência;
 - Valores do Ágil;
 - Comunicação evoluiu;
 - Entendimento dos processos.
