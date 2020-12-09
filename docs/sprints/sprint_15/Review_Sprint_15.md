@@ -63,7 +63,7 @@
 - Diminuição do ritmo e respiro para entrega.
 
 ### Pontos Negativos:
-- Não foi encontrado nenhum ponto negativo.
+- Problemas na integração com o grupo Vamos Cuidar Gestor.
 
 ### Pontos de Melhoria:
 - Não foi encontrado nenhum ponto onde possa haver melhorias.
