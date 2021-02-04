@@ -1,5 +1,18 @@
 # Post Mortem
 
+## Pontos no Processo do Projeto
+
+- Várias issues voltadas para o entendimento do github foram cruciais no início do projeto, a mais importante de todas foi a "<a href="https://github.com/fga-eps-mds/2020.1-VC_Usuario/issues/3">#3 Visualizar trabalhos de grupos anteriores</a>";
+- Trabalhar num processo de “batedores” de 2 sprints (1ª estudo, 2ª desenvolvimento) ajudou muito na produção de documentos, início do desenvolvimento e uso de novas tecnologias;
+- Estudar e implementar o uso do docker ao lado do desenvolvimento da documentação foi importante para adiantar o início do desenvolvimento;
+- Na ausência de EPS, ter os papéis de Product Owner e Scrum Master dentro da equipe foi o mínimo necessário para um bom planejamento e visão de produto e projeto;
+- 2 semanas é o mínimo necessário para o início do desenvolvimento para a Release 1. Menos que isso fica difícil desenvolver algo interessante e mais que isso gera calma, entregas de importantes funcionalidades e chance de revisões;
+- Questões relacionadas a devops são um pouco complicadas, demandam tempo, estudo e mão na massa. Uma má gestão disso pode atrasar o desenvolvimento, então toda atenção nisso é pouca. Talvez uma pessoa(s) mais focada nisso seja interessante;
+- As 2 semanas após a Release 1 é crucial iniciar a implementação de testes e deploy, aproveitar que ainda tem poucas funcionalidades para ser testadas, quanto mais tempo passa mais trabalho demandará, se na Release 1 já tivesse testes seria acima do esperado;
+- Usar a semana após a Release 1 para respirar, analisar o que deu certo e errado e ajustar o planejamento do projeto é vital para uma excelente entrega de Release 2;
+- Da Release 1 para a Release 2 o processo de desenvolvimento fica mais rotineiro, o grupo embala e cria um flow de trabalho, mas o constante monitoramento do avanço do projeto em relação a data final é importante para não ter Sprints corridas no final.
+
+
 ## Relatos Individuais
 
 ### Bruno Félix
